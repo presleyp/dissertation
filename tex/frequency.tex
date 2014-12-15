@@ -1,0 +1,167 @@
+\subsection{Token Frequency}
+\subsubsection{Motivation}
+%TODO does celex have token frequencies?
+% TODO citations
+% request baayen and lieber
+% get bybee in print or request
+% have albright 2002, albright and hayes 2003
+% have ernestus and baayen
+% request hay et al
+% from albright's modeling analogy as grammar paper:
+%In fact, it appears that the propensity to generalize morphophonological
+%patterns to new forms depends primarily on type frequency, and not on token
+%frequency. This restriction has been noted numerous times in the literature;
+%see Baayen and Lieber (1991) for English derivational suffixes Bybee (1995)
+%for French conjugation classes, German past participles, and others, Albright
+%(2002) for Italian conjugation classes, Albright and Hayes (2003, p. 133) for
+%English past tenses, Ernestus and Baayen (2003, p. 29) for stem-final voicing
+%in Dutch, Hay, Pierrehumbert, and Beckman (2004) for medial consonant clusters
+%in English, and additional references in Bybee (1995)). 
+
+% TODO lit review
+% p.23:
+%There is abundant prima facie evidence that the high token frequency of
+%diphthongization does not make it a strong pattern: synchronically it is
+%relatively unproductive in experimental settings (Bybee and Pardo 1981;
+%Albright, Andrade, and Hayes 2001), and diachronically verbs tend to lose
+%diphthongization alternations (Penny 2002; Morris 2005). Furthermore,
+%overregularization errors among children acquiring Spanish consistently result
+%in omitting diphthongization (Clahsen, Aveledo, and Roca 2002), even though
+%diphthongizing tokens constitute a large portion—perhaps even the majority—of
+%childrens’ experience.
+
+% TODO Albright lit review
+% p.23-24:
+%In order to test the influence of token frequency more systematically, I ran
+%both the GCM and the MGL with and without taking token frequency into account.
+%Specifically, a weighting term was introduced in the GCM, so the contribution
+%of each analog was defined not only in proportion to its similarity, but also
+%in proportion its (log) token frequency. A weighting term was also introduced
+%into the MGL, such that the contribution of each word to the hits and/or scope
+%of a rule was weighted according to its log token frequency. The result was
+%that both models did slightly worse when token frequency was taken into
+%account, as shown in (17).
+
+% TODO keep in mind for my methods
+% p. 24
+%It should be noted that these particular experimental items were not
+%constructed for the purpose of dissociating type and token frequency, and
+%ultimately the fairest test would be based on items that diverge more in their
+%predictions.
+
+%TODO 
+% from his gradient phonotactics paper, p. 12:
+%None of the models explored here derived any advantage from their ability to take token frequency into account
+%➢ GNM and simple NNB models did best when frequency weighting was turned off
+%➢ Vitevitch and Luce model, which has frequency weighting built in, does not come out
+%ahead because of it
+%An apparent difference from Bailey and Hahn (2001), who found significant contribution of token frequency
+%➢ However, even there, only a tiny numerical boost was observed (r2 gain of .01?)
+%➢ I was unable to replicate this effect, even on their data
+%In most cases, taking token frequency into account doesn’t change the predictions at all
+%➢ Most words in the lexicon are very low frequency, so a boost for high token frequency only gives more influence to a small set of words
+%When it does make a difference, though, it tends to be a deleterious one
+%➢ Compared predictions of GNM with and without token frequency, to find those words which changed the most when token frequency was considered
+%[zeI] (say), [gEr] (there), [paInt] (mine), l2m (come), [gli:d] (need)
+%➢ For all five of these words, the frequency-sensitive model was farther from the human
+%ratings (overestimated goodness)
+%➢ Further evidence that pattern strength is related to type, not token frequency (Bybee
+%1995; Albright 2002b; Albright and Hayes 2003; Hay, Pierrehumbert, and Beckman 2004)
+
+\citet{Albright_gradient_2006,Albright_modeling_2009} has shown that giving
+models the ability to use token frequency does not improve their performance,
+and can even hinder it. However, the way he incorporated token frequency into
+various models made the effect of a sound sequence on the grammar or analogical
+system correlate positively with the token frequency of the words those
+sequences appeared in.  Thus it is possible that token frequency is
+uncorrelated with the productivity of a pattern, but it is also possible that
+token frequency is inversely correlated with it.  On one hand, token frequency
+may simply not be used to determine grammaticality, as in a model where token
+frequency is represented in the lexicon and grammaticality is calculated from a
+grammar which only pulls patterns out of the lexicon, abstracting away from
+word-specific information like token frequency.  On the other hand, high token
+frequency may serve to increase the degree to which the patterns in the word
+are associated with that particular word rather than with the grammar in
+general. Thus, the patterns found in very frequently used words may be
+memorized as exceptional, so that patterns associated with high token
+frequencies are less likely to be generalized than others.
+
+% The answer to this question will inform future phonotactic modeling as well as
+% shed light on the question of where phonotactic judgments come from. If token
+% frequency is irrelevant to judgments, this would support a view in which the
+% lexicon does not participate in the formation of judgments directly, only
+% indirectly through the formation of the grammar. If token frequency is
+% inversely correlated with judgments, this will support a view in which lexical
+% information works with the grammar in order to separate exceptions from general
+% patterns.
+
+I predict that constraints found mainly in very high token frequency words are not
+highly weighted in the phonotactic grammar. This would have implications for how we model
+phonotactics, as token frequency would need to be reintroduced as a factor, but as one
+whose effect is negative or found by the grammar rather than assumed to be positive. It
+would also have implications for theories of how the lexicon interacts with the grammar; token
+frequency is closely associated with access to the lexicon, so this finding would support
+a view in which the lexicon is involved in phonotactic judgment even if there is a separate
+grammar.
+
+\subsubsection{Plan}
+
+The hypothesis is that constraints that hold mostly of high token frequency words,
+which we could think of as constraints that encode exceptions, are not highly weighted
+in the general phonotactic grammar, the one applied to arbitrary novel words (rather than to exceptional words
+and conceivably, to novel words that have specific properties that cause analogy to exceptional words).
+
+This hypothesis predicts that a grammar learned from a lexicon containing highly frequent, exceptional
+words will generalize to nonce words less well, that is, less similarly to English speakers, than a grammar
+learned from a lexicon with the exceptional words removed.
+
+I will gather a corpus of English words to train a Maximum Entropy grammar on. I will remove
+a certain number of words from this corpus several times, resulting in several different corpora
+of the same size, and then repeat this process with multiple sizes since there is no \textit{a priori}
+reason to believe in a certain threshold on the degree of token frequency that would cause the
+effect in question. For each size, one corpus will be formed by removing the most frequent words, and
+at least one will be formed by removing a randomly selected set of words.
+
+I will find or elicit judgment data on nonce words that do not seem to cause analogy to
+specific English words more than usual. Then, I'll test each learned grammar on these words
+and compare their results to the English speaker results. I'll run a regression to see if
+the grammars that were trained on lexica with high token frequency words removed systematically
+performed better than the ones based on lexica with arbitrary sets of words removed.
+% I will use data sets from phonotactic judgment experiments on nonce words
+% combined with a corpus of English words that provides token frequencies.  I
+% plan to fit four Maximum Entropy models to this data and compare their levels
+% of correlation with the data.  First, I will train a model that takes each
+% unique word in the data once, ignoring token frequency. Second, I will train a
+% model that uses token frequency. Third, I will train a model that uses
+% transformed token frequency, so that high frequency words have a smaller rather
+% than a greater effect on the model. Finally, I will fit a model on data with
+% words above a certain threshold of token frequency removed.
+% %TODO i don't know if the last one makes sense
+
+% Based on past research, I predict that the model that ignores token frequency
+% will outperform the one that uses it straightforwardly. It is difficult to
+% predict the performance of the third and fourth models, but I suspect that one
+% or both of them will outperform the model that ignores token frequency, showing
+% that high token frequency is not merely irrelevant to phonological learning but
+% actually harmful, in the sense that patterns followed by extremely common words
+% are likely to be exceptions that should not be generalized.
+
+% I will calculate empirical probabilities of the words based on their token
+% frequencies. I will use a phonotactic learner to fit a Maximum Entropy model by
+% minimizing KL divergence on these probabilities. Then I will rerun the learner
+% with a transformation applied to the empirical distribution so that high token
+% frequency words are considered improbable and low token frequency words are
+% considered probable.
+
+
+%Then I will run the Hayes and Wilson learner
+%\citep{Hayes2008} on those words two times, once giving the learner each input
+%word once per iteration, and once giving the learner each input word a number
+%of times proportional to its token frequency each iteration. If the model
+%without token frequency performs better than the one with token frequency, I
+%will modify the learner to penalize patterns associated with high token
+%frequency and see if that one outperforms the one that ignores token frequency.
+
+%TODO could I tweak number of training words to simulate penalty?
+
+

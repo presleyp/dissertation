@@ -1,0 +1,126 @@
+SurveyMan is a desktop application that communicates with Amazon's Mechanical
+Turk survey-running website in order to manage surveys and experiments with
+minimal human intervention. A working prototype exists but it has many
+shortcomings, particularly for linguistics experiments which often have very
+precise requirements. I propose to develop an experiment-specific version of
+the software that will meet the needs of our phonotactic and psycholinguistic
+web-based studies. This would benefit my own research and that of
+any linguist interested in running word or sentence judgment studies on the
+internet. Other social scientists would also be likely to find it useful.
+
+%TODO make tables out of prose for exp. materials and maybe also software comparison
+%IbexFarm either can or will be able to do audio
+%Brian Smith used IbexFarm
+%write out about control flow
+%map out dependencies
+This software would enable researchers without a programming background
+to set a wide variety of options on the mechanics and presentation of their
+experiments.
+
+There are several existing programs to help researchers run experiments on the web, and they differ
+from SurveyMan in various ways.
+
+Survey programs like SurveyMonkey and LimeSurvey are relatively easy to use, but lack some
+crucial experiment-centric features. In SurveyMonkey, randomization requires a premium membership,
+and neither of them handle Latin square designs for the experimenter.
+
+There are also experiment-running programs developed by scientists, such as \citet{WebExp}, \citet{Experigen},
+and \citet{PsiTurk}. These tend to require more programming but have more of the features needed for experiments.
+However, they still lack some of the features planned for SurveyMan. WebExp, for instance, lacks support for
+acoustic stimuli and constrained randomization of question order. Experigen does not record reaction time. PsiTurk
+is compatible with any of these features, but the experimenter has to be able to write JavaScript.
+
+\citet{IbexFarm} is a strong candidate for use in web experiments, as it was designed for linguists and thus addresses
+most of the features needed for our experiments. However, SurveyMan has plans for advanced features, such as training
+periods that continue until the participant performs well enough to advance.
+
+Thus, SurveyMan will balance the ability to design experiments quickly and easily with minimal programming knowledge
+with a wide array of features tailored to the needs of phonologists and other social scientists.
+% Many other software packages for web-based experiments \citep{WebExp,Experigen,PsiTurk}
+% require researchers to run experiments on their own server, which increases
+% barriers to access, but SurveyMan will send experiments directly to Mechanical Turk,
+% although the option to use one's own server is also in the works. IbexFarm \citep{IbexFarm} is
+% another option that hosts experiments for researchers, but SurveyMan will have features
+% that IbexFarm lacks in terms of the ease with which researchers can use resources of
+% various types and create complex control flow within their experiments.
+% Thus, SurveyMan would increase the accessibility of web-based experiments and
+% thus the rate at which experiments can be completed.
+
+% Second, the planned version of SurveyMan will tackle an important outstanding
+% question in experimental methods, namely how experimenters ought to determine
+% the number of participants they need for an experiment to have sufficient
+% power.  The practice of running statistical tests on the data in the middle of
+% an experiment and adding participants if the results are not yet significant is
+% known to distort results \citep{Armitage1969,Snoop,Simmons2011}, and the
+% preferred method of deciding on a sample size is to do a power analysis before
+% running the experiment based on the effect size found in previous related
+% studies. However, if the effect has not previously been studied, it is
+% difficult to choose a sample size appropriately. Some techniques have been
+% developed to solve this problem \citep{Todd2001}, %TODO bootstrapping
+% and we plan to incorporate them directly into the experimental software so that
+% participants are added until the program determines that the distribution has
+% stabilized.  This feature has the potential to increase the validity of data
+% published in the field.
+
+% Thus, this software could benefit research in phonology and other social sciences
+% in terms of both quantity and quality.
+
+
+% \begin{table}
+%     \begin{tabular}[h][ccc]
+%         Software & Externally Hosted & Latin Square & Resources & Randomization & Branching & Training Loops & Reaction Times \\
+%         SurveyMonkey & \ding{51} & & \ding{51} & \ding{51}* & \ding{51}* &  & \\
+%         LimeSurvey & \ding{51} & & \ding{51} & \ding{51} & \ding{51} &  & \\
+%         WebExp & &  & \ding{51} & \ding{51} & & & \\
+%         Experigen & & & \ding{51} & \ding{51} & & & \\
+%         PsiTurk & & \ding{51} & & & & \\
+%         IbexFarm & \ding{51} & \ding{51} & \ding{51} & \ding{51} && &\\
+%         SurveyMan & \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51} & \ding{51}\\
+%     \end{tabular}
+% \end{table}
+
+% *Available in premium version.
+% **Allows users to write this themselves but does not provide it.
+
+\subsection{Plan}
+In order to make an experimental version of SurveyMan that is fully functional
+for word and sentence judgment studies, the following features need to be added:
+
+\begin{itemize}
+\item Pseudorandomization as an alternative to pure randomization of question order.
+\item Counterbalancing of question types.
+% \item Statistics to determine optimal sample size.
+% \item Reverse qualifications to keep the same participant from taking the experiment
+%     more than once. This has already been implemented.
+% \item Ability to show multiple resources (images, sounds, or videos) with a question.
+%   This is already possible because questions now take arbitrary HTML.
+\item Logging of reaction times and the times of events such as playing sounds or videos.
+\item Ability to place restrictions on events; for instance, allowing a sound to be played
+only once or allowing a choice to be made only after the sound has played.
+\item Training loops.
+\item Ability to randomly pair images, audio, and video with questions for each participant.
+% \item Ability to change the layout of elements on the page.
+\end{itemize}
+
+% Additionally, there are changes we would like to make that are not strictly necessary
+% but would make the program more extensible and user-friendly:
+
+% \begin{itemize}
+% \item Rewrite the software in Python, both for speed of programming and interoperability
+% with R.
+% \item Create an R interface for the program to replace the current interface (we are currently
+%     starting with a Python interface which will make an R interface possible later).
+% \item Use a feedback loop to allow experimenters to interact with pilot studies and
+% develop experimental designs iteratively.
+% \item Set up a JavaScript library to hold user-submitted functions to extend the functionality
+% of the software.
+% \end{itemize}
+
+Currently, Emma Tosch is working on the backend of the survey-based version of SurveyMan and Molly McMahon is writing a Python front-end,
+which will enable an R interface later on. I will adapt SurveyMan to include the necessary experiment-based
+features.
+
+I have implemented all of the features necessary to run my own experiments, and will focus on integrating
+those changes with the broader SurveyMan framework before adding additional features.
+
+
