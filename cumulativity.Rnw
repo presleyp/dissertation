@@ -2,7 +2,16 @@
 set_parent('diss.Rnw')
 @
 
-\subsection{Motivation}
+
+<<options-cumulativity, cache=FALSE, include=FALSE>>=
+opts_chunk$set(fig.width=6, fig.height=6, eval=TRUE, echo=FALSE, cache=TRUE, warning=FALSE)
+opts_knit$set(self.contained=FALSE, concordance=TRUE)
+Sys.setenv(TEXINPUTS="/Users/presley/dissertation/",
+           BIBINPUTS="/Users/presley/Library/texmf/bibtex/bib/",
+           BSTINPUTS="/Users/presley/dissertation/")
+@
+
+\section{Overview}
 % One of the goals of phonology is to develop predictive models of phonotactics.
 % Such models predict phonotactic judgments of words based on various properties
 % of those words, UG, and the language's lexicon. In order to enable us to choose
@@ -12,41 +21,71 @@ set_parent('diss.Rnw')
 
 In modeling constraint-based phonotactics, there are three broad kinds of decisions to be made: which framework
 to use, which parameters (constraints) to use, and how to tune (rank or weight) the parameters. This experiment
-aims to offer support for a particular framework, freeing up phonologists to focus on the latter decisions.
+will weigh in on the question of framework choice, using the function they use to combine the effects of violations to distinguish among them.
 
 Popular constraint-based frameworks include Optimality Theory \citep{Prince1993/2004}, Harmonic Grammar (taken here to mean linear Harmonic
 Grammar, in which harmony scores are not subject to exponentiation) \citep{Legendre1990c,Smolensky2006b,Pater2009,Potts2010}, and Maximum Entropy
 \citep{Goldwater2003}.
 
-
-
+As these frameworks are all constraint-based, they recognize units of violation. Every locus of a constraint violation is such a unit. Identical violations of identical constraints are recognized as ``the same'' across words, so that violations can be compared across words. Multiple violations can occur in the same word, and the ungrammaticality of the word is derived by combining the ungrammaticalities of each violation in the word according to some process. These frameworks differ in how they define that violation-combining process, and so they make different predictions about the relative ungrammaticalities of words whose violations are in a subset-superset relationship. This experiment will seek to distinguish between frameworks on the basis of such groups of words.
 %Ohala and Ohala 1986
 
 % It may be linear, so that each additional violation of equal
 % magnitude decreases judgments equally, or it may be nonlinear, so that
 % additional violations have increasing or decreasing contributions to judgments.
-
-Optimality Theory predicts that adding mild
+\section{Optimality Theory}
+Optimality Theory (OT) predicts that adding mild
 violations to a word with a severe violation has no effect, so that the
 function from number of violations to grammaticality is flat for any given
-first violation as long as it remains one of the worst violations in the word.
+first violation as long as it remains one of the worst violations in the word. 
+In other words, OT's function for combining the penalties of multiple violations 
+is to return the maximum of those penalties as the penalty for the whole word 
+(multiplied by the number of times that penalty is incurred).
+
+Figure \ref{fig:OT-combiner} illustrates by crossing a strong violation, [mr] in the onset, with a weak violation,
+[o:sp] in the rhyme. Each occurrence of the strong violation counts as a penalty of 2, while each occurrence of the weak
+violation counts as a penalty of 1. The penalty of each word is simply the maximum of the penalties of the violations in the word, so that \textit{mroasp} is not any worse than \textit{mrote}. 
+
+\begin{figure}
+<<OT-combiner, echo=FALSE>>=
+barplot(c(0, -1, -2, -2), main='Optimality Theory Violation Cumulativity', xlab='Penalty Vectors', ylab='Cumulative Penalty', names.arg=c("rote: [0, 0]", "roasp: [0, -1]", "mrote: [-2, 0]", "mroasp: [-2, -1]"), ylim=c(-3, 0));
+@
+\end{figure}
 
 However, predating OT, \citet{Ohala1986} found that speakers have an above
 chance probability of preferring a word with one violation to a word with that
 same violation and a less severe one, suggesting that even the milder violations
-affect the grammaticality of a word. Additionally, \citet{Coleman1997} found
+affect the grammaticality of a word. This contradicts OT's prediction that an additional
+violation that is lesser than the first violation will not affect the ungrammaticality of the word.
+Additionally, \citet{Coleman1997} found
 that a word like \textit{mrupation}, with one severe violation followed by a
 common English sequence, was preferred to a word like \textit{spleitisak}, with
-several minor violations.  \citet{Albright_clusters_2008} designed experiments
+several minor violations. This is in contrast with OT's prediction that 
+the strong violation \textit{mr} matters
+more than any number of lesser violations. 
+
+\citet{Albright_clusters_2008} designed experiments
 to directly test the question of cumulativity of violations, addressing
 potential alternative explanations for these two results, and found that models
 that take into account all violations of a word, not just its worst violation,
-fit the data significantly better.
+fit the data significantly better. Albright used two types of words, those with
+phonotactic violations in the onset and those with phonotactic violations in
+the onset as well as milder violatinos in the rime. In a variety of analyses,
+he fitted models that rate words by their worst violation only, and ones that
+rate words by the sum of all their violations. The models that take into
+account all violations in the word were more strongly correlated with experimental
+findings. This study showed that cumulative models reflect speaker judgments better
+than noncumulative models, but did not distinguish among various cumulative models.
+
+I conclude that OT's strategy of combining violations by finding their maximum is
+not empirically supported, and I turn to Harmonic Grammar and Maximum Entropy.
 
 %Sorace and Keller 2004 found cumulativity of violations for syntax
 %TODO discuss grammaticality vs acceptability vs ratings
-
-However, Albright did not compare various cumulative models against each other.
+\section{Linear vs. Exponential Combination}
+\citet{Albright_clusters_2008} found evidence that all violations in a word contribute to the word's
+ungrammaticality, but it 
+did not compare various models that work this way against each other.
 The shape of the curve relating number of violations to phonotactic judgments
 bears on the question of which framework we should use to model phonotactic
 well-formedness. As \citet{Pater_cumulative_2008} points out, Harmonic Grammar
@@ -75,9 +114,24 @@ majority of the probability because it is the best choice available, and each
 additional violation decreases the probability by a smaller amount than the
 last.
 
-\ex. \includegraphics[scale=.5]{hg_cumulativity.png}
 
-\ex. \includegraphics[scale=.5]{me_cumulativity.png}
+\begin{figure}
+<<HG-combiner, echo=FALSE>>=
+barplot(c(0, -1, -2, -3), main='Harmonic Grammar Violation Cumulativity', xlab='Penalty Vectors', ylab='Cumulative Penalty', names.arg=c("rote: [0, 0]", "roasp: [0, -1]", "mrote: [-2, 0]", "mroasp: [-2, -1]"), ylim=c(-3.5,0));
+@
+\end{figure}
+%\ex. \includegraphics[scale=.5]{hg_cumulativity.png}
+
+\begin{figure}
+<<ME-combiner, echo=FALSE>>=
+one = exp(0)
+two = exp(-1)
+three = exp(-2)
+four = exp(-3)
+barplot(c(one, two, three, four), main='Maximum Entropy Violation Cumulativity', xlab='Penalty Vectors', ylab='Cumulative Penalty', names.arg=c("rote: [0, 0]", "roasp: [0, 1]", "mrote: [2, 0]", "mroasp: [2, 1]"), ylim=c(0, 1.5));
+@
+\end{figure}
+%\ex. \includegraphics[scale=.5]{me_cumulativity.png}
 
 I predict that, in accordance with the Maximum Entropy model, additional violations
 will have smaller effects on the grammaticality of the word, as the grammaticality approaches a floor.
@@ -88,29 +142,24 @@ will have smaller effects on the grammaticality of the word, as the grammaticali
 %dealing only with patterns that are widely accepted to belong to that set for the language
 %in question.
 
-\subsection{Plan}
+\section{Method}
 
-\citet{Albright_clusters_2008} has shown that cumulative models of phonotactics fit data
-better than noncumulative ones. He used two types of words, those with
-phonotactic violations in the onset and those with phonotactic violations in
-the onset as well as milder violatinos in the rime. In a variety of analyses,
-he fitted models that rate words by their worst violation only, and ones that
-rate words by the sum of all their violations. The models that take into
-account all violations in the word were more strongly correlated with experimental
-findings. This study showed that cumulative models reflect speaker judgments better
-than noncumulative models, but did not distinguish among various cumulative models.
+%Relative to words with one violation, does the same violation add less, the same amount, or
+%more ungrammaticality to the word when it appears in a word that already has
+%another violation?
 
-I will ask which kind of cumulative model best fits the data.  Relative to
-words with one violation, does the same violation add less, the same amount, or
-more ungrammaticality to the word when it appears in a word that already has
-another violation?
+\subsection{Participants}
+%TODO numbers who participated, were removed
+One hundred participants were recruited from Mechanical Turk and paid for their participation. They were all located in the United States and claimed to be native speakers of English. Catch trials asked participants to choose the more English-like of two words where one word is free of violations and the other has a severe violation; any participants who preferred the severe violation were removed from the analysis. Additionally, participants whose reaction times were too short to be human were removed.
+
+\subsection{Materials}
 
 Each of 24 test items will appear in four conditions. The four conditions are created by
 crossing two factors: presence of an onset violation and presence of a rime
 violation.  Within an item, the onset violation will be the same whenever it is
 present, and likewise for the rime violation. This way, comparing an item with
-an onset violation only to the same item with both violations directly shows
-the effect of the rime violation. The vowel is held constant across all conditions of an item.
+only an onset violation to the same item with both violations shows
+the effect of adding the rime violation. The vowel is held constant across all conditions of an item.
 
 Aside from test items, there will also be filler items. These will be nonce words
 of medium acceptability; they will have mild violations that are different from the
@@ -118,38 +167,49 @@ kinds of violations found in the test words. Instead of violating cluster phonot
 they will violate long-distance OCP constraints or constraints on the cooccurrence of certain
 vowels and codas. The goal is to keep participants from comparing filler and test items
 piecewise and encourage them to use the filler only to get a sense of a baseline of grammaticality
-against which to compare the test words. Fillers will be paired with sets of test items in a way
-that minimizes overlap of OCP violating segments with test word segments.
+against which to compare the test words. 
+%Fillers will be paired with sets of test items in a way
+%that minimizes overlap of OCP violating segments with test word segments.
 %Participants will be asked to rate these words on a scale from one to four, as
 %even-numbered scales allow for better detection of participants that are
 %answering randomly.
 
-Participants will be shown pairs of items and asked to choose the one that sounds
-more like a possible word of English. Pairs will be composed of one of the test items
-and one of the filler items. For each test item, each of its conditions will be compared
-against the same set of filler items. A given participant will only see one of these pairings
-for each item and filler word, thanks to a Latin Square design.
 
-A mixed effects model will be fitted to the results. The dependent variable
-will be proportion of times the test item was chosen. OnsetViolation,
-RimeViolation, and their interaction will serve as fixed effects in addition
-to random effects for subject and item. % separately for test item and filler item?
+\subsection{Design}
+A Latin square design is applied to the test items so that each participant only sees one
+word from each item set. Each test word is then randomly paired with a filler word. This random assignment
+is done independently for each participant. 
+
+%Participants will thus be shown pairs of items (one test, one filler) and asked to choose the one that sounds
+%more like a possible word of English. For each test item, each of its conditions will be compared
+%against the same set of filler items. A given participant will only see one of these pairings
+%for each item and filler word, thanks to a Latin Square design.
+\subsection{Procedure}
+The experiment was built using Speriment and run using PsiTurk to interact with Mechanical Turk.
+
+The task is a two-alternative forced choice task between a test word and a filler word, for 24 trials. In each trial, the participant was asked to choose the more English-like of the two words.
+
+\section{Results}
+A mixed effects model was fitted to the results. The dependent variable
+was the proportion of times the test item was chosen. OnsetViolation,
+RimeViolation, and their interaction served as fixed effects. Random
+effects for subject and item were included in the model. % separately for test item and filler item?
 
 The purpose of the experiment is to test whether an interaction exists between
-the two fixed effects. Bayesian methods will be used in the case of a null effect
-to determine whether the absence of a significant interaction is likely to represent
-a truly linear relationship as violations are added.
+the two fixed effects. %Bayesian methods will be used in the case of a null effect
+%to determine whether the absence of a significant interaction is likely to represent
+%a truly linear relationship as violations are added.
 
-If a positive interaction is present, this would support a model that takes probability
-away from words in greater and greater amounts as the number of violations increases.
-I do not know of such a model, and this result is not predicted.
+%If a positive interaction is present, this would support a model that takes probability
+%away from words in greater and greater amounts as the number of violations increases.
+%I do not know of such a model, and this result is not predicted.
 
-A negative interaction would support models like Maximum Entropy, in which each additional
-violation subtracts less probability from the word than the last violation did.
+%A negative interaction would support models like Maximum Entropy, in which each additional
+%violation subtracts less probability from the word than the last violation did.
 
-A linear relationship would support models like linear Harmonic Grammar, in which each
-additional violation subtracts the same amount of probability from a word as the last
-violation did.
+%A linear relationship would support models like linear Harmonic Grammar, in which each
+%additional violation subtracts the same amount of probability from a word as the last
+%violation did.
 
 
 % another experiment: what do preference proportions (analogous to ratings) mean?
@@ -159,3 +219,8 @@ violation did.
 % - do you pick A over B with a ratio of (ratio of A over C / ratio of B over C)?
 % - if not, what does that mean?
 
+<<cumulativity-analysis >>=
+data = data.frame('cumulativity.csv', sep='\t')
+@
+
+\section{Discussion}
