@@ -1,0 +1,50 @@
+\documentclass{report}
+
+\usepackage{pifont}
+\usepackage{natbib}
+\usepackage{linguex}
+\usepackage{graphicx}
+
+\author{Presley Pizzo}
+\title{Properties of a Phonotactic Theory}
+
+\begin{document}
+
+<<options, cache=FALSE, include=FALSE>>=
+opts_chunk$set(fig.width=6, fig.height=6, eval=TRUE, echo=FALSE, cache=TRUE, warning=FALSE)
+opts_knit$set(self.contained=FALSE, concordance=TRUE)
+Sys.setenv(TEXINPUTS="/Users/presley/dissertation/",
+           BIBINPUTS="/Users/presley/Library/texmf/bibtex/bib/",
+           BSTINPUTS="/Users/presley/dissertation/")
+@
+
+\maketitle
+
+\chapter{Introduction}
+<<intro, child='intro.Rnw'>>=
+@
+
+\chapter{Speriment}
+<<speriment, child='speriment.Rnw'>>=
+@
+
+\chapter{Experiment 1: Cumulativity of Violations}
+<<cumulativity, child='cumulativity.Rnw'>>=
+@
+
+\chapter{Experiment 2: Effect of Alternations on Phonotactics}
+<<alternations, child='alternations.Rnw'>>=
+@
+
+\chapter{Simulation: Effect of Token Frequency on Phonotactics}
+<<frequency, child='frequency.Rnw'>>=
+@
+
+\chapter{Conclusion}
+<<conclusion, child='conclusion.Rnw'>>=
+@
+
+\bibliographystyle{apalike}
+\bibliography{software,HG,phonology}
+
+\end{document}

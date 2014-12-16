@@ -1,3 +1,7 @@
+<<set-parent-alternations, echo=FALSE, cache=FALSE>>=
+set_parent('diss.Rnw')
+@
+
 The previous section asked the question, given that words with certain
 characteristics are preferred to words with other characteristics, how do those
 preferences interact? This chapter will back up and investigate which characteristics

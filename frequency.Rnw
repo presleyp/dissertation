@@ -1,3 +1,7 @@
+<<set-parent-frequency, echo=FALSE, cache=FALSE>>=
+set_parent('diss.Rnw')
+@
+
 \subsection{Token Frequency}
 \subsubsection{Motivation}
 %TODO does celex have token frequencies?

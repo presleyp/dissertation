@@ -1,8 +1,10 @@
+<<set-parent-conclusion, echo=FALSE, cache=FALSE>>=
+set_parent('diss.Rnw')
+@
+
 I will conclude with recommendations for phonotactic modeling, regarding the
 function that we should fit the data to and two of the potential factors, token
 frequency and participation in alternations, that we could use in those models.
 
 I will also discuss SurveyMan and recommendations for running phonotactic
 judgment experiments in a convenient and effective way.
-
-

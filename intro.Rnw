@@ -1,3 +1,7 @@
+<<set-parent-intro, echo=FALSE, cache=FALSE>>=
+set_parent('diss.Rnw')
+@
+
 The goal of this dissertation is to lay groundwork for the further study of phonotactics.
 In Chapter 1, I discuss software that will facilitate the implementation of phonotactic
 experiments. In Chapter 2, I review literature that suggests that any accurate model of

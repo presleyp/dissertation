@@ -1,3 +1,7 @@
+<<set-parent-speriment, echo=FALSE, cache=FALSE>>=
+set_parent('diss.Rnw')
+@
+
 SurveyMan is a desktop application that communicates with Amazon's Mechanical
 Turk survey-running website in order to manage surveys and experiments with
 minimal human intervention. A working prototype exists but it has many

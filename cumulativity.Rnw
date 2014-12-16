@@ -1,3 +1,7 @@
+<<set-parent-cumulativity, echo=FALSE, cache=FALSE>>=
+set_parent('diss.Rnw')
+@
+
 \subsection{Motivation}
 % One of the goals of phonology is to develop predictive models of phonotactics.
 % Such models predict phonotactic judgments of words based on various properties

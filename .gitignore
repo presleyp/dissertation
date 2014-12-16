@@ -1,4 +1,12 @@
-*.aux 
-*.bbl 
+*.aux
+*.bbl
 *.log
 *.blg
+*.Rproj.user/
+*.Rproj
+*-concordance.tex
+*.synctex.gz
+*.tex
+forms/*
+*.sty
+
