@@ -156,7 +156,7 @@ One hundred participants were recruited from Mechanical Turk and paid for their 
 
 Each of 24 test items will appear in four conditions. The four conditions are created by
 crossing two factors: presence of an onset violation and presence of a rime
-violation.  Within an item, the onset violation will be the same whenever it is
+violation. Within an item, the onset violation will be the same whenever it is
 present, and likewise for the rime violation. This way, comparing an item with
 only an onset violation to the same item with both violations shows
 the effect of adding the rime violation. The vowel is held constant across all conditions of an item.
@@ -190,6 +190,20 @@ The experiment was built using Speriment and run using PsiTurk to interact with 
 The task is a two-alternative forced choice task between a test word and a filler word, for 24 trials. In each trial, the participant was asked to choose the more English-like of the two words.
 
 \section{Results}
+
+\subsection{Exclusions}
+Participants were excluded if they were not native speakers of English and if their data was suspect. Native status was determined by answers to two demographics questions: one asking the language they use at home and one asking where people think they are from. I read the answers to these questions and excluded participants whose answers indicated that they are not native speakers of English.
+
+The quality of the data was assessed in a variety of ways.
+
+First, there were four catch trials. These had the same form as other test trials, a two-alternative forced choice between nonce words, but the words consisted of one phonotactically valid word and one word that violates multiple constraints. Whereas none of the fillers are completely acceptable or extremely unacceptable, this choice between extremes should lead to only one reasonable response for each catch trial. Participants who chose any of the extremely unacceptable words were excluded from the analysis. 
+
+Second, I excluded any participant who consistently chose whichever option was on a particular side of the screen. I defined consistently as more than 90\% of test questions.
+
+Third, I excluded any participant who answered any question in under 50ms. In pilot data, the fastest reaction times were over 300ms, so times under 50ms suggest a bot.
+
+
+\subsection{Modeling}
 A mixed effects model was fitted to the results. The dependent variable
 was the proportion of times the test item was chosen. OnsetViolation,
 RimeViolation, and their interaction served as fixed effects. Random
@@ -220,7 +234,9 @@ the two fixed effects. %Bayesian methods will be used in the case of a null effe
 % - if not, what does that mean?
 
 <<cumulativity-analysis >>=
-data = data.frame('cumulativity.csv', sep='\t')
+library(lme4)
+cdata = read.csv('~/dissertation/cumulativity/cumulativity_dataframe.csv')
+model = glmer(SelectedTest ~ OnsetViolation * CodaViolation + TrialNumber + TestPosition + Version + (1|Subject) + (1|Item) + (1|Filler), data = cdata, family = binomial)
 @
 
 \section{Discussion}
