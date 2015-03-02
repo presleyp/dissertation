@@ -79,9 +79,11 @@ with make_experiment(IDGenerator()):
                 train_question,
                 options = [
                     Option(SampleFrom(wordbank, variable = row['stem'], field =
-                        number), correct = True),
+                        number), correct = True, tags = {'Number': number,
+                            'Wordbank': wordbank}),
                     Option(SampleFrom(wordbank, not_variable = row['stem'], field =
-                        number), correct = False)
+                        number), correct = False, tags = {'Number': number,
+                            'Wordbank': wordbank})
                 ],
                 resources = [SampleFrom('pictures', variable = row['stem'], field =
                     number)],
@@ -99,9 +101,11 @@ with make_experiment(IDGenerator()):
                 train_question,
                 options = [
                     Option(SampleFrom(wordbank, variable = row['stem'], field =
-                        number), correct = True),
+                        number), correct = True, tags = {'Number': number,
+                            'Wordbank': wordbank}),
                     Option(SampleFrom(wordbank, variable = row['stem'], field =
-                        other), correct = False)
+                        other), correct = False, tags = {'Number': number,
+                            'Wordbank': wordbank})
                 ],
                 resources = [SampleFrom('pictures', variable = row['stem'], field =
                     number)],
@@ -160,10 +164,12 @@ with make_experiment(IDGenerator()):
 
     test_pages = [Page(
         test_question,
-        options = [Option(row['singular']), Option(row['plural'])],
+        options = [
+            Option(row['singular'], tags = {'Violates': 'voicing',
+                'Segment': row['segment1']}),
+            Option(row['plural'], tags = {'Violates': 'place', 'Segment':
+                row['segment2']})],
         keyboard = True,
-        tags = {'voice_segment': row['segment1'],
-            'nasal_segment': row['segment2']}
         ) for row in test]
 
     test_block = Block(pages = test_pages)
@@ -177,9 +183,9 @@ with make_experiment(IDGenerator()):
     pilot_pages = [Page(
         ["Which of these words do you think is the correct plural for this word? <br><br>",
             row['stem']],
-        options = [Option(row['singular'], tags = {'alternates': 'F', 'segment':
+        options = [Option(row['singular'], tags = {'Alternates': 'F', 'Segment':
             row['segment1']}),
-            Option(row['plural'], tags = {'alternates': 'T', 'segment': row['segment1']})],
+            Option(row['plural'], tags = {'Alternates': 'T', 'Segment': row['segment1']})],
         condition = row['language'],
         keyboard = True
         ) for row in pilot]
