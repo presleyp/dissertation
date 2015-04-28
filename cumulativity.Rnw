@@ -1,7 +1,7 @@
 <<set-parent-cumulativity, echo=FALSE, cache=FALSE>>=
 set_parent('diss.Rnw')
 @
-
+# test edit
 
 <<options-cumulativity, cache=FALSE, include=FALSE>>=
 opts_chunk$set(fig.width=6, fig.height=6, eval=TRUE, echo=FALSE, cache=TRUE, warning=FALSE)
