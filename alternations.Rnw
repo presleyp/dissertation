@@ -2,42 +2,17 @@
 set_parent('diss.Rnw')
 @
 
+% define alternations and their dependence on lexicon?
 
-
-% never mind, bad motivation for this project
-%As (cite Hayes et al, Becker et al) have shown, some sound sequences that are statistically
-%over- or under-represented in the lexicon of a language do not affect judgments in
-%experiments. In other words, constraints that computational models are likely to
-%find and give substantial weight to do not always behave as if they are highly weighted
-%for speakers, and the processes they motivate are not always productive. Although inducing
-%constraints from lexical statistics is fruitful in many cases, this means that additional
-%information is used in the phonological acquisition process. One likely source of information
-%is participation of sequences in alternations. Alternations cause morphologically related
-%words to differ, and their linkage via meaning and parts of their phonological form may make
-%the change, and therefore the sequences that are the inputs and outputs to the change, more
-%salient. These sequences may be more likely to be used as constraints and more likely to
-%get weights of high magnitude --- negative weights in the case of sequences that alternations
-%repair and positive weights in the case of sequences that alternations result in. Alternations
-%may give the learner evidence that the over- and under-representation of sequences involved
-%in alternations is not merely due to chance and should therefore be attended to. Perhaps other
-%constraints are then at a disadvantage relative to these more strongly supported ones. %TODO would that make them less likely to become productive?
-
-% about Gorman
-% Gorman isn't talking about what's productive because he didn't do experiments on judgments of
-% novel words. He's talking about lexical statistics, somewhat ironically. He's basically just
-% saying that the lexical statistics we have show on medial clusters that Pierrehumbert was wrong and that they
-% make sense, there are no surprising gaps that we need to account for with some new insight.
-
-%Another factor that has been claimed to affect likelihood of generalization of
-%a phonotactic pattern is whether the pattern is the input or output to an
-%alternation. Patterns that participate in alternations have direct evidence for
-%being preferred or dispreferred, whereas those that are merely under- or
-%over-represented in the lexicon have evidence only from lexical statistics.
-%\citet{Gorman2013} argues that participation in alternations is key to
-%generalization.
+% review the lit on modeling them together or separate
+% do i have to go back to morpheme structure constraints?
+% OT good for uniting the two
+% yet most phonotactic modeling - Adriaans, Hayes and Wilson, look at others - ignore morphemes and thus alternations
+% if the two are separate, the modeler's job is easier
+% if they're not, it may sometimes still be useful to model phonotactics separately for simplicity, but we need to at least be aware that alternations would change the results and assess results with that in mind
 
 Infants show evidence of knowing phonotactic patterns before they begin
-producing words \citep{Werker1984,Kuhl2006}, and thus it may be the case that
+producing words \citep{Werker1984,Kuhl2006}. Thus, it may be the case that
 the phonotactic grammar is learned independently of alternations, which depend
 on a lexicon. \citet{Adriaans2010}, for instance, developed a phonotactic
 learner based on this assumption. However, it is also possible that infants
@@ -62,7 +37,7 @@ from a sound sequence affects judgments of the grammaticality of that sequence,
 holding the sequence's type frequency in the lexicon constant.
 
 It is difficult to find a case in natural language with these properties in
-order to do a well-controlled test of the idea, so I will use an artificial
+order to do a well-controlled test of the idea, so I use an artificial
 language learning experiment to test the effect of alterations elsewhere in a
 language on identical words.
 
@@ -76,109 +51,235 @@ language on identical words.
     %abstracted away from the lexicon
 %\end{itemize}
 
-The results of this study will inform future modeling as well as theories about
-the interaction between phonotactics and alternations.
-
-
-
 \section{Method}
-%I will modify the Hayes and Wilson learner to reward patterns that are the
-%outputs of alternations and penalize those that are the inputs to alternations.
-%I will compare the performance of this modified learner to that of the original
-%on data from previous phonotactic judgment studies, in order to see whether
-%participation in alternations is a good predictor of the weight of a constraint
-%in a phonotactic grammar.
-
-I will address this question with an experiment in which participants are
+In this experiment, participants are
 trained in an artificial language and then asked for judgments about the probability
 that novel words could belong to the artificial language.
 
+The experiment is based on two constraints, C1 and C2. Two languages are constructed.
+Within each language, I have endeavored to keep phonotactic evidence for each
+constraint constant, as discussed in section \ref{sec:alt-materials}. However,
+alternation-based evidence for the constraints differs: one language shows
+alternations motivated by C1 and offers no opportunities to alternate based on
+C2. The other language is the reverse: it has alternations driven by C2 and no
+evidence either way on alternations driven by C1.
+
+Participants are assigned to one language or the other and trained on it. Then,
+all participants are shown the same test words in a two-alternative forced
+choice task. Each test item is a choice between a word that violates C1, and a
+word that violates C2.
+
+The analysis will look at the effect of training language on test word
+preference. If alternations-based knowledge affects phonotactic knowledge,
+there should be a significant effect of training language on the probability of
+choosing a test word that violates C1: being trained on language 1 should
+decrease the probability of preferring C1 violators, and being trained on
+language 2 should increase the probability of preferring C1 violators. Several
+other scenarios could also produce a significant effect of training language,
+but with different estimates for the effect of language 1 and language 2. These
+other outcomes will be regarded as evidence that the materials are lacking. If
+alternations-based learning does not inform phonotactics, there should be no
+effect of training language on test word preference.
+
 \subsection{Participants}
+%TODO
+One hundred participants were recruited from Mechanical Turk and paid for their
+participation. They were all located in the United States and claimed to be over 18 years old and
+native speakers of English. 
 
-\subsection{Materials}
-Two constraints will be constructed. They will be chosen to be of similar
-levels of attestion in English, segmental length, featural specificity, and
-phonetic naturalness, but perfect control is not necessary due to the
-experimental design. It is, however, necessary that neither be inviolable in
-English, or else the experiment will get ceiling effects. For purposes of exposition
-I will call these constraints *AB and *CD. At least initially, I plan for these constraints
-to actually be *bf and *nf, where the rules are b $\rightarrow$ p / \_f and n $\rightarrow$ m / \_f.
-The rules will apply across syllable boundaries, where these rules are not obligatory in English.
-However, even heterosyllabic instances of these bigrams are uncommon or unattested in English,
-so I will analyze the results for ceiling effects. If needed, I will switch to completely non-English constraints,
-such as vowel harmony and consonant harmony.
+Participants were excluded from the analysis based on native speaker status, whether they seemed to be paying attention, and whether they seemed to have learned the rules in the training session.
 
-Two artificial languages will be constructed. The lexicons of the two languages
-will be as similar as possible, and neither language will allow sequences of AB
-or CD. However, Language 1 will use B as a plural ending, causing alternations
-from AB to XB, while Language 2 will use D as a plural ending, causing
-analogous alternations from CD to YD.  Thus, in Language 1 AB is the
-alternating sequence, and in Language 2 CD is the alternating sequence.
+Native speaker status was assessed as in Experiment 1, based on questions about the language they speak at home and where people think they're from.
 
-Participants will be shown words and definitions from their assigned language
-until they have learned the meanings. They will then be asked to give judgments
-on novel words containing AB and CD.
+Particpants were considered inattentive if they answered too quickly or chose the option on one side of the screen too consistently. Reaction times under 50ms are likely due to bots, so any participants with such short times were excluded. Participants who chose the option on the left or the option on the right more than 90\% of the time were also excluded.
 
-\ex. Languages
-    \a. Both Languages:\\
-    No bf\\
-    No nf\\
-    plural: -fa
-    \b. Language I: b $\rightarrow$ p / \_f
-    \c. Language II: n $\rightarrow$ m / \_f
+In place of catch trials, I further assessed attention and success at the task with a set of questions at the end meant to test whether participants learned the alternations they were trained on as general rules in the language. The final set of questions asks each participant to pluralize a novel word of the language they are learning. The rule they were trained on applies to half of the words in this phase. If they apply the rule to 70\% or more of those words, they are considered to have learned the rule; if not, they are excluded from the analysis.
 
-\ex. Example training words
-    \a. Language I: 
-dela, delafa, vem, vemfa, sirab, sirapfa, \ldots
-    \b. Language II:
-dela, delafa, vem, vemfa, siran, siramfa, \ldots
+\subsection{Materials}\label{sec:alt-materials}
+%TODO wug testing - added fillers - choice between non-alternating sound and its counterpart of the same category (stop, fricative, sonorant) in the inventory. p-t, m-l, s-f. p and t are represented more than m - equal by segment but not by category. however, this should make everyone more likely to learn one language better than the other, rather than the bad thing, which is to make everyone learn their own language better than the other.
+The stimuli for this experiment are based on two constraints. One constraint
+militates against sequences in which voiced obstruents are followed by
+voiceless obstruents; I call this *DT for brevity, but it applies to obstruents
+of any place. The second constraint motivates nasal place assimilation to
+following obstruents. I call this constraint *MT, but again, it applies to any
+sequence of a nasal and an obstruent where their places do not match.
 
-\ex. Example testing words for both languages\\
-malo, kamfin, labfu, \ldots
+Two artificial languages were constructed, one based on each constraint. The
+Devoicing Language has alternations from forms that would violate *DT to forms
+that obey it. The Nasal Assimilation Language has alternations from forms that
+would violate *MT to forms that obey it.  The alternations will all apply across
+syllable boundaries, where these processes are not obligatory in English.  
 
-% Language I: *AB, *CD, A $\rightarrow$ X / \_B
+I call *DT the Devoicing Language's ``own'' constraint and voicing assimilation its ``own'' rule. In contrast, *MT is the Devoicing Language's ``ignored'' constraint and nasal place assimilation is its ``ignored'' rule. The reverse labels apply for the Nasal Assimilation language.
 
-% Language II: *AB, *CD, C $\rightarrow$ Y / \_D
+The languages give no explicit evidence about the status of
+their ignored constraint. They do not have alternations motivated by their
+ignored constraint, but they also do not have words that violate their ignored
+constraint.
+
+The materials were presented orthographically, and there is a note in the instructions saying that
+\textit{ng} is always pronounced as in \textit{singer}, never as in
+\textit{finger} in this language.
 
 
-% Language I rule: b $\rightarrow$ p / \_f
+% TODO inventory
 
-% Language II rule: n $\rightarrow$ m / \_f
 
-% Language I training: singulars and plurals with meanings
 
-% dela, delafa, vem, vemfa, sirab, sirapfa, \ldots
+\subsubsection{Training Materials}
 
-% Language II training: singulars and plurals with meanings
+The two rules, devoicing and nasal assimilation, guided the construction of two sets of nouns. I will refer to them as the devoicing nouns and the nasal assimilation nouns. There are ten nouns for each alternation, for a total of twenty forms including singular and plural. Each alternation is represented by two segments: devoicing applies to \textit{b} and \textit{d} and nasal assimilation applies to \textit{n} and \textit{ng}. The language has no \textit{g}. The two segments representing each rule occur an equal number of times.
 
-% dela, delafa, vem, vemfa, siran, siramfa, \ldots
+Plurals are formed by adding the suffix \textit{fa}, which triggers the devoicing of a preceding voiced obstruent and the place assimilation of a preceding nasal.
 
-% Testing: singulars
+\ex. Example training materials
+\a. Devoicing singular: nemab
+\b. Devoicing plural: nemapfa
+\c. Nasal Assimilation singular: pitang
+\d. Nasal Assimilation plural: pitamfa
 
-% malo, kamfin, labfu, \ldots
+Each language contains the words representing its own rule in both the singular and plural, giving evidence of the rule, and the words representing its ignored rule in only the singular, failing to give evidence of the ignored rule. The inclusion of ignored rule singulars serves as a control on the phonotactic evidence for the language's own constraint and its ignored constraint. This way, the type frequency of the segments that undergo rules (\textit{b}, \textit{d}, \textit{n}, \textit{ng}) is equal across languages both in general and in word-final position. Their token frequencies are not equal due to the design of the experiment, but token frequency is not believed to be directly correlated with phonotactic acceptability \citep{}, so this difference should not affect performance in the test phase.
+
+Aside from the constraint-violating consonants, the nouns constructed for each constraint have the same distribution of segments overall and by word position. The bigram frequencies, however, differ, because avoiding minimal pairs made the words easier to learn. 
+
+Three of the ten nouns for each rule contain stem-medial consonant clusters, in order to show participants that such clusters are legal within a morpheme. Word-medial clusters are used in the test phase to look for evidence of a phonotactic constraint, so it's desirable that they be interpreted as morpheme-internal. %TODO acknowledge Kie
+%TODO examples
+
+\subsubsection{Training Fillers}
+
+Five nouns were constructed to serve as fillers for the training session. They appeared in the singular and the plural for a total of ten words. These words do not violate either constraint and show no alternations. Three of the five nouns have word-medial consonant clusters.
+
+\ex. Training filler example
+\a. Singular: nimol
+\b. Plural: nimolfa
+
+\subsubsection{Test Words}
+Learners of both languages saw the same 20 test items. Each test item is a two-alternative forced choice question where the options are minimal pairs. One option violates *DT and the other violates *MT. The violation is in a word-medial cluster where the second consonant is \textit{f}, but there is no indication that the word is morphologically complex. Thus, the question is about the phonotactic acceptability of the word, not how it should derive from a different form. Each consonant in the inventory that can violate a constraint (\textit{b}, \textit{d}, \textit{n}, \textit{ng}) appears an equal number of times.
+
+\ex. Example test word pair
+\a. Violates *DT: mebfet
+\b. Violates *MT: menfet
+
+%TODO change materials so this is true, then say: each voiced stop is paired with each nasal an equal number of times
+
+\subsubsection{Testing Fillers}
+The test words were accompanied by ten items comparing minimal pairs that violate neither constraint. They are of the same shape as the test items: CVCfVC, where the consonant preceding \textit{f} varied between the two options in the forced choice task.
+
+%TODO remake so none violate either constraint
+
+\ex. Example test filler word pair
+\a. desfong
+\b. detfong
+
+\subsubsection{Catch Trials}
+These items were designed to test whether participants learned the alternation they were trained on during the training session. They consist of two-alternative forced choice questions where a novel singular word is presented and the participant is asked to choose between two forms of its plural. The singulars end in a voiced obstruent or a non-labial nasal, and the answer choices consist of one option that applies a rule and one that does not. Thus, by analyzing the responses to these trials, we can assess whether participants learned the alternation they were trained on, and whether they assumed the alternation they were not trained on. This phase of the experiment does not contain fillers, because it serves as a sanity check rather than as a manipulation. It comes at the end of the experiment to avoid biasing other results.
+
+%TODO examples
+
+\ex. Example Catch Trial Word Pairs
+\a. Testing plural of a devoicing word, \textit{sapod}: \textit{sapodfa}, \textit{sapotfa}
+\b. Testing plural of a nasal assimilation word, \textit{sapong}: \textit{sapongfa}, \textit{sapomfa}
 
 \subsection{Procedure}
-The most straightforward judgment task for this experiment would be asking participants
-to simply answer the yes/no question ``Is this word possible in the language you learned?''
-Thus, in the first run of the experiment, I will ask participants this question for words
-containing AB, CD, XB, and YD, and filler words. However, there is some concern
-that when asked yes/no questions, participants try to balance the number of yeses and nos
-they give. I will instruct them not to do this, but I will also analyze the results of the
-experiment to look for such behavior. If I suspect that such a strategy has been used, I
-will rerun the experiment with a two-alternative forced choice task in which I compare
-words with AB to words with XB and words with CD to words with YD.
+
+Half of participants are assigned to learn the Devoicing Language, and half are assigned to the Nasal Assimilation Language. 
+
+\subsubsection{Training Phase}
+First, there are two training blocks. In each training block, participants see training questions consisting of an image and two words and are asked which word represents the image. The association of a word with an image is constant throughout the experiment but varies across participants.
+
+The training phase was introduced with these instructions: 
+
+\begin{quotation}In this part of the experiment, you will learn words
+from a made-up language. Their meanings will be expressed through pictures.
+
+You will see a picture with two words and be asked to choose which word has the
+meaning shown by the picture. At first you will just be guessing, but that's
+okay. Try to remember the right answer, and you'll get better with practice.
+
+Remember: in this language, "ng" is always pronounced as in "singer", never
+as in "finger".\end{quotation}
+
+Then, each item contained the text:
+\begin{quotation}Which word is represented by this picture?
+\end{quotation}
+
+Training fillers and training words that demonstrate the alternation of the language appear in four questions in the singular and in four questions in the plural. For each wordform, their appearances are as follows:
+
+\begin{itemize}
+\item As the correct answer in comparison with another word having the same number
+\item As the incorrect answer in comparison with another word having the same number
+\item As the correct answer in comparison with the same lexical item with different number
+\item As the incorrect answer in comparison with the same lexical item with different number
+\end{itemize}
+
+Words that are designed to test the ignored rule appear in only the first two kinds questions, because only their singular forms are included.
+
+Thus, there are 20 training filler questions, 80 questions on wordforms showing an alternation, and 20 questions on the singulars constructed for the ignored rule. Each question is followed by a feedback page showing the same image paired with the correct word. Participants retake a block, with newly shuffled question order, until they get at least 80\% of the questions right. 
+
+The learning of word-image mappings is used as a proxy for the learning of the words of the language. This avoids drawing too much attention to the manipulation, in order to discourage puzzle-solving approaches to the experiment. However, it adds to the difficulty of the experiment, as participants need not learn only how to form plurals but also the meanings of various words. The words are divided into two training blocks to facilitate learning, so that participants only need to focus on half the meanings at a time. The classes of words (training fillers, own-rule words, and ignored-rule words) are divided as evenly as possible into the training blocks. The division is done randomly for each participant.
+
+\subsubsection{Testing Phase}
+The testing phase was identical for learners of both languages. Participants were shown 20 test questions, each asking them to choose which of two words better fit the language they had learned. In each test question, the words were minimal pairs, where one word violated the language's own constraint and the other word violated the language's ignored constraint. The test questions were shuffled together with ten filler questions, which posed the same question but provided answer choices that violate neither constraint.
+
+The test phase was introduced with these instructions:
+
+\begin{quotation}
+In this part of the experiment, you will see pairs of new words.
+Based on how each word sounds, decide which one is more likely to belong to the
+language you just learned.
+\end{quotation}
+
+The text for each test question was:
+
+\begin{quotation}Which of these two words is more likely to be a word of the 
+language you just learned?
+\end{quotation}
+
+\subsubsection{Catch Phase}
+The catch phase posed 20 questions, ten for each rule, testing whether the participants learned the rule. 
+
+The catch phase was introduced with these instructions:
+\begin{quotation}
+Now you will see a singular word and be asked
+    which of two words you think is more likely to be the plural for that word
+    in the language you learned.
+\end{quotation}
+
+Each catch question contained the text:
+
+\begin{quotation}
+Which of these words do you think is the correct plural for this word?
+\end{quotation}
+
+The question was followed by a blank line and then a singular word. The answer choices were two plural forms, one which applied an alternation and one which did not.
+
+\subsubsection{Demographics}
+A final block of questions gathered demographic information.
 
 \section{Results}
-The results will be analyzed with a mixed effects model predicting proportion
-of times the banned bigrams are chosen based on the interaction of language learned
-and constraint tested, with random effects for subject and item.
-If there is a significant effect of whether a sequence was an
-alternating sequence on the proportion of times the sequence was chosen in the
-forced choice task, I will conclude that evidence from alternations are used in
-the phonotactic grammar.
-I will look separately at whether the sequence that the rule eliminates is
-especially dispreferred and at whether the sequence that the rule creates is
-especially preferred, as these may yield different answers.
+
+<<alternations-analysis, echo=FALSE, eval=FALSE>>=
+library(lme4)
+adata = read.csv('~/dissertation/alternations/alternations_dataframe.csv')
+
+# code factors for interaction
+# Trained on voicing assimilation: -1
+adata$Permutation[which(adata$Permutation == 0)] = -1
+adata$Language = as.factor(adata$Permutation)
+# voicing constraint at play: -1
+adata$Violates = as.character(adata$Violates)
+adata$Violates[which(adata$Violates == 'Voicing')] = 1
+adata$Violates[which(adata$Violates == 'Place')] = -1
+adata$Violates = as.numeric(adata$Violates)
+
+# center factors
+adata$TrialNumber = adata$TrialNumber - mean(adata$TrialNumber)
+adata$ViolationPosition = adata$ViolationPosition - mean(adata$ViolationPosition)
+
+# looking for interaction between Permutation and Violates
+full_model = glmer(ChoseViolation ~ Permutation * Violates + TrialNumber + ViolationPosition + (1|Subject) + (0 + Permutation|Subject) + (0 + Violates | Subject) + (0 + Permutation:Violates|Subject) + (1|Item) + (0 + Permutation|Item) + (0 + Violates | Item) + (0 + Permutation:Violates|Item), data = adata, family = binomial(link="logit"), glmerControl(optCtrl=list(maxfun=20000), optimizer = "bobyqa" ) )
+summary(full_model)
+@
 
 \section{Discussion}
 % it would also be interesting to do this where each language violated the constraint in
