@@ -2,20 +2,19 @@
 set_parent('diss.Rnw')
 @
 
-The goal of this dissertation is to lay groundwork for the further study of phonotactics.
-In Chapter 1, I discuss software that will facilitate the implementation of phonotactic
-experiments. In Chapter 2, I review literature that suggests that any accurate model of
+The goal of this dissertation is to advance the state of the art of research in constraint-based phonotactics. It takes a two-pronged approach: a technological contribution intended to facilitate
+future research, and experiments which seek to shed light on high-level questions about the properties of phonotactic models that can guide the development of theoretical work. 
+
+The technological contribution is a software package called Speriment which allows experimenters to create and run experiments over the internet without advanced programming techniques. This software is particularly well suited to the kinds of experiments often run in phonotactic research, but can also be used for experiments in other domains of linguistics and the social sciences. It is hoped that this software will make it faster and easier to conduct phonotactic and other experiments as well as encourage experimenters to increase the reproducibility and transparency of their research.
+
+The experiments presented here address questions are theory- but not framework-neutral. That is, they apply to constraint-based frameworks for theories of phonotactics, with the first study seeking to distinguish between two such frameworks, Harmonic Grammar and Maximum Entropy, while the second investigates whether phonotactic knowledge is independent of knowledge of phonological alternations. These coarse-grained questions about phonotactic knowledge --- how pieces of phonotactic knowledge interact with each other and with another part of the grammar --- are intended to add to the groundwork on which phonotactic models and models of all phonological knowledge are built. Their findings have implications for which constraint-based frameworks should be used to couch future theories and how these theories can be reliably tested.
+
+In Chapter 1, I discuss Speriment's features and how it is used as well as compare it with other similar packages, each of which have different strengths and weaknesses. 
+In Chapter 2, I review literature that suggests that any accurate model of
 phonotactics must allow for the accumulation of violations, so that the grammaticality of
 a word depends on all of the violations it contains. I present an experiment with the
 ability to refine this statement by investigating how additional violations affect the
 grammaticality of the word, weighing on the question of whether linear Harmonic Grammar
 or Maximum Entropy grammar is a better model for phonotactics.
-In Chapter 3, I ask whether variables not usually considered could affect phonotactics and
-need to be included in future modeling. First, I consider that token frequency might correlate
-negatively with the weight of a constraint in a grammar, rather than being unrelated. Second,
-I consider whether a constraint may have a higher weight in the phonotactic grammar if it is
-active in alternations than if it is not. Thus, the dissertation does not propose a particular
-model of phonotactics, but aims to narrow the space of models that need to be considered
-in the future via empirical investigation, and increase the speed and accuracy of future experimental work in the field.
-
-
+In Chapter 3, I consider whether a constraint may have a higher weight in the phonotactic grammar if it is
+active in alternations than if it is not. The effect of alternations is not usually accounted for in phonotactic models but may be quite important.

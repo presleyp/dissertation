@@ -1,9 +1,11 @@
-\documentclass{report}
+\documentclass{umassthesis}
 
 \usepackage{pifont}
 \usepackage{natbib}
+\usepackage{tipa}
 \usepackage{linguex}
 \usepackage{graphicx}
+\usepackage{hyperref}
 
 \author{Presley Pizzo}
 \title{Properties of a Phonotactic Theory}
@@ -11,16 +13,52 @@
 \begin{document}
 
 <<options, cache=FALSE, include=FALSE>>=
-opts_chunk$set(fig.width=6, fig.height=6, eval=TRUE, echo=FALSE, cache=TRUE, warning=FALSE)
+opts_chunk$set(fig.width=4, fig.height=4, eval=TRUE, echo=FALSE, cache=TRUE, warning=FALSE)
 opts_knit$set(self.contained=FALSE, concordance=TRUE)
 Sys.setenv(TEXINPUTS="/Users/presley/dissertation/",
            BIBINPUTS="/Users/presley/Library/texmf/bibtex/bib/",
            BSTINPUTS="/Users/presley/dissertation/")
 @
 
+\title{Something Something Phonotactics}
+\author{Presley Pizzo}
+\date{February 2016} % The date you'll actually graduate -- must be
+                     % February, May, or September
+\copyrightyear{2015}
+\bachelors{B.A.}{Emory University}
+\committeechair{Joe Pater}
+\firstreader{Kristine Yu}
+\secondreader{Brian Dillon}
+\thirdreader{Emery Berger}
+%\fourthreader{}   % Optional
+%\fifthreader{}            % Optional
+%\sixthreader{}            % Optional
+\departmentchair{John Kingston} % Uses "Department Chair" as the title. To
+% use an alternate title, such as "Chair", use \departmentchair[Chair]{Pete Shearer}
+\departmentname{Linguistics}
+\degree{Doctor of Philosophy}{Ph.D.}
+\frontmatter
 \maketitle
+\copyrightpage     %% not required for an M.S. thesis
+\signaturepage
+%% Acknowledgements are optional...yeah, right.
+\chapter{Acknowledgments}             % Acknowledgements page
+  
+%%
+%% Abstract is MANDATORY. -- Except for MS theses
+\begin{abstract}                % Abstract
+\end{abstract}
 
-\chapter{Introduction}
+%% Table of contents is mandatory, lists of tables and figures are 
+%% mandatory if you have any tables or figures; must be in this order.
+\tableofcontents                % Table of contents
+\listoftables                   % List of Tables
+\listoffigures                  % List of Figures
+
+\mainmatter   %% <-- This line is mandatory
+
+
+\unnumberedchapter{Introduction}
 <<intro, child='intro.Rnw'>>=
 @
 
@@ -36,15 +74,23 @@ Sys.setenv(TEXINPUTS="/Users/presley/dissertation/",
 <<alternations, child='alternations.Rnw'>>=
 @
 
-\chapter{Simulation: Effect of Token Frequency on Phonotactics}
-<<frequency, child='frequency.Rnw'>>=
-@
-
 \chapter{Conclusion}
 <<conclusion, child='conclusion.Rnw'>>=
 @
 
+
+\appendix
+\chapter{Experiment 1 Stimuli}
+<<appendix1, child='appendix1.Rnw'>>=
+@
+\chapter{Experiment 2 Stimuli}
+<<appendix2, child='appendix2.Rnw'>>=
+@
+
+\backmatter  %% <--- mandatory
+\interlinepenalty=10000  % prevent split bibliography entries
 \bibliographystyle{apalike}
+%\bibliographystyle{umassthesis}
 \bibliography{software,HG,phonology}
 
 \end{document}
