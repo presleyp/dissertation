@@ -1,0 +1,1267 @@
+\documentclass{phonologyproceedings}
+
+\usepackage{pifont}
+\usepackage{natbib}
+\usepackage{tipa}
+\usepackage{linguex}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{fancyvrb}
+\usepackage[hidelinks]{hyperref}
+
+\author{Presley Pizzo and Joe Pater}
+\title{Does Learning Alternations Affect Phonotactic Judgments?}
+\institution{University of Massachusetts Amherst}
+\completed{March 22, 2016}
+\copyrightyear{2016}
+
+\begin{document}
+
+\maketitle
+
+<<options, cache=FALSE, include=FALSE>>=
+opts_chunk$set(fig.width=4, fig.height=4, eval=TRUE, cache=FALSE, echo=FALSE, message=FALSE, warning=FALSE)
+opts_knit$set(self.contained=FALSE, concordance=TRUE)
+Sys.setenv(TEXINPUTS="/Users/presley/dissertation/",
+           BIBINPUTS="/Users/presley/Library/texmf/bibtex/bib/",
+           BSTINPUTS="/Users/presley/dissertation/")
+@
+\section{Background}
+
+%     Phonological generalizations can be divided into two types: phonotactic
+%     generalizations and alternations. Phonotactic generalizations are true of the
+%     words in the lexicon when they are treated as meaningless strings with no
+%     relationships to each other. For instance, one could say that a language has no
+%     word-final voiced obstruents, or no falling sonority onsets. Alternations, on
+%     the other hand, require reference to the relationships between words. When two
+%     words share a morpheme, and that morpheme takes a different phonological form in one word than in the
+%     other, we say that the morpheme alternates. For instance, the English plural
+%     suffix alternates among the forms [s], [z], and [\textipa{1z}].
+%     Phonotactics are often referred to as static generalizations because they are
+%     true of forms without any transformations needing to occur, whereas
+%     alternations are referred to as processes, implemented via rules, under the view that underlying forms
+%     change via these processes into their surface forms, and the application of
+%     different processes or the application versus the non-application of a process
+%     produces the different alternants of the morpheme.
+
+    It has long been recognized that the phonotactics and alternations of a
+    language share some generalizations in common. For instance, Russian words
+    lack obstruent sequences that disagree in voicing, and also has voicing
+    assimilation alternations to prevent the creation of such sequences
+    \citep{jakobson_mutual_1978}.  
+    \citet{SPE} advocated against redundantly
+    representing these generalizations in favor of encoding them as rules that
+    apply both across forms of a morpheme and ``internally to a lexical item''
+    (p.~382). Similarly, Kisseberth notes that morpheme structure
+    conditions, that is, phonotactic generalizations, often effect the same
+    result as some of the rules in a language (Kisseberth, 1970:294).
+    \nocite{Kisseberth1970a}
+    %Furthermore, Kisseberth showed that multiple rules can participate in a
+    %``conspiracy'' in which they all result in maintaining the same existing
+    %phonotactic generalization in the language. He described a
+    %conspiracy in Yawelmani, in which four generalizations participated in a
+    %conspiracy to avoid triconsonantal clusters: no morphemes contain them
+    %underlyingly, a vowel epenthesis rule avoids them, and two consonant
+    %deletion rules avoid them. 
+    In order to capture the insight that multiple generalizations
+    are driven by one force, %such as a constraint *CCC
+    %or *\textsc{ComplexCoda}, 
+    we must assume that phonotactics and alternations
+    are encoded in the same grammar.% and share such a constraint. Otherwise, we
+    %can trace the three alternations back to one source, but we can't unify the
+    %cause of the alternations with the cause of the phonotactic generalization.
+    Optimality Theory \citep{Prince1993/2004} formalizes this insight by using
+    one set of constraints to model both phonotactics and alternations.
+
+    % typology
+    However, there are
+    also cases where phonotactics and alternations do not work towards the same end
+    results, but instead alternations avoid surface forms that are phonotactically
+    acceptable. For instance, \citet{pierrehumbert_statistical_2006} shows that the
+    velar softening rule in English generalizes to novel Latinate-sounding
+    words, such as [\textipa{klEmIk}] $\sim$ [\textipa{kl@mIs1Ri}]. In addition to her
+    arguments that velar softening is not phonetically grounded, she shows that it
+    does not generalize to Germanic-sounding words such as [\textipa{blEk}] $\sim$
+    [\textipa{blEk1Ri}], indicating that the alternations in the Latinate words is not
+    necessarily required by the phonotactics. %This can be interpreted as showing that
+    %alternations behave differently from phonotactics, or motivate more complex
+    %representations of the phonotactics of English.
+    
+%     Similarly, derived environment effects occur when a process
+%     applies only in derived contexts, that is, contexts in which some other process
+%     has applied or an affix has been added \citep{Kiparsky1973a,Mascaro1976,Wolf2008}. 
+%     Thus, the phonotactic system tolerates
+%     sequences in underived environments that alternations eliminate in derived
+%     environments.
+
+%     Another phenonemon that demonstrates some independence between alternations and
+%     phonotactics is derived environment effects.  First discussed in generative
+%     phonology by \citet{Kiparsky1973a,Mascaro1976} and reviewed in
+%     \citet{Wolf2008}, derived environment effects occur when a process
+%     applies only in derived contexts, that is, contexts in which some other process
+%     has applied or an affix has been added. Thus, the phonotactic system tolerates
+%     sequences in underived environments that alternations eliminate in derived
+%     environments.  These effects have been analyzed in OT-based theories, however
+%     \citep{Lubowicz2002, McCarthy2003a, van_oostendorp_derived_2007,
+%     Wolf2008, anttila_derived_2009}; depending on the types of constraints
+%     allowed and the relationships between inputs and outputs, it is possible to
+%     handle this apparent divergence between phonotactics and alternations in a
+%     system that derives both from one constraint set.
+
+%     The reverse situation is also observed, where monomorphemic words do not
+%     have a particular sequence, suggesting a phonotactic ban, but that sequence
+%     is permitted at morpheme boundaries. \citet{martin_grammars_2011} gives two
+%     examples: Navajo sibilant harmony is respected in roots but can be violated
+%     in compounds containing multiple roots
+%     \citep{sapir_phonology_1967,young_navajo_1980}, and geminates are banned
+%     within morphemes in English but can occur across morpheme boundaries
+%     \citep{hammond_phonology_1999}. 
+    
+    %Depending on theoretical assumptions, these
+%     multimorphemic words may also be subject to the phonotactic system, but they
+%     are a place where we might expect alternations to bring surface forms into
+%     line with the phonotactic generalizations that are true of single
+%     morphemes, as they so often do. Martin shows, however, that these languages
+%     exhibit a tendency to respect the phonological constraints across morpheme
+%     boundaries, even though there are exceptions, and demonstrates that a
+%     Maximum Entropy learner can account for this loose coupling between
+%     tautomorphemic and heteromorphemic constraints.
+
+%     Thus, it is difficult to draw conclusions from the
+%     typology alone about the degree of interaction between the two types of
+%     knowledge.
+
+    % acquisition
+%     The evidence from acquisition offers support, albeit weak, for the view that
+%     phonotactics and alternations are independent. 
+%     At nine months of age, infants
+%     show sensitivity to the phonotactic generalizations of their native language.
+%     They can distinguish native words from foreign words
+%     \citep{jusczyk_infants_1993}, phonotactically acceptable nonwords from
+%     phonotactically unacceptable nonwords \citep{friederici_phonotactic_1993}, and
+%     words that are more probable in their language from words that are less
+%     probable in their language \citep{jusczyk_infants_1994}. However, at this stage
+%     they do not seem to be able to acquire alternations. 
+%     \citet{white_rapid_2008}
+%     show that at 8.5 months of age, infants distinguish sequences in an artificial
+%     language based on their transitional probabilities, but do not treat alternants
+%     of a morpheme as ``the same'' morpheme when transitional probabilities are not
+%     available as a cue. In contrast, they found that 12 month old infants do treat
+%     alternants of the same morpheme differently from unrelated morphemes,
+%     suggesting in this time window, infants develop the ability to learn
+%     alternations.
+% 
+%     That alternations are acquired later than phonotactics is to be
+%     expected, as phonotactic knowledge can be learned from the speech stream, while
+%     alternations depend on lexical knowledge \citep{Hayes2004d,Adriaans2010}. It is possible that once
+%     alternations are learned, they are encoded in the same grammar as the
+%     phonotactics. However, we might expect that if the two share a grammar, infants
+%     would behave as if they know alternations that are motivated by a phonotactic
+%     generalization that they have learned.
+
+    \citet{Pater2003a} investigated the relationship between phonotactics and
+    alternations in adults, by asking whether knowledge of a phonotactic
+    generalization affected the ease with which an alternation is learned.  If the
+    two kinds of knowledge are held in the same system, then an alternation
+    motivated by a known phonotactic generalization should be easier to learn than
+    one motivated by a previously unsupported phonotactic generalization.  They
+    found that this was the case, offering support for the view that phonotactics
+    and alternations are either encoded in the same grammar or have a pathway for
+    sharing information. They note, however, that another interpretation of their
+    results is possible: the alternation not supported by English phonotactics is
+    not only novel to English, but phonetically unmotivated. If speakers are biased
+    towards learning phonetically grounded generalizations (see for instance
+    \citet{Becker2011}, c.f.~\citet{Hayes2009}), this alternation may have been
+    harder to learn for that reason rather than because it lacked support from the
+    phonotactic system.
+
+    Even if their result is due to communication between the systems encoding
+    phonotactics and alternations, their experiment investigated only one direction
+    of communication: from phonotactics to alternations. Thus, the question of
+    whether alternation-based knowledge affects phonotactics remains open.
+
+    This question is relevant to the way work in phonotactic modeling is carried out.
+    Often, phonotactic models are built to ignore morphemic and lexical information,
+    learning phonotactic generalizations in the absence of alternations \citep{Coleman1997,
+    Bailey2001, Vitevitch2004, Albright2009}. This has also been
+    true of some constraint-based models in the Optimality Theory tradition. 
+%     \citet{Adriaans2010}
+%     model the acquisition of phonotactics from the unsegmented speech stream, as a proof
+%     of concept of how infants may learn phonotactics and use it to help them learn words.
+%     In this case, learning alternations would be beside the point, as the goal is to demonstrate
+%     the learning of phonotactics when lexical information is not available.
+    For instance, \citet{Hayes2008} model the induction of phonotactic constraints from words, but these words
+    are not associated with meanings or broken into morphemes, so alternations are not
+    represented. As this learner is used to model adult data, and has been used to assess
+    the learnability of phonotactic generalizations given the lexicon of a language \citep{Daland2011},
+    it is important to know whether its omission of the influence of alternations on constraint identities
+    and weights is an accurate representation of reality or a simplification.
+
+    There are also constraint-based models of learning in the Optimality Theory family that assume that alternations
+    and phonotactics do interact \citep{Tesar2004,Jarosz2006}. In this case, it is also important to know
+    whether the flow of information the models depend on is actually possible and should be appealed to
+    in order to explain empirical findings.
+
+%     If no evidence is found for the effect of alternation-based data on phonotactic
+%     knowledge, researchers modeling phonotactics would be justified in abstracting
+%     away from morphological data, simplifying the modeling process. If, on the
+%     other hand, such evidence is found, it would motivate new work in phonotactic
+%     modeling and underscore the utility of theories that capture conspiracies
+%     across the two domains. %Thus, it is of considerable interest whether
+    %information from alternation data affects the phonotactic grammar.
+
+\section{Experiment 1}
+    % why artificial language
+    In order to address this gap in our understanding of the interaction of parts
+    of the phonological grammar, we conducted an experiment to test whether learning
+    an alternation affected participants' phonotactic judgments on underived words.
+    It is difficult to find a case in natural language with the properties
+    necessary to do a well-controlled test of this nature, because the phonotactic
+    evidence for the generalization must be controlled in order to test the effect
+    of the alternation. Thus, we use an artificial language learning paradigm.
+
+
+
+    \subsection{Method}
+        In order to test whether alternations affect phonotactics, this experiment
+        manipulated alternation-based evidence while keeping phonotactic evidence
+        constant.
+
+        Two constraints were constructed: one against a voiced obstruent followed by a
+        voiceless obstruent (specifically [f]), referred to as *DF, and one against a nasal followed by an obstruent of a different place (also [f]), referred to as *MF.
+        One rule was constructed to repair each constraint: disagreement in voicing is
+        repaired by devoicing the first obstruent (Devoicing), and place disagreement is repaired by changing
+        the place of the nasal (Place Assimilation).
+
+%         The formal definitions of the constraints are given below along with short names
+%         for them. These names are not conventional but match their use in the artificial language,
+%         to make the experimental design easier to follow. As will be shown below, the second segment in
+%         any constraint violation in the artificial language is always [f].
+% 
+% 
+%         \ex. *DF\\
+%         \begin{math}
+%         *
+%         \left[
+%           \begin{array}{l}
+%           +\mbox{voice}\\
+%           -\mbox{sonorant}
+%           \end{array}
+%         \right]
+%         \left[
+%           \begin{array}{l}
+%           -\mbox{voice}\\
+%           -\mbox{sonorant}
+%           \end{array}
+%         \right]
+%         \end{math}
+% 
+%         \ex. *NF\\
+%         \begin{math}
+%         *
+%         \left[
+%           \begin{array}{ll}
+%           \mbox{$\alpha$} \mbox{place}\\
+%           -\mbox{continuant}\\
+%           +\mbox{sonorant}
+%           \end{array}
+%         \right]
+%         \left[
+%           \begin{array}{l}
+%           \mbox{$\beta$} \mbox{place}\\
+%           -\mbox{sonorant}
+%           \end{array}
+%         \right]
+%         \end{math}
+% 
+%         Two rules were constructed, each motivated by one of the constraints.
+% 
+%         \ex. Devoicing\\
+%         \begin{math}
+%         \left[
+%           \begin{array}{l}
+%           +\mbox{voice}\\
+%           -\mbox{sonorant}
+%           \end{array}
+%         \right]
+%         \rightarrow
+%         \left[
+%           \begin{array}{l}
+%           -\mbox{voice}\\
+%           -\mbox{sonorant}
+%           \end{array}
+%         \right]
+%         / \_
+%         \left[
+%           \begin{array}{l}
+%           -\mbox{voice}\\
+%           -\mbox{sonorant}
+%           \end{array}
+%         \right]
+%         \end{math}
+% 
+%         \ex. Place Assimilation\\
+%         \begin{math}
+%         \left[
+%           \begin{array}{l}
+%           \mbox{$\alpha$} \mbox{place}\\
+%           -\mbox{continuant}\\
+%           +\mbox{sonorant}
+%           \end{array}
+%         \right]
+%         \rightarrow
+%         \left[
+%           \begin{array}{l}
+%           \mbox{$\beta$} \mbox{place}\\
+%           -\mbox{continuant}\\
+%           -\mbox{sonorant}
+%           \end{array}
+%         \right]
+%         / \_
+%         \left[
+%           \begin{array}{l}
+%           \mbox{$\beta$} \mbox{place}\\
+%           -\mbox{sonorant}
+%           \end{array}
+%         \right]
+%         \end{math}
+
+        Voicing assimilation and place assimilation are differently supported by the
+        English lexicon and the productive processes of English \citep{Kiparsky1985,Jun2004,darcy_phonological_2009}. 
+%         While regressive
+%         devoicing is attested in the world's languages, and adult English
+%         speakers have been shown to perceptually compensate for its use to a
+%         small degree \citep{darcy_phonological_2009}, it is not an active
+%         process in English. In contrast, regressive nasal place assimilation is an
+%         optional process in compounds and phrases of English, and is obligatory
+%         within words and Level 1 derivations \citep{Kiparsky1985}, as reflected in
+%         the orthography of \textit{impossible}. However, this
+%         process is less likely to happen when the trigger is a fricative; compare
+%         \textit{impossible} to \textit{infernal}. Nor does English assimilate velar
+%         nasals to labial place \citep{Jun2004}. 
+        %As a result, we can expect variability
+        %in participants' learning of both processes --- that is, neither rule is
+        %expected to be unlearnable or applied without exception. 
+        %The rules are not
+        %equally learnable for English speakers, but 
+        However, the design of the experiment does
+        not require them to be equally learnable, as the experiment is designed to test the interaction
+        between the rule participants are trained on and the constraint they are tested on,
+        rather than a main effect of the rule.
+
+        These constraints and rules guided the construction of words in an artificial
+        language. The language has a plural suffix -[fa], and singular nouns have no
+        suffix. When pluralization is applied to stems ending in voiced obstruents,
+        which in this language include only [b] and [d], *DF is violated and Devoicing
+        applies. When pluralization is applied to stems ending in non-labial nasals,
+        which in this language include [n] and [\textipa{N}], *NF is violated and Place
+        Assimilation applies.
+
+        The experiment has a between-participants design, where the participants are
+        divided into two groups and each exposed to a different exposure and training
+        phase. The test phase is the same across these two treatments.
+
+        Neither treatment sees any violations of either constraint. However, each
+        treatment only sees direct evidence for one rule. Thus, for each treatment
+        there is an \textit{active rule} and a \textit{hidden rule}. For a given
+        treatment, participants are shown both the singular and plural form of stems
+        that undergo the active rule, but only a singular or a plural for each stem
+        that would undergo the hidden rule. Thus, the application of the hidden rule is
+        neither confirmed nor denied. There is phonotactic evidence for the constraint
+        that motivates the hidden rule, because of the lack of violations of it
+        throughout the language, but there is no alternation-based evidence for the
+        hidden rule.
+
+        The test phase then poses two-alternative forced choice questions concerning
+        both constraints. For each constraint, there are questions pitting an
+        apparently stem-internal violation of the constraint against a word that
+        satisfies the constraint. Specifically, the constraint-satisfying word is
+        identical to the constraint-violating word except for the first segment of the
+        constraint violation --- it is as if the rule has applied to repair the
+        violation.
+
+        The dependent variable measured in this experiment is the probability of
+        choosing a constraint-violating word in the test phase. If alternation-based
+        evidence can affect one's phonotactic grammar, there should be an interaction
+        between the treatment a participant is given and the constraint being tested,
+        so that when participants are trained to apply a certain rule, they disprefer
+        violations of the constraint that motivates that rule more than participants
+        who were not trained to apply that rule.
+
+
+        \subsubsection{Participants}
+            One hundred participants were recruited from Mechanical Turk and paid for their
+            participation. They were all located in the United States and claimed to be
+            over 18 years old and native speakers of English. As in Experiment 1, participants
+            were only run during the hours of noon and 5pm Eastern time on weekdays. Participants
+            were paid \$2.25, as the experiment was predicted to take up to 15 minutes.
+
+            Participants were excluded from the analysis based on native speaker status,
+            whether they seemed to be paying attention, and whether they seemed to have
+            learned the rules in the training session.
+
+            Native speaker status was assessed as in Experiment 1, based on questions about
+            their native language and the language they speak at home. No participants were
+            excluded on this basis, as all responded that they are native and regular speakers of English.
+
+            Participants were considered inattentive if they answered too quickly or chose
+            the option on one side of the screen too consistently. Reaction times under
+            50ms are likely due to bots, so any participants with such short times were
+            excluded. Participants who chose the option on the left or the option on the
+            right more than 90\% of the time were also excluded. These criteria were
+            applied and one participant was excluded based on answer speed.
+
+            In place of catch trials, we further assessed attention and success at the task
+            through participants' performance in the training phase. The training phase
+            repeated a maximum of five times. If they did not correctly answer 80\% of the
+            graded questions in a training round before getting to the fifth round, they
+            were assumed to have not learned to apply the rule their language supports, and
+            were excluded from the main analysis. Thirty-six participants were excluded on this
+            basis.
+
+            In total, 63 participants were included in the analysis.
+
+        \subsubsection{Inventory}
+            The words of the artificial language used in this experiment were presented
+            orthographically. The inventory of the language consisted of the following
+            letters:
+
+            \ex. Inventory
+            \a. Trigger for both constraints: \textit{f}
+            \b. Triggers for *DF: \textit{b}, \textit{d}
+            \c. Repairs for *DF: \textit{p}, \textit{t}
+            \d. Triggers for *NF: \textit{n}, \textit{ng}\footnote{Participants were
+            instructed that in this language, \textit{ng} is always pronounced as in \textit{singer}, never
+            as in \textit{finger}.}
+            \e. Repair for *NF: \textit{m}
+            \f. Others: \textit{l}, \textit{s}, \textit{a}, \textit{e}, \textit{i}, \textit{o}, \textit{u}
+
+        \subsubsection{Exposure Phase}
+            The first phase of the experiment after instructions were given was the
+            exposure phase. The purpose of this phase was to begin teaching the
+            participants the phonotactic patterns and the active rule without yet testing
+            their memory. The task in this phase was to simply type the word or words of
+            the artificial language that were displayed on the screen.
+
+            This phase consisted of three kinds of items: singular only, plural only, and
+            singular-plural. The singular-only items showed a singular noun from the
+            artificial language. There were ten of these items, and their words all ended
+            in triggers for the hidden rule.
+
+            The plural-only items, of which there were also ten, showed a plural noun that
+            ended in a repair for the hidden rule. However, the stems used in singular-only
+            items were never used in plural-only items. Thus, the evidence was consistent
+            with the use of the hidden rule, but did not prove its application.
+
+            The singular-plural items, on the other hand, showed a singular noun and the
+            plural version of that same noun. There were fifteen of these: ten showing the
+            active rule, and five showing non-alternating stems. The items showing the
+            active rule had a stem ending in a segment that triggers the active rule, and
+            its plural form, showing that the active rule had applied. For instance, if the
+            active rule was Devoicing, the singular would end in \textit{b} or \textit{d},
+            and the stem of the plural would end in \textit{p} or \textit{t}, respectively.
+
+            The items showing the non-alternating words had stems ending in \textit{p},
+            \textit{t}, \textit{m}, \textit{l}, or \textit{s}. Their plurals violated no
+            constraints and thus consisted of the faithful stem and the suffix
+            -\textit{fa}.
+
+            \ex. Exposure stimuli examples when Devoicing is the active rule
+            \a. Singular-only (10): \textit{lobon}
+            \b. Plural-only (10): \textit{funemfa}
+            \c. Singular-plural, faithful (5): \textit{teldus - teldusfa}
+            \d. Singular-plural, alternating (10): \textit{nemab - nemapfa}
+
+            \ex. Exposure stimuli examples when Place Assimilation is the active rule
+            \a. Singular-only (10): \textit{nemab}
+            \b. Plural-only (10): \textit{funepfa}
+            \c. Singular-plural, faithful (5): \textit{teldus - teldusfa}
+            \d. Singular-plural, alternating (10): \textit{lobon - lobomfa}
+
+            The exposure stimuli were generated using a CV(C)CVC template. The consonants
+            of the inventory were evenly distributed over the stimuli in the first
+            consonantal slot and also in the second mandatory consonantal slot, with the
+            exception that word-initial \textit{ng} was swapped with the consonant that had
+            been placed in that word's second onset, to avoid distracting participants with
+            an ungrammatical word-initial \textit{ng}. The optional medial consonant was
+            placed in two of the singular-plural faithful stimuli and three of the
+            singular-plural alternating stimuli (for each kind of alternation), in order to
+            show participants that word-internal consonant clusters are allowed in this
+            language, since they appear in the test words. They always consist of
+            consonants that are not triggers for a specific rule, so that their presence
+            doesn't influence answers to the test questions. The final consonant is
+            dictated by the type of stimulus, as it is the one that may undergo rule
+            application. Both vowel slots were filled by evenly distributing the vowels of
+            the inventory over words and positions. The stimuli used in other portions of
+            the experiment were generated similarly: positions whose identities were not
+            dictated by the needs of the experimental design were filled via uniform
+            distribution of sounds from the inventory, except that \textit{ng} was kept
+            out of word-initial position.
+
+            The instructions at the beginning of the exposure block were as follows:
+
+            \begin{quote}
+            In this part of the experiment, you will learn words
+from a made-up language.
+
+Sometimes you'll see one word, and sometimes you'll see two: the
+singular version of the word first, and then the plural version.
+
+To help yourself catch on to this new language, type the words you see into the
+text box. We recommend pronouncing them out loud, too. In this
+language, ``ng'' is always pronounced as in ``singer'', never as in ``finger''.
+\end{quote}
+
+            Each exposure question had the following text: ``Please write this
+            word in the text box and pronounce it to yourself:'' followed by
+            one word or an appropriately pluralized version of that text followed
+            by a singular-plural pair of words in the format ``lobon - lobomfa''.
+            Below was a text box. No pictures or meanings were given to
+            indicate the number of the nonce words, but as participants saw
+            singular-plural pairs in their predictable order, they may have
+            been able to recognize the plural suffix elsewhere.
+
+            The materials were generated and then read into a Python script that used Speriment
+            to generate a website that was then launched on Mechanical Turk using PsiTurk.
+
+        \subsubsection{Training Phase}
+
+            After the exposure phase, participants went through a training phase. The goal
+            of this phase was to ensure that participants had learned the active rule. The
+            task was to choose the correct of two plural forms for a given singular form.
+
+            The phase consisted of thirty items: ten for the active rule, ten for the hidden
+            rule, and ten for non-alternating fillers.
+
+            The instructions for this phase were as follows:
+            \begin{quote}
+Now we'll focus on learning singulars and plurals a bit
+more. You'll see the singular version of a word and two possible plurals. Choose
+the one you think is correct for this language. Sometimes you'll then be given
+the correct answer afterwards, to help you learn. Other times you won't see how
+you did.
+
+The length of this phase depends on your accuracy. We've found that people who
+take their time on these questions actually finish this phase \textbf{much
+faster} than those who rush through the questions. Take your time and pronounce the correct
+answers out loud when they're given to help you learn how this language
+sounds.
+\end{quote}
+
+            The active rule items showed a singular noun ending in a trigger for the active
+            rule, and presented two potential plural forms: one applying the active rule
+            and one failing to apply it.  The participant's response was considered correct
+            if he or she chose the form which applied the rule. Correct responses were followed
+            by a page saying ``Correct!'' and showing the correct singular-plural pair.
+            Incorrect responses were followed by a page saying ``No, the correct pairing is'' followed by
+            the correct singular-plural pair.
+
+            The filler items showed a singular noun ending in \textit{l} or \textit{s} and
+            presented a plural form with a faithful stem and a plural form where the final
+            consonant of the stem had been changed from \textit{l} to \textit{s} or vice
+            versa. The faithful choice was considered correct. The responses were followed by the same
+            kind of feedback as described for the active rule items.
+
+            The hidden rule items showed a singular noun ending in a trigger for the hidden
+            rule and two options for its plural, one with a faithful stem and one having
+            undergone the hidden rule. The participants are not taught whether the hidden
+            rule applies or not, so no feedback was given for these items and they were not
+            considered correct or incorrect.
+
+            The participant's score on the active rule and filler items was calculated by
+            Speriment \footnote{https://github.com/presleyp/Speriment}. If the participant had answered less than 80\% of the graded
+            questions correctly, the training block would repeat, with the question order
+            newly shuffled. This would continue until either the participant passed the
+            80\% mark or the block ran five times, at which point the participant would
+            continue on to the testing phase.
+
+        \subsubsection{Testing Phase}
+
+            The testing phase was intended to test phonotactic judgments of both
+            constraints. It was identical for participants in both treatments. The task was
+            to choose which of two words sounded more like it belonged in the artificial
+            language. The two words were minimal pairs. Neither contained a plural suffix;
+            rather, both had an \textit{f} in the middle of the word. The words differed in the segment
+            preceding the \textit{f}. In fillers, they differed randomly. In test items,
+            one of the options would have a segment that triggered a given constraint and the
+            other option would have a segment that repaired that constraint.
+
+            \ex. Example options on a test item for *DF (20)
+            \a. madfas
+            \b. matfas
+
+            \ex. Example options on a test item for *NF (20)
+            \a. mangfas
+            \b. mamfas
+
+            \ex. Example options on a filler item (10)
+            \a. sulfen
+            \b. susfen
+
+            As you can see in the examples above, the same word frames were used to create
+            test items for both constraints, while different ones were used for fillers.
+            For each constraint, there are two triggering segments. Each triggering segment
+            was used in half of the word frames for a given rule. Within the half that used
+            one triggering segment for a given rule, half used one triggering segment for
+            the other rule and half used the second triggering segment for the other rule.
+
+    \subsection{Results}
+        <<alternations-functions>>=
+        library(lme4)
+        library("vioplot")
+
+        a_make_percentages = function(df){
+          dev = df[df$Group.1 == 'Devoicing',]
+          pa = df[df$Group.1 == 'PlaceAssimilation',]
+          dd = dev[dev$Group.2 == '*DF',]
+          dn = dev[dev$Group.2 == '*NF',]
+          pd = pa[pa$Group.2 == '*DF',]
+          pn = pa[pa$Group.2 == '*NF',]
+          return(list(
+            dd$ChoseViolation * 100,
+            dn$ChoseViolation * 100,
+            pd$ChoseViolation * 100,
+            pn$ChoseViolation * 100
+          ))
+        }
+
+        a_make_vioplot = function(groups, header){
+          percentages = a_make_percentages(groups)
+          par(cex.lab = 0.75, cex.axis = 0.75)
+          vioplot(percentages[[1]], percentages[[2]], percentages[[3]], percentages[[4]],
+                  names = c('D-*DF', 'D-*NF', 'PA-*DF', 'PA-*NF'),
+                  col='blue')
+          title(main = header,
+                  xlab = 'Rule Trained On - Constraint Tested On',
+                  ylab = 'Percent of Times Constraint Violation Chosen',
+                  ylim = c(0,100))
+          par(cex.lab = 1, cex.axis = 1)
+        }
+        @
+
+        <<alternations-analysis, message=FALSE>>=
+        a1_data = read.csv('~/dissertation/alternations/alternations_dataframe.csv')
+
+        # Trained on voicing assimilation: -1
+        a1_data$Permutation[which(a1_data$Permutation == 0)] = -1
+        a1_data$Language = as.factor(a1_data$Permutation)
+
+        # Voicing constraint at play: -1
+        a1_data$Violates = as.character(a1_data$Violates)
+        a1_data$Violates[which(a1_data$Violates == 'Voicing')] = -1
+        a1_data$Violates[which(a1_data$Violates == 'Place')] = 1
+        a1_data$Violates = as.numeric(a1_data$Violates)
+
+        a1_data$TrialNumber = a1_data$TrialNumber - mean(a1_data$TrialNumber)
+        a1_data$ViolationPosition = a1_data$ViolationPosition - mean(a1_data$ViolationPosition)
+
+        a1_learned_data = a1_data[a1_data$NumberIterations < 5,]
+
+        # aggregate
+        a1_learned_mean = aggregate(a1_learned_data,
+                                  by=list(a1_learned_data$TrainedOn, a1_learned_data$TestedOn),
+                                  FUN = function(x){
+                                    mean(as.numeric(as.character(x)))
+                                  })
+        a1_learned_sd = aggregate(a1_learned_data,
+                                  by=list(a1_learned_data$TrainedOn, a1_learned_data$TestedOn),
+                                  FUN = function(x){
+                                    sd(as.numeric(as.character(x)))
+                                  })
+        a1_learned_subject = aggregate(a1_learned_data,
+                                     by=list(a1_learned_data$TrainedOn, a1_learned_data$TestedOn, a1_learned_data$Subject),
+                                     FUN = function(x){
+                                       mean(as.numeric(as.character(x)))})
+        a1_learned_item = aggregate(a1_learned_data,
+                                  by=list(a1_learned_data$TrainedOn, a1_learned_data$TestedOn, a1_learned_data$Item),
+                                  FUN = function(x){
+                                    mean(as.numeric(as.character(x)))
+                                  })
+        a1_learned_mean_percentages = a_make_percentages(a1_learned_mean)
+        a1_learned_sd_percentages = a_make_percentages(a1_learned_sd)
+        #$
+        @
+
+
+
+        <<alternations-model, cache=TRUE>>=
+        a1_model = glmer(ChoseViolation ~ Permutation * Violates +
+            ViolationPosition + (1|Subject) + (0 + Permutation|Subject) + (0 + Violates |
+            Subject) + (0 + Permutation:Violates|Subject) + (1|Item) + (0 +
+            Permutation|Item) + (0 + Violates | Item) + (0 + Permutation:Violates|Item),
+            data = a1_learned_data, family = binomial(link="logit"),
+            glmerControl(optCtrl=list(maxfun=20000), optimizer = 
+            #'bobyqa'
+            'Nelder_Mead'
+            #"optimx"#, optCtrl=list(method="nlminb")
+            #"optimx", optCtrl=list(method="L-BFGS-B")
+            #'nloptwrap2'
+            #'nloptwrap2', optCtrl=list(algorithm="NLOPT_LN_NELDERMEAD")
+            ))
+        @
+
+        The hypothesis that alternations affects phonotactics predicts an interaction
+        between training condition and testing condition. Specifically, if learning a
+        rule makes people disprefer the kind of violation that is removed by that rule,
+        then we predict that participants will prefer violations of the constraint
+        motivating the hidden rule more than they prefer violations of the constraint
+        motivating the active rule, regardless of the rule that was active. The
+        interaction plot in Figure \ref{fig:alternations-interaction} shows strong
+        evidence of such an interaction. Recall that *DF motivates Devoicing and *NF
+        motivates Place Assimilation. When training and testing ``match,'' that is, a
+        participant is trained on a rule and tested on the constraint that motivates
+        that rule, they disprefer violations more than when training and testing do not
+        match. The same means are given, along with standard deviations, in \ref{tab:alternations-percents}.
+
+%         \begin{table}[htbp]
+%         \begin{center}
+%         \caption{Percent of times a constraint violation was chosen by condition in Experiment 1.}
+\ex. Percent of times a constraint violation was chosen by condition in Experiment 1\\
+            \begin{tabular}{llll}
+            \hline Rule Trained On & Constraint Tested On & Mean & Standard Deviation \\
+            \hline
+            Devoicing & *DF & \Sexpr{round(a1_learned_mean_percentages[[1]], 1)} & \Sexpr{round(a1_learned_sd_percentages[[1]], 1)}  \\
+            Devoicing & *NF & \Sexpr{round(a1_learned_mean_percentages[[2]], 1)} & \Sexpr{round(a1_learned_sd_percentages[[2]], 1)} \\
+            Place Assimilation & *DF & \Sexpr{round(a1_learned_mean_percentages[[3]], 1)} & \Sexpr{round(a1_learned_sd_percentages[[3]], 1)} \\
+            Place Assimilation & *NF & \Sexpr{round(a1_learned_mean_percentages[[4]], 1)} & \Sexpr{round(a1_learned_sd_percentages[[4]], 1)} \\
+            \hline
+            \end{tabular}
+        \label{tab:alternations-percents}
+%         \end{center}
+%         \end{table}
+
+%         The two high points in the plot represent the preferences of participants
+%         for violations that motivate hidden rules. These can be viewed more or
+%         less as participants' baseline preference for such violations due to
+%         their background knowledge as an English speaker.
+        The baseline preference for violations of *DF is higher than the
+        baseline preference for violations of *NF, which is expected given the
+        English place assimilation rule. 
+%         The absolute values of the slopes of
+%         the two lines are also different. This can be understood to mean that
+%         those who were encouraged to apply Place Assimilation, a rule similar
+%         to one they already know, responded more strongly than those who
+%         were encouraged to apply a novel rule, Devoicing.
+%         For the present study, these differences across groups are relevant
+%         only insofar as their interpretation reassures us that the participants
+%         behaved in a reasonable manner, 
+        This offers some reassurance that the task worked as
+        expected. The point of interest in this plot is that the slopes of the
+        lines are opposite, showing that the type of violation participants
+        preferred more depended on the type of training they received, and thus
+        supporting the hypothesis that training, that is, knowledge of
+        alternations, can affect phonotactic judgements.
+
+        \begin{figure}[htbp]
+        \begin{center}
+        <<alternations-interaction, cache=FALSE>>=
+        with(a1_learned_data, interaction.plot(TestedOn, TrainedOn, ChoseViolation, fun = mean, type = 'l', ylim  = c(0,1), legend = FALSE, ylab = 'Proportion Violations Chosen', xlab = 'Constraint Tested', main = 'Interaction of Rule and Constraint'))
+        legend('topright', c('Devoicing', 'Place Assimilation'), lty=c(2,1), title = 'Active Rule')
+        @
+        \caption{Interaction between effect of rule training and constraint testing in Experiment 1.}
+        \label{fig:alternations-interaction}
+        \end{center}
+        \end{figure}
+
+
+        For a more detailed view of the results, Figures
+        \ref{fig:alternations-subject-violin} and
+        \ref{fig:alternations-item-violin} show violin plots of data. The
+        former shows a violin plot of the percent of times each participant chose a
+        constraint violation in each condition.  Figure
+        \ref{fig:alternations-item-violin} shows the same violin plot
+        aggregated by item rather than by participant. As in the interaction plot,
+        the violin plots show that a match between training and testing
+        generally produces lower preferences for violations than a mismatch
+        does. In these figures, Devoicing is abbreviated `D' and Place Assimilation is abbreviated `PA.'
+
+        \begin{figure}[htbp]
+        \begin{center}
+        <<alternations-subject-violin, cache=FALSE>>=
+        a_make_vioplot(a1_learned_subject, 'Preference for Violation by Participant')
+        @
+        \caption{Distribution of by-participant violation preference for each condition in Experiment 1.}
+        \label{fig:alternations-subject-violin}
+        \end{center}
+        \end{figure}
+
+        Figure \ref{fig:alternations-subject-violin} shows that the effect of
+        training on Devoicing is subtle; the first two violins are fairly
+        similar looking, although the median and interquartile range show a
+        higher preference for violating *NF than *DF, as predicted. The effect
+        of Place Assimilation training is more obvious. The distribution of
+        participant means for those trained on Place Assimilation when they were
+        tested on *DF is differently shaped than the other three distributions.
+        This shows that no participants chose *DF-violating forms at a low
+        rate after being trained on Place Assimilation. 
+%         It is useful to bear in mind that
+%         the smooth distributions drawn on violin plots represent counts of
+%         discrete points; accordingly, it's normal for these plots to end
+%         somewhat abruptly rather than tapering to a fine point. 
+%        Only six participants are represented in the portion of the Devoicing-*NF violin below 40\%. However, the shape of the Place Assimilation-*DF violin is striking, and may be due to the fact that this condition is the one in which neither training nor English language knowledge militate against violations.
+
+        \begin{figure}[htbp]
+        \begin{center}
+        <<alternations-item-violin, cache=FALSE>>=
+        a_make_vioplot(a1_learned_item, 'Preference for Violation by Item')
+        @
+        \caption{Distribution of by-item violation preference for each item in Experiment 1.}
+        \label{fig:alternations-item-violin}
+        \end{center}
+        \end{figure}
+
+        Figure \ref{fig:alternations-item-violin} once again reflects the
+        predicted interaction. 
+%         Of note are the distributions for those who were
+%         trained on Place Assimilation. When tested on *DF, a very few items
+%         elicited a preference for unfaithful forms across participants. So even
+%         though no participants consistently answered this way across items, the
+%         variability across items was fairly high. When these participants were
+%         tested on *NF, so that both their native grammar and their training
+%         encouraged them to avoid violations, no items elicited high preference
+%         for violations. 
+        As in the grand means and the by-participant data, the
+        effect of Devoicing training was smaller than the effect of Place
+        Assimilation training.
+
+        A logistic mixed effects model was fitted to the data using the lme4 package \citep{lme4} in R \citep{R}. It included
+        random slopes and intercepts for participants and items. The fixed effects
+        were the training condition, the testing condition, their interaction,
+        and the side of the page the constraint-violating word was presented
+        on.  The complete formula is given in \Next. The table in \ref{tab:alternations-coefficients} shows the coefficients
+        found for this model. It shows that the main effects of training
+        condition and testing condition were not significant. However, as predicted, their
+        interaction was significant, at the $\alpha = 0.001$ level. Another significant effect was that of the positioning
+        of the options. Participants were more likely to choose the
+        constraint-violating option if it appeared on the left.
+
+        <<alternations-coefficients>>=
+        a1_coef = summary(a1_model)$coefficients
+        #$
+        @
+
+        \ex. Mixed effects model formula\\
+        ChoseViolation $\sim$ Permutation $*$ Violates +
+        ViolationPosition + (1 $\vert $ Participant) + (0 + Permutation $\vert $ Participant) + (0 + Violates  $\vert $ 
+        Participant) + (0 + Permutation:Violates $\vert $ Participant) + (1 $\vert $ Item) + (0 +
+        Permutation $\vert $ Item) + (0 + Violates  $\vert $  Item) + (0 + Permutation:Violates $\vert $ Item)
+
+%         \begin{table}[htbp]
+%         \begin{center}
+%         \caption{Coefficients of mixed effects model for Experiment 1.}
+\ex. Coefficients of mixed effects model for Experiment 1\\
+        \begin{tabular}{lll}
+        \hline Factor & Estimate & $p$-value \\
+        \hline
+        Intercept & \Sexpr{round(a1_coef[[1]], 2)} & \Sexpr{a1_coef[[16]]} \\
+        Active Rule & \Sexpr{round(a1_coef[[2]], 2)}  & \Sexpr{a1_coef[[17]]}\\
+        Constraint Tested & \Sexpr{round(a1_coef[[3]], 2)}  & \Sexpr{a1_coef[[18]]} \\
+        Active Rule:Constraint Tested & \Sexpr{round(a1_coef[[5]], 2)} & \Sexpr{a1_coef[[20]]} \\
+        Violation Position &  \Sexpr{round(a1_coef[[4]], 2)} & \Sexpr{a1_coef[[19]]} \\
+        \hline
+        \end{tabular}
+        \label{tab:alternations-coefficients}
+%         \end{center}
+%         \end{table}
+
+    \subsection{Discussion}
+        The results support the hypothesis that knowledge gleaned from
+        alternations can affect the phonotactic grammar, and motivate research
+        on phonotactics that takes the presence of alternations into account.
+        The modeling of phonotactics alone may still be useful as a
+        methodological abstraction, but this study suggests that it will be
+        important to consider how this simplification may skew the results.
+        This study also bears on work on derived environment effects.
+        Such effects, reviewed in \citet{Wolf2008}, occur when a rule applies at a
+        morpheme boundary but not in a monomorphemic context. By showing the
+        generalization of a rule learned at a morpheme boundary to a presumably
+        monomorphemic context, these results suggest that the presence of derived
+        environment effects may not be the baseline hypothesis of the language
+        learner.
+
+%         The primary weakness of this experiment is the reliance on feedback to
+%         train participants on the rule. The problem with feedback is that it is
+%         necessarily given asymmetrically. The design of the experiment hinges
+%         on one rule being active while the other is hidden, so feedback cannot
+%         be given for the hidden rule. Yet, feedback may increase participants'
+%         familiarity with the forms that are shown to be correct or incorrect,
+%         which could have an effect on the phonotactic grammar directly. This effect
+%         is subtle, because the test questions do not pit one constraint against the other,
+%         and so a feedback bias is partially avoided. For concreteness, here are
+%         the types of forms shown in the feedback given in the Devoicing
+%         treatment:
+% 
+%         \ex. Types of feedback in Devoicing treatment
+%         \a. Irrelevant fillers: \textit{beful} $\sim$ \textit{befulfa}
+%         \b. Faithful voiceless fillers: \textit{pidep} $\sim$ \textit{pidepfa}
+%         \c. Faithful labial fillers: \textit{dulim} $\sim$ \textit{dulimfa}
+%         \d. Devoicing training: \textit{sapod} $\sim$ \textit{sapotfa}
+% 
+%         The fillers are the same across treatments, so it is the Devoicing training
+%         words that introduce an asymmetry, as they are replaced by
+%         Place Assimilation training words in the Place Assimilation treatment.
+%         The test questions pit constraint-satisfying words against
+%         constraint-violating words for a particular constraint, such as
+%         \textit{ludfum} vs.~\textit{lutfum} and \textit{lunfum}
+%         vs.~\textit{lumfum}. A participant in the Devoicing condition will have
+%         seen feedback containing stem-final \textit{d} and \textit{t}, and no
+%         non-filler feedback containing stem-final \textit{n} or \textit{m}.
+%         However, if we consider bigrams, the participant has seen non-filler
+%         feedback containing \textit{tf}, and no non-filler feedback containing
+%         \textit{df}, \textit{mf}, or \textit{nf}.
+% 
+%         Thus, if participants update their phonotactic grammars of the
+%         artificial language based not just on the presence of the test words
+%         but also on the presence of feedback for the test words, there is a
+%         confound that should cause participants to prefer forms that satisfy
+%         the constraint that motivates their active rule. It is unclear if this
+%         effect is plausible, because token frequency, which is increased by
+%         feedback while type frequency is held constant, has not been found to
+%         be predictive of phonotactic judgments \citep{albright_gradient_2008}.
+%         However, feedback may simply amplify attention.
+
+%         The best way to assess this possibility with the data from this
+%         experiment is to look at the responses from participants who only spent
+%         one iteration in the training phase; they had less exposure to feedback
+%         than any other participants, and may well have exited the exposure
+%         phase already having learned the rule.
+% 
+%         The plot in Figure \ref{fig:alternations-interaction-1} shows the
+%         interaction plot for only those participants who met the criterion in
+%         the first iteration of training, and Figure
+%         \ref{fig:alternations-interaction-234} shows the interaction plot for
+%         the participants who met the criterion after two, three, or four
+%         iterations. The slopes of the lines in the interaction plot are not
+%         identical, but they have the same sign, showing the same direction of
+%         change across conditions. The difference appears to be primarily that
+%         longer training in Devoicing lowered the preference for violations of
+%         *DF; in other words, Place Assimilation appears to not only have a
+%         larger effect on test performance, but also to have that effect more
+%         quickly. The presence of a trend towards the predicted interaction in
+%         both figures suggests that feedback is not the sole reason for the
+%         presence of the effect in the experiment as a whole. However, feedback
+%         is given in the first iteration, so this possibility cannot be ruled
+%         out completely. Furthermore, a statistical test of the interactions
+%         over these smaller participant pools cannot be carried out because the
+%         models lack sufficient data to converge, given their complex random
+%         effects structure.
+% 
+% 
+%         \begin{figure}[htbp]
+%         \begin{center}
+        <<alternations-interaction-1, echo=FALSE, cache=FALSE, eval=FALSE>>=
+        with(a1_learned_data[a1_learned_data$NumberIterations == 1,], interaction.plot(TestedOn, TrainedOn, ChoseViolation, fun = mean, type = 'l', ylim=c(0,1), legend = FALSE, ylab = 'Proportion Violations Chosen', xlab = 'Constraint Tested', main = 'Interaction After One Iteration'))
+        legend('topright', c('Devoicing', 'Place Assimilation'), lty=c(2,1), title = 'Active Rule')
+        #$
+        @
+%         \caption{Interaction between rule trained on and constraint in question for participants who took only one training iteration.}
+%         \label{fig:alternations-interaction-1}
+%         \end{center}
+%         \end{figure}
+% 
+%         \begin{figure}[htbp]
+%         \begin{center}
+        <<alternations-interaction-234, cache=FALSE, eval=FALSE>>=
+        with(a1_learned_data[a1_learned_data$NumberIterations > 1,], interaction.plot(TestedOn, TrainedOn, ChoseViolation, fun = mean, type = 'l', ylim = c(0,1), legend = FALSE, ylab = 'Proportion Violations Chosen', xlab = 'Constraint Tested', main = 'Interaction After Multiple Iterations'))
+        legend('topright', c('Devoicing', 'Place Assimilation'), lty=c(2,1), title = 'Active Rule')
+        #$
+        @
+%         \caption{Interaction between rule trained on and constraint in question for participants who took more than one training iteration.}
+%         \label{fig:alternations-interaction-234}
+%         \end{center}
+%         \end{figure}
+
+\section{Experiment 2}
+
+    The primary weakness of Experiment 1 is that the presence of feedback creates
+    a confound. If participants update their phonotactic grammars of the
+    artificial language based not just on the presence of the test words
+    but also on the presence of feedback for the test words, it would cause participants to prefer forms that satisfy
+    the constraint that motivates their active rule. It is unclear if this
+    effect is plausible, because token frequency, which is increased by
+    feedback while type frequency is held constant, has not been found to
+    be predictive of phonotactic judgments \citep{albright_gradient_2008}.
+    However, feedback may simply amplify attention.
+In order to address this confound, a second experiment was performed. Experiment 2
+    removes feedback from the design, resulting in an
+    experiment with an exposure phase, one iteration of training where no
+    feedback is given, and a testing phase.
+
+    \subsection{Method}
+        Experiment 2 is very similar to Experiment 1; the parts of the method
+        that were different are described below.
+
+    \subsubsection{Training Phase}
+        Recall that the training phase in Experiment 1 consisted of questions
+        where a singular form was presented and the participant was asked to
+        choose between two possible plural forms, and then, for some trials,
+        given feedback naming the correct singular-plural pair. The training
+        phase in Experiment 2 used the same stimuli and question format, but
+        eliminated all feedback. Because the lack of feedback made it unlikely
+        that repeated iterations would improve performance, only one iteration
+        was given, regardless of accuracy rate. Due to the lack of feedback,
+        this phase was not truly a training phase, and is called that only for
+        comparison with Experiment 1. Rather, this phase was used to determine
+        which participants had learned the rule sufficiently that they should
+        be included in the analysis. It is possible, though, that participants
+        organized and solidified their knowledge of the rule by answering the
+        questions in this phase.
+
+    \subsubsection{Testing Phase}
+        The testing phase was identical except that, in order to increase the
+        validity of the assumption that participants were treating test words
+        as underived, the instructions to the test phase specified that unlike
+        the words seen previously, these did not have any suffixes added.
+
+    \subsubsection{Participants}
+        Participants were once again run on Mechanical Turk. Because the
+        experiment was shorter, they were paid \$1.10 each, under the
+        assumption that the experiment would take about 7 minutes to complete.
+        All exclusion criteria from Experiment 1 were used except the number of
+        iterations, which was not applicable because multiple iterations were
+        not possible in Experiment 2. These criteria resulted in two
+        participants whose native languages were not English being excluded
+        from the analysis.
+
+        In place of number of iterations as a metric of whether participants
+        learned the alternation, percent correct answers in the single training
+        iteration was used.  In Experiment 1, 46 of 99 participants reached
+        criterion in their first iteration of training. In order to get a
+        similar amount of usable data, 200 participants were run on Experiment
+        4. However, due to the lack of feedback, which could help participants
+        learn even within one iteration, a lower percentage of participants
+        reached the original criterion of 80\% correct, yielding 57
+        participants. To increase the likelihood of having sufficient data, the
+        criterion was lowered to 70\% accuracy. This decision was made before
+        analyzing any data to avoid anti-conservative effects due to data
+        peeking. This resulted in 80 participants being included in the
+        analysis.
+
+
+    \subsection{Results}
+        <<alternations2-analysis, cache=FALSE>>=
+        a2_data = read.csv('~/dissertation/alternations/alternations_dataframe_june.csv')
+
+        # Trained on voicing assimilation: -1
+        a2_data$Permutation[which(a2_data$Permutation == 0)] = -1
+        a2_data$Language = as.factor(a2_data$Permutation)
+
+        # Voicing constraint at play: -1
+        a2_data$Violates = as.character(a2_data$Violates)
+        a2_data$Violates[which(a2_data$Violates == 'Voicing')] = -1
+        a2_data$Violates[which(a2_data$Violates == 'Place')] = 1
+        a2_data$Violates = as.numeric(a2_data$Violates)
+
+        # center factors
+        a2_data$TrialNumber = a2_data$TrialNumber - mean(a2_data$TrialNumber)
+        a2_data$ViolationPosition = a2_data$ViolationPosition - mean(a2_data$ViolationPosition)
+
+        a2_learned_data = a2_data[a2_data$Accuracy > .7,]
+
+        a2_learned_mean = aggregate(a2_learned_data,
+                                  by=list(a2_learned_data$TrainedOn, a2_learned_data$TestedOn),
+                                  FUN = function(x){
+                                    mean(as.numeric(as.character(x)))
+                                  })
+        a2_learned_sd = aggregate(a2_learned_data,
+                                  by=list(a2_learned_data$TrainedOn, a2_learned_data$TestedOn),
+                                  FUN = function(x){
+                                    sd(as.numeric(as.character(x)))
+                                  })
+        a2_learned_subject = aggregate(a2_learned_data,
+                                     by=list(a2_learned_data$TrainedOn, a2_learned_data$TestedOn, a2_learned_data$Subject),
+                                     FUN = function(x){
+                                       mean(as.numeric(as.character(x)))})
+        a2_learned_item = aggregate(a2_learned_data,
+                                  by=list(a2_learned_data$TrainedOn, a2_learned_data$TestedOn, a2_learned_data$Item),
+                                  FUN = function(x){
+                                    mean(as.numeric(as.character(x)))
+                                  })
+
+        a2_learned_mean_percentages = a_make_percentages(a2_learned_mean)
+        a2_learned_sd_percentages = a_make_percentages(a2_learned_sd)
+        #$
+        @
+
+%         \begin{table}[htbp]
+%         \begin{center}
+%        \caption{Percent of times a constraint violation was chosen by condition in Experiment 2.}
+        \ex. Percent of times a constraint violation was chosen by condition in Experiment 2\\
+            \begin{tabular}{llll}
+            \hline Rule Trained On & Constraint Tested On & Mean & Standard Deviation \\
+            \hline
+            Devoicing & *DF & \Sexpr{round(a2_learned_mean_percentages[[1]], 1)} & \Sexpr{round(a2_learned_sd_percentages[[1]], 1)}  \\
+            Devoicing & *NF & \Sexpr{round(a2_learned_mean_percentages[[2]], 1)} & \Sexpr{round(a2_learned_sd_percentages[[2]], 1)} \\
+            Place Assimilation & *DF & \Sexpr{round(a2_learned_mean_percentages[[3]], 1)} & \Sexpr{round(a2_learned_sd_percentages[[3]], 1)} \\
+            Place Assimilation & *NF & \Sexpr{round(a2_learned_mean_percentages[[4]], 1)} & \Sexpr{round(a2_learned_sd_percentages[[4]], 1)} \\
+            \hline
+            \end{tabular}
+        \label{tab:alternations2-percents}
+%         \end{center}
+%         \end{table}
+
+        Figure \ref{fig:alternations2-interaction} shows the interaction plot
+        for Experiment 2. Once again, we see that the slopes of the lines have
+        different signs, indicating that training on a rule decreased
+        preferences for violating the constraint that motivates that rule. Compared to Experiment 1, participants trained on Place Assimilation behave less differently on the two constraints. 
+
+        \begin{figure}[htbp]
+        \begin{center}
+        <<alternations2-interaction, cache=FALSE>>=
+        with(a2_learned_data, interaction.plot(TestedOn, TrainedOn, ChoseViolation, fun = mean, type = 'l', ylim=c(0,1), legend = FALSE, ylab = 'Proportion Violations Chosen', xlab = 'Constraint Tested', main = 'Interaction of Rule and Constraint'))
+        legend('topright', c('Devoicing', 'Place Assimilation'), lty=c(2,1), title = 'Active Rule')
+        @
+        \caption{Interaction between rule training and constraint testing in Experiment 2.}
+        \label{fig:alternations2-interaction}
+        \end{center}
+        \end{figure}
+
+
+        Figure \ref{fig:alternations2-subject-violin} shows a violin plot of
+        the percent of times each participant chose a constraint violation in each
+        condition. It shows a clear trend towards an effect of training in the
+        Devoicing condition; the preference for violations is lower when the
+        constraint tested is *DF, motivated by the active rule, than when it is
+        *NF. This trend is less clear in the Place Assimilation condition.
+
+        \begin{figure}[htbp]
+        \begin{center}
+        <<alternations2-subject-violin, cache=FALSE>>=
+        a_make_vioplot(a2_learned_subject, 'Preference for Violation by Participant')
+        @
+        \caption{Distribution of by-participant violation preference for each condition in Experiment 2.}
+        \label{fig:alternations2-subject-violin}
+        \end{center}
+        \end{figure}
+
+        Figure \ref{fig:alternations2-item-violin} shows the same violin plot
+        aggregated by item rather than by participant. In this plot, the trend is
+        clearer in the Place Assimilation condition. As in Experiment 1, items
+        testing *DF among participants trained in Devoicing have a long lower
+        tail, showing that a few items are preferred without the constraint
+        violation. In the Devoicing condition, the trend is more subtle, but
+        still leans in the predicted direction.        
+        
+        \begin{figure}[htbp]
+        \begin{center}
+        <<alternations2-item-violin, cache=FALSE>>=
+        a_make_vioplot(a2_learned_item, 'Preference for Violation by Item')
+        @
+        \caption{Distribution of by-item violation preference for each item in Experiment 2.}
+        \label{fig:alternations2-item-violin}
+        \end{center}
+        \end{figure}
+
+        The same model structure that was used to analyze the data from
+        Experiment 1 was used to analyze this data, although some random effects were omitted to allow the model to converge. The resulting formula is given in \Next. The coefficients found by the model are shown
+        in \ref{tab:alternations2-coefficients}.
+        
+        \ex. Mixed effects model formula\\
+        ChoseViolation $\sim$ Permutation $*$ Violates +
+        ViolationPosition + (1 $\vert $ Participant) + (0 + Permutation $\vert
+        $ Participant) + (0 + Violates  $\vert $  Participant) +  (1 $\vert $
+        Item) + (0 + Permutation $\vert $ Item)
+
+
+        <<alternations2-model>>=
+        a2_model = glmer(ChoseViolation ~
+                           Permutation *
+                           Violates +
+                           ViolationPosition +
+                           (1|Subject) +
+                           (0 + Permutation|Subject) +
+                           (0 + Violates | Subject) +
+                          # (0 + Permutation:Violates|Subject) +
+                           (1|Item) +
+                           (0 + Permutation|Item),
+                           #(0 + Violates | Item),
+                          # (0 + Permutation:Violates|Item),
+            data = a2_data[a2_data$Accuracy > .7,],
+            family = binomial(link="logit"),
+            glmerControl(optCtrl=list(maxfun=20000),
+            optimizer =
+            'bobyqa'
+            #'Nelder_Mead'
+            #"optimx"#, optCtrl=list(method="nlminb")
+            #"optimx", optCtrl=list(method="L-BFGS-B")
+            #'nloptwrap2'
+            #'nloptwrap2', optCtrl=list(algorithm="NLOPT_LN_NELDERMEAD")
+            ))
+
+        a2_coef = summary(a2_model)$coefficients
+        #
+        @
+
+%         \begin{table}[htbp]
+%         \begin{center}
+%         \caption{Coefficients of mixed effects model for Experiment 2.}
+\ex. Coefficients of mixed effects model for Experiment 2\\
+        \begin{tabular}{lll}
+        \hline Factor & Estimate & $p$-value \\
+        \hline
+        Intercept & \Sexpr{round(a2_coef[[1]], 2)} & \Sexpr{a2_coef[[16]]} \\
+        Active Rule & \Sexpr{round(a2_coef[[2]], 2)}  & \Sexpr{a2_coef[[17]]}\\
+        Constraint Tested & \Sexpr{round(a2_coef[[3]], 2)}  & \Sexpr{a2_coef[[18]]} \\
+        Active Rule:Constraint Tested & \Sexpr{round(a2_coef[[5]], 2)} & \Sexpr{a2_coef[[20]]} \\
+        Violation Position &  \Sexpr{round(a2_coef[[4]], 2)} & \Sexpr{a2_coef[[19]]} \\
+        \hline
+        \end{tabular}
+        \label{tab:alternations2-coefficients}
+%         \end{center}
+%         \end{table}
+
+
+        As before, there is a significant effect of the position of the
+        constraint-violating option on the page, and the main effects of
+        training and testing are not significant. Unlike in Experiment 1, the
+        interaction of training and testing does not reach significance. The
+        trend is in the predicted direction, but has not been confirmed
+        statistically.
+
+    \subsection{Discussion}
+
+        The results of Experiment 2 are inconclusive. The data show a trend in the same direction
+        as Experiment 1, but the predicted interaction between training and testing is not significant.
+        This could mean that the finding of Experiment 1 was indeed due to feedback, but it could also mean
+        that without feedback, participants learned the generalization less well, resulting in noisier results.
+        When variance increases, all else held equal, power decreases, so it is plausible that Experiment 2 failed
+        to find a significant result due to a lack of power.
+
+\section{General Discussion}
+    These experiments offer mixed support for the hypothesis that information about
+    alternations is used in making phonotactic judgments. Experiment 1 found support
+    for the hypothesis, but may have inadvertently drawn participants' attention to words
+    that biased them towards giving such results. Experiment 2 eliminated feedback, and as
+    a result the active rule was learned at a far lower rate. The criterion used to determine
+    whether a participant had learned the rule sufficiently to be included in the analysis
+    was lowered in an attempt to increase power, and this may have increased the noise in the
+    results. The predicted interaction between training and testing was not significant, in contrast
+    to Experiment 1. Further experimentation is needed to determine whether Experiment 2 merely lacked
+    power or failed to show an effect because it the effect had been due to a confound.
+
+    Nevertheless, the trend found in Experiment 2 makes it worthwhile to consider
+    the possibility that alternation-based knowledge affects phonotactics and spell out
+    the implications if clearer evidence is found with further
+    study. It would not show that alternations and phonotactics are necessarily computed from the
+    same, monolithic system, as Optimality Theory asserts, 
+    %although that may be
+    %the case. Rather, it would suggest that whether these types of knowledge are
+    %encoded in one system or in two, there is at least a pathway for
+    %communication between them. Specifically, it would argue for the flow of
+    but would argue that information is shared between them, at least from alternations
+    to phonotactics.
+    %information from alternations to phonotactics. 
+    Although the findings of
+    \citet{Pater2003a} are suggestive, this study cannot confirm the flow of
+    information from phonotactics to alternations. However, of the two
+    directions of information flow, that from alternations to phonotactics is
+    the more surprising. Since phonotactic knowledge is likely to be acquired
+    first, it may be helpful in acquiring alternations. The need for
+    alternations to affect phonotactics is less obvious; phonologists may find
+    it more plausible that the two forms of knowledge are in two-way
+    communication than that alternations affects phonotactics but the reverse
+    is not true.
+
+\cascadillabibliography{software,HG,phonology}
+
+\end{document}

@@ -1,0 +1,118 @@
+<<set-parent-appendix1, echo=FALSE, cache=FALSE>>=
+set_parent('diss.Rnw')
+@
+
+\section{Experiment 1}
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Test items in Experiment 1.}
+    \begin{tabular}{llll}
+    \hline
+    GG & BG & GB & BB \\
+    \hline
+    plag  &	plavb	&	tlag	&	tlavb	\\
+    klep	&	klefp	&	dlep	&	dlefp	\\
+    bloss	&	blofk	&	zboss	&	zbofk	\\
+    glid	&	glishf	&	srid	&	srishf	\\
+    pruss	&	prumth	&	zduss	&	zdumth	\\
+    troom	&	trooshp	&	zgoom	&	zgooshp	\\
+    skaff	&	skashk	&	shlaff	&	shlashk	\\
+    brizz	&	brivg	&	shpizz	&	shpivg	\\
+    drell	&	drefsh	&	shtell	&	shtefsh	\\
+    grun	&	gruzv	&	shkun	&	shkuzv	\\
+    spog	&	spozb	&	shnog	&	shnozb	\\
+    stoob	&	stoosf	&	thloob	&	thloosf	\\
+    krat	&	krathp	&	vlat	&	vlathp	\\
+    sleb	&	slemg	&	vreb	&	vremg	\\
+    shrin	&	shritp	&	znin	&	znitp	\\
+    snock	&	snopk	&	zmock	&	zmopk	\\
+    smeck	&	smenb	&	fmeck	&	fmenb	\\
+    throoz	&	throozg	&	fnooz	&	fnoozg	\\
+    flad	&	flathk	&	vnad	&	vnathk	\\
+    skrep	&	skrebg	&	vmep	&	vmebg	\\
+    swuff	&	swukp	&	thnuff	&	thnukp	\\
+    splot	&	splogb	&	thmot	&	thmogb	\\
+    frim	&	fridb	&	lrim	&	lridb	\\
+    strool	&	stroothf	&	hrool	&	hroothf	\\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Filler items in Experiment 1.}
+    \begin{tabular}{ll}
+    \hline
+    High acceptability & Low acceptability \\
+    \hline
+    bressic & lbifth\\
+    claffer & krlisg\\
+    spellion & psatrl\\
+    frotion & tmozb\\
+    merly & zgdivl\\
+    dellous & wlramr\\
+    \hline
+    \end{tabular}
+    \label{tab:exp1-best}
+    \end{center}
+    \end{table}
+
+\section{Experiment 2}
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Test items in Experiment 2.}
+    \begin{tabular}{llll}
+    \hline
+    GG & BG & GB & BB \\
+    \hline
+    praz	&pradb	&zmaz	&zmadb\\
+    skreff	&skrefsh	&shpeff	&shpefsh\\
+    grot	&gropk	&shtot	&shtopk\\
+    thrit	&thrishk	&lrit	&lrishk\\
+    skun	&skuthp	&shnun	&shnuthp\\
+    kloop	&kloothk	&thnoop	&thnoothk\\
+    ]snass	&snathf	&thmass	&thmathf\\
+    krizz	&krishp	&thlizz	&thlishp\\
+    sleb	&slemth	&vleb	&vlemth\\
+    smul	&smutp	&hrul	&hrutp\\
+    swod	&swokp	&shlod	&shlokp\\
+    gloob	&gloosf	&dloob	&dloosf\\
+    brack	&brafsh	&vlack	&vlafsh\\
+    plen	&plemth	&zmen	&zmemth\\
+    striff	&strishk	&shpiff	&shpishk\\
+    blom	&blodb	&thlom	&thlodb\\
+    fleg	&flepk	&thmeg	&thmepk\\
+    spood	&spooshp	&dlood	&dlooshp\\
+    drass	&drathf	&thnass	&thnathf\\
+    shrell	&shrethk	&shnell	&shnethk\\
+    trug	&trusf	&lrug	&lrusf\\
+    splock	&splokp	&shlock	&shlokp\\
+    stip	&stithp	&shtip	&shtithp\\
+    froom	&frootp	&hroom	&hrootp\\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Filler items in Experiment 2.}
+    \begin{tabular}{ll}
+    \hline
+    High acceptability & Low acceptability \\
+    \hline
+    bressic & lbafthrizk\\
+    claffer &kflisgwevr \\
+    spellion &psafzotrl \\
+    frotion &tmuhrizb \\
+    merly &zgdokpevf \\
+    dellous &wlratlumr \\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+

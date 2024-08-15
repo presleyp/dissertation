@@ -1,0 +1,198 @@
+,BlockIDs,CodaViolation,Condition,Correct,EndTime,HIT,ItemID,Iteration,OnsetViolation,OptionOrder,OptionResources,OptionTexts,PageID,PageResources,PageText,Permutation,SelectedID,SelectedPosition,SelectedText,StartTime,TrialNumber,UniqueID,Version,Vowel,WorkerID,type,ReactionTime
+0,[u'1'],,,,1424807121171,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,,1,,,,,0,[],"In this experiment, you will be shown pairs of made-up words.
+Pronounce the words to yourself. Based on how they sound, choose the one that you find more
+English-like.",0,,,,1424807120284,0,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,,A2LD8A4LBTYELX,,887
+1,[u'3'],,,,1424807121531,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,,1,,,,,2,[],"During experimental questions, you will not be able to use your mouse. Use
+the F key to choose the option on the left, the J key to choose the option
+on the right, and the spacebar to move forward.",0,,,,1424807121175,1,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,,A2LD8A4LBTYELX,,356
+2,[u'340'],False,GG,[None],1424807122559,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,19,1,False,"[u'232', u'233']","[[], []]","[u'frep', u'gwald']",234,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'232'],[0],[u'frep'],1424807121540,2,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,e,A2LD8A4LBTYELX,"[u'test', u'filler']",1019
+3,[u'340'],False,GG,[None],1424807123464,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,15,1,False,"[u'185', u'184']","[[], []]","[u'gwempt', u'snock']",186,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'184'],[1],[u'snock'],1424807122564,3,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,o,A2LD8A4LBTYELX,"[u'filler', u'test']",900
+4,[u'340'],True,GB,[None],1424807124064,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,20,1,False,"[u'247', u'248']","[[], []]","[u'swukp', u'spelsh']",249,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'247'],[0],[u'swukp'],1424807123468,4,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,u,A2LD8A4LBTYELX,"[u'test', u'filler']",596
+5,[u'340'],False,BG,[None],1424807124456,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,1,1,True,"[u'22', u'23']","[[], []]","[u'dlep', u'sloond']",24,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'23'],[1],[u'sloond'],1424807124068,5,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,e,A2LD8A4LBTYELX,"[u'test', u'filler']",388
+6,[u'340'],False,BG,[None],1424807124767,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,21,1,True,"[u'263', u'262']","[[], []]","[u'shrelth', u'thmot']",264,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'263'],[0],[u'shrelth'],1424807124459,6,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,o,A2LD8A4LBTYELX,"[u'filler', u'test']",308
+7,[u'340'],,"[u'BG', True, False]",[None],1424807125104,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,,1,,"[u'318', u'317']","[[], []]","[u'felp', u'krlisg']",316,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'317'],[1],[u'krlisg'],1424807124769,7,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,,A2LD8A4LBTYELX,"[u'catch-good', u'catch-bad']",335
+8,[u'340'],,"[u'BB', True, True]",[None],1424807126008,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,,1,,"[u'329', u'330']","[[], []]","[u'psatr', u'lunt']",328,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'330'],[1],[u'lunt'],1424807125107,8,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,,A2LD8A4LBTYELX,"[u'catch-bad', u'catch-good']",901
+9,[u'340'],False,GG,[None],1424807126623,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,23,1,False,"[u'280', u'281']","[[], []]","[u'strool', u'brur']",282,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'280'],[0],[u'strool'],1424807126012,9,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,oo,A2LD8A4LBTYELX,"[u'test', u'filler']",611
+10,[u'340'],False,GG,[None],1424807127000,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,7,1,False,"[u'89', u'88']","[[], []]","[u'fashk', u'brizz']",90,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'88'],[1],[u'brizz'],1424807126625,10,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,i,A2LD8A4LBTYELX,"[u'filler', u'test']",375
+11,[u'340'],True,BB,[None],1424807127440,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,2,1,True,"[u'37', u'38']","[[], []]","[u'zbofk', u'felmth']",39,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'37'],[0],[u'zbofk'],1424807127003,11,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,o,A2LD8A4LBTYELX,"[u'test', u'filler']",437
+12,[u'340'],False,GG,[None],1424807127761,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,3,1,False,"[u'40', u'41']","[[], []]","[u'glid', u'flelg']",42,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'41'],[1],[u'flelg'],1424807127443,12,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,i,A2LD8A4LBTYELX,"[u'test', u'filler']",318
+13,[u'340'],False,BG,[None],1424807128112,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,13,1,True,"[u'166', u'167']","[[], []]","[u'vreb', u'throth']",168,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'166'],[0],[u'vreb'],1424807127763,13,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,e,A2LD8A4LBTYELX,"[u'test', u'filler']",349
+14,[u'340'],True,GB,[None],1424807128456,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,16,1,False,"[u'199', u'200']","[[], []]","[u'smenb', u'sklime']",201,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'200'],[1],[u'sklime'],1424807128113,14,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,e,A2LD8A4LBTYELX,"[u'test', u'filler']",343
+15,[u'340'],True,BB,[None],1424807128783,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,6,1,True,"[u'86', u'85']","[[], []]","[u'glagd', u'shlashk']",87,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'86'],[0],[u'glagd'],1424807128458,15,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,a,A2LD8A4LBTYELX,"[u'filler', u'test']",325
+16,[u'340'],True,GB,[None],1424807129192,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,4,1,False,"[u'55', u'56']","[[], []]","[u'prumth', u'smim']",57,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'56'],[1],[u'smim'],1424807128786,16,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,u,A2LD8A4LBTYELX,"[u'test', u'filler']",406
+17,[u'340'],True,GB,[None],1424807129552,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,12,1,False,"[u'151', u'152']","[[], []]","[u'krathp', u'spup']",153,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'151'],[0],[u'krathp'],1424807129195,17,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,a,A2LD8A4LBTYELX,"[u'test', u'filler']",357
+18,[u'340'],True,BB,[None],1424807129977,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,22,1,True,"[u'277', u'278']","[[], []]","[u'lridb', u'skoths']",279,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'278'],[1],[u'skoths'],1424807129555,18,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,i,A2LD8A4LBTYELX,"[u'test', u'filler']",422
+19,[u'340'],,"[u'GB', False, True]",[None],1424807130287,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,,1,,"[u'305', u'306']","[[], []]","[u'lbifth', u'slan']",304,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'305'],[0],[u'lbifth'],1424807129979,19,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,,A2LD8A4LBTYELX,"[u'catch-bad', u'catch-good']",308
+20,[u'340'],True,BB,[None],1424807130647,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,18,1,True,"[u'229', u'230']","[[], []]","[u'vnathk', u'shesp']",231,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'230'],[1],[u'shesp'],1424807130289,20,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,a,A2LD8A4LBTYELX,"[u'test', u'filler']",358
+21,[u'340'],False,BG,[None],1424807130943,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,17,1,True,"[u'214', u'215']","[[], []]","[u'fnooz', u'threlt']",216,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'214'],[0],[u'fnooz'],1424807130649,21,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,oo,A2LD8A4LBTYELX,"[u'test', u'filler']",294
+22,[u'340'],True,BB,[None],1424807131519,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,14,1,True,"[u'181', u'182']","[[], []]","[u'znitp', u'skuck']",183,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'182'],[1],[u'skuck'],1424807130945,22,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,i,A2LD8A4LBTYELX,"[u'test', u'filler']",574
+23,[u'340'],False,BG,[None],1424807132207,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,9,1,True,"[u'119', u'118']","[[], []]","[u'gralfth', u'shkun']",120,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'119'],[0],[u'gralfth'],1424807131521,23,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,u,A2LD8A4LBTYELX,"[u'filler', u'test']",686
+24,[u'340'],True,BB,[None],1424807132520,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,10,1,True,"[u'134', u'133']","[[], []]","[u'blelth', u'shnozb']",135,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'134'],[0],[u'blelth'],1424807132209,24,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,o,A2LD8A4LBTYELX,"[u'filler', u'test']",311
+25,[u'340'],False,BG,[None],1424807132775,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,5,1,True,"[u'70', u'71']","[[], []]","[u'zgoom', u'trilb']",72,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'70'],[0],[u'zgoom'],1424807132522,25,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,oo,A2LD8A4LBTYELX,"[u'test', u'filler']",253
+26,[u'340'],True,GB,[None],1424807133336,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,0,1,False,"[u'8', u'7']","[[], []]","[u'dwoond', u'plavb']",9,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'7'],[1],[u'plavb'],1424807132778,26,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,a,A2LD8A4LBTYELX,"[u'filler', u'test']",558
+27,[u'340'],True,GB,[None],1424807133767,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,8,1,False,"[u'104', u'103']","[[], []]","[u'slils', u'drefsh']",105,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'104'],[0],[u'slils'],1424807133339,27,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,e,A2LD8A4LBTYELX,"[u'filler', u'test']",428
+28,[u'340'],False,GG,[None],1424807134424,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,11,1,False,"[u'137', u'136']","[[], []]","[u'skralk', u'stoob']",138,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'137'],[0],[u'skralk'],1424807133770,28,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,oo,A2LD8A4LBTYELX,"[u'filler', u'test']",654
+29,[u'340'],,"[u'GG', False, False]",[None],1424807134888,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,,1,,"[u'302', u'301']","[[], []]","[u'velk', u'tmozb']",303,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'301'],[1],[u'tmozb'],1424807134426,29,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,,A2LD8A4LBTYELX,"[u'catch-good', u'catch-bad']",462
+30,[u'474'],,,[None],1424807137577,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,,1,,[u'466'],[[]],[u''],467,[],What is your native language?,0,[u'466'],[0],[u'f '],1424807134895,30,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,,A2LD8A4LBTYELX,,2682
+31,[u'474'],,,[None],1424807138411,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,,1,,[u'472'],[[]],[u''],473,[],"What information or strategies did you use to choose words in the
+experimental questions?",0,[u'472'],[0],[u'f'],1424807137580,31,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,,A2LD8A4LBTYELX,,831
+32,[u'474'],,,[None],1424807139391,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,,1,,[u'470'],[[]],[u''],471,[],Where do people typically think you're from?,0,[u'470'],[0],[u'f'],1424807138413,32,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,,A2LD8A4LBTYELX,,978
+33,[u'474'],,,[None],1424807142747,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,,1,,"[u'341', u'342', u'343', u'344', u'345', u'346', u'347', u'348', u'349', u'350', u'351', u'352', u'353', u'354', u'355', u'356', u'357', u'358', u'359', u'360', u'361', u'362', u'363', u'364', u'365', u'366', u'367', u'368', u'369', u'370', u'371', u'372', u'373', u'374', u'375', u'376', u'377', u'378', u'379', u'380', u'381', u'382', u'383', u'384', u'385', u'386', u'387', u'388', u'389', u'390', u'391', u'392', u'393', u'394', u'395', u'396', u'397', u'398', u'399', u'400', u'401', u'402', u'403', u'404', u'405', u'406', u'407', u'408', u'409', u'410', u'411', u'412', u'413', u'414', u'415', u'416', u'417', u'418', u'419', u'420', u'421', u'422', u'423', u'424', u'425', u'426', u'427', u'428', u'429', u'430', u'431', u'432', u'433', u'434', u'435', u'436', u'437', u'438', u'439', u'440', u'441', u'442', u'443', u'444', u'445', u'446', u'447', u'448', u'449', u'450', u'451', u'452', u'453', u'454', u'455', u'456', u'457', u'458', u'459', u'460']","[[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []]","[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119]",461,[],How old are you?,0,[u'342'],[1],[1],1424807139420,33,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,,A2LD8A4LBTYELX,,3327
+34,[u'474'],,,[None],1424807146002,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,,1,,[u'468'],[[]],[u''],469,[],What language do you speak at home?,0,[u'468'],[0],[u'd'],1424807142753,34,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,,A2LD8A4LBTYELX,,3249
+35,[u'474'],,,[None],1424807147832,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,,1,,"[u'464', u'462', u'463']","[[], [], []]","[u'other', u'male', u'female']",465,[],What is your sex?,0,[u'463'],[2],[u'female'],1424807146004,35,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,,A2LD8A4LBTYELX,,1828
+36,[u'476'],,,,1424807148746,3V7ICJJAZAGBD3FDUFXVEXNTJXOB46,,1,,,,,475,[],Thank you for participating in this experiment!,0,,,,1424807147833,36,A2LD8A4LBTYELX:3UJ1CZ6IZHPUDSY99972YYYQ214S5J,1,,A2LD8A4LBTYELX,,913
+37,[u'1'],,,,1424825011012,debugCPJIPQ,,1,,,,,0,[],"In this experiment, you will be shown made-up words.
+Based on how they sound, decide if they could become a new English word or not.
+",0,,,,1424825009807,0,debugG8AUS0:debugTY8Y26,1,,debugG8AUS0,,1205
+38,[u'3'],,,,1424825011448,debugCPJIPQ,,1,,,,,2,[],"During experimental questions, you will not be able to use your mouse. Use
+the F key to choose the option on the left, the J key to choose the option
+on the right, and the spacebar to move forward.",0,,,,1424825011016,1,debugG8AUS0:debugTY8Y26,1,,debugG8AUS0,,432
+39,[u'292'],True,BB,[None],1424825014079,debugCPJIPQ,6,1,True,"[u'85', u'86']","[[], []]","[u'Yes', u'No']",87,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+shlashk",0,[u'85'],[0],[u'Yes'],1424825011454,2,debugG8AUS0:debugTY8Y26,1,a,debugG8AUS0,,2625
+40,[u'292'],True,GB,[None],1424825015189,debugCPJIPQ,12,1,False,"[u'152', u'151']","[[], []]","[u'No', u'Yes']",153,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+krathp",0,[u'152'],[0],[u'No'],1424825014085,3,debugG8AUS0:debugTY8Y26,1,a,debugG8AUS0,,1104
+41,[u'292'],True,BB,[None],1424825016646,debugCPJIPQ,14,1,True,"[u'181', u'182']","[[], []]","[u'Yes', u'No']",183,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+znitp",0,[u'182'],[1],[u'No'],1424825015195,4,debugG8AUS0:debugTY8Y26,1,i,debugG8AUS0,,1451
+42,[u'292'],True,BB,[None],1424825017894,debugCPJIPQ,10,1,True,"[u'134', u'133']","[[], []]","[u'No', u'Yes']",135,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+shnozb",0,[u'133'],[1],[u'Yes'],1424825016651,5,debugG8AUS0:debugTY8Y26,1,o,debugG8AUS0,,1243
+43,[u'292'],True,GB,[None],1424825019326,debugCPJIPQ,0,1,False,"[u'8', u'7']","[[], []]","[u'No', u'Yes']",9,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+plavb",0,[u'8'],[0],[u'No'],1424825017898,6,debugG8AUS0:debugTY8Y26,1,a,debugG8AUS0,,1428
+44,[u'292'],True,GB,[None],1424825020813,debugCPJIPQ,20,1,False,"[u'248', u'247']","[[], []]","[u'No', u'Yes']",249,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+swukp",0,[u'247'],[1],[u'Yes'],1424825019328,7,debugG8AUS0:debugTY8Y26,1,u,debugG8AUS0,,1485
+45,[u'292'],False,GG,[None],1424825022382,debugCPJIPQ,11,1,False,"[u'137', u'136']","[[], []]","[u'No', u'Yes']",138,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+stoob",0,[u'136'],[1],[u'Yes'],1424825020816,8,debugG8AUS0:debugTY8Y26,1,oo,debugG8AUS0,,1566
+46,[u'292'],True,BB,[None],1424825024029,debugCPJIPQ,22,1,True,"[u'277', u'278']","[[], []]","[u'Yes', u'No']",279,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+lridb",0,[u'278'],[1],[u'No'],1424825022386,9,debugG8AUS0:debugTY8Y26,1,i,debugG8AUS0,,1643
+47,[u'292'],True,GB,[None],1424825025474,debugCPJIPQ,4,1,False,"[u'56', u'55']","[[], []]","[u'No', u'Yes']",57,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+prumth",0,[u'55'],[1],[u'Yes'],1424825024033,10,debugG8AUS0:debugTY8Y26,1,u,debugG8AUS0,,1441
+48,[u'292'],False,BG,[None],1424825026590,debugCPJIPQ,13,1,True,"[u'167', u'166']","[[], []]","[u'No', u'Yes']",168,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+vreb",0,[u'167'],[0],[u'No'],1424825025476,11,debugG8AUS0:debugTY8Y26,1,e,debugG8AUS0,,1114
+49,[u'292'],False,BG,[None],1424825027997,debugCPJIPQ,21,1,True,"[u'263', u'262']","[[], []]","[u'No', u'Yes']",264,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+thmot",0,[u'263'],[0],[u'No'],1424825026593,12,debugG8AUS0:debugTY8Y26,1,o,debugG8AUS0,,1404
+50,[u'292'],False,BG,[None],1424825029732,debugCPJIPQ,5,1,True,"[u'70', u'71']","[[], []]","[u'Yes', u'No']",72,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+zgoom",0,[u'71'],[1],[u'No'],1424825028000,13,debugG8AUS0:debugTY8Y26,1,oo,debugG8AUS0,,1732
+51,[u'292'],False,GG,[None],1424825030741,debugCPJIPQ,23,1,False,"[u'281', u'280']","[[], []]","[u'No', u'Yes']",282,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+strool",0,[u'280'],[1],[u'Yes'],1424825029734,14,debugG8AUS0:debugTY8Y26,1,oo,debugG8AUS0,,1007
+52,[u'292'],False,GG,[None],1424825031662,debugCPJIPQ,7,1,False,"[u'88', u'89']","[[], []]","[u'Yes', u'No']",90,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+brizz",0,[u'89'],[1],[u'No'],1424825030743,15,debugG8AUS0:debugTY8Y26,1,i,debugG8AUS0,,919
+53,[u'292'],False,GG,[None],1424825035609,debugCPJIPQ,15,1,False,"[u'185', u'184']","[[], []]","[u'No', u'Yes']",186,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+snock",0,[u'184'],[1],[u'Yes'],1424825031665,16,debugG8AUS0:debugTY8Y26,1,o,debugG8AUS0,,3944
+54,[u'292'],False,GG,[None],1424825037142,debugCPJIPQ,19,1,False,"[u'233', u'232']","[[], []]","[u'No', u'Yes']",234,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+frep",0,[u'232'],[1],[u'Yes'],1424825035612,17,debugG8AUS0:debugTY8Y26,1,e,debugG8AUS0,,1530
+55,[u'292'],True,GB,[None],1424825038878,debugCPJIPQ,16,1,False,"[u'200', u'199']","[[], []]","[u'No', u'Yes']",201,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+smenb",0,[u'200'],[0],[u'No'],1424825037145,18,debugG8AUS0:debugTY8Y26,1,e,debugG8AUS0,,1733
+56,[u'292'],True,GB,[None],1424825040876,debugCPJIPQ,8,1,False,"[u'104', u'103']","[[], []]","[u'No', u'Yes']",105,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+drefsh",0,[u'103'],[1],[u'Yes'],1424825038881,19,debugG8AUS0:debugTY8Y26,1,e,debugG8AUS0,,1995
+57,[u'292'],True,BB,[None],1424825042149,debugCPJIPQ,18,1,True,"[u'229', u'230']","[[], []]","[u'Yes', u'No']",231,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+vnathk",0,[u'230'],[1],[u'No'],1424825040879,20,debugG8AUS0:debugTY8Y26,1,a,debugG8AUS0,,1270
+58,[u'292'],False,BG,[None],1424825043588,debugCPJIPQ,1,1,True,"[u'22', u'23']","[[], []]","[u'Yes', u'No']",24,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+dlep",0,[u'23'],[1],[u'No'],1424825042152,21,debugG8AUS0:debugTY8Y26,1,e,debugG8AUS0,,1436
+59,[u'292'],False,BG,[None],1424825049814,debugCPJIPQ,9,1,True,"[u'119', u'118']","[[], []]","[u'No', u'Yes']",120,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+shkun",0,[u'118'],[1],[u'Yes'],1424825043590,22,debugG8AUS0:debugTY8Y26,1,u,debugG8AUS0,,6224
+60,[u'292'],False,BG,[None],1424825051094,debugCPJIPQ,17,1,True,"[u'214', u'215']","[[], []]","[u'Yes', u'No']",216,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+fnooz",0,[u'215'],[1],[u'No'],1424825049817,23,debugG8AUS0:debugTY8Y26,1,oo,debugG8AUS0,,1277
+61,[u'292'],False,GG,[None],1424825052200,debugCPJIPQ,3,1,False,"[u'40', u'41']","[[], []]","[u'Yes', u'No']",42,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+glid",0,[u'40'],[0],[u'Yes'],1424825051097,24,debugG8AUS0:debugTY8Y26,1,i,debugG8AUS0,,1103
+62,[u'292'],True,BB,[None],1424825053574,debugCPJIPQ,2,1,True,"[u'37', u'38']","[[], []]","[u'Yes', u'No']",39,[],"Based on how it sounds, could this be a word of
+English?
+<br><br>
+zbofk",0,[u'38'],[1],[u'No'],1424825052203,25,debugG8AUS0:debugTY8Y26,1,o,debugG8AUS0,,1371
+63,[u'428'],,,[None],1424825056946,debugCPJIPQ,,1,,"[u'412', u'411', u'410', u'409', u'408', u'407', u'406', u'405', u'404', u'403', u'402', u'401', u'400', u'399', u'398', u'397', u'396', u'395', u'394', u'393', u'392', u'391', u'390', u'389', u'388', u'387', u'386', u'385', u'384', u'383', u'382', u'381', u'380', u'379', u'378', u'377', u'376', u'375', u'374', u'373', u'372', u'371', u'370', u'369', u'368', u'367', u'366', u'365', u'364', u'363', u'362', u'361', u'360', u'359', u'358', u'357', u'356', u'355', u'354', u'353', u'352', u'351', u'350', u'349', u'348', u'347', u'346', u'345', u'344', u'343', u'342', u'341', u'340', u'339', u'338', u'337', u'336', u'335', u'334', u'333', u'332', u'331', u'330', u'329', u'328', u'327', u'326', u'325', u'324', u'323', u'322', u'321', u'320', u'319', u'318', u'317', u'316', u'315', u'314', u'313', u'312', u'311', u'310', u'309', u'308', u'307', u'306', u'305', u'304', u'303', u'302', u'301', u'300', u'299', u'298', u'297', u'296', u'295', u'294', u'293']","[[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []]","[119, 118, 117, 116, 115, 114, 113, 112, 111, 110, 109, 108, 107, 106, 105, 104, 103, 102, 101, 100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 89, 88, 87, 86, 85, 84, 83, 82, 81, 80, 79, 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68, 67, 66, 65, 64, 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]",413,[],How old are you?,0,[u'409'],[3],[116],1424825053615,26,debugG8AUS0:debugTY8Y26,1,,debugG8AUS0,,3331
+64,[u'428'],,,[None],1424825062881,debugCPJIPQ,,1,,[u'422'],[[]],[u''],423,[],Where do people typically think you're from?,0,[u'422'],[0],[u'murica'],1424825056957,27,debugG8AUS0:debugTY8Y26,1,,debugG8AUS0,,5924
+65,[u'428'],,,[None],1424825066150,debugCPJIPQ,,1,,[u'420'],[[]],[u''],421,[],What language do you speak at home?,0,[u'420'],[0],[u'murican'],1424825062884,28,debugG8AUS0:debugTY8Y26,1,,debugG8AUS0,,3266
+66,[u'428'],,,[None],1424825077417,debugCPJIPQ,,1,,[u'424'],[[]],[u''],425,[],"What information or strategies did you use to choose words in the
+experimental questions?",0,[u'424'],[0],"[u""it's hard with yes and no switching places""]",1424825066154,29,debugG8AUS0:debugTY8Y26,1,,debugG8AUS0,,11263
+67,[u'428'],,,[None],1424825080210,debugCPJIPQ,,1,,[u'418'],[[]],[u''],419,[],What is your native language?,0,[u'418'],[0],[u'english'],1424825077420,30,debugG8AUS0:debugTY8Y26,1,,debugG8AUS0,,2790
+68,[u'428'],,,[None],1424825084510,debugCPJIPQ,,1,,[u'426'],[[]],[u''],427,[],"This is a pilot for an experiment I'll run on people later. Do you
+have any feedback for me about the length or difficulty of the experiment, or
+any bugs or typos you saw? Thanks for your help!",0,[u'426'],[0],"[u""it's me""]",1424825080213,31,debugG8AUS0:debugTY8Y26,1,,debugG8AUS0,,4297
+69,[u'428'],,,[None],1424825086613,debugCPJIPQ,,1,,"[u'414', u'416', u'415']","[[], [], []]","[u'male', u'other', u'female']",417,[],What is your sex?,0,[u'415'],[2],[u'female'],1424825084513,32,debugG8AUS0:debugTY8Y26,1,,debugG8AUS0,,2100
+70,[u'430'],,,,1424825087479,debugCPJIPQ,,1,,,,,429,[],Thank you for participating in this experiment!,0,,,,1424825086615,33,debugG8AUS0:debugTY8Y26,1,,debugG8AUS0,,864
+71,[u'1'],,,,1424806901780,debugEOMGQE,,1,,,,,0,[],"In this experiment, you will be shown pairs of made-up words.
+Pronounce the words to yourself. Based on how they sound, choose the one that you find more
+English-like.",0,,,,1424806900605,0,debugNXHVF3:debugGAX5PR,0,,debugNXHVF3,,1175
+72,[u'3'],,,,1424806902246,debugEOMGQE,,1,,,,,2,[],"During experimental questions, you will not be able to use your mouse. Use
+the F key to choose the option on the left, the J key to choose the option
+on the right, and the spacebar to move forward.",0,,,,1424806901783,1,debugNXHVF3:debugGAX5PR,0,,debugNXHVF3,,463
+73,[u'340'],False,GG,[None],1424806902990,debugEOMGQE,16,1,False,"[u'197', u'196']","[[], []]","[u'felmth', u'smeck']",198,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'197'],[0],[u'felmth'],1424806902250,2,debugNXHVF3:debugGAX5PR,0,e,debugNXHVF3,"[u'filler', u'test']",740
+74,[u'340'],False,GG,[None],1424806903246,debugEOMGQE,8,1,False,"[u'100', u'101']","[[], []]","[u'drell', u'smim']",102,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'100'],[0],[u'drell'],1424806902996,3,debugNXHVF3:debugGAX5PR,0,e,debugNXHVF3,"[u'test', u'filler']",250
+75,[u'340'],False,GG,[None],1424806903518,debugEOMGQE,4,1,False,"[u'52', u'53']","[[], []]","[u'pruss', u'spelsh']",54,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'52'],[0],[u'pruss'],1424806903252,4,debugNXHVF3:debugGAX5PR,0,u,debugNXHVF3,"[u'test', u'filler']",266
+76,[u'340'],,"[u'GB', False, True]",[None],1424806903717,debugEOMGQE,,1,,"[u'315', u'314']","[[], []]","[u'felp', u'krlisg']",313,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'315'],[0],[u'felp'],1424806903522,5,debugNXHVF3:debugGAX5PR,0,,debugNXHVF3,"[u'catch-good', u'catch-bad']",195
+77,[u'340'],False,BG,[None],1424806903957,debugEOMGQE,2,1,True,"[u'35', u'34']","[[], []]","[u'threlt', u'zboss']",36,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'35'],[0],[u'threlt'],1424806903719,6,debugNXHVF3:debugGAX5PR,0,o,debugNXHVF3,"[u'filler', u'test']",238
+78,[u'340'],False,BG,[None],1424806904174,debugEOMGQE,14,1,True,"[u'179', u'178']","[[], []]","[u'flelg', u'znin']",180,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'179'],[0],[u'flelg'],1424806903959,7,debugNXHVF3:debugGAX5PR,0,i,debugNXHVF3,"[u'filler', u'test']",215
+79,[u'340'],True,GB,[None],1424806904373,debugEOMGQE,13,1,False,"[u'164', u'163']","[[], []]","[u'gwald', u'slemg']",165,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'164'],[0],[u'gwald'],1424806904177,8,debugNXHVF3:debugGAX5PR,0,e,debugNXHVF3,"[u'filler', u'test']",196
+80,[u'340'],False,BG,[None],1424806904582,debugEOMGQE,18,1,True,"[u'226', u'227']","[[], []]","[u'vnad', u'dwoond']",228,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'226'],[0],[u'vnad'],1424806904375,9,debugNXHVF3:debugGAX5PR,0,a,debugNXHVF3,"[u'test', u'filler']",207
+81,[u'340'],False,GG,[None],1424806904774,debugEOMGQE,0,1,False,"[u'5', u'4']","[[], []]","[u'shrelth', u'plag']",6,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'5'],[0],[u'shrelth'],1424806904584,10,debugNXHVF3:debugGAX5PR,0,a,debugNXHVF3,"[u'filler', u'test']",190
+82,[u'340'],True,BB,[None],1424806904982,debugEOMGQE,3,1,True,"[u'50', u'49']","[[], []]","[u'skoths', u'srishf']",51,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'50'],[0],[u'skoths'],1424806904776,11,debugNXHVF3:debugGAX5PR,0,i,debugNXHVF3,"[u'filler', u'test']",206
+83,[u'340'],False,BG,[None],1424806905174,debugEOMGQE,22,1,True,"[u'274', u'275']","[[], []]","[u'lrim', u'throth']",276,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'274'],[0],[u'lrim'],1424806904987,12,debugNXHVF3:debugGAX5PR,0,i,debugNXHVF3,"[u'test', u'filler']",187
+84,[u'340'],False,BG,[None],1424806905365,debugEOMGQE,10,1,True,"[u'131', u'130']","[[], []]","[u'slils', u'shnog']",132,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'131'],[0],[u'slils'],1424806905176,13,debugNXHVF3:debugGAX5PR,0,o,debugNXHVF3,"[u'filler', u'test']",189
+85,[u'340'],True,GB,[None],1424806905557,debugEOMGQE,9,1,False,"[u'115', u'116']","[[], []]","[u'gruzv', u'brur']",117,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'115'],[0],[u'gruzv'],1424806905367,14,debugNXHVF3:debugGAX5PR,0,u,debugNXHVF3,"[u'test', u'filler']",190
+86,[u'340'],False,GG,[None],1424806905757,debugEOMGQE,20,1,False,"[u'245', u'244']","[[], []]","[u'sloond', u'swuff']",246,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'245'],[0],[u'sloond'],1424806905560,15,debugNXHVF3:debugGAX5PR,0,u,debugNXHVF3,"[u'filler', u'test']",197
+87,[u'340'],False,BG,[None],1424806905949,debugEOMGQE,6,1,True,"[u'83', u'82']","[[], []]","[u'spup', u'shlaff']",84,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'83'],[0],[u'spup'],1424806905759,16,debugNXHVF3:debugGAX5PR,0,a,debugNXHVF3,"[u'filler', u'test']",190
+88,[u'340'],False,GG,[None],1424806906141,debugEOMGQE,12,1,False,"[u'149', u'148']","[[], []]","[u'sklime', u'krat']",150,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'149'],[0],[u'sklime'],1424806905950,17,debugNXHVF3:debugGAX5PR,0,a,debugNXHVF3,"[u'filler', u'test']",191
+89,[u'340'],True,BB,[None],1424806906332,debugEOMGQE,19,1,True,"[u'242', u'241']","[[], []]","[u'glagd', u'vmebg']",243,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'242'],[0],[u'glagd'],1424806906143,18,debugNXHVF3:debugGAX5PR,0,e,debugNXHVF3,"[u'filler', u'test']",189
+90,[u'340'],True,GB,[None],1424806906542,debugEOMGQE,5,1,False,"[u'68', u'67']","[[], []]","[u'gwempt', u'trooshp']",69,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'68'],[0],[u'gwempt'],1424806906334,19,debugNXHVF3:debugGAX5PR,0,oo,debugNXHVF3,"[u'filler', u'test']",208
+91,[u'340'],True,GB,[None],1424806906726,debugEOMGQE,1,1,False,"[u'20', u'19']","[[], []]","[u'gralfth', u'klefp']",21,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'20'],[0],[u'gralfth'],1424806906545,20,debugNXHVF3:debugGAX5PR,0,e,debugNXHVF3,"[u'filler', u'test']",181
+92,[u'340'],True,BB,[None],1424806906926,debugEOMGQE,23,1,True,"[u'290', u'289']","[[], []]","[u'skralk', u'hroothf']",291,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'290'],[0],[u'skralk'],1424806906729,21,debugNXHVF3:debugGAX5PR,0,oo,debugNXHVF3,"[u'filler', u'test']",197
+93,[u'340'],,"[u'BG', True, False]",[None],1424806907117,debugEOMGQE,,1,,"[u'327', u'326']","[[], []]","[u'lunt', u'psatr']",325,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'327'],[0],[u'lunt'],1424806906929,22,debugNXHVF3:debugGAX5PR,0,,debugNXHVF3,"[u'catch-good', u'catch-bad']",188
+94,[u'340'],True,BB,[None],1424806907518,debugEOMGQE,15,1,True,"[u'194', u'193']","[[], []]","[u'fashk', u'zmopk']",195,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'193'],[1],[u'zmopk'],1424806907119,23,debugNXHVF3:debugGAX5PR,0,o,debugNXHVF3,"[u'filler', u'test']",399
+95,[u'340'],,"[u'GG', False, False]",[None],1424806907750,debugEOMGQE,,1,,"[u'292', u'293']","[[], []]","[u'lbifth', u'slan']",294,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'292'],[0],[u'lbifth'],1424806907520,24,debugNXHVF3:debugGAX5PR,0,,debugNXHVF3,"[u'catch-bad', u'catch-good']",230
+96,[u'340'],True,BB,[None],1424806907966,debugEOMGQE,11,1,True,"[u'146', u'145']","[[], []]","[u'blelth', u'thloosf']",147,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'146'],[0],[u'blelth'],1424806907753,25,debugNXHVF3:debugGAX5PR,0,oo,debugNXHVF3,"[u'filler', u'test']",213
+97,[u'340'],True,GB,[None],1424806908173,debugEOMGQE,21,1,False,"[u'260', u'259']","[[], []]","[u'skuck', u'splogb']",261,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'260'],[0],[u'skuck'],1424806907969,26,debugNXHVF3:debugGAX5PR,0,o,debugNXHVF3,"[u'filler', u'test']",204
+98,[u'340'],True,GB,[None],1424806908365,debugEOMGQE,17,1,False,"[u'211', u'212']","[[], []]","[u'throozg', u'trilb']",213,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'211'],[0],[u'throozg'],1424806908175,27,debugNXHVF3:debugGAX5PR,0,oo,debugNXHVF3,"[u'test', u'filler']",190
+99,[u'340'],,"[u'BB', True, True]",[None],1424806908581,debugEOMGQE,,1,,"[u'338', u'339']","[[], []]","[u'tmozb', u'velk']",337,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'338'],[0],[u'tmozb'],1424806908368,28,debugNXHVF3:debugGAX5PR,0,,debugNXHVF3,"[u'catch-bad', u'catch-good']",213
+100,[u'340'],True,BB,[None],1424806908772,debugEOMGQE,7,1,True,"[u'98', u'97']","[[], []]","[u'shesp', u'shpivg']",99,[],"Based on how they sound, which of these two words is more likely to be a word of English?",0,[u'98'],[0],[u'shesp'],1424806908583,29,debugNXHVF3:debugGAX5PR,0,i,debugNXHVF3,"[u'filler', u'test']",189
+101,[u'474'],,,[None],1424806910692,debugEOMGQE,,1,,[u'470'],[[]],[u''],471,[],Where do people typically think you're from?,0,[u'470'],[0],[u'f '],1424806908778,30,debugNXHVF3:debugGAX5PR,0,,debugNXHVF3,,1914
+102,[u'474'],,,[None],1424806913738,debugEOMGQE,,1,,"[u'463', u'464', u'462']","[[], [], []]","[u'female', u'other', u'male']",465,[],What is your sex?,0,[u'463'],[0],[u'female'],1424806910696,31,debugNXHVF3:debugGAX5PR,0,,debugNXHVF3,,3042
+103,[u'474'],,,[None],1424806918878,debugEOMGQE,,1,,"[u'460', u'459', u'458', u'457', u'456', u'455', u'454', u'453', u'452', u'451', u'450', u'449', u'448', u'447', u'446', u'445', u'444', u'443', u'442', u'441', u'440', u'439', u'438', u'437', u'436', u'435', u'434', u'433', u'432', u'431', u'430', u'429', u'428', u'427', u'426', u'425', u'424', u'423', u'422', u'421', u'420', u'419', u'418', u'417', u'416', u'415', u'414', u'413', u'412', u'411', u'410', u'409', u'408', u'407', u'406', u'405', u'404', u'403', u'402', u'401', u'400', u'399', u'398', u'397', u'396', u'395', u'394', u'393', u'392', u'391', u'390', u'389', u'388', u'387', u'386', u'385', u'384', u'383', u'382', u'381', u'380', u'379', u'378', u'377', u'376', u'375', u'374', u'373', u'372', u'371', u'370', u'369', u'368', u'367', u'366', u'365', u'364', u'363', u'362', u'361', u'360', u'359', u'358', u'357', u'356', u'355', u'354', u'353', u'352', u'351', u'350', u'349', u'348', u'347', u'346', u'345', u'344', u'343', u'342', u'341']","[[], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []]","[119, 118, 117, 116, 115, 114, 113, 112, 111, 110, 109, 108, 107, 106, 105, 104, 103, 102, 101, 100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 89, 88, 87, 86, 85, 84, 83, 82, 81, 80, 79, 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68, 67, 66, 65, 64, 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]",461,[],How old are you?,0,[u'458'],[2],[117],1424806913770,32,debugNXHVF3:debugGAX5PR,0,,debugNXHVF3,,5108
+104,[u'474'],,,[None],1424806920316,debugEOMGQE,,1,,[u'472'],[[]],[u''],473,[],"What information or strategies did you use to choose words in the
+experimental questions?",0,[u'472'],[0],[u'f'],1424806918884,33,debugNXHVF3:debugGAX5PR,0,,debugNXHVF3,,1432
+105,[u'474'],,,[None],1424806921558,debugEOMGQE,,1,,[u'468'],[[]],[u''],469,[],What language do you speak at home?,0,[u'468'],[0],[u'f'],1424806920319,34,debugNXHVF3:debugGAX5PR,0,,debugNXHVF3,,1239
+106,[u'474'],,,[None],1424806923292,debugEOMGQE,,1,,[u'466'],[[]],[u''],467,[],What is your native language?,0,[u'466'],[0],[u'f'],1424806921560,35,debugNXHVF3:debugGAX5PR,0,,debugNXHVF3,,1732
+107,[u'476'],,,,1424806924383,debugEOMGQE,,1,,,,,475,[],Thank you for participating in this experiment!,0,,,,1424806923293,36,debugNXHVF3:debugGAX5PR,0,,debugNXHVF3,,1090

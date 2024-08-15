@@ -1,0 +1,232 @@
+\documentclass{umassthesis}
+
+\usepackage{pifont}
+\usepackage{natbib}
+\usepackage{tipa}
+\usepackage{linguex}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{fancyvrb}
+\usepackage{hyperref}
+
+\author{Presley Pizzo}
+
+
+\begin{document}
+
+<<options, cache=FALSE, include=FALSE>>=
+opts_chunk$set(fig.width=5, fig.height=5, eval=TRUE, cache=FALSE, echo=FALSE, message=FALSE, warning=FALSE)
+opts_knit$set(self.contained=FALSE, concordance=TRUE)
+Sys.setenv(TEXINPUTS="/Users/presley/dissertation/",
+           BIBINPUTS="/Users/presley/Library/texmf/bibtex/bib/",
+           BSTINPUTS="/Users/presley/dissertation/")
+@
+
+\title{Investigating Properties of Phonotactic Knowledge Through Web-Based Experimentation}
+\author{Presley Pizzo}
+\date{September 2015} % The date you'll actually graduate -- must be
+                     % February, May, or September
+\copyrightyear{2015}
+\bachelors{B.A.}{Emory University}
+\committeechair{Joe Pater}
+\firstreader{Kristine Yu}
+\secondreader{Brian Dillon}
+\thirdreader{Emery Berger}
+%\fourthreader{}   % Optional
+%\fifthreader{}            % Optional
+%\sixthreader{}            % Optional
+\departmentchair{John Kingston} % Uses "Department Chair" as the title. To
+% use an alternate title, such as "Chair", use \departmentchair[Chair]{Pete Shearer}
+\departmentname{Linguistics}
+\degree{Doctor of Philosophy}{Ph.D.}
+\frontmatter
+\maketitle
+\copyrightpage     %% not required for an M.S. thesis
+\signaturepage
+
+
+\begin{dedication}              % Dedication page
+  \begin{center}
+    \emph{For the impostors.}
+  \end{center}
+\end{dedication}
+
+%% Acknowledgements are optional...yeah, right.
+\chapter{Acknowledgments}             % Acknowledgements page
+I am grateful to many people for their help and support while I was writing this dissertation.
+
+As I started to write about Joe Pater, I wondered how many hours he has spent
+discussing phonology with me. I settled on ``too many to count.'' Joe's
+generosity with his time --- no matter what country he happens to inhabit ---
+has provided a continuous thread throughout my graduate career, despite the
+many changes in course I took. His flexibility and breadth allowed me to
+explore and settle on a path that makes sense for me, while still maintaining a
+focus on phonology. Joe struck an impressive balance as an advisor, giving me
+the space to make my own decisions while working hard to carve out
+opportunities for me.  He has supported me regardless of my career choices, and
+that made the difference in my ability to write this dissertation.
+
+Kristine Yu also dedicated an immense amount of time to helping me think
+through ideas and experimental designs. Her broad knowledge base and incisive
+thinking were extremely helpful in both brainstorming and refining the
+experimental chapters of this dissertation. What I will remember more, though,
+is how her genuineness and interest in others made her so approachable,
+giving me the confidence to ask her a wider variety of questions and opening up opportunities
+to learn practical things about how to organize your research. Her quirky sense of
+humor made the long road more enjoyable.
+
+Brian Dillon was an indispensable source of advice. Meetings with Brian are
+like no other meetings I had in grad school; they feel like untangling a knot.
+Perhaps this is because he brings a novel perspective as someone outside of my
+subfield; I prefer the hypothesis that he is extraordinary.
+
+Emery Berger has an inspirational vision for programs that can solve real
+problems. He and Emma Tosch have done incredible work on SurveyMan, the
+precursor to the program that I present in this dissertation. Although I had
+toyed with the idea of writing experiment-running software, I likely never
+would have done so without their work paving the way. I am indebted to them for
+their ideas and the time they spent with me as we discussed goals for
+experimental software. I am also grateful to Emery for taking the time to coach
+me during my job search. As a linguist going into a career in software, I had
+little formal guidance, and his advice helped me understand the task I was
+undertaking and succeed in it.
+
+John Vilk also played a role in making Speriment possible, by recommending
+TypeScript to Emma and me as an alternative to JavaScript. If this sounds like
+a minor contribution, I leave it as an exercise to the reader to make sense of
+the JavaScript type system.
+
+I'm grateful to Will Dabney for grabbing my computer
+one day in a cafe and showing me how to write object oriented code. Having
+someone I could ask dumb questions made it possible for me to make the jump
+from being able to get a computer to do what I want it to do (somehow,
+eventually), to being able to design software.
+
+Wendell Kimper was the first person I met at UMass,
+and he quickly became a friend and mentor. Wendell taught me how to navigate
+grad school; Brian Smith gave me new ways of looking at theories; Claire
+Moore-Cantwell was endlessly patient with both my linguistic musings and my
+personal conundrums; Claire, Robert Staubs, and Minta Elsman --- the
+phonologists in my cohort --- were extremely generous with their ideas when I
+shared my work with them. The rest of my cohort, Elizabeth Bogal-Allbritten,
+Seda Kan, Jason Overfelt, and Andrew Weir, helped me through first-year syntax,
+and as a whole my class was a welcoming, supportive group that I'm grateful to
+be a part of. I'm also proud of our trivia team, Totally Jake, and its multiple wins
+against the likes of The Cunning Linguists.
+
+I was lucky that the phonology department at UMass has had a strong tradition
+of informal meetings throughout my time here, whether in the form of grant
+group meetings, reading groups, or seminars. I thank Lena Fainleib, Clint
+Hartzell, Ivy Hauser, Coral Hughto, Karen Jesney, John Kingston, John McCarthy,
+Kevin Mullin, Aleksei Nazarov, Amanda Rysling, and all the visitors and occasional
+drop-ins we've had over the years for their insightful presentations and helpful comments.
+
+The software development, and writing of this dissertation, was supported by NSF BCS-424077 to the University of Massachusetts Amherst. The experiments were funded by a dissertation research grant from the Department of Linguistics.
+
+I'd also like to thank all of the friends who created a support network for me throughout
+the academic and personal challenges of grad school. Northampton was a change for me but it
+turned out to be a wonderful one. On that note, I'd also like to thank all of the cafes in
+Northampton for, well, keeping me going.
+
+Mike MacHenry not only encouraged me to become a better software developer and helped
+me do so, but also talked me through every interview and every p-value greater than 0.05. Everyone should have someone in their corner who only says ``I told you so'' after a victory.
+He was also a great sounding board as I designed Speriment, both because of his software
+development expertise and his background in designing a survey language.
+
+My family has always been in full support of me, no matter what I choose to do.
+I feel so lucky to have always been confident that I could make the career choices I
+wanted without fear of disappointing my family, or of annoying them by
+answering ``Still writing my dissertation'' every time they ask me what I'm up
+to. Thank you.
+
+
+%%
+%% Abstract is MANDATORY. -- Except for MS theses
+\begin{abstract}                % Abstract
+The goal of this dissertation is to advance the state of the art of research in
+constraint-based phonotactics. It takes a two-pronged approach: a technological
+contribution intended to facilitate future research, and experiments which seek
+to shed light on high-level questions about the properties of phonotactic
+models that can guide the development of theoretical work.
+
+The technological contribution is a software package called Speriment which
+allows experimenters to create and run experiments over the internet without
+advanced programming techniques. This software is particularly well suited to
+the kinds of experiments often run in phonotactic research, but can also be
+used for experiments in other domains of linguistics and the social sciences.
+It is hoped that this software will make it faster and easier to conduct
+phonotactic and other experiments as well as encourage experimenters to
+increase the reproducibility and transparency of their research.
+
+The experiments presented here address questions that assume constraint-based
+phonotactic frameworks, but that do not rely on particular theories of the
+content of the constraint set. That is, they apply to constraint-based frameworks for
+theories of phonotactics, with the first study seeking to distinguish between
+two such frameworks, a linear version of Harmonic Grammar and Maximum Entropy, while the second
+investigates whether phonotactic knowledge is independent of knowledge of
+phonological alternations. These coarse-grained questions about phonotactic
+knowledge on how pieces of phonotactic knowledge interact with each other and
+with another part of the grammar are intended to add to the groundwork on
+which phonotactic models and models of all phonological knowledge are built.
+Their findings have implications for which constraint-based frameworks should
+be used for future theories and how these theories can be reliably tested.
+\end{abstract}
+
+%% Table of contents is mandatory, lists of tables and figures are 
+%% mandatory if you have any tables or figures; must be in this order.
+\tableofcontents                % Table of contents
+\listoftables                   % List of Tables
+\listoffigures                  % List of Figures
+
+\mainmatter   %% <-- This line is mandatory
+
+
+\unnumberedchapter{Introduction}
+<<intro, child='intro.Rnw'>>=
+@
+
+\chapter{Speriment}
+\label{ch:speriment}
+<<speriment, child='speriment.Rnw'>>=
+@
+
+\chapter{Cumulativity of Violations}
+\label{ch:cumulativity}
+<<cumulativity, child='cumulativity.Rnw'>>=
+@
+
+\chapter{Effect of Alternations on Phonotactics}
+\label{ch:alternations}
+<<alternations, child='alternations.Rnw'>>=
+@
+
+\chapter{Conclusion}
+<<conclusion, child='conclusion.Rnw'>>=
+@
+
+
+\appendix
+\chapter{Experiments 1 and 2 Code}
+\label{cumul-code}
+<<appendix1c, child='appendix1c.Rnw'>>=
+@
+\chapter{Experiments 1 and 2 Stimuli}
+\label{cumul-stimuli}
+<<appendix1, child='appendix1.Rnw'>>=
+@
+\chapter{Experiments 3 and 4 Code}
+\label{alt-code}
+<<appendix2c, child='appendix2c.Rnw'>>=
+@
+\chapter{Experiments 3 and 4 Stimuli}
+\label{alt-stimuli}
+<<appendix2, child='appendix2.Rnw'>>=
+@
+
+\backmatter  %% <--- mandatory
+\interlinepenalty=10000  % prevent split bibliography entries
+\bibliographystyle{apalike}
+%\bibliographystyle{umassthesis}
+\bibliography{software,HG,phonology}
+
+\end{document}

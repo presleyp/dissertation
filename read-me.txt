@@ -1,0 +1,3 @@
+These files are slightly modified from the AMP 2014 stylesheet documents, which were in turn adapted (by Adam Albright and Michelle Smallwood) from the original Phonology 2013 stylesheet created by Claire Moore-Cantwell, Joe Pater, and Robert Staubs.
+
+See comments in stylesheet.tex for information about these files. Thanks to Max Bane for all his work on the cascadilla class file on which this one is based, and to Claire Moore-Cantwell, Joe Pater, and Robert Staubs for creating the Example document, and the Phonology 2013 style sheet on which this is based.

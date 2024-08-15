@@ -1,0 +1,76 @@
+C1,V1,C2,C3,V2,C4,Language
+d,a,s, ,o,m,both
+m,e,n, ,e,p,both
+p,i,b, ,i,t,both
+l,u,t, ,u,l,both
+f,o,ng, ,a,s,both
+l,i,f, ,i,d,voice
+b,e,m, ,a,b,voice
+t,o,l, ,o,b,voice
+s,e,d, ,i,d,voice
+ng,o,ng, ,a,b,voice
+d,u,p, ,u,d,voice
+m,a,t, ,o,b,voice
+n,u,s, ,e,d,voice
+f,i,n, ,u,b,voice
+p,a,b, ,e,d,voice
+l,i,f, ,i,n,nasal
+b,e,m, ,a,ng,nasal
+t,o,l, ,o,ng,nasal
+s,e,d, ,i,n,nasal
+ng,o,ng, ,a,ng,nasal
+d,u,p, ,u,ng,nasal
+m,a,t, ,o,ng,nasal
+n,u,s, ,e,n,nasal
+f,i,n, ,u,n,nasal
+p,a,b, ,e,n,nasal
+l,e,b,n,i,f,test
+t,e,b,ng,i,n,test
+ng,a,d,n,a,d,test
+n,o,b,n,u,m,test
+p,o,b,ng,e,l,test
+d,o,d,ng,a,p,test
+b,u,d,n,o,s,test
+f,a,d,n,a,d,test
+d,e,d,ng,e,m,test
+s,i,d,ng,u,b,test
+f,i,b,ng,u,s,test
+b,i,d,ng,a,f,test
+s,o,b,n,u,t,test
+p,u,b,n,o,t,test
+m,i,b,ng,o,l,test
+l,a,b,n,i,n,test
+m,e,d,ng,i,ng,test
+t,u,d,n,e,p,test
+ng,a,d,ng,e,ng,test
+n,u,b,n,o,b,test
+d,a,s,b,i,ng,filler
+p,e,n,p,e,m,filler
+s,i,m,d,e,d,filler
+t,u,b,m,a,s,filler
+b,i,p,t,u,l,filler
+l,u,ng,f,o,p,filler
+m,e,t,ng,u,b,filler
+f,o,f,n,o,n,filler
+n,o,l,s,i,t,filler
+ng,a,d,l,a,f,filler
+t,o,t, ,a,b,pilot_voice
+ng,a,p, ,i,b,pilot_voice
+n,a,b, ,u,d,pilot_voice
+b,u,n, ,o,d,pilot_voice
+f,u,s, ,u,b,pilot_voice
+p,i,f, ,a,b,pilot_voice
+m,e,l, ,i,b,pilot_voice
+l,i,ng, ,o,d,pilot_voice
+s,o,m, ,e,d,pilot_voice
+d,e,d, ,e,d,pilot_voice
+t,o,t, ,a,ng,pilot_nasal
+ng,a,p, ,i,ng,pilot_nasal
+n,a,b, ,u,n,pilot_nasal
+b,u,n, ,o,ng,pilot_nasal
+f,u,s, ,u,n,pilot_nasal
+p,i,f, ,a,n,pilot_nasal
+m,e,l, ,i,ng,pilot_nasal
+l,i,ng, ,o,ng,pilot_nasal
+s,o,m, ,e,n,pilot_nasal
+d,e,d, ,e,n,pilot_nasal

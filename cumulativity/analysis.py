@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import json
+import copy
 
 #mysql://presley:Qlw6JXnaR5@localhost:3306/Cumulativity
 
@@ -76,7 +77,9 @@ with open('results_june3.json', 'r') as f:
 js = json.loads(data)
 df = pd.DataFrame(js)
 
-df = exclude_old(df, '6')
+df = exclude_old(df, '7')
+# pilot person the day before
+df = df[~df.WorkerID.isin(['A39E9936894TJR'])]
 
 # add/modify useful columns
 df['ReactionTime'] = df.EndTime - df.StartTime
@@ -86,8 +89,11 @@ df['ReactionTime'] = df.EndTime - df.StartTime
 ### Exclusions
 workers = exclude_debug(df)
 dedup = exclude_duplicates(workers)
+print 'initial total'
+print len(set(dedup.WorkerID))
 # non_minors = exclude_minors(dedup, '461')
-non_minors = exclude_minors(dedup, '557')
+non_minors = exclude_minors(dedup, '558')
+# non_minors = exclude_minors(dedup, '557')
 
 
 # catch = non_minors[non_minors.PageType == 'Catch']
@@ -109,6 +115,7 @@ humans = exclude_bot_speed(test)
 humans['SelectedIndex'] = humans.SelectedPosition.apply(lambda x: x[0])
 attentive = exclude_one_sided(humans)
 # read: language answers, strategy answers
+# March 17:
 # A12DBV9FNAOFEM speaks Bulgarian
 # A3GFDGDJ3UNL18 speaks Spanish
 # A3IMQGP6Q6URB6 speaks English and French but native language english
@@ -118,11 +125,19 @@ english_speakers = attentive[~attentive.WorkerID.isin(['A12DBV9FNAOFEM',
 
 # where from question is ambiguous, could draw on any information, so I'm
 # ignoring it though two answers were India, Russia
+# June 3:
 # one native language answer was Spanish: AAXYYH9MI3PJM
 
-# attentive = attentive[attentive.WorkerID != 'AAXYYH9MI3PJM']
+# June 17:
+# A1CXNVK45K3GY0 - Arabic
+# A1WCC1EPZRG4TQ - Bengali
+# ABB9DYBUWGNNX - Arabic
+
+# english_speakers = attentive[attentive.WorkerID != 'AAXYYH9MI3PJM']
+# english_speakers = attentive[~attentive.WorkerID.isin(['A1CXNVK45K3GY0', 'A1WCC1EPZRG4TQ', 'ABB9DYBUWGNNX'])]
+
 print "Number of participants dropped for saying English was not their native language"
-print 2
+print 3
 results = english_speakers
 
 print 'Number of included participants'
@@ -131,6 +146,12 @@ print len(set(results.WorkerID))
 # make useful columns
 # results['SelectedTest'] = results.apply(lambda row: row['SelectedType'] == 'test', axis = 1)
 results.Response = results.apply(lambda row: row['Response'][row['SelectedIndex']], axis = 1)
+
+results['ItemID'] = results.apply(lambda row: row['ItemID'] if
+        type(row['ItemID']) == str else
+        row['PageText'].split('>')[-2].rstrip('</b'), axis = 1)
+print 'item ids'
+print results[results.PageType == 'Catch'].ItemID
 
 def assess_catch(worker_group):
     cond_groups = worker_group.groupby('Condition')
@@ -142,9 +163,11 @@ catch = results[results.PageType == 'Catch']
 # worker_groups = catch.groupby('WorkerID')
 # catch_agg = worker_groups.aggregate(assess_catch)
 # print catch_agg
-catch_groups = catch.groupby(['WorkerID', 'Condition'])
+catch_groups = catch.groupby(['PageID'])
 catch_means = catch_groups.aggregate(np.mean)
 catch_means.to_csv('response_means.csv')
+# print 'catch means'
+# print catch_means['Response']
 # catch_means['negative'] = catch_means.apply(lambda row: -row['Response'] if
 #         row['Condition'] == 'worst' else row['Response'], axis = 1)
 # print catch_means['negative']
@@ -183,16 +206,22 @@ to_analyze = pd.DataFrame({
     'Version': results.Version,
     'YesPosition': results.YesPosition})
 
+# print to_analyze[to_analyze.Condition == 'BB'].groupby('Item').agg(np.mean)['Response']
+# print to_analyze[to_analyze.Condition == 'BG'].groupby('Item').agg(np.mean)['Response']
+# print to_analyze[to_analyze.Condition == 'GB'].groupby('Item').agg(np.mean)['Response']
+
+
 # make graphs
-cond_groups = to_analyze.groupby(['Condition', 'Response'])
-cond_groups.count()['Response'].plot(kind = 'bar')
-plt.show()
+# cond_groups = to_analyze.groupby(['Condition', 'Response'])
+# cond_groups.count()['Response'].plot(kind = 'bar')
+# plt.show()
 
 cond_groups2 = to_analyze.groupby('Condition')
 cond_means = cond_groups2.aggregate(np.mean)['Response']
-print cond_means
+# print cond_means
 cond_means.plot(kind = 'bar')
-plt.show()
+# plt.show()
+
 
 # number where test was chosen for each condition
 # chose_test = to_analyze[to_analyze.SelectedTest == True]
@@ -225,17 +254,16 @@ plt.show()
 # check distribution of versions
 worker_set = to_analyze.drop_duplicates('Subject')
 worker_set.groupby('Version').count()['Version'].plot(kind = 'bar')
-plt.show()
+# plt.show()
 
 # mean reaction time for each condition/selection
 time_groups = to_analyze.groupby(['Condition', 'Response'])
 mean_times = time_groups['ReactionTime'].aggregate(np.mean)
 # sd_times = time_groups['ReactionTime'].aggregate(np.sd)
-#TODO unfinished outlier removal
 # outlier_times = time_groups[time_groups['ReactionTime'] > (mean_times + 2 *
 #     sd_times)]
 mean_times.plot(kind = 'bar')
-plt.show()
+# plt.show()
 
 included_workers = set(to_analyze.Subject)
 freetext_questions = df[df.PageType == 'Demographics']
@@ -247,6 +275,6 @@ freetext_df = pd.DataFrame({
 })
 
 # write to csv
-to_analyze.to_csv('cumulativity_june3_dataframe.csv')
+# to_analyze.to_csv('cumulativity_june3_dataframe.csv')
 
-freetext_df.to_csv('cumulativity_june3_freetext.csv')
+# freetext_df.to_csv('cumulativity_june3_freetext.csv')

@@ -1,0 +1,96 @@
+C1,V1,C2,C3,V2,C4,language,singular,plural,stem,segment1,segment2,notes,C5,pagetype
+t,e,d, ,u,s,both,teldus,teldusfa,teldus,,,,l,training
+l,a,b, ,a,p,both,labap,labapfa,labap,,,,,training
+f,o,ng, ,e,m,both,fongem,fongemfa,fongem,,,swapped ng and f,,training
+p,u,s, ,i,t,both,pufsit,pufsitfa,pufsit,,,,f,training
+n,i,m, ,o,l,both,nimol,nimolfa,nimol,,,,,training
+n,e,m,p,a,b,voice,nemab,nemapfa,nemab,b,,,,training
+s,o,b,t,u,d,voice,sobud,sobutfa,sobud,d,,,,training
+f,e,t,p,a,b,voice,fetab,fetapfa,fetab,b,,,,training
+t,a,d,t,i,d,voice,tamdid,tamditfa,tamdid,d,,,m,training
+d,u,ng,p,i,b,voice,dungib,dungipfa,dungib,b,,swapped ng and d,,training
+m,i,l,t,o,d,voice,milod,milotfa,milod,d,,,,training
+l,i,p,p,e,b,voice,lispeb,lispepfa,lispeb,b,,,s,training
+s,a,ng,t,o,d,voice,sangod,sangotfa,sangod,d,,,,training
+p,o,n,p,e,b,voice,poneb,ponepfa,poneb,b,,,,training
+b,u,f,t,u,d,voice,bupfud,bupfutfa,bupfud,d,,,p,training
+f,u,n,p,e,m,plural,funemfa,funepfa,fune,p,,,,training
+s,e,m,t,o,m,plural,semomfa,semotfa,semo,t,,,,training
+n,a,ng,p,i,m,plural,nangimfa,nangipfa,nangi,p,,,,training
+s,i,p,t,u,m,plural,sipumfa,siputfa,sipu,t,,,,training
+l,o,t,p,a,m,plural,lotamfa,lotapfa,lota,p,,,,training
+m,e,l,t,o,m,plural,melomfa,melotfa,melo,t,,,,training
+b,a,ng,p,u,m,plural,bangumfa,bangupfa,bangu,p,,,,training
+t,u,b,t,e,m,plural,tubemfa,tubetfa,tube,t,,,,training
+d,i,f,p,a,m,plural,ditfamfa,ditfapfa,ditfa,p,,,t,training
+p,o,d,t,i,m,plural,podimfa,poditfa,podi,t,,,,training
+s,u,m,m,e,n,nasal,sumen,sumemfa,sumen,n,,,,training
+l,o,b,m,o,n,nasal,lobon,lobomfa,lobon,n,,,,training
+p,i,t,m,a,ng,nasal,pitang,pitamfa,pitang,ng,,,,training
+d,e,d,m,i,ng,nasal,demding,demdimfa,demding,ng,,,m,training
+f,a,ng,m,u,n,nasal,fangun,fangumfa,fangun,n,,swapped ng and d,,training
+s,o,l,m,o,n,nasal,solon,solomfa,solon,n,,,,training
+b,u,p,m,a,ng,nasal,buspang,buspamfa,buspang,ng,,,s,training
+n,a,ng,m,u,ng,nasal,nangung,nangumfa,nangung,ng,,,,training
+t,i,n,m,e,n,nasal,tinen,tinemfa,tinen,n,,n matched with b one extra time,,training
+m,e,f,m,i,ng,nasal,mepfing,mepfimfa,mepfing,ng,,ng matched with d one extra time,p,training
+l,u,d,n,u,m,test,ludfum,lunfum,ludfum,d,n,,,test
+p,i,d,ng,a,p,test,pidfap,pingfap,pidfap,d,ng,,,test
+t,o,d,n,o,b,test,todfob,tonfob,todfob,d,n,,,test
+b,u,d,ng,i,l,test,budfil,bungfil,budfil,d,ng,,,test
+d,i,d,n,i,ng,test,didfing,dinfing,didfing,d,n,,,test
+s,u,d,ng,u,f,test,sudfuf,sungfuf,sudfuf,d,ng,,,test
+n,a,d,n,u,ng,test,nadfung,nanfung,nadfung,d,n,swapped ng and n,,test
+m,a,d,ng,a,s,test,madfas,mangfas,madfas,d,ng,,,test
+m,e,d,n,e,t,test,medfet,menfet,medfet,d,n,,,test
+n,i,d,ng,i,t,test,nidfit,ningfit,nidfit,d,ng,,,test
+n,a,b,n,e,p,test,nabfep,nanfep,nabfep,b,n,,,test
+t,i,b,ng,i,m,test,tibfim,tingfim,tibfim,b,ng,,,test
+f,o,b,n,o,l,test,fobfol,fonfol,fobfol,b,n,,,test
+p,e,b,ng,u,f,test,pebfuf,pengfuf,pebfuf,b,ng,,,test
+b,u,b,n,a,n,test,bubfan,bunfan,bubfan,b,n,,,test
+s,a,b,ng,o,d,test,sabfod,sangfod,sabfod,b,ng,,,test
+f,o,b,n,e,s,test,fobfes,fonfes,fobfes,b,n,,,test
+b,o,b,ng,a,ng,test,bobfang,bongfang,bobfang,b,ng,swapped ng and b,,test
+l,e,b,n,o,ng,test,lebfong,lenfong,lebfong,b,n,,,test
+d,e,b,ng,e,d,test,debfed,dengfed,debfed,b,ng,,,test
+f,o,n,b,a,m,filler,fonfam,fobfam,fonfam,,,,,filler
+m,u,t,n,u,f,filler,mutfuf,munfuf,mutfuf,,,,,filler
+l,a,s,m,i,t,filler,lasfit,lamfit,lasfit,,,replaced f with s,,filler
+b,i,d,l,a,b,filler,bidfab,bilfab,bidfab,,,replaced f with l,,filler
+l,e,p,l,e,ng,filler,lepfeng,lelfeng,lepfeng,,,swapped ng and l,,filler
+s,u,l,d,e,n,filler,sulfen,sudfen,sulfen,,,,,filler
+n,i,m,ng,i,d,filler,nimfid,ningfid,nimfid,,,,,filler
+p,o,b,s,u,p,filler,pobfup,posfup,pobfup,,,,,filler
+d,e,s,t,o,ng,filler,desfong,detfong,desfong,,,,,filler
+t,a,ng,p,o,s,filler,tangfos,tapfos,tangfos,,,,,filler
+s,a,p,t,o,d,pilot_voice,sapodfa,sapotfa,sapod,d,,,,rule
+p,u,l,p,o,b,pilot_voice,pulobfa,pulopfa,pulob,b,,,,rule
+l,u,m,p,u,b,pilot_voice,lumubfa,lumupfa,lumub,b,,,,rule
+t,e,t,p,i,b,pilot_voice,tetibfa,tetipfa,tetib,b,,,,rule
+f,a,d,t,u,d,pilot_voice,fadudfa,fadutfa,fadud,d,,,,rule
+m,o,f,p,e,b,pilot_voice,mofebfa,mofepfa,mofeb,b,,,,rule
+b,i,n,t,e,d,pilot_voice,binedfa,binetfa,bined,d,,,,rule
+n,i,ng,t,a,d,pilot_voice,ningadfa,ningatfa,ningad,d,,,,rule
+s,e,ng,p,i,b,pilot_voice,sengibfa,sengipfa,sengib,b,,,,rule
+d,o,b,t,a,d,pilot_voice,dobadfa,dobatfa,dobad,d,swapped ng and b,,,rule
+s,a,p,m,o,ng,pilot_nasal,sapongfa,sapomfa,sapong,ng,,,,rule
+p,u,l,m,o,ng,pilot_nasal,pulongfa,pulomfa,pulong,ng,,,,rule
+l,u,m,m,u,ng,pilot_nasal,lumungfa,lumumfa,lumung,ng,,,,rule
+t,e,t,m,i,n,pilot_nasal,tetinfa,tetimfa,tetin,n,,,,rule
+f,a,d,m,u,ng,pilot_nasal,fadungfa,fadumfa,fadung,ng,,,,rule
+m,o,f,m,e,ng,pilot_nasal,mofengfa,mofemfa,mofeng,ng,,,,rule
+b,i,n,m,e,n,pilot_nasal,binenfa,binemfa,binen,n,,,,rule
+n,i,ng,m,a,n,pilot_nasal,ninganfa,ningamfa,ningan,n,,,,rule
+s,e,ng,m,i,n,pilot_nasal,senginfa,sengimfa,sengin,n,swapped ng and s,,,rule
+d,o,b,m,a,n,pilot_nasal,dobanfa,dobamfa,doban,n,,,,rule
+s,a,n,p,o,t,pilot_filler,sanotfa,sanopfa,sanot,t,,,,
+s,o,b,l,a,m,pilot_filler,sobamfa,sobalfa,sobam,m,,,,
+b,e,f,m,u,l,pilot_filler,befulfa,befumfa,beful,l,,,,
+p,i,d,t,e,p,pilot_filler,pidepfa,pidetfa,pidep,p,,,,
+n,u,p,f,i,s,pilot_filler,nupisfa,nupiffa,nupis,s,,,,
+t,a,t,m,u,l,pilot_filler,tatulfa,tatumfa,tatul,l,,,,
+d,u,l,l,i,m,pilot_filler,dulimfa,dulilfa,dulim,m,,,,
+f,o,ng,t,e,p,pilot_filler,fongepfa,fongetfa,fongep,p,,,,
+m,e,ng,f,o,s,pilot_filler,mengosfa,mengoffa,mengos,s,,,,
+l,i,m,p,a,t,pilot_filler,limatfa,limapfa,limat,t,,,,

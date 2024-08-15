@@ -1,0 +1,12 @@
+
+model {
+for( i in 1 : nData ) {
+y[i] ~ dbern( mu[i] )
+mu[i] <- 1/(1+exp(-( b0 + inprod( b[] , x[i,] ))))
+}
+b0 ~ dnorm( 0 , 1.0E-12 )
+for ( j in 1 : nPredictors ) {
+b[j] ~ dnorm( 0 , 1.0E-12 )
+}
+}
+

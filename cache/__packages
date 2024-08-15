@@ -1,0 +1,9 @@
+base
+knitr
+Matrix
+Rcpp
+lme4
+sm
+vioplot
+pwr
+optimx

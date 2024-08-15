@@ -3,639 +3,1225 @@ set_parent('diss.Rnw')
 @
 
 \section{Overview}
-% One of the goals of phonology is to develop predictive models of phonotactics.
-% Such models predict phonotactic judgments of words based on various properties
-% of those words, UG, and the language's lexicon. In order to enable us to choose
-% more effective models, I propose to investigate the correlation between the
-% number of phonotactic violations in a word and the phonotactic judgment it
-% elicits.
+    In modeling constraint-based phonotactics, there are three broad kinds of
+    decisions to be made: which framework to use (that is, which algorithms for learning
+    from data and predicting new judgments), which parameters (constraints) to
+    use, and how to tune (rank or weight) the parameters. This experiment
+    will weigh in on the question of framework choice, using the function they use
+    to combine the effects of violations to distinguish among them.
 
-In modeling constraint-based phonotactics, there are three broad kinds of decisions to be made: which framework
-to use, which parameters (constraints) to use, and how to tune (rank or weight) the parameters. This experiment
-will weigh in on the question of framework choice, using the function they use to combine the effects of violations to distinguish among them.
+    Several constraint-based frameworks for instantiating phonological grammars
+    have been proposed.  Optimality Theory \citep{Prince1993/2004} is a framework
+    with strictly ranked constraints. This is in contrast with its predecessor
+    Harmonic Grammar \citep{Legendre1990c,Smolensky2006b,Pater2009,Potts2010},
+    which assigns weights to constraints. Linear Optimality Theory
+    \citep{Keller2006} is similar to Harmonic Grammar, but only allows constraints
+    to assign penalties, not rewards; Harmonic Grammar, in contrast, can in
+    principle allow both positively and negatively weighted constraints. Maximum
+    Entropy Grammar (MaxEnt) \citep{Goldwater2003} is a version of Harmonic Grammar that converts
+    the harmony scores given by Harmonic Grammar into probabilities.
+    \citet{Hayes2008} have used MaxEnt to assign probabilities to all the
+    surface forms of a language, rather than the surface forms of a given input
+    candidate. I will henceforth refer to Linear Harmonic Grammar (Linear HG) to distinguish
+    Harmonic Grammar without an exponentiation step from MaxEnt.
 
-Popular constraint-based frameworks include Optimality Theory \citep{Prince1993/2004}, Harmonic Grammar (taken here to mean linear Harmonic Grammar, in which harmony scores are not subject to exponentiation) \citep{Legendre1990c,Smolensky2006b,Pater2009,Potts2010}, and Maximum Entropy \citep{Goldwater2003}.
+    One feature of constraint-based frameworks is that they recognize units of
+    violation that are independent of the words they appear in. In other words, two
+    different words can be said to contain the same violation, and one word can be
+    said to contain multiple different violations. Thus, these frameworks all have
+    some method of combining units of violation into a grammaticality score for the
+    entire word. However, they differ in how they define the combination operation.
+    As a result, they make different predictions about the relative
+    ungrammaticalities of words whose violations are in a subset-superset
+    relationship. This experiment will seek to distinguish between frameworks on
+    the basis of such groups of words.
 
-One feature of constraint-based frameworks is that they recognize units of violation that are independent of the words they appear in. In other words, two different words can be said to contain the same violation, and one word can be said to contain multiple different violations. Thus, these frameworks all have some method of combining units of violation into a grammaticality score for the entire word. However, they differ in how they define the combination operation. As a result, they make different predictions about the relative ungrammaticalities of words whose violations are in a subset-superset relationship. This experiment will seek to distinguish between frameworks on the basis of such groups of words.
-%Ohala and Ohala 1986
+    In the following, I will use the term \textit{penalty} to refer to the weight of a constraint
+    multiplied by the number of times that constraint is violated.
 
-% It may be linear, so that each additional violation of equal
-% magnitude decreases judgments equally, or it may be nonlinear, so that
-% additional violations have increasing or decreasing contributions to judgments.
 \section{Optimality Theory}
-Optimality Theory (OT) predicts that adding mild
-violations to a word with a severe violation has no effect, so that the
-function from number of violations to grammaticality is flat for any given
-first violation as long as it remains one of the worst violations in the word. 
-In other words, OT's function for combining the penalties of multiple violations 
-is to return the maximum of those penalties as the penalty for the whole word 
-(multiplied by the number of times that penalty is incurred).
-
-Figure \ref{fig:OT-combiner} illustrates by crossing a strong violation, [mr] in the onset, with a weak violation,
-[o:sp] in the rhyme. Each occurrence of the strong violation counts as a penalty of 2, while each occurrence of the weak
-violation counts as a penalty of 1. The penalty of each word is simply the maximum of the penalties of the violations in the word, so that \textit{mroasp} is not any worse than \textit{mrote}. 
-
-\begin{figure}
-\begin{center}
-\label{fig:OT-combiner}
-<<OT-combiner, echo=FALSE>>=
-par(mar = c(5.1, 4.1, 4.1, 4.1));
-barplot(c(0, -1, -2, -2), main='Optimality Theory Violation Cumulativity', xlab='Penalty Vectors', ylab='Cumulative Penalty', names.arg=c("rote: [0, 0]", "roasp: [0, -1]", "mrote: [-2, 0]", "mroasp: [-2, -1]"), ylim=c(-3, 0));
-@
-\caption{Cumulativity in Optimality Theory.}
-\end{center}
-\end{figure}
-
-However, predating OT, \citet{Ohala1986} found that speakers have an above
-chance probability of preferring a word with one violation to a word with that
-same violation and a less severe one, suggesting that even the milder violations
-affect the grammaticality of a word. This contradicts OT's prediction that an additional
-violation that is lesser than the first violation will not affect the ungrammaticality of the word.
-Additionally, \citet{Coleman1997} found
-that a word like \textit{mrupation}, with one severe violation followed by a
-common English sequence, was preferred to a word like \textit{spleitisak}, with
-several minor violations. This is in contrast with OT's prediction that 
-the strong violation \textit{mr} matters
-more than any number of lesser violations. 
-
-% Albright:
-% onsetviolation vs onsetandcodaviolation
-% ratings
-% model comparison
-\citet{Albright_clusters_2008} designed experiments
-to directly test the question of cumulativity of violations, addressing
-potential alternative explanations for these two results, and found that models
-that take into account all violations of a word, not just its worst violation,
-fit the data significantly better. Albright used two types of words, those with
-phonotactic violations in the onset and those with phonotactic violations in
-the onset as well as milder violations in the rime. In a variety of analyses,
-he fitted models that rate words by their worst violation only, and ones that
-rate words by the sum of all their violations. The models that take into
-account all violations in the word were more strongly correlated with experimental
-findings. This study showed that cumulative models reflect speaker judgments better
-than noncumulative models, but did not distinguish among various cumulative models.
-
-I conclude that OT's strategy of combining violations by finding their maximum is
-not empirically supported in the domain of phonotactics, and I turn to Harmonic Grammar and Maximum Entropy.
-
-%Sorace and Keller 2004 found cumulativity of violations for syntax
-%TODO discuss grammaticality vs acceptability vs ratings
-\section{Linear vs. Exponential Combination}
-\citet{Albright_clusters_2008} found evidence that all violations in a word contribute to the word's
-ungrammaticality, but it 
-did not compare various models that work this way against each other.
-The shape of the curve relating number of violations to phonotactic judgments
-bears on the question of which framework we should use to model phonotactic
-well-formedness. As \citet{Pater_cumulative_2008} points out, Harmonic Grammar
-predicts a well-restricted set of cumulativity effects, unlike Optimality
-Theory with Local Constraint Conjunction \citep{Smolensky2006d}.
-But the weighted constraints of Harmonic Grammar can be combined in a linear fashion,
-producing the framework commonly associated with the name, or exponentiated and normalized,
-as in Maximum Entropy. These approaches predict differently shaped curves.
-
-\ex. Harmonic Grammar: The harmony $\mathcal{H}$ of a word $x$ is the dot product of the violation vector $v$,
-representing violations of $x$ on each constraint in the constraint set $C$, with the constraint
-weight vector $w$.\\
-\[\mathcal{H}(x) = \sum_{i \in C}{v_iw_i}\]
-
-\ex. Maximum Entropy: The probability $p$ of a word $x$ is the exponentiated negative harmony
-of the word, normalized relative to the candidate set $X$.\\
-\[p(x_i) = \frac{\exp(-\mathcal{H}(x_i))}{\sum_{j \in X}{\exp(-\mathcal{H}(x_j))}}\]
-
-Consider a constraint with a weight
-of two and candidates A, B, C, and D that violate it zero, one, two, and three
-times respectively. In linear Harmonic Grammar, the candidates have the harmony scores
-0, -2, -4, and -6; they decrease by two each time, in a linear pattern. In
-Maximum Entropy, if we assume these candidates exhaust the possibilities, they
-have the probabilities 0.865, 0.117, 0.015, and 0.002; candidate A has the
-majority of the probability because it is the best choice available, and each
-additional violation decreases the probability by a smaller amount than the
-last.
-
-
-\begin{figure}
-\begin{center}
-<<HG-combiner, echo=FALSE>>=
-barplot(c(0, -1, -2, -3), main='Harmonic Grammar Violation Cumulativity', xlab='Penalty Vectors', ylab='Cumulative Penalty', names.arg=c("rote: [0, 0]", "roasp: [0, -1]", "mrote: [-2, 0]", "mroasp: [-2, -1]"), ylim=c(-3.5,0));
-@
-\caption{Cumulativity in Harmonic Grammar.}
-\label{fig:HG-combiner}
-\end{center}
-\end{figure}
-%\ex. \includegraphics[scale=.5]{hg_cumulativity.png}
-
-\begin{figure}
-\begin{center}
-<<ME-combiner, echo=FALSE>>=
-one = exp(0)
-two = exp(-1)
-three = exp(-2)
-four = exp(-3)
-barplot(c(one, two, three, four), main='Maximum Entropy Violation Cumulativity', xlab='Penalty Vectors', ylab='Cumulative Penalty', names.arg=c("rote: [0, 0]", "roasp: [0, 1]", "mrote: [2, 0]", "mroasp: [2, 1]"), ylim=c(0, 1.5));
-@
-\caption{Cumulativity in Maximum Entropy grammar.}
-\label{fig:ME-combiner}
-\end{center}
-\end{figure}
-%\ex. \includegraphics[scale=.5]{me_cumulativity.png}
-
-<<HG-prob, echo=FALSE, eval=FALSE>>=
-HG_prob = function(a, b){
-  f <- function(x) dnorm(x, m=a, sd=1) - dnorm(x, m=b, sd=1)
-  lower = min(a, b)
-  higher = max(a, b)
-  intersection = uniroot(f, interval=c(lower, higher))$root
-  return(pnorm(intersection, mean=a, sd=1, lower.tail = FALSE))
-}
-HG_gg = HG_prob(0, -1)
-HG_gb = HG_prob(-3, -1)
-HG_bg = HG_prob(-2, -1)
-HG_bb = HG_prob(-5, -1)
-barplot(c(HG_gg, HG_bg, HG_gb, HG_bb))
-@
-
-<<HG-prob2, echo=FALSE, eval=FALSE>>=
-intersection = function(g, lower, higher){
-  return(uniroot(g, interval=c(lower, higher))$root)
-}
-prob_over = function(inter, mn, below){
-  return(pnorm(inter, mean=mn, sd=0.5, lower.tail=below))
-}
-# filler: [0, 0, 1]
-# gg: [0, 0, 0]
-# gb: [0, 1, 0]
-# bg: [1, 0, 0]
-# bb: [1, 1, 0]
-# weights: [-2, -3, -1] sd 0.5
-# filler: [0, 0, (-1)] dnorm(x, mean=-1, sd=0.5)
-# gg: [0, 0, 0] dnorm(x, mean=0, sd=0.5)
-# gb: [0, -3, 0] dnorm(x, mean=-3, sd=0.5)
-# bg: [-2, 0, 0] dnorm(x, mean=-2, sd=0.5)
-# bb: [-2, -3, 0] (dnorm(x, mean=-2, sd=0.5) + dnorm(x, mean=-3, sd=0.5))
-# gg over filler: dnorm(x, mean=0, sd=0.5) - dnorm(x, mean=-1, sd=0.5)
-# gb over filler: dnorm(x, mean=-3, sd=0.5) - dnorm(x, mean=-1, sd=0.5)
-# bg over filler: dnorm(x, mean=-2, sd=0.5) - dnorm(x, mean=-1, sd=0.5)
-# bb over filler: (dnorm(x, mean=-2, sd=0.5) + dnorm(x, mean=-3, sd=0.5)) - dnorm(x, mean=-1, sd=0.5)
-
-prob_filler = function(mn){
-  inter = intersection(function(x){dnorm(x, mean = mn, sd = 0.5) - dnorm(x, mean = -1, sd = 0.5)}, mn, 0)
-  prob_over_inter = prob_over(inter, -1, FALSE)
-  return(prob_over_inter)
-}
-
-HG_prob_gg = prob_over(intersection(function(x){dnorm(x, mean=0, sd=0.5) - dnorm(x, mean=-1, sd=0.5)}, -1, 0), 0, FALSE)
-HG_prob_gb = 1 - prob_filler(-3)
-HG_prob_bg = 1 - prob_filler(-2)
-HG_prob_bb = 1 - prob_over(intersection(function(x){(dnorm(x, mean=-2, sd=0.5) + dnorm(x, mean=-3, sd=0.5)) - dnorm(x, mean=-1, sd=0.5)}, -2.5, 0), -1, FALSE)
-barplot(c(HG_prob_gg, HG_prob_bg, HG_prob_gb, HG_prob_bb))
-@
-
-<<HG-prob3, echo=FALSE, eval=FALSE>>=
-weights = c(1, 2, 3)
-sd = 1
-hg_mean = function(violations){
-  return(weights %*% violations)  
-}
-
-hg_variance = function(violations){
-  return(rep(sd**2, length(violations)) %*% violations**2)  
-}
-
-# probability of choosing from the first dist
-compare = function(violations1, violations2){
-  mean1 = hg_mean(violations1)  
-  mean2 = hg_mean(violations2)
-  var1 = hg_variance(violations1)
-  var2 = hg_variance(violations2)
-  diff_mean = mean1 - mean2
-  diff_var = var1 + var2
-  return(pnorm(0, mean = diff_mean, sd = sqrt(diff_var), lower.tail=FALSE))
-}
-
-gg_violations = c(0, 0, 0)
-bg_violations = c(0, -1, 0)
-gb_violations = c(0, 0, -1)
-bb_violations = c(0, -1, -1)
-filler_violations = c(-1, 0, 0)
-gg_filler = compare(gg_violations, filler_violations)
-bg_filler = compare(bg_violations, filler_violations)
-gb_filler = compare(gb_violations, filler_violations)
-bb_filler = compare(bb_violations, filler_violations)
-#same results as with robert's math
-barplot(c(gg_filler, bg_filler, gb_filler, bb_filler),
-        main='Predicted Probability of Choosing Test Word in Noisy HG',
-        xlab='Conditions of Test Word',
-        ylab='Probability of Being Chosen Against Filler',
-        names.arg=c('GG', 'BG', 'GB', 'BB'))
-@
-
-<<ME-prob, echo=FALSE, eval=FALSE>>=
-ME_prob = function(a, b){
-  p_a = exp(-a)/(exp(-a)+exp(-b))
-  p_b = exp(-b)/(exp(-a)+exp(-b))
-  return(p_a)
-}
-ME_gg = ME_prob(0, 1)
-ME_bg = ME_prob(2, 1)  
-ME_gb = ME_prob(3, 1)
-ME_bb = ME_prob(5, 1)
-barplot(c(ME_gg, ME_bg, ME_gb, ME_bb))
-# noisy hg is more winner take all
-barplot(c(ME_gg, gg_filler, ME_bg, bg_filler, ME_gb, gb_filler, ME_bb, bb_filler))
-
-@
-
-<<linear-ME-prob, echo=FALSE, eval=FALSE>>=
-gg_l = 0/-1
-bg_l = -2/-3
-gb_l = -3/-4
-bb_l = -5/-6
-print(bg_l + gb_l)
-print(bb_l)
-barplot(c(gg_l, bg_l, gb_l, bb_l))
-
-z = 1 + 2 + 3 + 5
-gg_l2 = 0
-bg_l2 = -2/z
-gb_l2 = -3/z
-bb_l2 = -5/z
-print(bg_l2 + gb_l2)
-print(bb_l2)
-barplot(c(gg_l2, bg_l2, gb_l2, bb_l2))
-@
-
-I predict that, in accordance with the Maximum Entropy model, additional violations
-will have smaller effects on the grammaticality of the word, as the grammaticality approaches a floor.
-
-
-%In order to simplify this investigation, I will not attempt to define the set of patterns
-%that can be considered phonotactic violations. Rather, I will use controlled experiments
-%dealing only with patterns that are widely accepted to belong to that set for the language
-%in question.
-
-\section{Method}
-
-In order to test the prediction made by the Maximum Entropy model, I gathered acceptability data on words much like the ones used in the examples above: words with no obvious violations, words that are the same except with the addition of a violation in the onset, words the same as the first group except with a violation in the coda, and words with both the onset and coda violation. This will allow us to distinguish between the Harmonic Grammar and Maximum Entropy models of the cumulativity of constraint violations.
-
-
-%Relative to words with one violation, does the same violation add less, the same amount, or
-%more ungrammaticality to the word when it appears in a word that already has
-%another violation?
-
-% Luce choice rule: 
-
-% \ex. P(test) = \mathcal{H}_{test}/\mathcal{H}_{test} + \mathcal{H}_{filler}
-
-\subsection{Participants}
-One hundred participants were recruited from Mechanical Turk and paid for their participation at prorated minimum wage. They were all located in the United States and claimed to be over 18 years old. In order to maintain a level of consistency in the participant pool, I ran the experiment only on weekdays between the hours of noon and 5pm Eastern time, which corresponds to regular workday hours in the four major US timezones.
-
-Participants were excluded if they were not native speakers of English and if their data was suspect. Native status was determined by answers to two demographics questions: one asking the language they use at home and one asking where people think they are from. I read the answers to these questions and excluded participants whose answers indicated that they are not native speakers of English. Two participants were excluded on the basis of native language.
-
-The quality of the data was assessed in a variety of ways.
-
-First, there were twelve filler trials. These had the same form as test trials, a yes/no question about the acceptability of a nonce word in English. However, six words were constructed to be more English-like than even the best test words, and six were constructed to be less English-like than even the worst test words. Participants were excluded if they accepted good fillers equally as often as bad fillers, indicating that they may not have been paying attention or answering carefully. Four participants were excluded for this reason. No participants accepted bad fillers more often than good fillers.
-
-Second, I decided to exclude any participant who consistently chose whichever option was on a particular side of the screen. I defined consistently as more than 90\% of test questions. No participants fell into this category.
-
-The third exclusion criterion was answer speed. I would exclude any participant who answered any question in under 50ms. In pilot data, the fastest reaction times were over 300ms, so times under 50ms suggest that a computer program is clicking through the experiment automatically. No participants were found to have this behavior.
-
-After these exclusions, the data from 94 participants was used in the analysis.
-
-\subsection{Materials}
-% bad codas: 
-%fricative noncoronal – needs long vowel
-%fricative non-s fricative
-%nasal place-a obs place-b
-%not: stop non-coronal-stop
-%not: obs son
-
-% bad onsets:
-%fricative liquid
-%bw – unattested
-%dw, gw, pw – low frequency
-
-
-%TODO list them in appendix
-The words were presented orthographically. The benefit of visual presentation is that participants are much less likely to fail to perceive the violations. There is a large body of evidence that speakers misperceive certain sound combinations that would be severe phonotactic violations in their native language. The result is that their behavioral data does not reflect the presence of the violation \citep{
-berent_what_2007, % perceptual repairs aren't phonetic; Russians are more accurate, English speakers can be accurate under the right conditions
-berent_listeners_2009-1, % m@l- vs ml-, English speakers repair
-%breen_perceptual_2013, % tl- vs gl-, no repair in ERP but repair in behavior
-brown_expectancy_1956, % more errors on ungrammatical clusters than unattested ones
-dupoux_epenthetic_1999, % eb(u)zo, Japanese speakers repair
-%dupoux_new_2001, % manipulate perceptual repairs to support prelexical processing theory
-%halle_dental--velar_2007, % French and American speakers worse at tl/gl than Hebrew
-%halle_perception_2003, % French worse at tl/gl than Hebrew
-halle_processing_1998, % French get bad at tl/gl when they hear more of the l
-massaro_phonological_1983% many kinds of perceptual repairs
-%moreton_structural_2002-1, % compared perceptual error rates to support feature theory
-}. If some violations were not perceived, the results of the experiment would be compromised, and indeed, some of the violations used in this study, such as [tl], are known to be among those misperceived by English speakers \citep{
-breen_perceptual_2013, % tl- vs gl-, no repair in ERP but repair in behavior
-halle_dental--velar_2007% French and American speakers worse at tl/gl than Hebrew
-}. The downside of visual presentation is that we are testing orthotactics more directly than phonotactics. The materials were designed to minimize the ambiguity in the relationship between spelling and sound in order to mitigate this problem as much as possible.
-
-\subsubsection{Test Items}
-Each of 24 test items appeared in four conditions. The four conditions are created by
-crossing two factors: presence of an onset violation and presence of a rime
-violation. 
-
-For each item, there is a unique good onset, bad onset, good coda, and bad coda. There is also a vowel assigned to the item. The four conditions of the item are created by taking all combinations of one onset, the vowel, and one coda.
-
-The good onsets are all biconsonantal or triconsonantal and attested in native English words. The bad onsets are all biconsonantal, though some are represented by three letters, such as \textit{thl}, as the materials were presented orthographically. The bad onsets are not attested in native English words, although some are found in foreign proper nouns, such as \textit{Sri Lanka}, \textit{Vladimir}. 
-
-The good codas consist of one consonant, sometimes spelled with two letters, such as \textit{ss} or \textit{ck}. The bad codas are biconsonantal. These codas are not attested in native English words, and are believed to violate English phonotactics. Many of them have sonority profiles not allowed in English, but extremely bad sonority profiles --- those with a sonorant followed by an obstruent --- were avoided to keep participants from mentally inserting a schwa into the coda cluster, breaking
-it into two syllables.
-
-The vowels are taken from the set {\textit{a}, \textit{e}, \textit{i}, \textit{o}, \textit{u}, \textit{oo}}, in order to have a uniform distribution of orthographically distinct vowels across the items.
-
-Items were created randomly from these components, and then altered to avoid any actual English words.
-
-\ex. Example test item
-\a. Good onset, good coda: plag  	
-\b. Good onset, bad coda: plavb  
-\c. Bad onset, good coda: tlag  
-\d. Bad onset, bad coda: tlavb  
-
-\subsection{Design}
-A Latin square design is applied to the test items so that each participant only sees one
-word from each item set. 
-
-\subsection{Procedure}
-The experiment was built using Speriment and run using psiTurk \citep{PsiTurk} to interact with Mechanical Turk.
-
-The task is a two-alternative forced choice task between a test word and a filler word, for 24 trials. In each trial, the participant was asked to choose the more English-like of the two words. 
-
-Participants indicated their choice by pressing a key on their keyboard: `f' for the choice on the left and `j' for the choice on the right. The order in which the test and filler words were presented varied randomly across items and participants.
-
-\section{Results}
-
-<<cumulativity-dataframe, echo=FALSE, warning=FALSE>>=
-cdata = read.csv('~/dissertation/cumulativity/cumulativity_june3_dataframe.csv')
-# mean of Response is number of times test word chosen / total number of questions
-test_groups = aggregate(cdata, by=list(cdata$Condition), FUN = mean, na.rm = TRUE)
-subject_groups = aggregate(cdata, by=list(cdata$Condition, cdata$Subject), FUN = mean, na.rm = TRUE)
-item_groups = aggregate(cdata, by=list(cdata$Condition, cdata$Item), FUN = mean)
-#rtdata = cdata[cdata$ReactionTime < 20000,]
-rtdata = cdata
-subject_rt_groups = aggregate(rtdata, by=list(rtdata$Condition, rtdata$Response, rtdata$Subject), FUN = mean)
-item_rt_groups = aggregate(rtdata, by=list(rtdata$Condition, rtdata$Response, rtdata$Item), FUN = mean)
-get_percentages = function(df){
-  return(list(df[df$Group.1 == 'GG',]$Response * 100,
-              df[df$Group.1 == 'BG',]$Response * 100,
-              df[df$Group.1 == 'GB',]$Response * 100,
-              df[df$Group.1 == 'BB',]$Response * 100))
-}
-
-get_rts_log = function(df){
-  return(list(log(df[df$Group.1 == 'GG' & df$Group.2 == 1,]$ReactionTime),
-              log(df[df$Group.1 == 'GG' & df$Group.2 == 0,]$ReactionTime),              
-              log(df[df$Group.1 == 'BG' & df$Group.2 == 1,]$ReactionTime),              
-              log(df[df$Group.1 == 'BG' & df$Group.2 == 0,]$ReactionTime),              
-              log(df[df$Group.1 == 'GB' & df$Group.2 == 1,]$ReactionTime),              
-              log(df[df$Group.1 == 'GB' & df$Group.2 == 0,]$ReactionTime),              
-              log(df[df$Group.1 == 'BB' & df$Group.2 == 1,]$ReactionTime),             
-              log(df[df$Group.1 == 'BB' & df$Group.2 == 0,]$ReactionTime)))
-}
-
-get_rts = function(df){
-  return(list(df[df$Group.1 == 'GG' & df$Group.2 == 1,]$ReactionTime,
-              df[df$Group.1 == 'GG' & df$Group.2 == 0,]$ReactionTime,              
-              df[df$Group.1 == 'BG' & df$Group.2 == 1,]$ReactionTime,              
-              df[df$Group.1 == 'BG' & df$Group.2 == 0,]$ReactionTime,              
-              df[df$Group.1 == 'GB' & df$Group.2 == 1,]$ReactionTime,              
-              df[df$Group.1 == 'GB' & df$Group.2 == 0,]$ReactionTime,              
-              df[df$Group.1 == 'BB' & df$Group.2 == 1,]$ReactionTime,             
-              df[df$Group.1 == 'BB' & df$Group.2 == 0,]$ReactionTime))
-}
-
-global_percentages = get_percentages(test_groups)
-subject_percentages = get_percentages(subject_groups)
-item_percentages = get_percentages(item_groups)
-
-subject_rts = get_rts_log(subject_rt_groups)
-item_rts = get_rts_log(item_rt_groups)
-
-@
-
-As expected under any model, participants accepted the test item the most often when it had no violations, less often when it had one violation, and very rarely when it had two violations. Of the two types of words containing one violation, those with a coda violation and those with an onset violation, coda violation words were chosen less often, suggesting that the coda violations were on average more egregious than the onset violations. Thus, there is a total ordering of word types, from those with no violations (called GG for good onset, good coda), to those with an onset violation (BG for bad onset, good coda), to those with a coda violation (GB for good onset, bad coda), to those with two violations (BB for bad onset, bad coda).
-
-The question this experiment seeks to answer is not about the ranking of the percentages for each condition, but the quantitative relationships among them. In order to analyze these relationships, we need a linking hypothesis to map from predictions about psychological states to predictions about performance on the task. I hypothesize that participants use the output of whichever
-model they are using --- harmony in Harmonic Grammar and probability in Maximum Entropy --- as the input to a probabilistic process that governs whether they choose `yes' or `no' on the task. There are many forms this probabilistic process could take; I will adopt the assumption that the percent of times a participant accepts a word can be treated as a direct proxy for the output of the model for that word. That is, I assume that if participants calculate probabilities for words, they say `yes' to a word with the same probability they assign to the word, and if they calculate harmonies, they say `yes' with a probability that is proportional to the harmony the assign the word. I assume that the scaling necessary to convert harmonies to probabilities in the case of Harmonic Grammar is constant across words, so that the differences in the percents of `yes' answers is the same, modulo the noise of the probabilistic process, as the differences in the harmonies. This is equivalent to normalizing the harmonies for all stimuli for a given subject and item set consistently. With our current limitations in understanding the transformations that apply to model outputs as they are used to direct behavior in an experimental task, the results of this experiment must be interpreted as dependent on this assumption. A more conclusive understanding of the phenomenon will depend on future studies that investigate it using different tasks to determine if the findings are dependent on a particular linking hypothesis, or if they are robust to different ways of framing the question and to the particulars of different experimental tasks.
-
-The difference between the model outputs of GG words and another category of words can be viewed as the penalty for the violation(s) in the second category of words. 
-%This experiment rests on the linking hypothesis that participants choose test words over filler words proportionally to the acceptability of the test words, so I will use percent of the time that a test word was chosen as a proxy for its acceptability.
-
-Harmonic Grammar predicts that the penalty for BB is equal to the sum of the penalties for BG and GB, while Maximum Entropy predicts that the penatly for BB is less than this sum. Table \ref{tab:cumulativity-percents} and Figure \ref{fig:cumulativity-global-percents} show that descriptively, the data appear to support the prediction of a Maximum Entropy model, as the penalties decrease at each step. Both report the percent of the time that participants responded `yes' to a word, for each type of word.
-
-%TODO round numbers
-\begin{table}
-\begin{center}
-\caption{Percent acceptance by condition.}
-\begin{tabular}{lll}
-\hline Condition & Percent `Yes' \\
-\hline GG & \Sexpr{global_percentages[[1]]} \\
-BG & \Sexpr{global_percentages[[2]]}\\
-GB & \Sexpr{global_percentages[[3]]}\\
-BB & \Sexpr{global_percentages[[4]]}\\
-\hline
-\end{tabular}
-\label{tab:cumulativity-percents}
-\end{center}
-\end{table}
-
-\begin{figure}
-\begin{center}
-<<cumulativity-global-percents, echo=FALSE>>=
-barplot(c(global_percentages[[1]], global_percentages[[2]], global_percentages[[3]], global_percentages[[4]]),
-        main = 'Percent of Yes Responses By Condition',
-        names.arg = c('GG', 'BG', 'GB', 'BB'),
-        xlab = 'Condition of Test Word',
-        ylab = 'Percent of of Yes Responses')
-@
-\caption{Percent acceptance by condition.}
-\label{fig:cumulativity-global-percents}
-\end{center}
-\end{figure}
-
-Bar plots don't show the shape of the distributions, though, so we can also break down the data by subject and item in order to view violin plots of the conditions. A violin plot is a box plot where the sides of the boxes are replaced with kernel density plots. Thus, the white dots represent the median subject or item mean, the black bars represent the interquartile range --- the values in the medial two quartiles of the data. Figure \ref{fig:cumulativity-subject-percents} is a violin plot where each data point is the percent of `yes' answers given to that word type by a particular participant. It shows us the distribution of participants for each condition. Figure \ref{fig:cumulativity-item-percents} is a similar plot where the aggregation is done by item set. Recall that an item set is a set of four test words, one in each condition, where the words share common subsequences and constraint violations, where violations exist.
- 
-\begin{figure}
-\begin{center}
-<<cumulativity-subject-percents, echo=FALSE, message=FALSE>>=
-library("vioplot")
-make_vioplot = function(percentages, header){
-  vioplot(percentages[[1]], percentages[[2]], percentages[[3]], percentages[[4]], 
-          names = c('GG', 'BG', 'GB', 'BB'),
-          col='blue')
-  title(main = header,
-          xlab = 'Condition of Test Word',
-          ylab = 'Percent of Times Test Chosen Over Filler')
-}
-make_vioplot(subject_percentages, 'Preference for Test Words By Subject')
-@
-\caption{Distribution of mean by-subject percent acceptance for each condition.}
-\label{fig:cumulativity-subject-percents}
-\end{center}
-\end{figure}
-
-\begin{figure}
-\begin{center}
-<<cumulativity-item-percents, echo=FALSE>>=
-make_vioplot(item_percentages, 'Preference for Test Words By Test Word')
-@
-\label{fig:cumulativity-item-percents}
-\caption{Distribution of by-item percent acceptance for each condition.}
-\end{center}
-\end{figure}
-
-In Figure \ref{fig:cumulativity-subject-percents}, we see that the distribution for BB appears cut off at the bottom. This suggests a floor effect: the BB words are so unacceptable that we cannot get an accurate sense of how unacceptable they are, because we already hit zero percent `yes' responses, and it's not possible to give a negative number of `yes' responses. This result is problematic for the interpretation of this experiment, which hinges on an accurate estimation of the acceptability of BB words. If participants are using an HG-like grammar, could it map to a negative number of `yes' responses, which is then forced up to zero, making it appear that they employed a MaxEnt-like grammar instead? 
-
-One problem with this alternative interpretation is that it's unclear how harmonies would map to a negative number of intended `yes' responses. We would need a more sophisticated linking hypothesis than the one offered above, which assumed that harmonies are transformed into probabilities in a way that preserves their proportions. Implicit in that assumption was the idea that they were normalized to fit into the probability space and translated into positive space, keeping the proportions among them constant. Perhaps they are scaled but not fully pushed into the positive range? But what would it mean for our hypothesized probabilistic process to have a target of a negative number? The fact that harmonies must be shoehorned into a positive space may be the very motivation for a MaxEnt-like model which transforms harmonies and results in the attentuation of differences at the bottom of the scale. Furthermore, we might expect a more dramatic floor effect, and one consistent whether we look at the data aggregated by subject or by item, if indeed the subjects intended to assign BB words a harmony score as low as HG would predict for this data. Finally, we might expect that participants would alter their response rates to the other words in order to maintain the relationships among the words, even though the task does not ask them to do so. There is some preliminary evidence that this is the case; in a small pilot using less severe violations, intended to avoid the floor effect, the floor effect was in fact more extreme than in a pilot with the materials used here. The shapes of the distributions over BB words shows that participants were not perfectly calibrating their response rates to fill the space of possible responses, but the shapes also do not suggest that they were failing to calibrate completely. 
-
-One clue to participants' true assessments of the BB words may lie in their reaction times. If BB words were far worse, not just slightly worse, than BG and GB words, and participants merely ran out of ways to express this, we might expect them to have shorter reaction times in responding to BB words than to BG and GB words, because it was so obvious that they should be rejected. In particular, we would expect shorter reaction times for rejecting BB words than for rejecting the second worst category, GB words. In fact, however, the violin plots for log-transformed reaction times for rejected GB and BB words look fairly similar, as shown in Figure \ref{fig:cumulativity-rt-violin}. 
-
-\begin{figure}
-\begin{center}
-<<cumulativity-rt-violin>>=
-rejectgb = rtdata[rtdata$Condition == 'GB' & rtdata$Response == 0,]$ReactionTime
-rejectbb = rtdata[rtdata$Condition == 'BB' & rtdata$Response == 0,]$ReactionTime
-vioplot(log(rejectgb), log(rejectbb), col='blue')
-@
-\caption{Distribution of reaction times in rejecting GB and BB words.}
-\label{fig:cumulativity-rt-violin}
-\end{center}
-\end{figure}
-
-\begin{table}
-\begin{center}
-\caption{Central tendencies of reaction times for GB and BB words.}
-\begin{tabular}{lll}
-\hline Condition & Mean & Median \\
-\hline
-Rejected GB & \Sexpr{mean(log(rejectgb))} & \Sexpr{median(log(rejectgb))}\\
-Rejected BB & \Sexpr{mean(log(rejectbb))} & \Sexpr{median(log(rejectbb))}\\
-\hline
-\end{tabular}
-\label{tab:cumulativity-rt}
-\end{center}
-\end{table}
-
-<<cumulativity-rtt>>=
-rtt = t.test(log(rejectgb), log(rejectbb), alternative = 'greater')
-
-#rt_model = lmer(log(ReactionTime) ~ Condition + TrialNumber + YesPosition + (1|Subject) + (1|Item), data = rtdata[rtdata$Response == 0,])
-
-#rt_model2 = lmer(log(ReactionTime) ~ Condition + TrialNumber + YesPosition + (1|Subject) + (1|Item), data = rtdata[rtdata$Response == 1,])
-@
-
-The mean and median reaction times for BB words are lower than those for GB words, as given in Table \ref{tab:cumulativity-rt}, but a one-tailed t-test finds that the difference is not significant, with a $t$-score of \Sexpr{rtt$statistic} and a $p$-value of \Sexpr{rtt$p.value}. Thus, reaction times do not offer support for the Harmonic Grammar hypothesis.
-
-The hypothesis that participants are employing a MaxEnt-like grammar rather than an HG-like one predicts that there will be an interaction between the effects of onset violations and coda violations. 
-
-If a positive interaction is present, this would support a model that takes probability
-away from words in greater and greater amounts as the number of violations increases.
-I do not know of such a model, and this result is not predicted.
-
-A negative interaction would support models like Maximum Entropy, in which each additional
-violation subtracts less probability from the word than the last violation did.
-
-A linear relationship would support models like linear Harmonic Grammar, in which each
-additional violation subtracts the same amount of probability from a word as the last
-violation did.
-
-Figure \ref{fig:cumulativity-interaction} shows the interaction of the effects of coda violations and onset violations on `yes' responses. The difference between the slopes of the two lines shows that the addition of a coda violation decreases the acceptance rate less when an onset violation is already present than when it is not, as predicted by Maximum Entropy.
-
-\begin{figure}
-\begin{center}
-<<cumulativity-interaction, echo=FALSE>>=
-with(cdata[cdata$PageType == 'Test',], interaction.plot(CodaViolation, OnsetViolation, Response, fun=mean, legend=TRUE, ylim = c(0,1), type='l'))
-@
-\caption{Interaction between OnsetViolation and CodaViolation.}
-\label{fig:cumulativity-interaction}
-\end{center}
-\end{figure}
-
-To test the significance of this interaction, a mixed effects model was fitted to the data. The dependent variable
-was the percent of `yes' responses. OnsetViolation,
-CodaViolation, and their interaction served as fixed effects, in addition to TrialNumber and YesPosition, representing whether the `Yes' option was presented on the left or right side of the screen on a particular trial. Random slopes and intercepts for subject and test item were included in the model.
-
-<<cumulativity-analysis, cache=TRUE>>=
-library(lme4)
-cdata$OnsetViolation[which(cdata$OnsetViolation == 0)] = -1
-cdata$CodaViolation[which(cdata$CodaViolation == 0)] = -1
-cdata$TrialNumber = cdata$TrialNumber - mean(cdata$TrialNumber)
-cdata$YesPosition = cdata$YesPosition - mean(cdata$YesPosition)
-#didn't converge but close, add iterations
-full_model = glmer(Response ~ OnsetViolation * CodaViolation + TrialNumber + YesPosition + (1|Subject) + (0+OnsetViolation|Subject) + (0 + CodaViolation | Subject) + (0+ OnsetViolation:CodaViolation|Subject) + (1|Item) + (0+OnsetViolation|Item) + (0 + CodaViolation | Item) + (0+ OnsetViolation:CodaViolation|Item), data = cdata, family = binomial(link="logit"), glmerControl(optCtrl=list(maxfun=10000), optimizer = "bobyqa" ) )
-@
-
-Table \ref{tab:cumulativity-coefficients} gives the coefficients of the mixed effects model. It shows significant effects of both OnsetViolation and CodaViolation, meaning that the presence of an onset violation significantly decreases acceptance rate, as does the presence of a coda violation. Additionally, it shows a significant subadditive interaction between the two, showing that the combination of both violations is less potent than would be expected if they acted completely independently. This is in line with the Maximum Entropy prediction.
-
-%TODO
-\begin{table}
-\begin{center}
-\caption{Coefficients of the mixed effects model.}
-<<cumulativity-coefficients, cache=TRUE>>=
-summary(full_model)$coefficients
-@
-\label{tab:cumulativity-coefficients}
-\end{center}
-\end{table}
-
-%TODO
-%The MaxEnt prediction is in fact more specific than a subadditive interaction. It is that the acceptance rates of word types is proportional to their log probabilities. Ideally, we would test this more specific hypothesis by fitting a MaxEnt model to the data and comparing the fit to that of other models. The problem with this approach is that a MaxEnt model, as any constraint-based model, requires constraints, and we do not know for sure which constraints ought to be used. If we could decide on a constraint set, we could learn weights for that constraint set and some approximation of the English language, and apply the resulting grammar to the nonce words. 
-
-% see Barr et al p.25 if model doesn't converge
-
-% Barr et al p 27:
-% For obtaining p-values from analyses of typically-sized psycholinguistic datasets—where
-% the number of observations usually far outnumbers the number of model parameters—our
-% simulations suggest that the likelihood-ratio test is the best approach. To perform such a test,
-% one compares a model containing the fixed effect of interest to a model that is identical in all
-% respects except the fixed effect in question. One should not also remove any random effects
-% associated with the fixed effect when making the comparison. In other words, likelihoodratio
-% tests of a fixed effect with k levels should have only k − 1 degrees of freedom (e.g., one
-% degree of freedom for the dichotomous single-factor studies in our simulations). We have
-% seen cases where removing the fixed effect causes the comparison model to fail to converge.
-% Under these circumstances, one might alter the comparison model following the procedures
-% described above to attempt to get it to converge, and once convergence is achieved, compare
-% it to an identical model including the fixed effect. 
-
-
-
-
-
-% Barr et al p. 28:
-%  report the variance-covariance matrix, which includes all the
-% information about the random effects, including their estimates. This is useful not only as a
-% check on the random effects structure, but also for future meta-analyses. A simpler option is
-% to mention that one attempted to use a maximal LMEM and, as an added check, also state
-% which factors had random slopes associated with them. If the random effects structure had to
-% be simplified to obtain convergence, this should also be reported, and the simplifications that
-% were made should be justified to the extent possible.
-
-\section{Discussion}
-
-The results support the hypothesis that Maximum Entropy predicts participants' preferences better than Harmonic Grammar. The interaction between the effect of an onset violation and the effect of a coda violation was both statistically significant and of a considerable effect size. Although the data appears to suffer from a floor effect, the hypothesis that participants are using a Maximum Entropy grammar fits the results better than the hypothesis that they're using Harmonic Grammar.
-
-Several variations on this experiment would be helpful in increasing our confidence in the results. Auditory stimuli would help ensure that we are measuring phonology rather than orthographical effects, although it would be important to find stimuli that can be accurately perceived. Testing speakers of other languages on violations of their phonological constraints would show whether this is a robust effect, and whether it reflects something about human grammar rather than a fact particular to English and the kinds of constraints available for testing on English speakers. Investigations of the cumulativity of constraint violations that rely on different tasks and designs would be helpful in reducing our reliance on the linking hypothesis adopted for this experiment. Replications of this experiment with a variety of violations, especially mild ones, would show whether the floor effect found here is in fact as mild as it seems, or whether it hides a pattern of acceptability ratings that is consistent with Harmonic Grammar. 
-
-% Hayes and Wilson 2008 on Chomsky and Halle 1965
-% "All areas of generative grammar that address well-formedness are faced with the problem of
-% accounting for gradient intuitions. A large body of research in generative linguistics deals with
-% this issue; for example Chomsky 1963; Ross 1972; Legendre et al. 1990; Schütze 1996; Hayes
-% 2000; Boersma and Hayes 2001; Boersma 2004; Keller 2005; Sorace and Keller 2005; Legendre
-% et al. 2006. In the particular domain of phonotactics, gradient intuitions are pervasive: they have
-% been found in every experiment that allowed participants to rate forms on a scale (e.g.,
-% Greenberg and Jenkins 1964, Ohala and Ohala 1986, Coleman and Pierrehumbert 1997,
-% Vitevitch et al. 1997, Frisch et al. 2000, Treiman et al. 2000; Bailey and Hahn 2001, Hay,
-% Pierrehumbert, and Beckman 2003, Hammond 2004) and binary responses yield similar
-% responses when averaged across participants (Coleman and Pierrehumbert 1997, Pierrehumbert
-% 1994, Pater and Coetzee 2006). Thus, we consider the ability to model gradient intuitions to be
-% an important criterion for evaluating phonotactic models. As we will show below, it is an
-% inherent property of maximum-entropy models that they can account for both categorical and
-% gradient phonotactics in a natural way."
-
-The results of this study cannot, of course, single out Maximum Entropy as the correct grammar. There may be other models that would also fit the data gathered here. However, these findings do pose a challenge to Harmonic Grammar as a model of cumulative phonotactics and support the idea that violations make more of a difference at the high end of the acceptability scale than at the low end. This idea can bear on the question of whether grammaticality is categorical or gradient, which \citet{Hayes2008} point out has been a challenging question for decades. If differences matter more in one region of the scale than another, this can make elicited intuitions appear to show a threshold between grammatical and ungrammatical data, offering a sort of reconciliation between categorical and gradient views of phonotactic well-formedness.
-
-%TODO figure, move to results
-Another insight this experiment can bring has to do with the very high region of the acceptability scale, which is often overlooked. The especially acceptable fillers in this experiment, made from violation-free words and real English suffixes, were rated slightly higher than the GG (violation-free) words. This raises challenges for 
+    Optimality Theory (OT) does not define an algorithm that computes a score for each
+    candidate; it only defines an algorithm for choosing the winning candidate from a set
+    of options. In order to evaluate OT's predictions for the cumulativity of
+    violations, \citet{Albright_clusters_2008} suggests that we interpret the
+    grammaticality of a candidate as the maximum constraint penalty incurred by
+    that word.\footnote{Constraint weights are not defined in OT, as
+    constraints are only given relative ranks, so the term penalty must be
+    interpreted loosely as the rank of the constraint accompanied by the number
+    of violations of that constraint, rather than as the multiplication of the
+    two.  Nevertheless, the comparison can be made.} This interpretation
+    predicts that adding mild violations to a word with a severe violation has
+    no effect, so that the function from number of violations to grammaticality
+    is flat for any given first violation as long as it remains one of the
+    worst violations in the word.  In other words, OT's function for combining
+    the penalties of multiple violations is to return the maximum of those
+    penalties as the penalty for the whole word.
+
+    This is not the only possible way to extend OT to give scores to
+    candidates. We could also imagine that when words are in a tie on their most severe
+    violation, they are compared on their lesser violations, even if they are
+    not in the same candidate set because they are both nonce words and thus not
+    derived from the same input \citep{Berent2001,Coetzee2004}. This would not
+    predict the above function, but it would still predict a lack of
+    cumulativity of violations in some cases.  OT does not predict gang
+    effects, in which two mild constraint violations are together stronger than
+    one severe violation \citep{Pater_cumulative_2007}.
+
+    Several experiments have shown, however, that both the potential and the definite
+    failures of cumulativity in OT are not supported by speaker judgments.
+    Predating OT, \citet{Ohala1986} found that speakers have an above
+    chance probability of preferring a word with one violation to a word with that
+    same violation and a less severe one, suggesting that even the milder
+    violations affect the acceptability of a word. Assuming a straightforward transformation
+    from grammaticality to acceptability, this contradicts the
+    prediction that an additional violation that is lesser than the first violation
+    will not affect the ungrammaticality of the word.  Additionally,
+    \citet{Coleman1997} found that a word like \textit{mrupation}, with one severe
+    violation followed by a common English sequence, was preferred to a word like
+    \textit{spleitisak}, with several minor violations. This is in contrast with
+    OT's prediction that the strong violation \textit{mr} matters more than any
+    number of lesser violations. \citet{Keller2000} found that in some cases,
+    multiple violations of a constraint produce lower acceptability than a single
+    violation in syntax, as well.
+
+    \citet{Albright_clusters_2008} designed experiments to directly test the
+    question of cumulativity of violations, addressing potential alternative
+    explanations for these two results, and found that models that take into
+    account all violations of a word, not just its worst violation, fit the data
+    significantly better. Albright used two types of words, those with phonotactic
+    violations in the onset and those with not only phonotactic violations in the onset
+    but also milder violations in the rime. In a variety of analyses, he fitted
+    models that rate words by their worst violation only, and ones that rate words
+    according to all their violations. The models that take into account all
+    violations in the word were more strongly correlated with experimental
+    findings. This study showed that cumulative models reflect speaker judgments
+    better than noncumulative models, but did not distinguish among various
+    cumulative models.
+
+    I conclude that OT's dearth of cumulativity effects
+    is not empirically supported in the domain of phonotactics, and I turn to
+    Linear HG and MaxEnt.
+
+\section{Linear vs.~Exponential Combination}
+    \citet{Albright_clusters_2008} found evidence that all violations in a word
+    contribute to the word's unacceptability, but he did not compare various
+    models that work this way against each other.  The shape of the curve
+    relating number of violations to phonotactic judgments bears on the
+    question of which framework we should use to model phonotactic
+    well-formedness. Linear OT \citep{Keller2006} and the nearly identical
+    Linear HG have been used to model gradient well-formedness
+    \citep{Coetzee_weighted_2008}, so that, unlike in OT, there is a clearly
+    defined way to determine the predicted cumulativity effects of these
+    models.  As \citet{Pater_cumulative_2007} points out, Harmonic Grammar
+    predicts a well-restricted set of cumulativity effects, unlike Optimality
+    Theory with Local Constraint Conjunction \citep{Smolensky2006d}. We can
+    also find cumulativity predictions for the exponentiated and normalized
+    version of HG, Maximum Entropy Grammar.  Linear HG and MaxEnt predict
+    differently shaped curves as violations accumulate.
+
+    \ex. Linear Harmonic Grammar: The harmony $\mathcal{H}$ of a word $x$ is the dot
+    product of the violation vector $v$, representing violations of $x$ on each
+    constraint in the constraint set $C$, with the constraint weight vector $w$.\\
+    \[\mathcal{H}(x) = \sum_{i \in C}{v_iw_i}\]
+
+    \ex. Maximum Entropy Grammar: The probability $p$ of a word $x$ is the exponentiated negative harmony
+    of the word, normalized relative to the candidate set $X$.\\
+    \[p(x_i) = \frac{\exp(-\mathcal{H}(x_i))}{\sum_{j \in X}{\exp(-\mathcal{H}(x_j))}}\]
+
+    In order to illustrate the differences in how various constraint-based
+    frameworks combine the effects of constraint violations, \Next{} gives four
+    nonce words that contain zero to two constraint violations each, where the
+    constraints are *m\textipa{\*r} and *osp. The former constraint is usually
+    judged to lower word acceptability more and will be considered the stronger
+    of the two, so I assign it a weight of 2 and *osp a weight of 1
+    for the purposes of this example.  
+    %In Optimality Theory, constraints are
+    %ranked with respect to each other but not assigned numerical strengths.
+    %However, in order to compare OT's predictions with those of Harmonic
+    %Grammar and Maximum Entropy, weights are used in all cases, with the
+    %differences between frameworks showing only in how they combine violations.
+    %In fact, what frameworks combine is not raw violations, but the number of
+    %violations of a given constraint multiplied the strength of the constraint.
+    Example \Next{} shows the vector of penalties for each of the four nonce words.
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Example vectors of violations multiplied by constraint weights for nonce words.}
+    \begin{tabular}{lll}
+    \hline Word & *m\textipa{\*r} & *osp \\
+    \hline {[}\textipa{\*r}on{]} & 0 & 0 \\
+    {[}\textipa{\*r}osp{]} & 0 & -1 \\
+    {[}m\textipa{\*r}on{]} & -2 & 0 \\
+    {[}m\textipa{\*r}osp{]} & -2 & -1 \\
+    \hline
+    \end{tabular}
+    \label{tab:cumulativity-words}
+    \end{center}
+    \end{table}
+
+%    Figure \ref{fig:OT-combiner} shows the relative predicted acceptabilities
+%    of the nonce words in \Last{} according to the Optimality Theory prediction
+%    that the strongest constraint determines the acceptability of the word.
+%
+%    \begin{figure}[htp]
+%    \begin{center}
+%    \label{fig:OT-combiner}
+%    <<OT-combiner, echo=FALSE>>=
+%    par(mar = c(5.1, 4.1, 4.1, 4.1));
+%    barplot(c(0, -1, -2, -2), main='Optimality Theory Violation Cumulativity',
+%    xlab='Penalty Vectors', ylab='Cumulative Penalty', names.arg=c("rone",
+%    "roasp", "mrone", "mroasp"), ylim=c(-3, 0));
+%    @
+%    \caption{Cumulativity of violations in Optimality Theory.}
+%    \end{center}
+%    \end{figure}
+
+    When Linear HG is applied to the example words and
+    constraints given in \ref{tab:cumulativity-words}, the candidates have the
+    harmony scores 0, -1, -2, and -3; they decrease by two each time, in a
+    linear pattern. In MaxEnt, if we assume these wordforms exhaust
+    the possibilities, they have the probabilities 0.64, 0.24, 0.09, and
+    0.003; candidate A has the majority of the probability because it is the
+    best choice available, and each additional violation decreases the
+    probability by a smaller amount than the last.
+
+
+    \begin{figure}[htp]
+    \begin{center}
+    <<HG-combiner, echo=FALSE>>=
+    barplot(c(0, -1, -2, -3), main='Linear Harmonic Grammar Violation Cumulativity',
+    xlab='Words', ylab='Harmony', names.arg=c("rone",
+    "roasp", "mrone", "mroasp"), ylim=c(-3.5,0));
+    @
+    \caption{Cumulativity of violations in linear Harmonic Grammar.}
+    \label{fig:HG-combiner}
+    \end{center}
+    \end{figure}
+
+    \begin{figure}[htp]
+    \begin{center}
+    <<ME-combiner, echo=FALSE>>=
+    one = exp(0)
+    two = exp(-1)
+    three = exp(-2)
+    four = exp(-3)
+    total = one + two + three + four
+    one_n = one/total
+    two_n = two/total
+    three_n = three/total
+    four_n = four/total
+    barplot(c(one_n, two_n, three_n, four_n), main='MaxEnt Violation
+    Cumulativity', xlab='Words', ylab='Probability',
+    names.arg=c("rone", "roasp", "mrone", "mroasp"), ylim=c(0, 1));
+    @
+    \caption{Cumulativity of violations in Maximum Entropy Grammar.}
+    \label{fig:ME-combiner}
+    \end{center}
+    \end{figure}
+
+    \citet{frisch_perception_2000} conducted several phonotactic judgment tasks
+    and found that words predicted to be less acceptable by the model described in\\ \citet{Coleman1997} were found to have less variability in their
+    acceptability ratings than words predicted to be in higher parts of the
+    acceptability scale.  However, their experiments were not designed to test
+    the accumulation of violations specifically; for instance, they did not control
+    for the presence of one violation while adding another.  Experiments 1 and 2 address
+    this question directly by crossing two factors: the presence or absence of
+    an onset violation and the presence or absence of a coda violation.
+
+\section{Experiment 1}
+
+    This experiment uses evidence from the accumulation of violations to
+    distinguish between Linear Harmonic Grammar and Maximum Entropy Grammar as models of
+    phonotactic knowledge. I predict that, in accordance with the MaxEnt
+    model, a violation in the presence of other violations will have a smaller
+    effect on the acceptability of the word than it would have in isolation, as
+    the acceptability approaches a floor.
+
+    \subsection{Method}
+
+        In order to test the prediction made by the MaxEnt model, I gathered
+        acceptability data on words much like the ones used in the examples above:
+        words with no obvious violations, words that are the same except with the
+        addition of a violation in the onset, words the same as the first group except
+        with a violation in the coda, and words with both the onset and coda violation.
+
+    \subsubsection{Participants}
+        One hundred participants were recruited from Mechanical Turk. They were each
+        paid \$0.75, which is Massachusetts minimum wage for the amount of time the experiment
+        was expected to last, five minutes.
+        They were all located in the United States and claimed to be over 18 years old.
+        In order to maintain a level of consistency in the participant pool, I ran the
+        experiment only on weekdays between the hours of noon and 5pm Eastern time,
+        which corresponds to regular workday hours in the four continental US timezones.
+
+        Participants were excluded if they were not native speakers of English or if
+        their data was suspect. Native status was determined by answers to two
+        demographics questions: one asking their native language and one asking the
+        language they use at home. Participants were only included if English was given in
+        response to both of these questions. Other languages given in addition to English
+        were not considered reason for exclusion. Two participants were excluded on the
+        basis of native language.
+
+        The quality of the data was assessed in a variety of ways.
+
+        First, there were twelve filler trials. These had the same form as test trials,
+        a yes/no question about the acceptability of a nonce word in English. However,
+        six words were constructed to be more English-like than even the best test
+        words, and six were constructed to be less English-like than even the worst
+        test words. Participants were excluded if they accepted good fillers equally as
+        often as bad fillers, indicating that they may not have been paying attention
+        or answering carefully. Four participants were excluded for this reason. No
+        participants accepted bad fillers more often than good fillers.
+
+        Second, any participant who consistently chose whichever option was on a
+        particular side of the screen was excluded. ``Consistently'' was defined as
+        more than 90\% of test questions. No participants fell into this category.
+
+        The third exclusion criterion was answer speed. In pilot data, the fastest reaction
+        times were over 300ms, so times under 50ms suggest that a computer program is
+        clicking through the experiment automatically or that a participant is not reading
+        the question. No participants were found to have this behavior.
+
+        After these exclusions, 94 participants were included in the analysis.
+
+    \subsubsection{Materials}
+        The words were presented orthographically, a practice sometimes used in
+        phonotactic studies such as \citet{Daland2011}. The benefit of visual
+        presentation is that participants are less likely to fail to perceive
+        the violations.  There is a large body of evidence that speakers
+        misperceive certain sound combinations that would be severe phonotactic
+        violations in their native language. The result is that their
+        behavioral data does not reflect the
+        presence of the violation 
+        \citep{ berent_what_2007, % perceptual repairs aren't phonetic; Russians are more accurate, English speakers can be accurate under the right conditions
+        berent_listeners_2009-1, % m@l- vs ml-, English speakers repair
+        %breen_perceptual_2013, % tl- vs gl-, no repair in ERP but repair in behavior
+        brown_expectancy_1956, % more errors on ungrammatical clusters than unattested ones
+        dupoux_epenthetic_1999, % eb(u)zo, Japanese speakers repair
+        %dupoux_new_2001, % manipulate perceptual repairs to support prelexical processing theory
+        %halle_dental--velar_2007, % French and American speakers worse at tl/gl than Hebrew
+        %halle_perception_2003, % French worse at tl/gl than Hebrew
+        halle_processing_1998, % French get bad at tl/gl when they hear more of the l
+        massaro_phonological_1983}. % many kinds of perceptual repairs
+        %moreton_structural_2002-1, % compared perceptual error rates to support feature theory
+        If some violations were not perceived, the results of the experiment would
+        be compromised, and indeed, some of the violations used in this study, such as
+        [tl], are known to be among those misperceived by English speakers
+        \citep{
+        breen_perceptual_2013, % tl- vs gl-, no repair in ERP but repair in behavior
+        halle_dental--velar_2007}. % French and American speakers worse at tl/gl than Hebrew
+        It is possible that visual presentation will also cause the perception of illusory vowels,
+        so the materials were constructed to avoid words that speakers are likely to understand
+        as containing an unspelled vowel. For instance, \textit{lb} was not
+        included as a potential bad onset, because it was judged that speakers
+        would be likely to interpret a word like \textit{lbag} as having an intended pronunciation of
+        [\textipa{l@bag}].
+
+        The downside of visual presentation as opposed to auditory presentation
+        is that we may be testing orthotactics more directly than phonotactics.
+        The materials were designed to minimize the ambiguity in the
+        relationship between spelling and sound in order to mitigate this
+        problem as much as possible.
+
+        Each of 24 test items appeared in four conditions. The four conditions are
+        created by crossing two factors: presence of an onset violation and presence of
+        a rime violation.
+
+        For each item, there was a unique good onset, bad onset, good coda, and bad
+        coda. There was also a vowel assigned to the item. The four conditions of the
+        item were created by taking all combinations of one onset, the vowel, and one
+        coda.
+
+        The good onsets were all biconsonantal or triconsonantal and attested in native
+        English words. The bad onsets were all biconsonantal, though some are
+        represented by three letters, such as \textit{thl}. The bad onsets are not
+        attested in native English words, although some are found in foreign proper
+        nouns, such as \textit{Sri Lanka} and \textit{Vladimir}.
+
+        The good codas consisted of one consonant, sometimes spelled with two letters,
+        such as \textit{ss} or \textit{ck}. The bad codas were biconsonantal. These
+        codas are not attested in native English words, and are believed to violate
+        English phonotactics. Many of them have sonority profiles not allowed in
+        English, but extremely bad sonority profiles --- those with a sonorant followed
+        by an obstruent --- were avoided to keep participants from mentally inserting a
+        schwa into the coda cluster, breaking it into two syllables.
+
+        The vowels were taken from the set \{\textit{a}, \textit{e}, \textit{i},
+        \textit{o}, \textit{u}, \textit{oo}\}, in order to have a uniform distribution
+        of orthographically distinct vowels across the items.
+
+        Items were created randomly from these components, and then altered to avoid
+        any actual English words.
+
+        \ex. Test item components
+        \a. Good onset: pl
+        \b. Bad onset: tl
+        \c. Good coda: g
+        \d. Bad coda: vb
+        \e. Vowel: a
+
+        \ex. Example test item
+        \a. Good onset, good coda (GG): plag
+        \b. Bad onset, good coda (BG): tlag
+        \b. Good onset, bad coda (GB): plavb
+        \d. Bad onset, bad coda (BB): tlavb
+
+        A Latin square design was applied to the test items so that each participant
+        only saw one word from each item set.
+
+        Due to the Latin square, each participant saw six words from each
+        condition. Accordingly, twelve fillers were added to the set of
+        materials: six ``good'' fillers and six ``bad'' fillers.  The good
+        fillers were words expected to be even more English-like than the GG
+        words, as they have real English suffixes added to them.
+        \citet{Coleman1997} suggests that this addition will increase
+        acceptability. The bad fillers were words expected to be even less
+        English-like than the BB words, because they had longer
+        violation-containing clusters.  These fillers served two purposes: to
+        reduce the chances of ceiling and floor effects in the test words by
+        giving participants examples of more extreme acceptabilities, and to
+        show when participants are answering randomly or inattentively.
+        Attentive participants should accept good fillers more often
+        than they accept bad fillers.
+
+        The full set of materials is provided in Appendix \ref{cumul-stimuli}.
+
+    \subsubsection{Procedure}
+        The experiment was built using Speriment and run using psiTurk \citep{PsiTurk}
+        to interact with Mechanical Turk. The word components were put into a spreadsheet which
+        generated the four conditions of each item. These items were read into a Python script, given
+        in Appendix \ref{cumul-code}, which described the structure of the experiment and supplied
+        the items and their conditions to that structure. This script was compiled, and PsiTurk was
+        used to post the resulting website on Mechanical Turk and manage interaction with participants.
+
+        The task is a two-alternative forced choice task between the responses ``Yes'' and ``No''
+        as answers to the question ``Based on how it sounds, do you think this word could be a word of
+        English?'' followed by one of the stimuli. There were two options on the screen, one labeled ``Yes''
+        and the other labeled ``No''; their ordering varied across items and participants.
+
+        Participants indicated their choice by pressing a key on their keyboard: `f'
+        for the choice on the left and `j' for the choice on the right. The order in
+        which the test and filler words were presented varied randomly across items and
+        participants.
+
+    \subsection{Results}
+
+       <<cumulativity-functions>>=
+            get_percentages = function(df){
+              return(list(df[df$Group.1 == 'GG',]$Response * 100,
+                          df[df$Group.1 == 'BG',]$Response * 100,
+                          df[df$Group.1 == 'GB',]$Response * 100,
+                          df[df$Group.1 == 'BB',]$Response * 100))
+            }
+            library("vioplot")
+            c1_make_vioplot = function(percentages, header){
+              vioplot(percentages[[1]], percentages[[2]], percentages[[3]], percentages[[4]],
+                      names = c('GG', 'BG', 'GB', 'BB'),
+                      ylim = c(0, 100),
+                      col='blue')
+              title(main = header,
+                      xlab = 'Condition',
+                      ylab = "Percent of Yes Responses")
+            }
+
+            c2_get_percentages = function(df){
+              return(list(df[df$Group.1 == 'best',]$Response * 100,
+                          df[df$Group.1 == 'GG',]$Response * 100,
+                          df[df$Group.1 == 'BG',]$Response * 100,
+                          df[df$Group.1 == 'GB',]$Response * 100,
+                          df[df$Group.1 == 'BB',]$Response * 100,
+                          df[df$Group.1 == 'worst',]$Response * 100))
+            }
+
+            c2_make_vioplot = function(percentages, header){
+              vioplot(percentages[[1]], percentages[[2]], percentages[[3]], percentages[[4]], percentages[[5]], percentages[[6]] ,
+                      names = c('best', 'GG', 'BG', 'GB', 'BB', 'worst'),
+                      ylim = c(0,100),
+                      col='blue')
+              title(main = header,
+                      xlab = 'Condition',
+                      ylab = "Percent of 'Yes' Responses")
+            }
+        @
+
+        <<cumulativity-dataframe>>=
+            c1_data = read.csv('~/dissertation/cumulativity/cumulativity_june3_dataframe.csv')
+            c1_mean = aggregate(c1_data, by=list(c1_data$Condition), FUN = mean)
+            c1_sd = aggregate(c1_data, by=list(c1_data$Condition), FUN = sd)
+            c1_subject = aggregate(c1_data, by=list(c1_data$Condition, c1_data$Subject), FUN = mean)
+            c1_item = aggregate(c1_data, by=list(c1_data$Condition, c1_data$Item), FUN = mean)
+            c1_rtdata = c1_data
+
+            c1_mean_percentages = get_percentages(c1_mean)
+            c1_sd_percentages = get_percentages(c1_sd)
+            c1_subject_percentages = get_percentages(c1_subject)
+            c1_item_percentages = get_percentages(c1_item)
+        #
+        @
+
+        As expected under any model, participants accepted the test item the most often
+        when it had no violations, less often when it had one violation, and very
+        rarely when it had two violations. Of the two types of words containing one
+        violation, those with a coda violation and those with an onset violation, coda
+        violation words were chosen less often, suggesting that the coda violations
+        were on average more egregious than the onset violations. Thus, there is a
+        total ordering of word types, from those with no violations (called GG for good
+        onset, good coda), to those with an onset violation (BG for bad onset, good
+        coda), to those with a coda violation (GB for good onset, bad coda), to those
+        with two violations (BB for bad onset, bad coda).
+
+        \subsubsection{Linking Hypothesis}
+        The question this experiment seeks to answer is not about the ranking of the
+        percentages for each condition, but the quantitative relationships among them.
+        In order to analyze these relationships, we need a linking hypothesis to map
+        from predictions about psychological states to predictions about performance on
+        the task. I hypothesize that participants use the output of whichever model
+        they are using --- harmony in Linear HG and probability in MaxEnt
+         --- as the input to a probabilistic process that governs whether they
+        choose `Yes' or `No' on the task. There are many forms this probabilistic
+        process could take; I will adopt the assumption that the percent of times a
+        participant accepts a word can be treated as a proxy for the output of
+        the model for that word. That is, I assume that if participants calculate
+        probabilities for words, they say `Yes' to a word with the same probability
+        they assign to the word, and if they calculate harmonies, they say `Yes' with a
+        probability that is proportional to the harmony the assign the word. I assume
+        that the scaling necessary to convert harmonies to probabilities in the case of
+        Linear HG is constant across words, so that the differences in the
+        percents of `Yes' answers is the same, modulo the noise of the probabilistic
+        process, as the differences in the harmonies. One way to achieve this is to
+        translate the negative harmonies produced by Linear HG into a positive
+        space, by simply adding the absolute value of the lowest harmony score
+        to all harmony scores, and then normalize all resulting scores.
+
+        Thus, the linking hypotheses adopted here include a trivial one for MaxEnt, in which
+        its output probabilities are interpreted without transformation as probabilities of
+        acceptance, and a linear one for Linear HG, which does transform harmonies but in a way
+        that preserves the ratios of harmonies.
+
+        The difference between the output of a model, harmony or probability,
+        for GG words and the output of that model for another category of words
+        can be viewed as the penalty for any violations --- onset violations, coda
+        violations, or both --- that are present in the second category of words.
+        In the case of BB words, which have both kinds of violations, this is a cumulative
+        penalty, the combination of the penalty incurred by the onset violation and
+        the penalty incurred by the coda violation.
+
+        Linear HG combined with the linking hypothesis described above predicts
+        that the penalty for BB words is equal to the sum of the penalties for BG and
+        GB, while MaxEnt predicts that the penalty for BB words
+        is less than this sum.
+
+        Other linking hypotheses are of course possible; for instance,
+        \citet{Legendre1990c} proposed that the harmony of a sentence is
+        transformed into its grammaticality via the logistic function, which pushes
+        values towards the extremes of ``grammatical'' and ``ungrammatical''; such a
+        step is not assumed in this study.
+
+        Furthermore, the choice of a linking hypothesis is dependent on the experimental
+        task. Many phonotactic studies use an acceptability scale, allowing
+        participants to choose a level of acceptability for each test word.
+        However, scalar data is difficult to analyze, becasue different
+        participants may use the scale differently. The distance between
+        points on the scale would be crucial to investigating the shape of the
+        curve relating violations to acceptability, and yet we cannot depend on
+        all participants to assign the same distances between all points on the
+        scale.
+
+        Another possible design is a two alternative forced choice task between
+        two words rather than between two statuses of one word. In such a case,
+        Luce's Choice Axiom \citep{Luce1959} could provide a linking hypothesis
+        from harmonies to probabilities of acceptance, in which the probability
+        of accepting one word is equal to the harmony of that word divided by the
+        sum of both harmonies. However, given a forced choice between a foil word
+        of medium acceptability and each of the four types of test words, Linear HG
+        and Luce's Choice Axiom predict a sublinear pattern of cumulativity not unlike
+        that predicted by MaxEnt. This finding underscores the importance of
+        making linking hypotheses clear and of future research into the
+        validity of the hypothesis adopted here.
+
+        %This raised a problem in deriving predictions from
+        %Linear HG. As a categorical rather than probabilistic model, Linear HG
+        %predicts that either the test word or the filler word will always be
+        %chosen, rather than predicting a probability with which the test word
+        %will be chosen. Relating the harmony of the test word to the
+        %probability with which it will be accepted in isolation requires fewer
+        %assumptions than relating the harmony of the test word to the
+        %probability with which it will be accepted over a filler word. However,
+        %it is conceivable that Luce's Choice Axiom \citep{Luce1959} provides a linking
+        %hypothesis from Linear HG to the two-alternative forced choice task, in
+        %which the probability of choosing one word is that word's harmony
+        %divided by the sum of the harmonies of both choices.  This combination
+        %%of experimental design and linking hypothesis does not distinguish
+        %Linear HG from MaxEnt on the grounds of linear or sublinear
+        %cumulativity. When each test word's harmony is divided by a different
+        %sum to produce a probability, the predictions of Linear HG are no
+        %longer guaranteed to be linear, and in fact, they were sublinear with
+        %example constraint weights meant to mimic the materials used here. 
+
+        Noisy HG \citep{Boersma2008a} can also be used as a guide for how to
+        convert harmony scores into probabilities of acceptance, since it
+        models probabilistic data. However, the validity of this choice is
+        debatable, as Noisy HG is intended to be a model of variation between
+        surface forms that map from the same underlying form, not a model for
+        comparing the phonotactic acceptability of unrelated forms. Furthermore,
+        just as Linear HG paired with Luce's Choice Axiom can make a sublinear
+        pattern of predictions, so can Noisy HG.
+
+        This design and linking hypothesis were thus adopted to make maximally
+        distinct predictions for Linear HG and MaxEnt on the question of the
+        linearity of cumulativity.
+
+        With our current limitations in understanding the transformations that
+        apply to model outputs as they are used to direct behavior in an
+        experimental task, the results of this experiment must be interpreted
+        as dependent on the linking hypothesis assumed here.  A more conclusive
+        understanding of the phenomenon will depend on future studies that
+        investigate it using different tasks to determine if the findings are
+        dependent on a particular linking hypothesis, or if they are robust to
+        different ways of framing the question and to the particulars of
+        different experimental tasks.
+
+
+        \subsubsection{Analysis}
+        As explained in the previous section, Linear HG and the linear linking hypothesis
+        assumed here predict that BB words will be penalized as much as the sum of
+        the penalties against BG and GB words, while MaxEnt and the trivial linking
+        hypothesis adopted for it here predict that BB words will be penalized
+        less than that amount. Table \ref{tab:cumulativity-percents} shows that
+        descriptively, the data appear to support the prediction of a MaxEnt
+        model, as the penalties decrease at each step. Both report the percent
+        of the time that participants responded `Yes' to a word, for each type
+        of word.
+
+
+        \begin{table}[htp]
+        \begin{center}
+        \caption{Percent acceptance by condition in Experiment 1.}
+            \begin{tabular}{lll}
+            \hline Condition & Mean Percent `Yes' & Standard Deviation\\
+            \hline
+            GG & \Sexpr{round(c1_mean_percentages[[1]], 1)} & \Sexpr{round(c1_sd_percentages[[1]], 1)}\\
+            BG & \Sexpr{round(c1_mean_percentages[[2]], 1)} & \Sexpr{round(c1_sd_percentages[[2]], 1)}\\
+            GB & \Sexpr{round(c1_mean_percentages[[3]], 1)} & \Sexpr{round(c1_sd_percentages[[3]], 1)}\\
+            BB & \Sexpr{round(c1_mean_percentages[[4]], 1)} & \Sexpr{round(c1_sd_percentages[[4]], 1)}\\
+            \hline
+            \end{tabular}
+        \label{tab:cumulativity-percents}
+        \end{center}
+        \end{table}
+
+        The hypothesis that participants are employing MaxEnt rather
+        than Linear HG predicts that there will be an interaction between the
+        effects of onset violations and coda violations.
+
+        If a positive interaction is present, this would support a model that
+        takes probability away from words in greater and greater amounts as the
+        number of violations increases.  There are known superadditive effects,
+        where two violations incur a larger penalty than the sum of each
+        independently
+        \citep{Albright_cumulative_2009,Green_superadditivity_2014}, but this
+        can be modeled with specific conjoined constraints rather than a
+        consistently superadditive evaluation mechanism
+        \citep{Shih_super_2015}. It is not predicted that superadditive effects
+        are present consistently enough to affect the results of this
+        experiment, which uses a wide variety of constraint violations.
+
+        A negative interaction would support models like MaxEnt, in which each additional
+        violation subtracts less probability from the word than the last violation did.
+
+        A linear relationship would support models like Linear HG, in which each
+        additional violation subtracts the same amount of probability from a word as the last
+        violation did.
+
+        Figure \ref{fig:cumulativity-interaction} shows the interaction of the effects
+        of coda violations and onset violations on `Yes' responses. The difference
+        between the slopes of the two lines shows that the addition of a coda violation
+        decreases the acceptance rate less when an onset violation is already present
+        than when it is not, as predicted by MaxEnt.
+
+        \begin{figure}[htp]
+        \begin{center}
+        <<cumulativity-interaction>>=
+            with(c1_data[c1_data$PageType == 'Test',], interaction.plot(
+                CodaViolation,
+                OnsetViolation,
+                Response,
+                fun=mean,
+                ylim = c(0,1),
+                type='l',
+                ylab = "Proportion of 'Yes' Responses",
+                xlab = 'Number Coda Violations',
+                main = 'Interaction of Onset and Coda Violations',
+                legend = FALSE))
+            legend('topright', c('0', '1'), lty=c(2,1), title = 'Number Onset Violations')
+            # $
+        @
+        \caption{Interaction between onset and coda violations in predicting acceptance rate in Experiment 1.}
+        \label{fig:cumulativity-interaction}
+        \end{center}
+        \end{figure}
+
+
+        The interaction plot doesn't show the shape of the distributions, though, so we can also
+        break down the data by participant and item in order to view violin plots of the
+        conditions. A violin plot is a box plot where the sides of the boxes are
+        replaced with kernel density plots. The white dots represent the median
+        participant or item mean, the black bars represent the interquartile range --- the
+        values in the medial two quartiles of the data. Figure
+        \ref{fig:cumulativity-subject-percents} is a violin plot where each data point
+        is the percent of `Yes' answers given to that word type by a particular
+        participant. It shows us the distribution of participants for each condition.
+        Figure \ref{fig:cumulativity-item-percents} is a similar plot where the
+        aggregation is done by item set. Recall that an item set is a set of four test
+        words, one in each condition, where the words share substrings and
+        constraint violations.
+
+        \begin{figure}[htp]
+        \begin{center}
+        <<cumulativity-subject-percents, echo=FALSE, message=FALSE>>=
+            c1_make_vioplot(c1_subject_percentages, 'Acceptance of Test Words By Participant')
+        @
+        \caption{Distribution of mean percent acceptance by participant for each condition in Experiment 1.}
+        \label{fig:cumulativity-subject-percents}
+        \end{center}
+        \end{figure}
+
+        \begin{figure}[htp]
+        \begin{center}
+        <<cumulativity-item-percents, echo=FALSE>>=
+            c1_make_vioplot(c1_item_percentages, 'Acceptance of Test Words By Item')
+        @
+        \label{fig:cumulativity-item-percents}
+        \caption{Distribution of mean percent acceptance by item for each condition in Experiment 1.}
+        \end{center}
+        \end{figure}
+
+        The violin plots reflect the same interaction as the interaction plot,
+        supporting the trend found in the means with data from the medians and overall distributions.
+        To test the significance of this interaction, a mixed effects
+        model was fitted to the data using the lme4 package \citep{lme4} in R
+        \citep{R}. The dependent variable was the participant's response to each word,
+        coded as 0 for `No' and 1 for `Yes.'
+        OnsetViolation, CodaViolation, and their interaction served as fixed
+        effects. Random intercepts for participant and test item and random slopes
+        for OnsetViolation, CodaViolation, and their interaction by participant and
+        item were included in the model. Here and throughout the dissertation, the fixed and random
+        effects structures were chosen by prioritizing a maximal random effects structure and over the inclusion
+        of fixed effects that were not of theoretical interest. The maximal model that would converge within
+        20,000 iterations was used. The full model for the present analysis is given in \Next.
+
+        <<cumulativity-analysis, cache=TRUE>>=
+            library(lme4)
+            c1_data$OnsetViolation[which(c1_data$OnsetViolation == 0)] = -1
+            c1_data$CodaViolation[which(c1_data$CodaViolation == 0)] = -1
+            c1_data$TrialNumber = c1_data$TrialNumber - mean(c1_data$TrialNumber)
+            c1_data$YesPosition = c1_data$YesPosition - mean(c1_data$YesPosition)
+            c1_model = glmer(Response ~ OnsetViolation * CodaViolation +
+                (1|Subject) + (0+OnsetViolation|Subject) + (0 + CodaViolation |
+                Subject) + (0+ OnsetViolation:CodaViolation|Subject) + (1|Item) +
+                (0+OnsetViolation|Item) + (0 + CodaViolation | Item) + (0+
+                OnsetViolation:CodaViolation|Item), data = c1_data, family =
+                binomial(link="logit"), glmerControl(optCtrl=list(maxfun=10000), optimizer =
+                "bobyqa" ) )
+            c1_coef = summary(c1_model)$coefficients
+
+            c1_central_data = c1_data[!c1_data$ReactionTime %in% boxplot.stats(c1_data$ReactionTime)$out,]
+            c1_central_model = glmer(Response ~ OnsetViolation * CodaViolation +
+                (1|Subject) + (0+OnsetViolation|Subject) + (0 + CodaViolation |
+                Subject) + (0+ OnsetViolation:CodaViolation|Subject) + (1|Item) +
+                (0+OnsetViolation|Item) + (0 + CodaViolation | Item) + (0+
+                OnsetViolation:CodaViolation|Item), data = c1_central_data, family =
+                binomial(link="logit"), glmerControl(optCtrl=list(maxfun=10000), optimizer =
+                "bobyqa" ) )
+            c1_rt_model = lmer(log(ReactionTime) ~ OnsetViolation * CodaViolation +
+                (1|Subject) + (0+OnsetViolation|Subject) + (0 + CodaViolation |
+                Subject) + (0+ OnsetViolation:CodaViolation|Subject) + (1|Item) +
+                (0+OnsetViolation|Item) + (0 + CodaViolation | Item) + (0+
+                OnsetViolation:CodaViolation|Item), data = c1_data)
+            c1_rt_model_null = lmer(log(ReactionTime) ~ OnsetViolation + CodaViolation +
+                (1|Subject) + (0+OnsetViolation|Subject) + (0 + CodaViolation |
+                Subject) + (0+ OnsetViolation:CodaViolation|Subject) + (1|Item) +
+                (0+OnsetViolation|Item) + (0 + CodaViolation | Item) + (0+
+                OnsetViolation:CodaViolation|Item), data = c1_data)
+            #
+        @
+
+
+        \ex. Mixed effects model formula\\
+        Response $\sim$ OnsetViolation $*$ CodaViolation + (1 $\vert $ Participant)
+        + (0 + OnsetViolation $\vert $ Participant) + (0 + CodaViolation  $\vert $
+        Participant) + (0 + OnsetViolation:CodaViolation $\vert $ Participant) + (1
+        $\vert $ Item) + (0 + OnsetViolation $\vert $ Item) + (0 +
+        CodaViolation  $\vert $  Item) + (0 + OnsetViolation:CodaViolation
+        $\vert $ Item)
+
+        Table \ref{tab:cumulativity-coefficients} gives the coefficients of the
+        mixed effects model. It shows significant effects of both
+        OnsetViolation and CodaViolation, meaning that the presence of an onset
+        violation significantly decreases acceptance rate, as does the presence
+        of a coda violation.  Additionally, it shows a subadditive interaction
+        between the two; the main effects have negative estimates, because
+        violations decrease acceptance rate, while the interaction has a
+        positive estimate, because the coincidence of the two violations
+        increased acceptance rate relative to the addition of their two main
+        effects.  This is in line with the MaxEnt prediction.\footnote{The
+        picture is complicated by the use of a logistic regression in this
+        study, which means that the coefficients found by the analysis
+        represent the effect the factors have on the log odds of acceptance rather than on the
+        probability of acceptance. However, when transformed into probabilities, the probability of
+        accepting BB words (0.097) is still higher than it would be if it were reached by adding
+        the penalties against BG words (with a 0.233 probably of acceptance) and GB words (with
+        a 0.101 probability of acceptance) relative to GG words (0.894 probability of acceptance).}
+        This interaction is significant at the $\alpha = 0.001$ level.
+
+
+        \begin{table}[htp]
+        \begin{center}
+        \caption{Coefficients of the mixed effects model in Experiment 1.}
+        \begin{tabular}{lll}
+        \hline Factor & Estimate & $p$-value \\
+        \hline
+        Intercept & \Sexpr{round(c1_coef[[1]], 2)} & \Sexpr{c1_coef[[13]]} \\
+        OnsetViolation & \Sexpr{round(c1_coef[[2]], 2)}  & \Sexpr{c1_coef[[14]]}\\
+        CodaViolation & \Sexpr{round(c1_coef[[3]], 2)}  & \Sexpr{c1_coef[[15]]} \\
+        OnsetViolation:CodaViolation & \Sexpr{round(c1_coef[[4]], 2)} & \Sexpr{c1_coef[[16]]} \\
+        \hline
+        \end{tabular}
+        \label{tab:cumulativity-coefficients}
+        \end{center}
+        \end{table}
+
+        In Figure \ref{fig:cumulativity-subject-percents}, we see that the distribution
+        for BB appears cut off at the bottom. This suggests a floor effect: the BB
+        words are so unacceptable that we cannot get an accurate sense of how
+        unacceptable they are, because we already hit zero percent `Yes' responses, and
+        it's not possible to give a negative number of `Yes' responses. This result is
+        problematic for the interpretation of this experiment, which hinges on an
+        accurate estimation of the acceptability of BB words. If participants are using
+        an Linear HG-like grammar, perhaps it could map to a negative number of `Yes' responses, which
+        is then forced up to zero, making it appear that they employed a MaxEnt-like
+        grammar instead.
+
+        One problem with this alternative interpretation is that it's unclear
+        how harmonies would map to a negative number of intended `Yes'
+        responses. We would need a more sophisticated linking hypothesis than
+        the one offered above, which assumed that harmonies are transformed
+        into probabilities in a way that preserves their proportions. Implicit
+        in that assumption was the idea that they were normalized to fit into
+        the probability space and translated into positive space, keeping the
+        proportions among them constant. Perhaps they are scaled but not fully
+        pushed into the positive range, but it remains unclear what that would
+        mean for our hypothesized probabilistic process to have a target of a
+        negative number. The fact that harmonies must be shoehorned into a
+        positive space in order to relate to real world behavior may
+        be the very motivation for a MaxEnt-like model which transforms
+        harmonies and results in the attentuation of differences at the bottom
+        of the scale.
+
+        Furthermore, we might expect a more dramatic floor effect, and one
+        consistent whether we look at the data aggregated by participant or by
+        item, if indeed the participants intended to assign BB words a harmony
+        score as low as Linear HG would predict for this data.
+
+        One clue to participants' true assessments of the BB words may lie in their
+        reaction times. If BB words were far worse, not just slightly worse, than BG
+        and GB words, and participants merely ran out of ways to express this, we might
+        expect them to have shorter reaction times in responding to BB words than to BG
+        and GB words, because it was so obvious that they should be rejected. In
+        particular, we would expect shorter reaction times for rejecting BB words than
+        for rejecting the second worst category, GB words. In fact, however, the violin
+        plots for log-transformed reaction times for rejected GB and BB words look
+        fairly similar, as shown in Figure \ref{fig:cumulativity-rt-violin}.
+
+        \begin{figure}[htp]
+        \begin{center}
+        <<cumulativity-rt-violin>>=
+            rejectgb = c1_rtdata[c1_rtdata$Condition == 'GB' & c1_rtdata$Response == 0,]$ReactionTime
+            rejectbb = c1_rtdata[c1_rtdata$Condition == 'BB' & c1_rtdata$Response == 0,]$ReactionTime
+            vioplot(log(rejectgb), log(rejectbb), col='blue', names = c('GB', 'BB'))
+            title(main = 'Log Reaction Times for Rejected Words',
+                      xlab = 'Condition',
+                      ylab = "Distribution of Log Reaction Times (ms)")
+        @
+        \caption{Distribution of log reaction times for rejecting GB and BB words in Experiment 1.}
+        \label{fig:cumulativity-rt-violin}
+        \end{center}
+        \end{figure}
+
+        \begin{table}[htp]
+        \begin{center}
+        \caption{Central tendencies of log-transformed reaction times for rejecting GB and BB words in Experiment 1.}
+            \begin{tabular}{lll}
+            \hline Condition & Mean & Median \\
+            \hline
+            Rejected GB & \Sexpr{mean(log(rejectgb))} & \Sexpr{median(log(rejectgb))}\\
+            Rejected BB & \Sexpr{mean(log(rejectbb))} & \Sexpr{median(log(rejectbb))}\\
+            \hline
+            \end{tabular}
+        \label{tab:cumulativity-rt}
+        \end{center}
+        \end{table}
+
+        <<cumulativity-rtt>>=
+            rtt = t.test(log(rejectgb), log(rejectbb), alternative = 'greater')
+        @
+
+        The mean and median reaction times for BB words are lower than those for GB
+        words, as given in Table \ref{tab:cumulativity-rt}, but a one-tailed t-test
+        finds that the difference is not significant, with a $t$-score of
+        \Sexpr{round(rtt$statistic,3)} and a $p$-value of \Sexpr{rtt$p.value}. Thus, reaction
+        times do not offer support for the Linear HG hypothesis. However, we cannot accept the null
+        hypothesis that BB and GB reaction times are the same. The evidence of a floor effect is inconclusive,
+        motivating a second experiment to both replicate the interaction and differentiate it from a task effect.
+
+
+    \subsection{Discussion}
+
+        The results support the hypothesis that MaxEnt predicts participants'
+        preferences better than Linear HG. The interaction between the effect of
+        an onset violation and the effect of a coda violation was both statistically
+        significant and of a considerable effect size. However, it is possible that this is
+        a task effect, where the inability to accept BB words a negative number of times
+        artificially inflated its measured acceptability, creating the subadditive interaction.
+
+\section{Experiment 2}
+
+    Experiment 1 showed evidence of a floor effect, which interfered with the
+    ability to interpret the results as conforming to the prediction of Harmonic
+    Grammar or MaxEnt. Experiment 2 seeks further evidence to distinguish
+    between these theories by using different materials to make a floor effect less
+    likely and increase our ability to distinguish between a floor effect and an accurate
+    measurement of acceptability. Experiment 2 is largely the same as Experiment 1, but with the materials
+    altered to increase the distance in acceptability space between the violation-containing test words
+    and the violation-containing fillers. This adjustment may encourage participants to distribute their
+    responses differently, avoiding the low extreme of the acceptability space when assessing BB words,
+    and it will also increase the likelihood that we can differentiate statistically between the BB words
+    and an even less acceptable category of words, the bad fillers. If there is a category below the BB words,
+    then they must not be at the ``floor'' of the task's measurable acceptability values.
+
+    \subsection{Method}
+        \subsubsection{Participants}
+            101 participants were run on Mechanical Turk, each paid \$0.75, as
+            the experiment was expected to take the same amount of time as
+            Experiment 1. Two participants were excluded for answering too
+            quickly, implying they may be automated workers or not paying
+            attention. Three participants were excluded for not being native or
+            regular speakers of English. A total of 96 participants were
+            included.
+
+            Participants were not excluded from this experiment on the basis of
+            their responses to filler words, because the fillers serve a
+            different purpose in this experiment and doing so could bias the
+            results.
+
+        \subsubsection{Materials}
+            The materials for Experiment 2 have the same structure as those in
+            Experiment 1 but differ in their exact makeup.
+
+            In order to construct these materials, the results of Experiment 1
+            were analyzed. The mean acceptance rates of each BG word and each
+            GB word were calculated and sorted. The least preferred half of the
+            bad onsets and the least preferred half of the bad codas were
+            removed. In order to construct the same number of test words, the
+            remaining bad onsets and bad codas were each used in two items. The
+            good and bad onsets and codas were shuffled and recombined into new
+            nonce words, which were filtered for real words or words with
+            noticeable OCP violations. They are listed in
+            Appendix \ref{cumul-stimuli}.
+
+            The good fillers were the same as in Experiment 1: nonce words with
+            no known violations and real English suffixes. The bad fillers were
+            made worse. They were extended to two syllables long, with
+            violations in initial, medial, and final consonant clusters.
+
+        \subsubsection{Procedure}
+            The procedure in Experiment 2 was the same as in Experiment 1,
+            except that an additional instructional page was used.  This page
+            was intended to anchor participants' expectations for acceptable
+            and unacceptable words by giving them an example of a word they
+            would choose ``Yes'' for (a word constructed in the same manner as
+            the good fillers) and an example of a word they would choose
+            ``No'' for (a word constructed in the same manner as the bad fillers).
+
+            The reworking of the materials was done outside of Speriment, as
+            was their initial construction.  Speriment was then used to
+            implement the experiment and PsiTurk was used to run it on
+            Mechanical Turk, as in Experiment 1. The code is similar to that of
+            Experiment 1 and can be found in Appendix \ref{cumul-code}.
+
+    \subsection{Results}
+
+        <<cumulativity2-dataframe, echo=FALSE, warning=FALSE>>=
+            c2_data = read.csv('~/dissertation/cumulativity/cumulativity_june17_dataframe.csv')
+            c2_mean = aggregate(c2_data, by=list(c2_data$Condition), FUN = mean)
+            c2_sd = aggregate(c2_data, by=list(c2_data$Condition), FUN = sd)
+            c2_subject = aggregate(c2_data, by=list(c2_data$Condition, c2_data$Subject), FUN = mean)
+            c2_item = aggregate(c2_data, by=list(c2_data$Condition, c2_data$Item), FUN = mean)
+
+            c2_mean_percentages = c2_get_percentages(c2_mean)
+            c2_subject_percentages = c2_get_percentages(c2_subject)
+            c2_item_percentages = c2_get_percentages(c2_item)
+            c2_sd_percentages = c2_get_percentages(c2_sd)
+        @
+
+        As in Experiment 1, grand means show that the GG words were accepted
+        the most often out of the test words, followed by BG, GB, and then BB,
+        indicating that more violations decrease acceptability and that the
+        coda violations were on average considered worse than the onset
+        violations. Table \ref{tab:cumulativity2-percents} gives the mean and
+        standard deviation of the percent of accepted words from each
+        condition, including the good and bad fillers.  Unlike in Experiment 1,
+        the bad fillers will be used in part of the analysis, so the filler
+        acceptance rates are shown throughout the results
+        of this experiment.
+
+
+        \begin{table}[htp]
+        \begin{center}
+        \caption{Percent acceptance in Experiment 2 by condition.}
+            \begin{tabular}{lll}
+            \hline Condition & Mean Percent `Yes' & Standard Deviation \\
+            \hline
+            Good Filler & \Sexpr{round(c2_mean_percentages[[1]], 1)}& \Sexpr{round(c2_sd_percentages[[1]], 1)} \\
+            GG & \Sexpr{round(c2_mean_percentages[[2]], 1)} & \Sexpr{round(c2_sd_percentages[[2]], 1)} \\
+            BG & \Sexpr{round(c2_mean_percentages[[3]], 1)} & \Sexpr{round(c2_sd_percentages[[3]], 1)} \\
+            GB & \Sexpr{round(c2_mean_percentages[[4]], 1)} & \Sexpr{round(c2_sd_percentages[[4]], 1)} \\
+            BB & \Sexpr{round(c2_mean_percentages[[5]], 1)} & \Sexpr{round(c2_sd_percentages[[5]], 1)} \\
+            Bad Filler &  \Sexpr{round(c2_mean_percentages[[6]], 1)} & \Sexpr{round(c2_sd_percentages[[6]], 1)} \\
+            \hline
+            \end{tabular}
+        \label{tab:cumulativity2-percents}
+        \end{center}
+        \end{table}
+
+        Figure \ref{fig:cumulativity2-interaction} shows an interaction plot of
+        the data. As before, the slopes of the lines are different, suggesting
+        an interaction. The acceptability of a word with an onset violation
+        falls less with to the addition of a coda violation than the
+        acceptability of a word without an onset violation does. All mean
+        acceptance rates are higher in Experiment 2 than they were in
+        Experiment 1, due to the change in materials.
+
+        \begin{figure}[htp]
+        \begin{center}
+        <<cumulativity2-interaction, echo=FALSE>>=
+            with(c2_data[c2_data$PageType == 'Test',], interaction.plot(
+                CodaViolation,
+                OnsetViolation,
+                Response,
+                fun=mean,
+                legend=FALSE,
+                ylim = c(0,1),
+                type='l',
+                ylab = "Proportion of 'Yes' Responses",
+                xlab = 'Number Coda Violations',
+                main = 'Interaction of Onset and Coda Violations'))
+            legend('topright', c('0', '1'), lty=c(2,1), title = 'Number Onset Violations')
+            #$
+        @
+        \caption{Interaction between onset violations and coda violations in Experiment 2.}
+        \label{fig:cumulativity2-interaction}
+        \end{center}
+        \end{figure}
+
+        Figure \ref{fig:cumulativity2-subject-percents} shows a violin plot of
+        the mean acceptance rates of each participant on each of the six
+        conditions. The pattern among the test words is similar to that found
+        in Experiment 1, with the largest difference in adjacent conditions
+        occurring between the GG and BG words. The GG and BB words do show a
+        possible ceiling and floor effect, respectively. The distribution of
+        the good fillers is similar to that of the GG words, but with a smaller
+        variance; the same is true of the bad fillers relative to the BB words.
+
+        \begin{figure}[htp]
+        \begin{center}
+        <<cumulativity2-subject-percents, echo=FALSE, message=FALSE>>=
+            c2_make_vioplot(c2_subject_percentages, 'Acceptance of Test Words by Participant')
+        @
+        \caption{Distribution of mean percent acceptance by participant for each condition in Experiment 2.}
+        \label{fig:cumulativity2-subject-percents}
+        \end{center}
+        \end{figure}
+
+        Figure \ref{fig:cumulativity2-item-percents} shows the data aggregated
+        by item instead of by participant.  As in Experiment 1, it appears that
+        participant means vary more overall than item means do. The by-item
+        data shows less evidence for a floor effect, as the bad fillers have a
+        noticeably lower distribution of mean acceptance rates than the BB
+        words do.
+
+        \begin{figure}[htp]
+        \begin{center}
+        <<cumulativity2-item-percents, echo=FALSE>>=
+            c2_make_vioplot(c2_item_percentages, 'Acceptance of Test Words by Item')
+        @
+        \label{fig:cumulativity2-item-percents}
+        \caption{Distribution of mean percent acceptance by item for each condition in Experiment 2.}
+        \end{center}
+        \end{figure}
+
+        As in Experiment 1, a mixed effects model was fitted to the data.  The
+        model included fixed effects of theoretical interest and a full random
+        effects structure for those fixed effects, and showed significant
+        effects of OnsetViolation, CodaViolation, and their interaction. The
+        formula is given in \Next. The coefficients of the model are given in
+        Table \ref{tab:cumulativity2-coefficients}.
+
+        <<cumulativity2-analysis, cache=TRUE>>=
+            c2_data$OnsetViolation[which(c2_data$OnsetViolation == 0)] = -1
+            c2_data$CodaViolation[which(c2_data$CodaViolation == 0)] = -1
+            c2_data$TrialNumber = c2_data$TrialNumber - mean(c2_data$TrialNumber)
+            c2_data$YesPosition = c2_data$YesPosition - mean(c2_data$YesPosition)
+            c2_model = glmer(Response ~ OnsetViolation * CodaViolation + (1|Subject) +
+                (0+OnsetViolation|Subject) + (0 + CodaViolation | Subject) + (0+
+                OnsetViolation:CodaViolation|Subject) + (1|Item) + (0+OnsetViolation|Item) + (0
+                + CodaViolation | Item) + (0+ OnsetViolation:CodaViolation|Item), data =
+                c2_data[c2_data$PageType == 'Test',], family = binomial(link="logit"),
+                glmerControl(optCtrl=list(maxfun=10000), optimizer = "Nelder_Mead" ) )
+            c2_summary = summary(c2_model)
+            c2_coef = c2_summary$coefficients
+
+            c2_central_data = c2_data[!c2_data$ReactionTime %in% boxplot.stats(c2_data$ReactionTime)$out,]
+            c2_central_model = glmer(Response ~ OnsetViolation * CodaViolation +
+                (1|Subject) + (0+OnsetViolation|Subject) + (0 + CodaViolation |
+                Subject) + (0+ OnsetViolation:CodaViolation|Subject) + (1|Item) +
+                (0+OnsetViolation|Item) + (0 + CodaViolation | Item) + (0+
+                OnsetViolation:CodaViolation|Item), data = c2_central_data, family =
+                binomial(link="logit"), glmerControl(optCtrl=list(maxfun=20000), optimizer =
+                "bobyqa" ) )
+
+                c2_rt_model = lmer(log(ReactionTime) ~ OnsetViolation * CodaViolation +
+                (1|Subject) + (0+OnsetViolation|Subject) + (0 + CodaViolation |
+                Subject) + (0+ OnsetViolation:CodaViolation|Subject) + (1|Item) +
+                (0+OnsetViolation|Item) + (0 + CodaViolation | Item) + (0+
+                OnsetViolation:CodaViolation|Item), data = c2_data)
+            c2_rt_model_null = lmer(log(ReactionTime) ~ OnsetViolation + CodaViolation +
+                (1|Subject) + (0+OnsetViolation|Subject) + (0 + CodaViolation |
+                Subject) + (0+ OnsetViolation:CodaViolation|Subject) + (1|Item) +
+                (0+OnsetViolation|Item) + (0 + CodaViolation | Item) + (0+
+                OnsetViolation:CodaViolation|Item), data = c2_data)
+        @
+
+        \ex. Mixed effects model formula\\
+        Response $\sim$ OnsetViolation $*$ CodaViolation $+$ (1 $\vert$
+        Participant) + (0 + OnsetViolation $\vert $ Participant) + (0 + CodaViolation
+        $\vert $  Participant) + (0 + OnsetViolation:CodaViolation $\vert $
+        Participant) + (1 $\vert $ Item) + (0 + OnsetViolation $\vert $ Item) + (0
+        + CodaViolation  $\vert $  Item) + (0 + OnsetViolation:CodaViolation
+        $\vert $ Item)
+
+        \begin{table}[htp]
+        \begin{center}
+        \caption{Coefficients of the mixed effects model in Experiment 2.}
+        \begin{tabular}{lll}
+        \hline Factor & Estimate & $p$-value \\
+        \hline
+        Intercept & \Sexpr{round(c2_coef[[1]], 2)} & \Sexpr{c2_coef[[13]]} \\
+        OnsetViolation & \Sexpr{round(c2_coef[[2]], 2)}  & \Sexpr{c2_coef[[14]]}\\
+        CodaViolation & \Sexpr{round(c2_coef[[3]], 2)}  & \Sexpr{c2_coef[[15]]} \\
+        OnsetViolation:CodaViolation & \Sexpr{round(c2_coef[[4]], 2)} & \Sexpr{c2_coef[[16]]} \\
+        \hline
+        \end{tabular}
+        \label{tab:cumulativity2-coefficients}
+        \end{center}
+        \end{table}
+
+        The main effects were significant, showing that constraint violations
+        lower acceptability. Their interaction was also significant at the
+        $\alpha = 0.001$ level. As predicted by MaxEnt, and in
+        agreement with Experiment 1, the interaction is subadditive, having a
+        coefficient of opposite sign of the main effects.
+
+        <<cumulativity2-floor>>=
+            ftt = t.test(c2_data[c2_data$Condition == 'BB',]$Response, c2_data[c2_data$Condition == 'worst',]$Response, alternative = 'g', paired = TRUE)
+            #$
+        @
+
+        In order to assess whether the BB condition was subject to a floor
+        effect, meaning that the interaction is evidence of a task effect
+        rather than evidence of the way the phonotactic grammar computes
+        acceptability, a $t$-test was performed on the BB words and the bad
+        fillers. The analysis was done this way instead of in the regression
+        because the fillers are not captured by the crossed factors used in the
+        analysis. The prediction for the $t$-test is based on the fact that the
+        bad fillers contain multiple onset and coda violations
+        each, rendering them worse than the BB words. Therefore, if the task
+        is capable of showing a statistically significant difference between
+        the bad fillers and the BB words, then we can conclude that the
+        performance on the BB words is not due to a floor effect. Indeed, a
+        one-tailed paired $t$-test gives a $t$-score of \Sexpr{round(ftt$statistic, 3)} and
+        a $p$-value of \Sexpr{ftt$p.value}. In order to control for Type I
+        error, we should apply a Bonferroni correction to the results of the
+        mixed effects model and the $t$-test, adjusting the $\alpha $ level to
+        $\frac{0.05}{2} = 0.025$. Both the $p$-value of the interaction and
+        that of the $t$-test are below this new threshold, so we can conclude
+        that both are statistically significant.
+
+    \subsection{Discussion}
+        This experiment finds support for the hypothesis that a violation
+        lowers acceptability less in the presence of other violations than it
+        does in isolation. Not only was this pattern observed and found to be
+        significant, but it was also found to be distinguishable from a task
+        effect.  The concern that the condition containing multiple violations
+        was assigned artificially high acceptability due to the nature of the
+        task is undermined by the existence of a further condition assigned
+        lower acceptability under the same task. The findings are consistent
+        with MaxEnt models but not with Linear HG models.
+
+\section{General Discussion}
+    Experiments 1 and 2 reach the same conclusion: there is evidence that a
+    violation in the presence of another violation contributes a smaller
+    penalty to word acceptability than that violation does in isolation. This
+    conclusion is consistent with a MaxEnt model and challenges a Linear HG
+    model.
+
+    These results also offer further support to the conclusion reached by
+    \citet{Albright_clusters_2008} that an Optimality Theory style of violation
+    combination in which violations of different constraints do not
+    accumulate is not correct for phonotactic judgments. The BB words may not be as bad as a linear model
+    would predict, but they also do not seem to be as good as the GB words,
+    indicating that the more mild onset violation still affects the word's overall
+    acceptability.
+
+    The results of this study cannot, of course, single out MaxEnt as
+    the correct grammar. There may be other models that would also fit the data
+    gathered here. Furthermore, MaxEnt makes more specific predictions
+    than that of subadditive cumulativity of violations, and further work is
+    needed to test whether those predictions are also supported by the data.
+
+    However, these findings do pose a challenge to Linear HG as a model of cumulative
+    phonotactics and support the idea that violations make more of a difference
+    at the high end of the acceptability scale than at the low end. This idea
+    can bear on the question of whether grammaticality is categorical or
+    gradient, which \citet{Hayes2008} point out has been a challenging question
+    for decades. If differences matter more in one region of the scale than
+    another, this can make elicited intuitions appear to show a threshold
+    between grammatical and ungrammatical data, offering a sort of
+    reconciliation between categorical and gradient views of phonotactic
+    well-formedness.
+
+    Another insight this experiment can bring has to do with the very high region
+    of the acceptability scale, which is often overlooked. The
+    good fillers in Experiment 2, made from violation-free words with
+    English suffixes, were rated slightly higher than the GG (violation-free)
+    words. This raises challenges for a theory of grammar that uses only violations
+    and no rewards, such as \citet{Keller2006}. It is suggestive of analogical
+    approaches to grammar, which are straightforwardly capable of rewarding forms
+    that resemble existing words. However, it is possible that a grammar abstracted
+    from the lexicon, such as constraint-based grammars, could also account for
+    this phenomenon by incorporating constraints that reward the use of existing
+    affixes in addition to penalizing the use of marked sequences.
+
+    The fact that the finding was replicated with a different set of
+    materials can increase our confidence in the conclusion that violations
+    accumulate nonlinearly. However, further variations on this experiment
+    would be helpful. Auditory stimuli would help ensure that we are
+    measuring phonology rather than orthographical effects, although it would be
+    important to find stimuli that can be accurately perceived. Testing speakers of
+    other languages on violations of their phonological constraints would further test
+    the robustness of the effect, and show whether it reflects something about human
+    grammar rather than a fact particular to English or the kinds of constraints
+    available for testing on English speakers. Investigations of the cumulativity
+    of constraint violations that rely on different tasks and designs would be
+    helpful in reducing our reliance on the linking hypothesis adopted for this
+    experiment.

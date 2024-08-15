@@ -1,0 +1,67 @@
+[u'trilb', u'zmock']
+[u'gwald', u'grun']
+[u'skashk', u'dwoond']
+[u'blelth', u'thnukp']
+[u'skralk', u'fmenb']
+[u'vlathp', u'sloond']
+[u'shrelth', u'thloob']
+[u'spelsh', u'shtefsh']
+[u'blofk', u'dwoond']
+[u'klep', u'spelsh']
+[u'flathk', u'skuck']
+[u'skralk', u'hrool']
+[u'shritp', u'threlt']
+[u'lbifth', u'slan']
+[u'srid', u'blelth']
+[u'slils', u'troom']
+[u'skridb', u'shesp']
+[u'tlavb', u'smim']
+[u'spozb', u'flelg']
+[u'felp', u'krlisg']
+[u'throoz', u'spup']
+[u'smim', u'zdumth']
+[u'shpizz', u'skralk']
+[u'sklime', u'sleb']
+[u'splot', u'skuck']
+[u'throth', u'vmep']
+
+dwoond - skashk and blofk
+blelth - thnukp and srid
+skralk - fmenb, hrool, and shpizz
+spelsh - shtefsh and klep
+skuck - flathk and splot
+smim - tlavb and zdumth
+
+[u'shesp', u'vnad']
+[u'shrelth', u'shpivg']
+[u'spelsh', u'slemg']
+[u'fashk', u'znin']
+[u'throozg', u'gralfth']
+[u'thloosf', u'spelsh']
+[u'plag', u'gwald']
+[u'drell', u'brur']
+[u'lbifth', u'slan']
+[u'krat', u'slils']
+[u'trilb', u'trooshp']
+[u'felmth', u'lrim']
+[u'shlaff', u'dwoond']
+[u'klefp', u'threlt']
+[u'krlisg', u'felp']
+[u'hroothf', u'sklime']
+[u'swuff', u'smim']
+[u'brur', u'zboss']
+[u'felmth', u'shnog']
+[u'vmebg', u'trilb']
+[u'srishf', u'smim']
+[u'zmopk', u'spup']
+[u'gruzv', u'sloond']
+[u'slils', u'pruss']
+[u'glagd', u'splogb']
+[u'smeck', u'smim']
+
+spelsh - slemg and thloosf
+brur - drell and zboss
+slils - krat and pruss
+trilb
+felmth
+smim x3

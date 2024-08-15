@@ -1,7 +1,5 @@
 from speriment import *
 
-#TODO remove pilot page
-
 ##### Wording #####
 
 introduction = '''In this experiment, you will be shown pairs of made-up words.
@@ -10,7 +8,9 @@ English-like.'''
 
 instructions = '''During experimental questions, you will not be able to use your mouse. Use
 the F key to choose the option on the left, the J key to choose the option
-on the right, and the spacebar to move forward.'''
+on the right, and the spacebar to move forward. Make sure your CAPS lock is off.
+At the end of the experiment, you can use the mouse to answer some questions
+about yourself.'''
 
 question = "Based on how they sound, which of these two words is more likely to be a word of English?"
 
@@ -31,12 +31,13 @@ pilot = '''This is a pilot for an experiment I'll run on people later. Do you
 have any feedback for me about the length or difficulty of the experiment, or
 any bugs or typos you saw? Thanks for your help!'''
 
-goodbye = "Thank you for participating in this experiment!"
+goodbye = '''Thank you for participating in this experiment! Make sure to click
+the Complete HIT button on the next page.'''
 
 
 ##### Stimuli #####
 
-rows = get_dicts('/Users/presley/diss/Stimuli/cumulativity_items_oct8.csv')
+rows = get_dicts('items_oct8.csv')
 
 fillers = [row['filler'] for row in rows]
 
@@ -87,7 +88,6 @@ with make_experiment(IDGenerator()):
                     Option(bad_word, tags = {'type': 'catch-bad'}),
                     Option(good_word, tags = {'type': 'catch-good'})
                 ],
-                condition = test_conditions[0],
                 keyboard = True
             )
             for (bad_word, good_word) in catch_word_pairs]
@@ -101,7 +101,6 @@ with make_experiment(IDGenerator()):
         catch_group = [catch_trial]
         for i in range(1, 4):
             new_trial = catch_trial.new()
-            new_trial.condition = test_conditions[i]
             catch_group.append(new_trial)
         return catch_group
 

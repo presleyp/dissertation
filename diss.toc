@@ -1,0 +1,68 @@
+\contentsline {FrontMatter}{\MakeTextUppercase {Acknowledgments}}{iv}{chapter*.1}
+\contentsline {FrontMatter}{\MakeTextUppercase {\uppercase {Abstract}}}{v}{chapter*.2}
+\contentsline {FrontMatter}{\MakeTextUppercase {List of Tables}}{x}{chapter*.4}
+\contentsline {FrontMatter}{\MakeTextUppercase {List of Figures}}{xii}{chapter*.5}
+\contentsline {Chapter}{\MakeTextUppercase {Introduction}}{1}{chapter*.6}
+\contentsline {Chapter}{\numberline {1.}\MakeTextUppercase {Speriment}}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}Benefits of Online Experiments}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Comparison with Other Frameworks}{9}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Properties of Speriment}{10}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Ibex}{13}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Experigen}{14}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}TurkTools}{14}{subsection.1.3.4}
+\contentsline {subsection}{\numberline {1.3.5}WebExp}{15}{subsection.1.3.5}
+\contentsline {subsection}{\numberline {1.3.6}Survey Software}{16}{subsection.1.3.6}
+\contentsline {subsection}{\numberline {1.3.7}psiTurk}{17}{subsection.1.3.7}
+\contentsline {section}{\numberline {1.4}Components and Features}{17}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Pages}{18}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Options}{18}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Features of Pages and Options}{19}{subsection.1.4.3}
+\contentsline {subsection}{\numberline {1.4.4}Sampling}{19}{subsection.1.4.4}
+\contentsline {subsection}{\numberline {1.4.5}Blocks}{20}{subsection.1.4.5}
+\contentsline {section}{\numberline {1.5}Workflow}{21}{section.1.5}
+\contentsline {Chapter}{\numberline {2.}\MakeTextUppercase {Cumulativity of Violations}}{25}{chapter.2}
+\contentsline {section}{\numberline {2.1}Overview}{25}{section.2.1}
+\contentsline {section}{\numberline {2.2}Optimality Theory}{26}{section.2.2}
+\contentsline {section}{\numberline {2.3}Linear vs.\nobreakspace {}Exponential Combination}{29}{section.2.3}
+\contentsline {section}{\numberline {2.4}Experiment 1}{30}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Method}{33}{subsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.1.1}Participants}{33}{subsubsection.2.4.1.1}
+\contentsline {subsubsection}{\numberline {2.4.1.2}Materials}{34}{subsubsection.2.4.1.2}
+\contentsline {subsubsection}{\numberline {2.4.1.3}Procedure}{36}{subsubsection.2.4.1.3}
+\contentsline {subsection}{\numberline {2.4.2}Results}{36}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Discussion}{46}{subsection.2.4.3}
+\contentsline {section}{\numberline {2.5}Experiment 2}{46}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Method}{47}{subsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.1.1}Participants}{47}{subsubsection.2.5.1.1}
+\contentsline {subsubsection}{\numberline {2.5.1.2}Materials}{47}{subsubsection.2.5.1.2}
+\contentsline {subsubsection}{\numberline {2.5.1.3}Procedure}{48}{subsubsection.2.5.1.3}
+\contentsline {subsection}{\numberline {2.5.2}Results}{48}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Discussion}{53}{subsection.2.5.3}
+\contentsline {section}{\numberline {2.6}General Discussion}{53}{section.2.6}
+\contentsline {Chapter}{\numberline {3.}\MakeTextUppercase {Effect of Alternations on Phonotactics}}{56}{chapter.3}
+\contentsline {section}{\numberline {3.1}Background}{56}{section.3.1}
+\contentsline {section}{\numberline {3.2}Experiment 3}{61}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Method}{61}{subsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Participants}{64}{subsubsection.3.2.1.1}
+\contentsline {subsubsection}{\numberline {3.2.1.2}Inventory}{65}{subsubsection.3.2.1.2}
+\contentsline {subsubsection}{\numberline {3.2.1.3}Exposure Phase}{66}{subsubsection.3.2.1.3}
+\contentsline {subsubsection}{\numberline {3.2.1.4}Training Phase}{68}{subsubsection.3.2.1.4}
+\contentsline {subsubsection}{\numberline {3.2.1.5}Testing Phase}{69}{subsubsection.3.2.1.5}
+\contentsline {subsection}{\numberline {3.2.2}Results}{70}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Discussion}{76}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Experiment 4}{80}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Method}{80}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Training Phase}{80}{subsubsection.3.3.1.1}
+\contentsline {subsubsection}{\numberline {3.3.1.2}Testing Phase}{80}{subsubsection.3.3.1.2}
+\contentsline {subsubsection}{\numberline {3.3.1.3}Participants}{81}{subsubsection.3.3.1.3}
+\contentsline {subsection}{\numberline {3.3.2}Results}{81}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Discussion}{85}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}General Discussion}{86}{section.3.4}
+\contentsline {Chapter}{\numberline {4.}\MakeTextUppercase {Conclusion}}{88}{chapter.4}
+\setcounter {tocdepth}{0}
+\contentsline {Appendix}{\numberline {A.}\MakeTextUppercase {Experiments 1 and 2 Stimuli}}{91}{appendix.A}
+\contentsline {section}{\numberline {A.1}Experiment 1}{91}{section.A.1}
+\contentsline {section}{\numberline {A.2}Experiment 2}{91}{section.A.2}
+\contentsline {Appendix}{\numberline {B.}\MakeTextUppercase {Experiments 3 and 4 Stimuli}}{94}{appendix.B}
+\contentsline {BackMatter}{\MakeTextUppercase {Bibliography}}{101}{appendix*.7}

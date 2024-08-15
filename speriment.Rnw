@@ -7,110 +7,136 @@ Speriment is software that facilitates the design and running of experiments
 over the internet. It's built to work with psiTurk \citep{PsiTurk}, a program
 that runs arbitrary JavaScript experiments on Mechanical Turk and other
 platforms. psiTurk takes much of the work out of interfacing with Mechanical
-Turk and managing participants. Speriment further reduces the workload of the
+Turk and managing participants, and Speriment further reduces the workload of the
 experimenter. Instead of writing a dynamic website in JavaScript, Speriment
 users can write a description of the structure of their experiment in Python,
-and the JavaScript will be generated automtically.  For instance, instead of
-implementing the Latin Square algorithm to choose questions to show a given
-participant, the experimenter simply specifies that the block of questions uses
-a Latin Square.
+and the JavaScript will be generated automatically.
 
 \section{Benefits of Online Experiments}
-Online experiments are not applicable to all experimental designs and
+Web-based experiments are not applicable to all experimental designs and
 participant pools, but for those experiments that can be run online, evidence
-is building that they are a useful and valid tool.
-\citet{crump_evaluating_2013} and \citet{sprouse_validation_2011} test results
-of experiments run on Mechanical Turk against known results from lab studies,
-and find that for many tasks, online studies are a viable alternative that
-replicate known effects. Many of the reasons to consider running experiments
-online are well-known. The makers of WebExp \citep{WebExp}, for instance, note
-that the internet is a large source of potential participants, and that
-experiments conducted online avoid scheduling issues and other sources of
-overhead. There is a further benefit of running experiments online that follows
-from the way it makes experiments so quick and relatively inexpensive to run,
-which is that it supports iterative development, in which experiments are
-tested multiple times and edited along the way. This is helpful for both
-practical and scientific reasons.
+is building that they are a useful and valid tool.  \citet{keller_timing_2009},
+\citet{sprouse_validation_2011}, and \citet{crump_evaluating_2013} tested results
+of experiments run over the internet against known results from lab studies,
+and found that for many tasks, even those dependent on measuring reaction times,
+online studies replicate known effects. Many of
+the reasons to consider running experiments online are well-known. The makers
+of WebExp \citep{WebExp}, for instance, note that the internet is a large
+source of potential participants, and that experiments conducted online avoid
+scheduling issues and other sources of overhead. There is a further benefit of
+running experiments online that follows from the way it makes experiments so
+quick and relatively inexpensive to run, which is that it supports iterative
+development, in which experiments are tested multiple times and edited along
+the way. This is helpful for both practical and scientific reasons.
 
-%TODO cite, decide whether to use the term agile
 For practical purposes, online experiments can be treated as user-facing
-software, and follow much of the same workflow that commercial software products
+software and can follow parts of the workflow that commercial software products
 follow. As the software industry is large and competitive, much thought has
 been put into maximizing productivity in both writing software and responding
-to customers' behavior. Some of the resulting ideas can be applied to the
+to customer behavior. Some of the resulting ideas can be applied to the
 experimental design and deployment process.
 
 One lesson that has been learned in the software industry has been to shift
-from the ``waterfall'' model of development to an ``agile'' model\footnote{The
-term ``agile'' has many connotations in the software industry, not all of which are applicable here. The
-key point is short, repeated cycles of development.}. The ``waterfall'' model is
-one in which each stage of development is thoroughly completed before the next
-stage is started. It is advantageous when the final stage is extremely costly;
-better to spend extra time ensuring previous stages are perfect than to risk
-redoing the expensive last stage. It applies well to the manufacture of
-hardware, and to experiments run in the lab, where procuring participants is
-time-consuming and costly, and the number of available participants is limited.
+from the ``waterfall'' model \citep{royce_managing_1970} of development to an
+iterative model (see for instance \citet{AgileManifesto}). The waterfall model
+is one in which each stage of development is thoroughly completed before the
+next stage is started. It is advantageous when the final stage is extremely
+costly; better to spend
+extra time ensuring previous stages are perfect than to risk a mistake in the
+expensive last stage. It applies well to the manufacture of hardware, and to
+experiments run in the lab, where procuring participants is time-consuming and
+costly, and the number of available participants is limited.
 
-In contrast, agile or iterative development is a model in which the minimum
-necessary is done in each stage before moving onto the next, with the
-understanding that the entire cycle will be repeated many times to refine the
-final product. This model is effective when no one stage is extremely
-expensive, and so ability to benefit from new information outweighs the cost of
-revisiting stages of work.  It is difficult to predict the perfect design for
-an product or experiment, and difficult to detect the kinds of problems that a
+In contrast, iterative development is a model in which there are many cycles of
+development and testing, minimizing the importance of foresight by replacing it
+with hindsight.  This model is effective when testing the product is not
+very expensive and editing prior work is less time-consuming than starting from
+scratch, so that the ability to benefit from new information outweighs the cost of
+revisiting stages of work. It is difficult to predict the perfect design for a
+product or experiment, and difficult to detect the kinds of problems that a
 varied user base will have with either a commercial software product or an
 academic experiment, so responsiveness to feedback can be more useful than
-extensive prior planning.  Iterative development has proven applicable to
-experimentation in this work; for both of the experiments presented here, I ran
-several small pilots in quick succession before settling on a design. Each
-successive pilot was planned and implemented in response to results and
-problems from the last.
+extensive prior planning.
+
+Iterative development has proven applicable to experimentation in this work;
+for both of the studies presented here, I ran several small pilots in quick
+succession before settling on a design. Each successive pilot was planned and
+implemented in response to results and problems from the last, and often
+multiple pilots were possible in one day. Upon reflecting on the results from
+Experiments 1 and 3, weaknesses in their designs became apparent, and I was
+able to adjust and rerun them to produce Experiments 2 and 4 in a short period
+of time.
+
+%   For each experiment, I identified trends that would be
+%    present if the task was functioning properly and participants understood and
+%    mastered it, apart from the results I wanted to test. In Experiment 1, this
+%    trend was that the percent of accepted words should be ranked where
+%    violation-free words are accepted more than words with one violation, which are
+%    accepted more than words with two violations. Both theories I consider in that
+%    experiment predict this, so a deviation from these results would suggest a
+%    defect in the instructions or stimuli. In Experiment 2, I looked for evidence that
+%    participants had learned the rule they were trained on. If they have not, then asking
+%    whether learning that rule affected their choices in the testing phase is nonsensical, so
+%    once again, it would show that the experiment is not functioning properly.
 
 The scientific contribution of iteratively developed experiments is the ability
-to focus more on pilots as a tool for avoiding wasted resources instead of
-incentivizing researchers to use invalid statistical methods to salvage botched
-experiments. The social sciences have struggled with several challenges to experimental
-validity.
+to increasingly use pilots as a tool for avoiding wasted resources when
+experiments don't go as planned.  The social sciences have struggled with
+several challenges to experimental validity which are difficult to overcome as
+long as they are encouraged by the structure of our research.
 
-%TODO cite
-%TODO not sure about what i say about pilots
-One is data-peeking \citep{}, in which experimenters check interim results
-for statistical significance and decide whether to run more participants based
-on the outcome.  This practice increases the probability of Type I error; an
-experimenter who finds a significant effect at the $\alpha = 0.05$ level after
-engaging in data-peeking has a greater than 5\% chance that the effect is due
-to random chance.  When an experiment can be rerun in a matter of hours for a
-relatively low price, it will be easier for experimenters to avoid the
-temptation to check p-values before deciding whether to run additional
-participants. In the spirit of iterative development and with the reusability
-of experimental scripts, we can run multiple pilots to iron out the problems
-with experiments and get a sense of the power needed before running an
-experiment intended to be tested statistically.
+One of these problems is data-peeking, in which experimenters check interim
+results for statistical significance and decide whether to run more
+participants based on the outcome.  This practice increases the probability of
+Type I error; an experimenter who finds a significant effect at the $\alpha =
+0.05$ level after engaging in data-peeking has a greater than 5\% chance that
+the effect is due to random chance
+\citep{armitage_repeated_1969,mccarroll_sequential_1992,SNOOP}. This practice
+is well-known in medical studies, where it is of ethical importance not to
+continue ineffective or harmful treatments, but \citet{john_measuring_2012}
+shows that it also takes place in psychology. There are ways to correct for
+this increase in Type I error, rendering the practice a valid statistical
+technique \citep{pocock_group_1977,todd_interim_2001,sagarin_ethical_2014}. Although
+linguists would do well to adopt this correction when applicable, it is not
+currently in widespread use in our field. The ability to easily rerun an experiment in a matter of hours
+for a relatively low price may be, at least in the short term, more effective
+at changing habits than the availability of new statistical methods.
 
-%TODO cite
 Another problem is that of running multiple experiments in search of the same
-effect and only publishing the one that produced a significant result, referred to as publication bias. % can I
-%have the xkcd on this in a footnote?
-Again, this increases the chance of Type
-I error, and that change is not reflected in the criteria used for considering
-the effect significant.  This problem suggests the need for the reporting of
-null results, but even without changes to the criteria journals use for
-publication, experimenters can make their entire experimental process
-transparent with the use of version control on a public site like GitHub.
-Version control is a process that is easily applicable to any plain text, such
-as the experimental design scripts used to run online experiments. It keeps
+effect and only publishing the one that produced a significant result, referred
+to as publication bias.  Again, this increases the chance of Type I error
+\citep{sterling_publication_1959}. The true solution to this problem is the publication of
+null results, and the journal \textit{Cancer Epidemiology Biomarkers \&
+Prevention} has started a section for null results for exactly this reason
+\citep{shields_publication_2000}. However, this kind of change requires
+cooperation from both journals and the researchers submitting to them, so once
+again, any change that is more attainable in the meantime would be beneficial.
+
+The ability to write online experiments as open-source computer programs, the text of which
+is accessible to the researcher, opens up the possibility of making the entire
+experimental process transparent with the use of version control on a public site such as GitHub.
+Version control is a process that is easily applicable to any plain text, including
+the experimental design scripts used to run online experiments. It keeps
 track of the revisions to a program or other document over time, so that
 previous versions can be restored if a problem is found with the current one.
 This is convenient for one's personal design process, but it also allows the
 concept of reproducibility of research to be applied not just to the final
-version of an experiment but to all versions. Researchers may not want to share
+version of an experiment, but to all versions. Researchers may not want to share
 their results with the world before they have finalized a journal submission,
 but it is possible to build up version control information in private and publish
 it to a public repository when the time is right. If this practice were adopted, it would be
 easier to reason about the true probability that a result was achieved by
 chance in light of the number of similar attempts that were made. In addition,
 replication of not only the final experiment but also intermediate versions
-would be possible.
+would be possible. Speriment and the program it works with, psiTurk
+\citep{PsiTurk}, make it simple to replicate the analyses as well, as they keep
+all user data in a database. This database makes it easy to prevent the same participant
+from taking an experiment more than once, or from taking more than one version of the same
+experiment. As long as the database table assigned to the experiment is the same,
+participants who are already represented in the database will not be allowed to take
+the experiment. Thus, the most convenient route --- saving data
+from all versions of an experiment in one place --- is also the one that
+maximizes transparency and replicability.
 
 A further long-term goal of Speriment is to encourage experimenters to commit
 to the criteria by which they will exclude participants before running an
@@ -124,103 +150,318 @@ way that gave desirable results.
 \section{Comparison with Other Frameworks}
 
 There are many other frameworks for creating online experiments, all with
-different features, strengths, and weaknesses.
+different features, strengths, and weaknesses. Many of their differences come
+down to how they cope with the trade-off between ease of use and expressive
+power.  At one end of the spectrum is a completely expressive system: a
+Turing-complete programming language.  An experimenter who prioritizes
+flexibility above all can simply write an entire dynamic website
+in JavaScript and a server in the language of their
+choice. This requires extensive knowledge of programming and a considerable
+time investment. Even for experienced programmers, writing each experiment from
+scratch would waste time that could be saved by reusing encapsulated
+code that performs certain common features. This motivates the use of
+frameworks for experiment writing, but still leaves open the question of how
+many features should be encapsulated.
+
+On the less expressive extreme of the spectrum would be a survey creation
+website intended for casual users. It would make a few tasks very easy to
+express, and the rest impossible to express. Experimenters frequently find that
+the features of very simple tools are insufficient to test their hypotheses
+properly.
+
+Experiments will always need to serve a website, randomize item order, display
+text, and log data, but beyond that, the lists of commonly used and rarely used
+features vary from field to field and even from experimenter to experimenter.
+Similarly, different experiment designers vary in the amount of time they wish
+to spend programming an experiment and the variety of experimental designs they
+use. As a result, a wide variety of frameworks, different in the number and
+type of features they make simple to use, have been found useful. After introducing
+Speriment in terms of its placement on this spectrum and key features, I will compare
+it to some of the frameworks used in linguistics and related fields.
+
+\subsection{Properties of Speriment}
+\label{sec:properties}
+The guiding philosophy behind Speriment is that experiments common in phonology
+should be simple to express, and that an experimenter need not know how more
+advanced designs are expressed in order to describe a more basic one. This
+philosophy requires the encapsulation of quite complex features, such as different distributions
+of items and blocks across participants and per-participant page and option construction. In order to make it
+easy to express these complex designs, and even easier to write experiments
+that don't need them, Speriment provides several high-level features that
+can be used by supplying the name of the feature and, when necessary,
+a data structure of related information. Features that aren't needed simply
+aren't named, and the defaults are set up to make it safe for experimenters to
+ignore the documentation on features they don't use.
+
+This prioritization means that some kinds of experiments are difficult or
+impossible to express. Some of these kinds of experiments, such as those which
+require multiple pages to be presented per experimental item (as in self-paced reading
+experiments), and those that require flexibility in the way a page is
+displayed, are expected to be made possible in the future. However, there will
+always be some kinds of experiments that Speriment is not well-suited to. The
+goal is that in specializing by the needs of a field, Speriment will maximize
+both ease of use and power for a particular set of users. One strategy for those
+interested in using Speriment is to use Speriment for most experiments and to
+use psiTurk alone, which Speriment uses to interface with Mechanical Turk, for
+experiments that Speriment cannot express. psiTurk allows arbitrary JavaScript,
+removing all barriers to client-side development.
+
+Although there is a tradeoff between ease of use and flexibility, certain techniques
+can be employed to increase one without losing out on the other. Speriment makes use of
+several such techniques.
+
+First, Speriment separates the structure of an experiment from its content.
+Materials are read into a Speriment script from other files and inserted into
+Speriment components programmatically so that they don't have to be listed in the
+script.  This makes experimental designs reusable and experimental stimuli easy
+to change, as well as making the scripts easier to read.
+%Speriment does not go
+%so far as to avoid naming columns from materials files in the script; this
+%would increase the degree of separation of concerns and reusability of scripts,
+%but at the expense of requiring all materials files to be formatted the same
+%way and limiting the kinds of information they can contain, which is judged too
+%big a sacrifice.
+%REVISIONS make the above clearer
+
+Second, Speriment strives for a declarative rather than procedural description
+of experiments. Procedural programming describes how a result is to be
+achieved, while declarative programming merely states what result is to be
+achieved. A procedural description of an experiment would issue commands to
+show the first page, then choose which page should be shown next, then accept a response,
+and so on. In contrast, the Python script describing a Speriment experiment builds structures
+and assigns them properties. The actions that will be taken over time are implicit in the structures
+and their properties and do not have to be described step by step.
+
+Third, Speriment abstracts away
+from the details of commonly used experimental structures.
+The Latin square algorithm, used to distribute items and conditions
+across participants, provides a good example: the algorithm is fairly complex as compared
+to other aspects of an experiment, as shown in its description in \Next. Yet,
+it is commonly used among experimenters. Instead of giving experimenters the
+flexibility to build this algorithm as well as other less commonly
+used ones while burdening them with the responsibility for learning and implementing the algorithm,
+Speriment packages the concept of Latin Squares in a high-level feature that can be
+invoked with the code ``\texttt{latin\_square = True}.''
+
+%a procedural
+%description must choose an algorithm that results in a Latin square and state
+%it, while a declarative description can be agnostic as to the way it is done,
+%but expresses what conditions hold of a completed Latin square. Declarative
+%programming is often easier to read and write, and often results when
+%the procedures are spelled out by the compiler of the
+%programming language, saving the programmer from writing it herself.
+
+\ex. Algorithm to produce a Latin Square\\
+Begin with a list of groups 0 to $n$ of pages 0 to $m$, and a version number
+$v$ between 0 and $m$.  For each group $i$, let the condition number $c$ be $(i + v) \mod{m}$.
+Select from this group the $c$th page.
+%\b. Declarative:\\
+%Given a list of groups that each contain pages associated with conditions 0 to
+%$m$, distribute the pages among version numbers 0 to $m$ such that each version
+%has one page from each group and the same number of pages of each condition.
+
+%Speriment allows programmers to write declaratively about experimental
+%features and handles the procedures for them. Thus, to use a Latin square
+%design in Speriment, experimenters need not write JavaScript that iterates over
+%groups and chooses the needed page each time. In fact, they do not need to
+%write a declarative statement about Latin squares like the one above, because
+%Speriment's menu of features simplifies the task of declaring a feature.
+%Experimenters simply arrange pages into groups, ordered by condition --- an
+%arrangement that usually follows naturally from the generation of the materials ---
+%and add to their script ``\texttt{latin\_square = True}.''
+
+Frameworks like Turktools
+\citep{TurkTools} and psiTurk \citep{PsiTurk}, discussed in more detail below,
+are associated with libraries of scripts that describe entire experimental
+designs. These scripts can be shared and reused across experiments and labs,
+but this job is only easy when the entire design is meant to stay the same.
+Libraries of Speriment scripts are also possible, but Speriment is built to
+make it easy to identify and reuse parts of an experiment, not just entire experiments.
+
+With these properties of Speriment in mind, we can compare it to other frameworks
+commonly used to run web-based experiments in linguistics. In the following, I cover
+Ibex (Section \ref{sec:Ibex}); Experigen (Section \ref{sec:Experigen}); TurkTools
+(Section \ref{sec:TurkTools}); WebExp (Section \ref{sec:WebExp}); the survey creation
+frameworks SurveyMan, SurveyMonkey, and LimeSurvey (Section \ref{sec:Survey}); and the framework
+that Speriment relies upon, psiTurk (Section \ref{sec:psiturk}). Each package's documentation
+is written from a different point of view, making it difficult to compare packages feature for feature,
+so this comparison will focus on the highlights that may help experimenters decide which packages
+are best suited to their general needs.
 
 \subsection{Ibex}
+\label{sec:Ibex}
 Ibex \citep{IbexFarm} is a program that generates a website from a
-JavaScript description. Unlike Speriment, the original version of Ibex does not
-separate the materials from the structure of the experiment. Ibex version 2
-will do so, as it makes scripts easier to write and more robust to change in
-the materials. 
+JavaScript description. Ibex provides JavaScript functions to describe the
+behavior of pages and the way they are ordered. Both of these aspects of Ibex are
+highly flexible; experimenters can write their own JavaScript implementing new
+patterns of page behavior, and the functions that block and order pages allow
+a wide variety of experimental structures. The limitation on its flexibility comes
+in at the level of interdependence between pages in an experiment. Ibex allows
+experiments to display feedback after a question that depends on the participant's
+response to the question, but other forms of interdependence, such as the conditional
+running of a block depending on a previous response, or some of the designs made
+possible by Speriment's \texttt{SampleFrom} feature (see Section \ref{sec:sampling}), are not
+possible.
 
-Ibex experiments can be run on IbexFarm, which is hosted by
-Drummond, whereas Speriment is hosted by the experimenter. IbexFarm eliminates
-the need for experimenters to run their own server, but also limits their
-flexibility. For instance, one of the strenghts of psiTurk is that it manages
-participant data with a server-side database, and uses this database to balance
-participants across conditions. IbexFarm does not do this and to my knowledge,
-an experimenter would not be able to add this feature to their workflow if they
-are taking advantage of Drummond's hosting.
+A drawback of Ibex format is that the stimuli are inserted into the
+code describing the experiment, making the design harder to read and the materials
+harder to change. A new version of Ibex is planned that will separate materials
+from design, as many other frameworks do, including Speriment (Alex Drummond, p.c.).
 
-Ibex uses units of code called controllers to turn each item into a page in the
-experiment. This makes it easy for an
-experimenter who knows JavaScript to change the display properties and behavior of
-pages.
-
-Ibex offers a suite of functions that allow extreme flexibility in page ordering and division into blocks without experimenters needing to write complicated JavaScript. It also allows for feedback immediately following questions, but does not keep track of state long-term during an experiment, and so cannot run pages conditionally upon earlier responses, or implement the functionality of Speriment's SampleFrom feature, explained in Section \ref{sec:sampling}.
+Ibex experiments can be run on IbexFarm, which is hosted by Drummond. IbexFarm
+eliminates the need for experimenters to run their own server. This is helpful,
+as running a server requires extra steps and incurs the risk that the server will
+go down and prevent participants from completing an experiment. A downside is
+that the server does not use a database to balance participants across conditions
+as psiTurk's server-side code does. This means that Latin square and other designs
+that assign different participants to different treatments are possible, but usually
+require the experimenter to be involved in distributing the treatments to equal numbers
+of participants.
 
 \subsection{Experigen}
-Experigen \citep{Experigen} is a lighter-weight framework than Speriment, meaning it provides less structure for the experimenter. As a result, it is likely to be less user-friendly for novice programmers but more flexible. Experimenters write the HTML to display their pages, allowing them to alter the layout of a page in ways Speriment does not currently allow. Similarly, experimenters write the design of their experiment in JavaScript, allowing them to build, select, and order pages however they like. This includes building dynamic pages, which vary across participants. Speriment can create dynamic pages using its SampleFrom component; in a typical example of the difference between the two frameworks, dynamic pages are created in Speriment by declaring them with SampleFrom and associated options, which provide a fixed repertoire of ways pages can be built, while Experigen simply allows experimenters to build pages in any way they can think of in JavaScript. Complicated patterns of dynamic pages will require more programming expertise to express in Experigen, but some patterns are possible in Experigen that Speriment simply doesn't provide.
-
-As a framework in which experimenters write JavaScript directly, Experigen is comparable to Ibex. Experigen promotes cleaner code by separating items and structure. It does not have an extensible class encapsulating parts of an experimental design, as Ibex has in its controllers. Because both are written in JavaScript, this doesn't mean that more patterns are expressible in Ibex, but it may make it easier for experimenters to reuse and share advanced design patterns in Ibex.
+\label{sec:Experigen}
+Experigen \citep{Experigen} is a lightweight framework, likely to be less
+user-friendly for novice programmers but more flexible than many frameworks.
+Experimenters write the HTML to display their pages, allowing them to alter the
+layout of a page in ways Speriment does not currently allow. Similarly,
+experimenters write the design of their experiment in JavaScript, allowing them
+to build, select, and order pages however they like. This includes building
+dynamic pages, which vary across participants. Speriment can create dynamic
+pages using its \texttt{SampleFrom} component; in a typical example of the difference
+between the two frameworks, dynamic pages are created in Speriment by declaring
+them with \texttt{SampleFrom} and associated options, which provide a fixed repertoire
+of ways pages can be built, while Experigen simply allows experimenters to
+build pages however they like in JavaScript. Complicated patterns of
+dynamic pages will require more programming expertise to express in Experigen,
+but some patterns are possible in Experigen that Speriment simply doesn't
+provide.
 
 \subsection{TurkTools}
-Turktools \citep{TurkTools} is a collection of Python scripts that an experimenter can run to create an experiment. The experimenter supplies a skeleton, which can in some cases be selected from a set of skeletons provided with Turktools, and a list of items, and runs scripts to create the experiment and retrieve and analyze the results. Turktools is associated with turkserver, which can be used to run experiments without Mechanical Turk. The suite of tools is highly accessible to a novice programmer, or non-programmer, if they want to run one of the types of experiments for which Turktools already provides a skeleton. Creating one's own skeleton would be more challenging, as they are written in HTML, CSS, and JavaScript and the process is not highly documented. However, the ability for the user to add CSS and JavaScript means that the display properties and behavior on each page of the experiment is highly customizable, depending on the experimenter's familiarity with these languages. On the other hand, the Python scripts that turn the template into an experiment restrict the experimental designs that are possible. The possible designs include ones that are important in linguistics: Latin squares with instructions, randomized test questions, and demographics questions. Turktools is thus highly specialized to the most typical linguistics experiments, and less applicable to unusual designs. Because the Python scripts that make it up are independent of each other, it would be feasible for a developer to extend the set of tools to fit a new type of experiment.
+\label{sec:TurkTools}
+Turktools \citep{TurkTools} is similar to Speriment in its specialization
+for a certain universe of experiments, which it makes very easy to implement,
+but different in its approach to making those experiments accessible. While
+Speriment does so by making their components easily expressible, Turktools
+achieves this with a library of ``skeletons'' for experimental designs commonly
+used in linguistics. While it is possible to write new skeletons, the process
+is not highly documented and would require programming expertise.
 
-In comparison, Speriment is less flexible in the display of pages and more flexible in the structure of experimental designs. It involves more work for off-the-shelf experimental designs (at least currently, though a library similar to Turktools' set of skeletons is possible) and less work for more inventive designs.
+To use Turktools, the experimenter chooses a skeleton and creates a list of items, and
+runs the supplied Python scripts to create the experiment and to retrieve and analyze the
+results. Turktools is associated with Turkserver, which can be used to run
+experiments without Mechanical Turk.
+%REVISIONS: explain the problems with Mechanical Turk somewhere and how speriment
+% can do without it in theory but that hasn't been tested yet
+
+The display properties and behavior of each page are highly customizable,
+depending on the experimenter's familiarity with CSS and JavaScript. On the
+other hand, the Python scripts that process skeletons
+restrict the experimental designs that are possible. The possible designs
+include ones that are important in linguistics: Latin squares with
+instructions, randomized test questions, and demographics questions. Because
+the Python scripts are independent of each other, it would be
+feasible for a developer to extend the set of tools to fit a new type of
+experiment.
 
 \subsection{WebExp}
-WebExp \citep{WebExp} does not seem to be currently supported\footnote{It was followed by WebExp2, which also seems to be discontinued, as its website now discusses Japanese coin collection.}, so it is included here for the feature comparison but not as a recommended alternative for running experiments. It is a framework in which the experimenter writes a description of an
-experiment in XML and a Java program interprets the description to run it on the web. This
-is similar to how Speriment takes a description in JSON and a JavaScript program interprets it; XML and JSON are both formats used to pass information between programs and computers.
+\label{sec:WebExp}
+WebExp \citep{WebExp}, like its successor WebExp2, does not seem to be currently
+supported, so it is included here for the feature comparison but not as a
+recommended alternative for running experiments. It is a framework in which the
+experimenter writes a description of an experiment in XML and a Java program
+interprets the description to run it on the web. Similarly, Speriment takes a
+description in JSON, a format similar in use to XML, and interprets it with
+JavaScript.  Speriment, however, makes it easier to write this description by
+letting the experimenter write in Python and compiling the Python script into
+JSON.
 
-WebExp has some strengths that Speriment currently lacks, namely flexibility in the visual layout of the pages and in the timing of presentation of resources. It lacks support for audio resources, pseudorandomization, and some of Speriment's more advanced features, such as training blocks (WebExp can only repeat a block a fixed number of times) and the dynamic page construction that is provided by Speriment's SampleFrom component. The two frameworks allow different ways of letting past performance in the experiment affect later pages: while Speriment allows past choices to choose among pre-determined pages, WebExp allows past responses to be inserted into later pages. WebExp's version of this feature may serve as inspiration for a future Speriment feature. There is interest in phonological research in modeling the way language acquisition involves some form of language change, which has led to the development of iterated learning techniques, in which participants' earlier responses become part of their later training. This feature is thus a good fit for Speriment's goal of serving the needs of phonological research.
+WebExp provides a high degree of flexibility in the visual layout of the pages
+and in the timing of presentation of resources.  It lacks support for audio
+resources, pseudorandomization, training blocks, and per-participant page
+construction. WebExp and Speriment have different ways of letting past
+performance in the experiment affect later pages: while Speriment allows past
+choices to choose among pre-determined pages, WebExp allows past responses to
+be inserted into later pages.
+
+%There is interest in phonological
+%research in modeling the way language acquisition involves some form of
+%language change, which has led to the development of iterated learning
+%techniques, in which participants' earlier responses become part of their later
+%training. This feature is thus a good fit for Speriment's goal of serving the
+%needs of phonological research.
 
 
 \subsection{Survey Software}
-There are several websites and programs available for running online surveys, and some
-experiments are expressible using these tools. However, the difference in priorities
-for surveys and experiments means that many experiments are difficult or impossible to
-create using survey software.
+\label{sec:Survey}
+%REVISIONS: differences between surveys and experiments
+There are several websites and programs available for running online surveys,
+and some experiments are expressible using these tools. However, the difference
+in priorities for surveys and experiments means that many experiments are
+difficult or impossible to create using survey software.
 
-SurveyMonkey \citep{SurveyMonkey} is a popular tool for creating surveys, and has two advanced features: answer piping and skip logic. Answer piping inserts the answer to one question into a later question. Skip logic hides questions that are deemed irrelevant to the survey-taker based on their answer to a previous question. Speriment implements skip logic (referred to as conditional running of blocks, using the RunIf component), but not answer piping. However, SurveyMonkey lacks many key features for experiments. One of the most basic features for an experiment framework is randomization of question order, which is a premium feature in SurveyMonkey. Other features, such as Latin Squares and other schemes for reordering or choosing questions, do not appear to be available at all.
+Speriment grew out of a project to make a version of SurveyMan with the
+specific features needed to design experiments \citep{SurveyMan}. The two
+systems have different strengths. SurveyMan provides survey hosting, saving the
+experimenter the trouble of running their own server. SurveyMan randomizes
+question order by default, which is an unusual strength among survey software
+packages. SurveyMan is a particularly advanced tool for creating surveys
+because it enables the experimenter to detect which participants appear to have
+answered at random, so that their data can be excluded from the analysis.
+SurveyMan and Speriment share some features due to their common origin, such as
+exchangeable blocks, which allow some blocks of questions to be reordered
+across participants while others are guaranteed to maintain their position.
+However, SurveyMan lacks key experiment-specific features, such as the ability
+to automatically distribute questions according to a Latin square.  The goal of
+Speriment is to address these needs.
 
-LimeSurvey \citep{LimeSurvey} is an open source project primarily designed to enable the creation
-of online surveys. It has advanced features for survey designs that are sometimes applicable to experiments, as well, such as randomization of question order and conditional display of questions. Like WebExp, it can insert previous answers into later pages, and it can additionally insert participant-specific data, such as their email address, as default responses. However, it lacks some of the features that are often crucial to experimental designs, such as Latin Squares, and does not appear to be able to insert data from an experimenter-supplied bank, as with Speriment's SampleFrom component.
+SurveyMonkey \citep{SurveyMonkey} is a popular tool for creating surveys, and
+has two advanced features: answer piping and skip logic. Answer piping inserts
+the answer to one question into a later question. Skip logic hides questions
+that are deemed irrelevant to the survey-taker based on their answer to a
+previous question. Speriment implements skip logic (referred to as conditional
+running of blocks, using the \texttt{RunIf} component), but not answer piping. However,
+SurveyMonkey lacks many key features for experiments. One of the most basic
+features for an experiment framework is randomization of question order, which
+is a premium feature in SurveyMonkey. Other features, such as Latin squares and
+other schemes for reordering or choosing questions, do not appear to be
+available at all.
 
-SurveyMan \citep{SurveyMan} was the inspiration for Speriment, and the two systems have different
-strengths. SurveyMan provides survey hosting, saving the experimenter the trouble of running their own server.
-Unlike SurveyMonkey, SurveyMan randomizes question order by default --- a good
-choice for surveys for the same reason it is a good choice in experiments.
-SurveyMan is a particularly advanced tool for creating surveys because it
-enables the experimenter to detect which participants appear to have answered
-at random, so that their data can be excluded from the analysis. However, SurveyMan lacks
-key experiment-specific features, such as the ability to automatically distribute questions
-according to a Latin Square. The goal of Speriment is to address these needs.
+LimeSurvey \citep{LimeSurvey} is an open source project primarily designed to
+enable the creation of online surveys. It has advanced features for survey
+designs that are sometimes applicable to experiments, as well, such as
+randomization of question order and conditional display of questions. Like
+WebExp, it can insert previous answers into later pages, and it can
+additionally insert participant-specific data, such as their email address, as
+default responses. However, it lacks some of the features that are often
+crucial to experimental designs, such as Latin squares, and does not appear to
+be able to insert data from an experimenter-supplied bank, as with Speriment's
+\texttt{SampleFrom} component.
 
 \subsection{psiTurk}
-psiTurk can be used without Speriment, and the choice of whether to do so is
-based on the classic trade-off between ease of use and power. Speriment makes
-it easier to create an experiment with psiTurk because the experimenter need
-only describe what the experiment is in Python, while without it the
-experimenter must implement most of its functionality in JavaScript, with the
-help of a few psiTurk utilities for showing a consent form and the like. Yet
-Speriment can only express a subset of the experimental designs one could
-implement in JavaScript.
-
-\subsection{Speriment}
-Speriment fills a niche in this ecosystem of experimental frameworks. The
-philosophy guiding its development is that simple experiments should be simple
-to write, and an experimenter writing a simple experiment should not have to
-know about the more complicated options available to him or her. Thus,
-Speriment will never be able to express all conceivable experiments, the space
-of which is vast. However, Speriment will continue to grow to encompass useful
-experimental designs that do not interfere with the descriptions of simple
-experiments. For those designs which are beyond the abilities of Speriment,
-psiTurk paired with pure JavaScript is likely to be a good option, since
-JavaScript is a Turing-complete language and psiTurk limits the possibilities
-of experiments very little.
+\label{sec:psiturk}
+psiTurk \citep{PsiTurk} is a framework for running experiments online that
+Speriment employs to handle the results database and integration with
+Mechanical Turk. It can also be used alone, in which case the experimenter must
+provide all client-side code in JavaScript. The makers of psiTurk are compiling
+a library of such JavaScript experiments to be shared among experimenters.
+Speriment makes it easier to create an experiment with psiTurk because the
+experimenter only needs to describe what the experiment \textit{is} in Python,
+rather than describing what it \textit{does} in JavaScript,  as described in
+Sec. \ref{sec:properties}.  Yet Speriment can only express a subset of the
+experimental designs one could implement in JavaScript.
 
 \section{Components and Features}
 A full user guide for Speriment is available on the GitHub repository at\\
-\href{https://github.com/presleyp/Speriment}{https://github.com/presleyp/Speriment}.
+\href{https://github.com/presleyp/Speriment}{https://github.com/presleyp/Speriment}, and
+example scripts are available on the repository as well as in Appendices \ref{cumul-code} and
+\ref{alt-code}.
 However, it is useful to discuss the components that make up a description of an
 experiment in Speriment and the features that each component currently provides.
 
 \subsection{Pages}
 Speriment descriptions are made up of pages. A page represents one view of the
 experiment; whatever information is displayed at one moment in time. These can
-be questions, instructions, or niceties such as a welcome or thank you page.
+be questions, instructions, or niceties such as a `welcome' or `thank you' page.
 
 The order of pages is randomized by default. If they are assigned conditions,
 they may also be pseudorandomized so that no two pages of the same condition
@@ -229,7 +470,7 @@ will appear in a row.
 By default, all pages display eventually. However, the experimenter may create
 groups of pages when not all participants should see all pages. For a given
 participant, one page will be chosen from each group. This choice may be done
-randomly or according to a Latin Square.
+randomly or according to a Latin square.
 
 \subsection{Options}
 Pages that pose questions should contain one or more options.
@@ -248,7 +489,7 @@ Both pages and options can be associated with tags. Tags do not affect the
 implementation of the experiment, but serve to simplify the process of
 analyzing the resulting data. For instance, pages can be tagged with the type
 of the page, so that instructional pages can be easily filtered out. Options
-can be tagged with the aspect of them that is relevant to the analysis. For
+can be tagged with text relevant to the analysis. For
 instance, in an experiment designed to test whether people prefer cats or dogs,
 ``Garfield'' and ``Stimpy'' could have ``cat'' as the value for their ``Species''
 tag while ``Odie'' and ``Ren'' have ``dog.'' This eliminates the need to merge a table
@@ -272,9 +513,9 @@ participants do so.
 \label{sec:sampling}
 The text, tags, correctness, and resources of pages and options are typically
 all specified with constants that remain the same across participants. However,
-they can also be specified via a SampleFrom component. SampleFrom takes the
+they can also be specified via a \texttt{SampleFrom} component. \texttt{SampleFrom} takes the
 name of a bank containing text or the filenames of resources. These banks are
-passed to an enclosing block or the entire experiment. The SampleFrom component
+passed to an enclosing block or the entire experiment. The \texttt{SampleFrom} component
 will sample one string from the bank randomly at runtime, so that the
 selection varies across participants. By default, sampling is without
 replacement, so that once a string has been used for a page or option for a
@@ -282,7 +523,7 @@ given participant it will not be used for a different page or option for that
 participant. However, there is an option for sampling with replacement. If a
 more complex relationship among items is needed, experimenters can specify a
 variable to associate with the sampled string. This variable can be any string
-or number. When a variable is passed to two SampleFrom components, they will
+or number. When the same variable is passed to two \texttt{SampleFrom} components, they will
 both sample the same string. Conversely, if the same string or number is passed
 as \texttt{variable} in one SampleFrom and \texttt{not\_variable} in another, they
 will not sample the same string. To create relationships between different
@@ -291,10 +532,9 @@ kinds of stimuli, the experimenter can put dictionaries rather than strings in b
 dictionary from the bank, and an additional argument, \texttt{field}, specifies
 which key to access in the dictionary to arrive at a sampled string.
 
-The SampleFrom feature is one of the more complex and powerful features of Speriment.
-%TODO does anyone else have it?
+The \texttt{SampleFrom} feature is one of the more complex and powerful features of Speriment.
 It enables experimenters to minimize correlations in their data without trying
-every possible combination of, for instance, page text and resources.
+every possible combination of page components, such as text and images.
 
 \subsection{Blocks}
 Pages are grouped into blocks. While pages are shuffled by default, blocks
@@ -305,17 +545,21 @@ with each other. This feature is more powerful than one that allows shuffling,
 because it enables the first and third block, for instance, to trade places,
 while leaving a middle block in place. This can be useful for randomizing the
 order of test stimuli while leaving instructions and breaks in the sensible
-spots. The location of an exchangeable block is determined randomly, while the
-location of a counterbalanced block is deterministic. The difference is that
-counterbalancing is more likely to give a balanced distribution of orderings
-across participants.
+spots. Experimenters can also mark blocks to be counterbalanced. Counterbalanced
+blocks behave in the same way as exchangeable ones, except that their location
+is deterministic rather than random. Counterbalancing is used in tandem with a
+psiTurk setting that categorizes participants; Speriment uses that categorization
+to choose an ordering for the counterbalanced blocks. Thus, counterbalancing is more
+assured to give a balanced distribution of orderings across participants, but depends
+on a categorization that can be used to determine other aspects of the experiment.
 
-Blocks can also be assigned to treatments. A given participant will also be
-assigned to a treatment, and will only see blocks that are not in a treatment,
-and blocks that are in their treatment, excluding blocks that are in a
-different treatment.  Treatments are determined through the same mechanism as
-counterbalancing, so if both features are desired, treatments should be paired
-with exchangeable blocks to avoid unwanted correlations.
+For instance, this categorization of participants by psiTurk also dictates
+the way treatments are assigned to participants. Blocks can also be assigned to
+treatments, and a given participant will only see blocks that are not in any
+treatment and blocks that are in their treatment, excluding blocks that are in
+a different treatment. Since treatments are determined through the same
+mechanism as counterbalancing, treatments should be paired with exchangeable
+blocks to avoid unwanted correlations when both features are desired.
 
 Another way to decide if a block should run for a given participant is to base
 the decision on whether the participant answered a question a certain way.
@@ -326,26 +570,82 @@ option that must have been selected or a regular expression that the text
 answer must match. Conditional running of blocks is useful in two types of
 situations. In the first, there is a choice between running a block and not
 running it or anything in its place. For instance, a question about whether the
-participant enjoys skiing could be followed up with a block of questions about
-ski experiences, or not. The second case is a choice between multiple blocks.  For
-instance, a question about native language could be followed by a block of
-questions in whichever language was selected.
+participant has studied linguistics could be followed up with a block of questions about
+linguistics classes if the answer was in the affirmative. The second case is a
+choice between multiple blocks.  For instance, a question about native language
+could be followed by a block of questions in whichever language was selected.
 
-\subsection{Speriment's Repertoire}
-The options provided for these components make up the repertoire of features
-available to experimenters using Speriment. Not all conceivable experimental
-designs are expressible through Speriment, but many of those commonly used in
-linguistics are. There are plans to add a few more features to cover additional
-types of linguistic experiments. The most commonly requested additional features
-are multi-page sequences for use in self-paced reading experiments and increased
-flexibility of the layout of the page.
+\subsection{Planned Additions}
+Speriment is still being actively developed.
+One feature that will be a high priority is multi-page items. Currently, the
+page construct represents two independent concepts at the same time: a view,
+which is a webpage that is visible in one moment of the experiment, and an
+experimental item, which is a unit of data gathering that is independent from
+other such units to a certain degree. It is almost always best practice for
+items within a block to be presented in random order, but if an item requires
+multiple views, the views for a given item may need to be presented in fixed
+order. Currently, this can be approximated by wrapping the views for a given
+item inside of a block, but blocks are not meant to represent items, so they
+cannot undergo some processes useful for items, such as selection by Latin
+square. Thus, in order to implement self-paced reading studies and other
+designs that will be useful in linguistic research, a change is planned that
+will introduce an item construct separate of the page construct.
+
+Another high-priority feature is to expand the options for the output format of
+the data. Currently, the data is written in a format that logs all relevant
+aspects of all options, but this creates a data file that is difficult to read
+into R and is best preprocessed with Python. A new feature is in the works to
+allow output data to be trimmed in advance on the assumption that the analysis
+in R will be based only on data from the option that was chosen (and that most
+experiments will rely on pages that only permit one option selection). This
+will allow experimenters to view all data in the full format in case they have
+questions about how the experiment was generated, and to analyze the data in R
+without writing an additional script.
+
+These features will expand Speriment's abilities while maintaining its focus
+on being easy and useful for linguistic experiments. Further extensions will
+also be considered, and users can request or discuss features on the GitHub
+repository.
 
 \section{Workflow}
 
-The workflow when using Speriment begins the same way as the workflow for using psiTurk alone. The experimenter downloads and installs psiTurk, creates a new project, sets up a database, and edits the configuration file and templates provided by psiTurk.
+Much of the workflow when using Speriment is the same as that for using
+psiTurk alone. The experimenter downloads and installs psiTurk, creates a new
+project, sets up a database, and edits the configuration file and templates
+provided by psiTurk. From there, the flowchart in Figure \ref{fig:speriment-workflow}
+illustrates how the experimenter interacts with Speriment and psiTurk.
+The diamonds represent files that the experimenter writes, and the
+parallelograms represent commands that the experimenter runs in their computer
+terminal. All other shapes represent files or programs provided or generated by
+Speriment and psiTurk. The rounded rectangle shows which part of the process is
+the typical psiTurk process for running an experiment.
 
-At this point, Speriment comes in. The experimenter installs Speriment's Python and JavaScript packages, writes a Speriment script in Python, and runs it. The script edits the project's psiTurk files automatically to use the experiment described in the Python script. A Speriment
-script usually contains the following parts:
+\begin{figure}[htp]
+\begin{center}
+\includegraphics[scale=.6]{Speriment_workflow.png}
+\caption{Speriment Workflow}
+\label{fig:speriment-workflow}
+\end{center}
+\end{figure}
+
+The flowchart shows that the experimenter writes their materials (in a file
+named \texttt{my\_materials.csv} for this example) and Python script
+(\texttt{my\_experiment.py}). The Python script, described in more detail
+below, crucially imports Speriment's Python module and calls Speriment's
+\texttt{install} method. The experimenter then runs Python on the script
+(\texttt{python my\_experiment.py}), which produces a JavaScript file
+describing the experiment (\texttt{my\_experiment.js}).  At this point, the
+workflow reconverges with the typical psiTurk workflow, as if the experimenter
+had written the JavaScript manually.  psiTurk commands are run
+(\texttt{psiturk} and other commands, such as \texttt{hit create}) to set up
+and run the experiment, generating it as a website (\textit{My Experiment}).
+psiTurk stores the data in a database which the experimenter can configure; if
+they do not, psiTurk will automatically create and configure a SQLite database.
+Finally, the experimenter can access their data from the database however they would like,
+but they are encouraged to make use of the \texttt{speriment-output} command to retrieve
+the data easily and put it into a JSON or csv file (\texttt{my\_results.csv}).
+
+A Python script used with Speriment usually contains the following parts:
 
 \begin{enumerate}
 \item An import statement, to make Speriment's Python classes and functions available in the script.
@@ -360,17 +660,32 @@ free to create pages however they prefer; the materials do not need to be in any
 \item Lines of code creating blocks for the pages.
 \item A line creating an experiment for all of the blocks.
 \item A line naming and installing the experiment. This final line of the script validates the structure of the experiment, creates a
-JSON file describing the experiment, and edits psiTurk files to use both Speriment and the JSON file for this experiment. It is possible
-to keep more than one script in the project directory for different designs of an experiment. As long as they are assigned different names, their
-JSON files will not interfere with each other. However, psiTurk only points to the experiment in the project directory that was most recently installed, so it's good practice to run the script right before launching the experiment.
+JSON file describing the experiment, and edits psiTurk files to use both
+Speriment and the JSON file for this experiment. It is possible to keep more
+than one script in the project directory for different designs of an
+experiment. As long as they are assigned different names, their JSON files will
+not interfere with each other. However, psiTurk only points to the experiment
+in the project directory that was most recently installed, so it's good
+practice to run the script right before launching the experiment.
 \end{enumerate}
 
-Once the experiment has been installed, the workflow is again as if psiTurk were being used alone. The psiTurk documentation explains how to use the shell to start a server, create a task on Mechanical Turk or elsewhere, and review workers.
+These parts are labeled in the following example script:
 
-Finally, the experimenter can use Speriment's shell command \texttt{speriment-output} to download data from the database in a useful format. Instructions are on the GitHub repository. psiTurk also has a command for accessing results, but Speriment's command is tailored to the way Speriment records data for ease of use.
+\begin{Verbatim}[commandchars=\\\{\}]
+[1] from speriment import *
+[2] rows = get_dicts(my_materials.csv)
+[3] with make_experiment(IDGenerator()):
+[4]     my_pages = []
+        for row in rows:
+            my_pages.append(Page(row['text'],
+                                 options = [
+                                     Option(row['option1']),
+                                     Option(row['option2'])])
+[5]     intro = Block(pages = [Page('Welcome to my experiment!')])
+        body = Block(pages = my_pages)
+        goodbye = Block(pages = [Page('Goodbye!')])
+[6] exp = Experiment([intro, body, goodbye])
+[7] exp.install('my_experiment')
+\end{Verbatim}
 
-
-
-
-
-
+The scripts used to generate the experiments in this dissertation are given in Appendices \ref{cumul-code} and \ref{alt-code}.

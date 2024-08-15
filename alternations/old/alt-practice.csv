@@ -1,0 +1,525 @@
+,PageID,PageText,BlockIDs,StartTime,EndTime,Iteration,Condition,SelectedID,SelectedText,Correct,OptionOrder,SelectedPosition,UniqueID,TrialNumber,Version,Permutation,HIT,WorkerID,ReactionTime
+0,206,"During experimental questions, you will not be able to use your mouse. Use
+the F key to choose the option on the left, the J key to choose the option
+on the right, and the spacebar to move forward.",[u'207'],1422343203110,1422343204791,1,,,,,,,debugA33IT6:debug3RDIGV,0,0,0,debugR43UT1,debugA33IT6,1681
+1,208,"In this part of the experiment, you will learn words
+from a made-up language. Their meanings will be expressed through pictures. You
+will see a picture with two words and be asked to choose which word has the
+meaning shown by the picture. At first you will just be guessing, but that's
+okay. Try to remember the right answer, and you'll get better with practice.",[u'209'],1422343204795,1422343205246,1,,,,,,,debugA33IT6:debug3RDIGV,1,0,0,debugR43UT1,debugA33IT6,451
+2,15,Which word is represented by this picture?,[u'128'],1422343272459,1422343274566,2,both,[u'12'],[u'gikem'],[True],"[u'13', u'12']",[1],debugA33IT6:debug3RDIGV,2,0,0,debugR43UT1,debugA33IT6,2107
+3,15,Which word is represented by this picture?,[u'128'],1422343272459,1422343274566,2,both,[u'12'],[u'gikem'],[True],"[u'13', u'12']",[1],debugA33IT6:debug3RDIGV,3,0,0,debugR43UT1,debugA33IT6,2107
+4,14,gikem means:,[u'128'],1422343274568,1422343275157,2,,,,,,,debugA33IT6:debug3RDIGV,4,0,0,debugR43UT1,debugA33IT6,589
+5,14,gikem means:,[u'128'],1422343274568,1422343275157,2,,,,,,,debugA33IT6:debug3RDIGV,5,0,0,debugR43UT1,debugA33IT6,589
+6,27,Which word is represented by this picture?,[u'128'],1422343275159,1422343277302,2,both,[u'24'],[u'pakug'],[True],"[u'25', u'24']",[1],debugA33IT6:debug3RDIGV,6,0,0,debugR43UT1,debugA33IT6,2143
+7,27,Which word is represented by this picture?,[u'128'],1422343275159,1422343277302,2,both,[u'24'],[u'pakug'],[True],"[u'25', u'24']",[1],debugA33IT6:debug3RDIGV,7,0,0,debugR43UT1,debugA33IT6,2143
+8,26,pakug means:,[u'128'],1422343277304,1422343277926,2,,,,,,,debugA33IT6:debug3RDIGV,8,0,0,debugR43UT1,debugA33IT6,622
+9,26,pakug means:,[u'128'],1422343277304,1422343277926,2,,,,,,,debugA33IT6:debug3RDIGV,9,0,0,debugR43UT1,debugA33IT6,622
+10,23,Which word is represented by this picture?,[u'128'],1422343277930,1422343282403,2,both,[u'20'],[u'nineb'],[True],"[u'20', u'21']",[0],debugA33IT6:debug3RDIGV,10,0,0,debugR43UT1,debugA33IT6,4473
+11,23,Which word is represented by this picture?,[u'128'],1422343277930,1422343282403,2,both,[u'20'],[u'nineb'],[True],"[u'20', u'21']",[0],debugA33IT6:debug3RDIGV,11,0,0,debugR43UT1,debugA33IT6,4473
+12,22,nineb means:,[u'128'],1422343282405,1422343282876,2,,,,,,,debugA33IT6:debug3RDIGV,12,0,0,debugR43UT1,debugA33IT6,471
+13,22,nineb means:,[u'128'],1422343282405,1422343282876,2,,,,,,,debugA33IT6:debug3RDIGV,13,0,0,debugR43UT1,debugA33IT6,471
+14,59,Which word is represented by this picture?,[u'128'],1422343282879,1422343284580,2,both,[u'56'],[u'pakugfa'],[True],"[u'56', u'57']",[0],debugA33IT6:debug3RDIGV,14,0,0,debugR43UT1,debugA33IT6,1701
+15,59,Which word is represented by this picture?,[u'128'],1422343282879,1422343284580,2,both,[u'56'],[u'pakugfa'],[True],"[u'56', u'57']",[0],debugA33IT6:debug3RDIGV,15,0,0,debugR43UT1,debugA33IT6,1701
+16,58,pakugfa means:,[u'128'],1422343284582,1422343285196,2,,,,,,,debugA33IT6:debug3RDIGV,16,0,0,debugR43UT1,debugA33IT6,614
+17,58,pakugfa means:,[u'128'],1422343284582,1422343285196,2,,,,,,,debugA33IT6:debug3RDIGV,17,0,0,debugR43UT1,debugA33IT6,614
+18,19,Which word is represented by this picture?,[u'128'],1422343285198,1422343286628,2,both,[u'16'],[u'nodol'],[True],"[u'16', u'17']",[0],debugA33IT6:debug3RDIGV,18,0,0,debugR43UT1,debugA33IT6,1430
+19,19,Which word is represented by this picture?,[u'128'],1422343285198,1422343286628,2,both,[u'16'],[u'nodol'],[True],"[u'16', u'17']",[0],debugA33IT6:debug3RDIGV,19,0,0,debugR43UT1,debugA33IT6,1430
+20,18,nodol means:,[u'128'],1422343286630,1422343287132,2,,,,,,,debugA33IT6:debug3RDIGV,20,0,0,debugR43UT1,debugA33IT6,502
+21,18,nodol means:,[u'128'],1422343286630,1422343287132,2,,,,,,,debugA33IT6:debug3RDIGV,21,0,0,debugR43UT1,debugA33IT6,502
+22,63,Which word is represented by this picture?,[u'128'],1422343287135,1422343288835,2,both,[u'60'],[u'kanitfa'],[True],"[u'60', u'61']",[0],debugA33IT6:debug3RDIGV,22,0,0,debugR43UT1,debugA33IT6,1700
+23,63,Which word is represented by this picture?,[u'128'],1422343287135,1422343288835,2,both,[u'60'],[u'kanitfa'],[True],"[u'60', u'61']",[0],debugA33IT6:debug3RDIGV,23,0,0,debugR43UT1,debugA33IT6,1700
+24,62,kanitfa means:,[u'128'],1422343288837,1422343289260,2,,,,,,,debugA33IT6:debug3RDIGV,24,0,0,debugR43UT1,debugA33IT6,423
+25,62,kanitfa means:,[u'128'],1422343288837,1422343289260,2,,,,,,,debugA33IT6:debug3RDIGV,25,0,0,debugR43UT1,debugA33IT6,423
+26,43,Which word is represented by this picture?,[u'128'],1422343289263,1422343291547,2,1,[u'40'],[u'mupidfa'],[True],"[u'41', u'40']",[1],debugA33IT6:debug3RDIGV,26,0,0,debugR43UT1,debugA33IT6,2284
+27,43,Which word is represented by this picture?,[u'128'],1422343289263,1422343291547,2,1,[u'40'],[u'mupidfa'],[True],"[u'41', u'40']",[1],debugA33IT6:debug3RDIGV,27,0,0,debugR43UT1,debugA33IT6,2284
+28,42,mupidfa means:,[u'128'],1422343291550,1422343292147,2,,,,,,,debugA33IT6:debug3RDIGV,28,0,0,debugR43UT1,debugA33IT6,597
+29,42,mupidfa means:,[u'128'],1422343291550,1422343292147,2,,,,,,,debugA33IT6:debug3RDIGV,29,0,0,debugR43UT1,debugA33IT6,597
+30,31,Which word is represented by this picture?,[u'128'],1422343292151,1422343293996,2,both,[u'28'],[u'kanit'],[True],"[u'29', u'28']",[1],debugA33IT6:debug3RDIGV,30,0,0,debugR43UT1,debugA33IT6,1845
+31,31,Which word is represented by this picture?,[u'128'],1422343292151,1422343293996,2,both,[u'28'],[u'kanit'],[True],"[u'29', u'28']",[1],debugA33IT6:debug3RDIGV,31,0,0,debugR43UT1,debugA33IT6,1845
+32,30,kanit means:,[u'128'],1422343293998,1422343294412,2,,,,,,,debugA33IT6:debug3RDIGV,32,0,0,debugR43UT1,debugA33IT6,414
+33,30,kanit means:,[u'128'],1422343293998,1422343294412,2,,,,,,,debugA33IT6:debug3RDIGV,33,0,0,debugR43UT1,debugA33IT6,414
+34,55,Which word is represented by this picture?,[u'128'],1422343294414,1422343303270,2,both,[u'52'],[u'ninebfa'],[True],"[u'53', u'52']",[1],debugA33IT6:debug3RDIGV,34,0,0,debugR43UT1,debugA33IT6,8856
+35,55,Which word is represented by this picture?,[u'128'],1422343294414,1422343303270,2,both,[u'52'],[u'ninebfa'],[True],"[u'53', u'52']",[1],debugA33IT6:debug3RDIGV,35,0,0,debugR43UT1,debugA33IT6,8856
+36,54,ninebfa means:,[u'128'],1422343303272,1422343303829,2,,,,,,,debugA33IT6:debug3RDIGV,36,0,0,debugR43UT1,debugA33IT6,557
+37,54,ninebfa means:,[u'128'],1422343303272,1422343303829,2,,,,,,,debugA33IT6:debug3RDIGV,37,0,0,debugR43UT1,debugA33IT6,557
+38,3,Which word is represented by this picture?,[u'128'],1422343303832,1422343307476,2,1,[u'0'],[u'peguk'],[True],"[u'0', u'1']",[0],debugA33IT6:debug3RDIGV,38,0,0,debugR43UT1,debugA33IT6,3644
+39,3,Which word is represented by this picture?,[u'128'],1422343303832,1422343307476,2,1,[u'0'],[u'peguk'],[True],"[u'0', u'1']",[0],debugA33IT6:debug3RDIGV,39,0,0,debugR43UT1,debugA33IT6,3644
+40,2,peguk means:,[u'128'],1422343307478,1422343308070,2,,,,,,,debugA33IT6:debug3RDIGV,40,0,0,debugR43UT1,debugA33IT6,592
+41,2,peguk means:,[u'128'],1422343307478,1422343308070,2,,,,,,,debugA33IT6:debug3RDIGV,41,0,0,debugR43UT1,debugA33IT6,592
+42,11,Which word is represented by this picture?,[u'128'],1422343308073,1422343309822,2,1,[u'8'],[u'mupid'],[True],"[u'8', u'9']",[0],debugA33IT6:debug3RDIGV,42,0,0,debugR43UT1,debugA33IT6,1749
+43,11,Which word is represented by this picture?,[u'128'],1422343308073,1422343309822,2,1,[u'8'],[u'mupid'],[True],"[u'8', u'9']",[0],debugA33IT6:debug3RDIGV,43,0,0,debugR43UT1,debugA33IT6,1749
+44,10,mupid means:,[u'128'],1422343309824,1422343310358,2,,,,,,,debugA33IT6:debug3RDIGV,44,0,0,debugR43UT1,debugA33IT6,534
+45,10,mupid means:,[u'128'],1422343309824,1422343310358,2,,,,,,,debugA33IT6:debug3RDIGV,45,0,0,debugR43UT1,debugA33IT6,534
+46,47,Which word is represented by this picture?,[u'128'],1422343310361,1422343314070,2,both,[u'44'],[u'gikemfa'],[True],"[u'44', u'45']",[0],debugA33IT6:debug3RDIGV,46,0,0,debugR43UT1,debugA33IT6,3709
+47,47,Which word is represented by this picture?,[u'128'],1422343310361,1422343314070,2,both,[u'44'],[u'gikemfa'],[True],"[u'44', u'45']",[0],debugA33IT6:debug3RDIGV,47,0,0,debugR43UT1,debugA33IT6,3709
+48,46,gikemfa means:,[u'128'],1422343314072,1422343314565,2,,,,,,,debugA33IT6:debug3RDIGV,48,0,0,debugR43UT1,debugA33IT6,493
+49,46,gikemfa means:,[u'128'],1422343314072,1422343314565,2,,,,,,,debugA33IT6:debug3RDIGV,49,0,0,debugR43UT1,debugA33IT6,493
+50,39,Which word is represented by this picture?,[u'128'],1422343314568,1422343316117,2,1,[u'36'],[u'bubapfa'],[True],"[u'37', u'36']",[1],debugA33IT6:debug3RDIGV,50,0,0,debugR43UT1,debugA33IT6,1549
+51,39,Which word is represented by this picture?,[u'128'],1422343314568,1422343316117,2,1,[u'36'],[u'bubapfa'],[True],"[u'37', u'36']",[1],debugA33IT6:debug3RDIGV,51,0,0,debugR43UT1,debugA33IT6,1549
+52,38,bubapfa means:,[u'128'],1422343316119,1422343316781,2,,,,,,,debugA33IT6:debug3RDIGV,52,0,0,debugR43UT1,debugA33IT6,662
+53,38,bubapfa means:,[u'128'],1422343316119,1422343316781,2,,,,,,,debugA33IT6:debug3RDIGV,53,0,0,debugR43UT1,debugA33IT6,662
+54,7,Which word is represented by this picture?,[u'128'],1422343316784,1422343318860,2,1,[u'4'],[u'bubap'],[True],"[u'5', u'4']",[1],debugA33IT6:debug3RDIGV,54,0,0,debugR43UT1,debugA33IT6,2076
+55,7,Which word is represented by this picture?,[u'128'],1422343316784,1422343318860,2,1,[u'4'],[u'bubap'],[True],"[u'5', u'4']",[1],debugA33IT6:debug3RDIGV,55,0,0,debugR43UT1,debugA33IT6,2076
+56,6,bubap means:,[u'128'],1422343318861,1422343319340,2,,,,,,,debugA33IT6:debug3RDIGV,56,0,0,debugR43UT1,debugA33IT6,479
+57,6,bubap means:,[u'128'],1422343318861,1422343319340,2,,,,,,,debugA33IT6:debug3RDIGV,57,0,0,debugR43UT1,debugA33IT6,479
+58,51,Which word is represented by this picture?,[u'128'],1422343319342,1422343324723,2,both,[u'48'],[u'nodolfa'],[True],"[u'49', u'48']",[1],debugA33IT6:debug3RDIGV,58,0,0,debugR43UT1,debugA33IT6,5381
+59,51,Which word is represented by this picture?,[u'128'],1422343319342,1422343324723,2,both,[u'48'],[u'nodolfa'],[True],"[u'49', u'48']",[1],debugA33IT6:debug3RDIGV,59,0,0,debugR43UT1,debugA33IT6,5381
+60,50,nodolfa means:,[u'128'],1422343324725,1422343325123,2,,,,,,,debugA33IT6:debug3RDIGV,60,0,0,debugR43UT1,debugA33IT6,398
+61,50,nodolfa means:,[u'128'],1422343324725,1422343325123,2,,,,,,,debugA33IT6:debug3RDIGV,61,0,0,debugR43UT1,debugA33IT6,398
+62,35,Which word is represented by this picture?,[u'128'],1422343325126,1422343328225,2,1,[u'32'],[u'pegukfa'],[True],"[u'32', u'33']",[0],debugA33IT6:debug3RDIGV,62,0,0,debugR43UT1,debugA33IT6,3099
+63,35,Which word is represented by this picture?,[u'128'],1422343325126,1422343328225,2,1,[u'32'],[u'pegukfa'],[True],"[u'32', u'33']",[0],debugA33IT6:debug3RDIGV,63,0,0,debugR43UT1,debugA33IT6,3099
+64,34,pegukfa means:,[u'128'],1422343328227,1422343329218,2,,,,,,,debugA33IT6:debug3RDIGV,64,0,0,debugR43UT1,debugA33IT6,991
+65,34,pegukfa means:,[u'128'],1422343328227,1422343329218,2,,,,,,,debugA33IT6:debug3RDIGV,65,0,0,debugR43UT1,debugA33IT6,991
+66,210,"In this part of the experiment, you will see pairs of new words.
+Based on how each word sounds, decide which one is more likely to belong to the
+language you just learned.",[u'211'],1422343329220,1422343331833,1,,,,,,,debugA33IT6:debug3RDIGV,66,0,0,debugR43UT1,debugA33IT6,2613
+67,204,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343331836,1422343338043,1,,[u'202'],[u'nifal'],[None],"[u'203', u'202']",[1],debugA33IT6:debug3RDIGV,67,0,0,debugR43UT1,debugA33IT6,6207
+68,195,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343338045,1422343338963,1,,[u'193'],[u'mufet'],[None],"[u'194', u'193']",[1],debugA33IT6:debug3RDIGV,68,0,0,debugR43UT1,debugA33IT6,918
+69,138,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343338966,1422343342587,1,,[u'137'],[u'bogfep'],[None],"[u'136', u'137']",[1],debugA33IT6:debug3RDIGV,69,0,0,debugR43UT1,debugA33IT6,3621
+70,165,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343342590,1422343343650,1,,[u'163'],[u'nofut'],[None],"[u'164', u'163']",[1],debugA33IT6:debug3RDIGV,70,0,0,debugR43UT1,debugA33IT6,1060
+71,150,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343343652,1422343344426,1,,[u'148'],[u'bifit'],[None],"[u'149', u'148']",[1],debugA33IT6:debug3RDIGV,71,0,0,debugR43UT1,debugA33IT6,774
+72,135,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343344428,1422343345707,1,,[u'133'],[u'nidfig'],[None],"[u'134', u'133']",[1],debugA33IT6:debug3RDIGV,72,0,0,debugR43UT1,debugA33IT6,1279
+73,144,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343345710,1422343346833,1,,[u'143'],[u'mengfod'],[None],"[u'142', u'143']",[1],debugA33IT6:debug3RDIGV,73,0,0,debugR43UT1,debugA33IT6,1123
+74,153,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343346836,1422343347675,1,,[u'151'],[u'kafek'],[None],"[u'152', u'151']",[1],debugA33IT6:debug3RDIGV,74,0,0,debugR43UT1,debugA33IT6,839
+75,141,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343347679,1422343348458,1,,[u'140'],[u'gunfan'],[None],"[u'139', u'140']",[1],debugA33IT6:debug3RDIGV,75,0,0,debugR43UT1,debugA33IT6,779
+76,156,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343348461,1422343349114,1,,[u'154'],[u'fefam'],[None],"[u'155', u'154']",[1],debugA33IT6:debug3RDIGV,76,0,0,debugR43UT1,debugA33IT6,653
+77,201,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343349117,1422343349770,1,,[u'199'],[u'pafum'],[None],"[u'200', u'199']",[1],debugA33IT6:debug3RDIGV,77,0,0,debugR43UT1,debugA33IT6,653
+78,147,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343349773,1422343350402,1,,[u'146'],[u''],[None],"[u'145', u'146']",[1],debugA33IT6:debug3RDIGV,78,0,0,debugR43UT1,debugA33IT6,629
+79,132,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343350405,1422343351778,1,,[u'130'],[u'labfub'],[None],"[u'131', u'130']",[1],debugA33IT6:debug3RDIGV,79,0,0,debugR43UT1,debugA33IT6,1373
+80,180,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343351780,1422343352378,1,,[u'178'],[u'tefot'],[None],"[u'179', u'178']",[1],debugA33IT6:debug3RDIGV,80,0,0,debugR43UT1,debugA33IT6,598
+81,159,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343352382,1422343352908,1,,[u'157'],[u'toful'],[None],"[u'158', u'157']",[1],debugA33IT6:debug3RDIGV,81,0,0,debugR43UT1,debugA33IT6,526
+82,177,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343352910,1422343353580,1,,[u'176'],[u''],[None],"[u'175', u'176']",[1],debugA33IT6:debug3RDIGV,82,0,0,debugR43UT1,debugA33IT6,670
+83,189,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343353584,1422343354131,1,,[u'188'],[u''],[None],"[u'187', u'188']",[1],debugA33IT6:debug3RDIGV,83,0,0,debugR43UT1,debugA33IT6,547
+84,168,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343354133,1422343354690,1,,[u'166'],[u'gafek'],[None],"[u'167', u'166']",[1],debugA33IT6:debug3RDIGV,84,0,0,debugR43UT1,debugA33IT6,557
+85,198,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343354693,1422343355241,1,,[u'197'],[u''],[None],"[u'196', u'197']",[1],debugA33IT6:debug3RDIGV,85,0,0,debugR43UT1,debugA33IT6,548
+86,174,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343355243,1422343355825,1,,[u'173'],[u''],[None],"[u'172', u'173']",[1],debugA33IT6:debug3RDIGV,86,0,0,debugR43UT1,debugA33IT6,582
+87,162,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343355827,1422343356393,1,,[u'161'],[u''],[None],"[u'160', u'161']",[1],debugA33IT6:debug3RDIGV,87,0,0,debugR43UT1,debugA33IT6,566
+88,186,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343356395,1422343356970,1,,[u'184'],[u'bofum'],[None],"[u'185', u'184']",[1],debugA33IT6:debug3RDIGV,88,0,0,debugR43UT1,debugA33IT6,575
+89,183,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343356973,1422343357610,1,,[u'182'],[u''],[None],"[u'181', u'182']",[1],debugA33IT6:debug3RDIGV,89,0,0,debugR43UT1,debugA33IT6,637
+90,192,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343357612,1422343358210,1,,[u'190'],[u'kofop'],[None],"[u'191', u'190']",[1],debugA33IT6:debug3RDIGV,90,0,0,debugR43UT1,debugA33IT6,598
+91,171,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'205'],1422343358213,1422343358761,1,,[u'170'],[u''],[None],"[u'169', u'170']",[1],debugA33IT6:debug3RDIGV,91,0,0,debugR43UT1,debugA33IT6,548
+92,340,What is your native language?,[u'345'],1422343358769,1422343365385,1,,[u'339'],[u'English'],[None],[u'339'],[0],debugA33IT6:debug3RDIGV,92,0,0,debugR43UT1,debugA33IT6,6616
+93,334,How old are you?,[u'345'],1422343365432,1422343371676,1,,[u'242'],[28],[None],"[u'214', u'215', u'216', u'217', u'218', u'219', u'220', u'221', u'222', u'223', u'224', u'225', u'226', u'227', u'228', u'229', u'230', u'231', u'232', u'233', u'234', u'235', u'236', u'237', u'238', u'239', u'240', u'241', u'242', u'243', u'244', u'245', u'246', u'247', u'248', u'249', u'250', u'251', u'252', u'253', u'254', u'255', u'256', u'257', u'258', u'259', u'260', u'261', u'262', u'263', u'264', u'265', u'266', u'267', u'268', u'269', u'270', u'271', u'272', u'273', u'274', u'275', u'276', u'277', u'278', u'279', u'280', u'281', u'282', u'283', u'284', u'285', u'286', u'287', u'288', u'289', u'290', u'291', u'292', u'293', u'294', u'295', u'296', u'297', u'298', u'299', u'300', u'301', u'302', u'303', u'304', u'305', u'306', u'307', u'308', u'309', u'310', u'311', u'312', u'313', u'314', u'315', u'316', u'317', u'318', u'319', u'320', u'321', u'322', u'323', u'324', u'325', u'326', u'327', u'328', u'329', u'330', u'331', u'332', u'333']",[28],debugA33IT6:debug3RDIGV,93,0,0,debugR43UT1,debugA33IT6,6244
+94,338,What is your sex?,[u'345'],1422343371685,1422343373969,1,,[u'336'],[u'female'],[None],"[u'335', u'337', u'336']",[2],debugA33IT6:debug3RDIGV,94,0,0,debugR43UT1,debugA33IT6,2284
+95,344,"What information or strategies did you use to choose words in the
+experimental questions?",[u'345'],1422343373973,1422343392765,1,,[u'343'],"[u'Some had one missing, some had two identical.']",[None],[u'343'],[0],debugA33IT6:debug3RDIGV,95,0,0,debugR43UT1,debugA33IT6,18792
+96,342,What language do you speak most often?,[u'345'],1422343392768,1422343400314,1,,[u'341'],[u'lolspeak'],[None],[u'341'],[0],debugA33IT6:debug3RDIGV,96,0,0,debugR43UT1,debugA33IT6,7546
+97,212,Thank you for participating in this experiment!,[u'213'],1422343400316,1422343401430,1,,,,,,,debugA33IT6:debug3RDIGV,97,0,0,debugR43UT1,debugA33IT6,1114
+98,594,"During experimental questions, you will not be able to use your mouse. Use
+the F key to choose the option on the left, the J key to choose the option
+on the right, and the spacebar to move forward.",[u'595'],1422757019238,1422757028726,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,0,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,9488
+99,596,"In this part of the experiment, you will learn words
+from a made-up language. Their meanings will be expressed through pictures. You
+will see a picture with two words and be asked to choose which word has the
+meaning shown by the picture. At first you will just be guessing, but that's
+okay. Try to remember the right answer, and you'll get better with practice.",[u'597'],1422757028731,1422757040805,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,1,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,12074
+100,267,Which word is represented by this picture?,"[u'517', u'515']",1422757040825,1422757044146,1,2,[u'265'],[u'fofi'],[False],"[u'265', u'264']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,2,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,3321
+101,266,nenung means:,"[u'517', u'515']",1422757044151,1422757046631,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,3,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2480
+102,295,Which word is represented by this picture?,"[u'517', u'515']",1422757046635,1422757048026,1,both,[u'292'],[u'gikem'],[True],"[u'293', u'292']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,4,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1391
+103,294,gikem means:,"[u'517', u'515']",1422757048030,1422757049914,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,5,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1884
+104,507,Which word is represented by this picture?,"[u'517', u'515']",1422757049918,1422757052921,1,both,[u'504'],[u'kofenfa'],[True],"[u'505', u'504']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,6,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,3003
+105,506,kofenfa means: ,"[u'517', u'515']",1422757052923,1422757054154,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,7,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1231
+106,503,Which word is represented by this picture?,"[u'517', u'515']",1422757054158,1422757058448,1,both,[u'500'],[u'mudungfa'],[True],"[u'500', u'501']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,8,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,4290
+107,502,mudungfa means: ,"[u'517', u'515']",1422757058449,1422757059255,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,9,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,806
+108,283,Which word is represented by this picture?,"[u'517', u'515']",1422757059258,1422757061134,1,both,[u'280'],[u'beling'],[True],"[u'281', u'280']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,10,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1876
+109,282,beling means:,"[u'517', u'515']",1422757061136,1422757062527,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,11,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1391
+110,375,Which word is represented by this picture?,"[u'517', u'515']",1422757062531,1422757064671,1,both,[u'372'],[u'mudung'],[True],"[u'372', u'373']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,12,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2140
+111,374,mudung means: ,"[u'517', u'515']",1422757064673,1422757065568,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,13,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,895
+112,287,Which word is represented by this picture?,"[u'517', u'515']",1422757065573,1422757069102,1,both,[u'284'],[u'bubap'],[True],"[u'284', u'285']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,14,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,3529
+113,286,bubap means:,"[u'517', u'515']",1422757069104,1422757070335,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,15,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1231
+114,331,Which word is represented by this picture?,"[u'517', u'515']",1422757070339,1422757072287,1,2,[u'328'],[u'nenung'],[True],"[u'329', u'328']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,16,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1948
+115,330,nenung means: ,"[u'517', u'515']",1422757072292,1422757073711,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,17,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1419
+116,323,Which word is represented by this picture?,"[u'517', u'515']",1422757073717,1422757075972,1,2,[u'320'],[u'peguk'],[True],"[u'321', u'320']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,18,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2255
+117,322,peguk means: ,"[u'517', u'515']",1422757075978,1422757076719,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,19,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,741
+118,383,Which word is represented by this picture?,"[u'517', u'515']",1422757076722,1422757078831,1,both,[u'380'],[u'memi'],[True],"[u'380', u'381']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,20,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2109
+119,382,memi means: ,"[u'517', u'515']",1422757078834,1422757079622,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,21,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,788
+120,447,Which word is represented by this picture?,"[u'517', u'515']",1422757079625,1422757083718,1,both,[u'445'],[u'dupufa'],[False],"[u'445', u'444']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,22,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,4093
+121,446,memifa means:,"[u'517', u'515']",1422757083721,1422757084550,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,23,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,829
+122,419,Which word is represented by this picture?,"[u'517', u'515']",1422757084554,1422757086573,1,both,[u'416'],[u'dupufa'],[True],"[u'416', u'417']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,24,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2019
+123,418,dupufa means:,"[u'517', u'515']",1422757086575,1422757087261,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,25,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,686
+124,479,Which word is represented by this picture?,"[u'517', u'515']",1422757087267,1422757089009,1,both,[u'476'],[u'bubapfa'],[True],"[u'476', u'477']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,26,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1742
+125,478,bubapfa means: ,"[u'517', u'515']",1422757089012,1422757089494,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,27,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,482
+126,459,Which word is represented by this picture?,"[u'517', u'515']",1422757089498,1422757091541,1,2,[u'456'],[u'nenungfa'],[True],"[u'457', u'456']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,28,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2043
+127,458,nenungfa means: ,"[u'517', u'515']",1422757091543,1422757092134,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,29,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,591
+128,343,Which word is represented by this picture?,"[u'517', u'515']",1422757092138,1422757094781,1,2,[u'340'],[u'tato'],[True],"[u'340', u'341']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,30,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2643
+129,342,tato means: ,"[u'517', u'515']",1422757094782,1422757095198,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,31,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,416
+130,395,Which word is represented by this picture?,"[u'517', u'515']",1422757095201,1422757100010,1,2,[u'392'],[u'nenungfa'],[True],"[u'393', u'392']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,32,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,4809
+131,394,nenungfa means:,"[u'517', u'515']",1422757100012,1422757100562,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,33,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,550
+132,303,Which word is represented by this picture?,"[u'517', u'515']",1422757100568,1422757107039,1,both,[u'300'],[u'nodol'],[True],"[u'301', u'300']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,34,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,6471
+133,302,nodol means:,"[u'517', u'515']",1422757107040,1422757107456,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,35,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,416
+134,495,Which word is represented by this picture?,"[u'517', u'515']",1422757107460,1422757109270,1,both,[u'492'],[u'nodolfa'],[True],"[u'493', u'492']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,36,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1810
+135,494,nodolfa means: ,"[u'517', u'515']",1422757109272,1422757109641,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,37,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,369
+136,475,Which word is represented by this picture?,"[u'517', u'515']",1422757109644,1422757111287,1,both,[u'472'],[u'belingfa'],[True],"[u'473', u'472']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,38,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1643
+137,474,belingfa means: ,"[u'517', u'515']",1422757111290,1422757111640,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,39,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,350
+138,327,Which word is represented by this picture?,"[u'517', u'515']",1422757111644,1422757113279,1,2,[u'324'],[u'lilan'],[True],"[u'324', u'325']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,40,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1635
+139,326,lilan means: ,"[u'517', u'515']",1422757113282,1422757113614,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,41,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,332
+140,403,Which word is represented by this picture?,"[u'517', u'515']",1422757113618,1422757117535,1,2,[u'400'],[u'fofifa'],[True],"[u'400', u'401']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,42,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,3917
+141,402,fofifa means:,"[u'517', u'515']",1422757117537,1422757118127,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,43,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,590
+142,463,Which word is represented by this picture?,"[u'517', u'515']",1422757118131,1422757120031,1,2,[u'460'],[u'gutonfa'],[True],"[u'460', u'461']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,44,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1900
+143,462,gutonfa means: ,"[u'517', u'515']",1422757120034,1422757120414,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,45,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,380
+144,291,Which word is represented by this picture?,"[u'517', u'515']",1422757120417,1422757122479,1,both,[u'288'],[u'dupu'],[True],"[u'289', u'288']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,46,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2062
+145,290,dupu means:,"[u'517', u'515']",1422757122481,1422757122999,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,47,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,518
+146,379,Which word is represented by this picture?,"[u'517', u'515']",1422757123002,1422757125407,1,both,[u'376'],[u'kofen'],[True],"[u'377', u'376']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,48,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2405
+147,378,kofen means: ,"[u'517', u'515']",1422757125409,1422757125831,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,49,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,422
+148,471,Which word is represented by this picture?,"[u'517', u'515']",1422757125835,1422757127982,1,2,[u'468'],[u'tatofa'],[True],"[u'469', u'468']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,50,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2147
+149,470,tatofa means: ,"[u'517', u'515']",1422757127985,1422757128416,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,51,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,431
+150,263,Which word is represented by this picture?,"[u'517', u'515']",1422757128419,1422757131398,1,2,[u'260'],[u'lilan'],[True],"[u'261', u'260']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,52,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2979
+151,262,lilan means:,"[u'517', u'515']",1422757131400,1422757131814,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,53,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,414
+152,339,Which word is represented by this picture?,"[u'517', u'515']",1422757131818,1422757133557,1,2,[u'336'],[u'fofi'],[True],"[u'336', u'337']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,54,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1739
+153,338,fofi means: ,"[u'517', u'515']",1422757133559,1422757133910,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,55,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,351
+154,367,Which word is represented by this picture?,"[u'517', u'515']",1422757133913,1422757135229,1,both,[u'364'],[u'nodol'],[True],"[u'364', u'365']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,56,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1316
+155,366,nodol means: ,"[u'517', u'515']",1422757135231,1422757135606,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,57,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,375
+156,271,Which word is represented by this picture?,"[u'517', u'515']",1422757135610,1422757138367,1,2,[u'268'],[u'guton'],[True],"[u'268', u'269']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,58,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2757
+157,270,guton means:,"[u'517', u'515']",1422757138369,1422757138790,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,59,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,421
+158,351,Which word is represented by this picture?,"[u'517', u'515']",1422757138794,1422757140710,1,both,[u'348'],[u'bubap'],[True],"[u'349', u'348']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,60,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1916
+159,350,bubap means: ,"[u'517', u'515']",1422757140714,1422757141063,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,61,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,349
+160,407,Which word is represented by this picture?,"[u'517', u'515']",1422757141070,1422757143846,1,2,[u'404'],[u'tatofa'],[True],"[u'404', u'405']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,62,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2776
+161,406,tatofa means:,"[u'517', u'515']",1422757143848,1422757144220,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,63,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,372
+162,335,Which word is represented by this picture?,"[u'517', u'515']",1422757144223,1422757146166,1,2,[u'332'],[u'guton'],[True],"[u'333', u'332']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,64,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1943
+163,334,guton means: ,"[u'517', u'515']",1422757146168,1422757146590,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,65,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,422
+164,491,Which word is represented by this picture?,"[u'517', u'516']",1422757264937,1422757270118,2,both,[u'488'],[u'lilafa'],[True],"[u'489', u'488']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,66,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,5181
+165,491,Which word is represented by this picture?,"[u'517', u'516']",1422757264937,1422757270118,2,both,[u'488'],[u'lilafa'],[True],"[u'489', u'488']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,67,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,5181
+166,490,lilafa means: ,"[u'517', u'516']",1422757270121,1422757270629,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,68,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,508
+167,490,lilafa means: ,"[u'517', u'516']",1422757270121,1422757270629,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,69,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,508
+168,415,Which word is represented by this picture?,"[u'517', u'516']",1422757270636,1422757272460,2,both,[u'412'],[u'bubapfa'],[True],"[u'412', u'413']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,70,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1824
+169,415,Which word is represented by this picture?,"[u'517', u'516']",1422757270636,1422757272460,2,both,[u'412'],[u'bubapfa'],[True],"[u'412', u'413']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,71,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1824
+170,414,bubapfa means:,"[u'517', u'516']",1422757272465,1422757272894,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,72,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,429
+171,414,bubapfa means:,"[u'517', u'516']",1422757272465,1422757272894,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,73,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,429
+172,279,Which word is represented by this picture?,"[u'517', u'516']",1422757272897,1422757274989,2,2,[u'276'],[u'tato'],[True],"[u'276', u'277']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,74,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2092
+173,279,Which word is represented by this picture?,"[u'517', u'516']",1422757272897,1422757274989,2,2,[u'276'],[u'tato'],[True],"[u'276', u'277']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,75,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2092
+174,278,tato means:,"[u'517', u'516']",1422757274992,1422757275453,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,76,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,461
+175,278,tato means:,"[u'517', u'516']",1422757274992,1422757275453,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,77,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,461
+176,499,Which word is represented by this picture?,"[u'517', u'516']",1422757275456,1422757277109,2,both,[u'496'],[u'kanitfa'],[True],"[u'496', u'497']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,78,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1653
+177,499,Which word is represented by this picture?,"[u'517', u'516']",1422757275456,1422757277109,2,both,[u'496'],[u'kanitfa'],[True],"[u'496', u'497']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,79,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1653
+178,498,kanitfa means: ,"[u'517', u'516']",1422757277111,1422757277556,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,80,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,445
+179,498,kanitfa means: ,"[u'517', u'516']",1422757277111,1422757277556,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,81,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,445
+180,391,Which word is represented by this picture?,"[u'517', u'516']",1422757277559,1422757279669,2,2,[u'388'],[u'lilanfa'],[True],"[u'388', u'389']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,82,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2110
+181,391,Which word is represented by this picture?,"[u'517', u'516']",1422757277559,1422757279669,2,2,[u'388'],[u'lilanfa'],[True],"[u'388', u'389']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,83,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2110
+182,390,lilanfa means:,"[u'517', u'516']",1422757279672,1422757280045,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,84,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,373
+183,390,lilanfa means:,"[u'517', u'516']",1422757279672,1422757280045,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,85,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,373
+184,455,Which word is represented by this picture?,"[u'517', u'516']",1422757280048,1422757283021,2,2,[u'452'],[u'lilanfa'],[True],"[u'452', u'453']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,86,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2973
+185,455,Which word is represented by this picture?,"[u'517', u'516']",1422757280048,1422757283021,2,2,[u'452'],[u'lilanfa'],[True],"[u'452', u'453']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,87,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2973
+186,454,lilanfa means: ,"[u'517', u'516']",1422757283022,1422757283545,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,88,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,523
+187,454,lilanfa means: ,"[u'517', u'516']",1422757283022,1422757283545,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,89,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,523
+188,483,Which word is represented by this picture?,"[u'517', u'516']",1422757283548,1422757285604,2,both,[u'480'],[u'dupufa'],[True],"[u'481', u'480']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,90,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2056
+189,483,Which word is represented by this picture?,"[u'517', u'516']",1422757283548,1422757285604,2,both,[u'480'],[u'dupufa'],[True],"[u'481', u'480']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,91,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2056
+190,482,dupufa means: ,"[u'517', u'516']",1422757285605,1422757286060,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,92,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,455
+191,482,dupufa means: ,"[u'517', u'516']",1422757285605,1422757286060,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,93,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,455
+192,467,Which word is represented by this picture?,"[u'517', u'516']",1422757286067,1422757288116,2,2,[u'464'],[u'fofifa'],[True],"[u'464', u'465']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,94,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2049
+193,467,Which word is represented by this picture?,"[u'517', u'516']",1422757286067,1422757288116,2,2,[u'464'],[u'fofifa'],[True],"[u'464', u'465']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,95,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2049
+194,466,fofifa means: ,"[u'517', u'516']",1422757288119,1422757288837,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,96,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,718
+195,466,fofifa means: ,"[u'517', u'516']",1422757288119,1422757288837,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,97,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,718
+196,311,Which word is represented by this picture?,"[u'517', u'516']",1422757288840,1422757291787,2,both,[u'308'],[u'mudung'],[True],"[u'308', u'309']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,98,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2947
+197,311,Which word is represented by this picture?,"[u'517', u'516']",1422757288840,1422757291787,2,both,[u'308'],[u'mudung'],[True],"[u'308', u'309']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,99,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2947
+198,310,mudung means:,"[u'517', u'516']",1422757291789,1422757292411,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,100,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,622
+199,310,mudung means:,"[u'517', u'516']",1422757291789,1422757292411,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,101,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,622
+200,319,Which word is represented by this picture?,"[u'517', u'516']",1422757292414,1422757295892,2,both,[u'317'],[u'lila'],[False],"[u'317', u'316']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,102,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,3478
+201,319,Which word is represented by this picture?,"[u'517', u'516']",1422757292414,1422757295892,2,both,[u'317'],[u'lila'],[False],"[u'317', u'316']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,103,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,3478
+202,318,memi means:,"[u'517', u'516']",1422757295895,1422757296813,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,104,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,918
+203,318,memi means:,"[u'517', u'516']",1422757295895,1422757296813,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,105,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,918
+204,451,Which word is represented by this picture?,"[u'517', u'516']",1422757296816,1422757298413,2,2,[u'448'],[u'pegukfa'],[True],"[u'448', u'449']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,106,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1597
+205,451,Which word is represented by this picture?,"[u'517', u'516']",1422757296816,1422757298413,2,2,[u'448'],[u'pegukfa'],[True],"[u'448', u'449']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,107,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1597
+206,450,pegukfa means: ,"[u'517', u'516']",1422757298415,1422757298813,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,108,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,398
+207,450,pegukfa means: ,"[u'517', u'516']",1422757298415,1422757298813,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,109,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,398
+208,431,Which word is represented by this picture?,"[u'517', u'516']",1422757298817,1422757301146,2,both,[u'428'],[u'nodolfa'],[True],"[u'429', u'428']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,110,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2329
+209,431,Which word is represented by this picture?,"[u'517', u'516']",1422757298817,1422757301146,2,both,[u'428'],[u'nodolfa'],[True],"[u'429', u'428']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,111,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2329
+210,430,nodolfa means:,"[u'517', u'516']",1422757301148,1422757301620,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,112,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,472
+211,430,nodolfa means:,"[u'517', u'516']",1422757301148,1422757301620,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,113,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,472
+212,371,Which word is represented by this picture?,"[u'517', u'516']",1422757301623,1422757303436,2,both,[u'368'],[u'kanit'],[True],"[u'368', u'369']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,114,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1813
+213,371,Which word is represented by this picture?,"[u'517', u'516']",1422757301623,1422757303436,2,both,[u'368'],[u'kanit'],[True],"[u'368', u'369']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,115,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1813
+214,370,kanit means: ,"[u'517', u'516']",1422757303439,1422757303852,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,116,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,413
+215,370,kanit means: ,"[u'517', u'516']",1422757303439,1422757303852,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,117,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,413
+216,443,Which word is represented by this picture?,"[u'517', u'516']",1422757303855,1422757306924,2,both,[u'441'],[u'gutonfa'],[False],"[u'440', u'441']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,118,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,3069
+217,443,Which word is represented by this picture?,"[u'517', u'516']",1422757303855,1422757306924,2,both,[u'441'],[u'gutonfa'],[False],"[u'440', u'441']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,119,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,3069
+218,442,kofenfa means:,"[u'517', u'516']",1422757306927,1422757307364,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,120,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,437
+219,442,kofenfa means:,"[u'517', u'516']",1422757306927,1422757307364,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,121,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,437
+220,299,Which word is represented by this picture?,"[u'517', u'516']",1422757307366,1422757309107,2,both,[u'296'],[u'lila'],[True],"[u'297', u'296']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,122,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1741
+221,299,Which word is represented by this picture?,"[u'517', u'516']",1422757307366,1422757309107,2,both,[u'296'],[u'lila'],[True],"[u'297', u'296']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,123,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1741
+222,298,lila means:,"[u'517', u'516']",1422757309109,1422757309532,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,124,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,423
+223,298,lila means:,"[u'517', u'516']",1422757309109,1422757309532,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,125,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,423
+224,275,Which word is represented by this picture?,"[u'517', u'516']",1422757309534,1422757312228,2,2,[u'272'],[u'fofi'],[True],"[u'272', u'273']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,126,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2694
+225,275,Which word is represented by this picture?,"[u'517', u'516']",1422757309534,1422757312228,2,2,[u'272'],[u'fofi'],[True],"[u'272', u'273']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,127,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2694
+226,274,fofi means:,"[u'517', u'516']",1422757312230,1422757312626,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,128,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,396
+227,274,fofi means:,"[u'517', u'516']",1422757312230,1422757312626,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,129,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,396
+228,511,Which word is represented by this picture?,"[u'517', u'516']",1422757312629,1422757314394,2,both,[u'508'],[u'memifa'],[True],"[u'509', u'508']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,130,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1765
+229,511,Which word is represented by this picture?,"[u'517', u'516']",1422757312629,1422757314394,2,both,[u'508'],[u'memifa'],[True],"[u'509', u'508']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,131,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1765
+230,510,memifa means: ,"[u'517', u'516']",1422757314395,1422757314770,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,132,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,375
+231,510,memifa means: ,"[u'517', u'516']",1422757314395,1422757314770,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,133,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,375
+232,411,Which word is represented by this picture?,"[u'517', u'516']",1422757314772,1422757316979,2,both,[u'408'],[u'belingfa'],[True],"[u'408', u'409']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,134,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2207
+233,411,Which word is represented by this picture?,"[u'517', u'516']",1422757314772,1422757316979,2,both,[u'408'],[u'belingfa'],[True],"[u'408', u'409']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,135,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2207
+234,410,belingfa means:,"[u'517', u'516']",1422757316983,1422757317443,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,136,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,460
+235,410,belingfa means:,"[u'517', u'516']",1422757316983,1422757317443,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,137,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,460
+236,307,Which word is represented by this picture?,"[u'517', u'516']",1422757317448,1422757319036,2,both,[u'304'],[u'kanit'],[True],"[u'304', u'305']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,138,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1588
+237,307,Which word is represented by this picture?,"[u'517', u'516']",1422757317448,1422757319036,2,both,[u'304'],[u'kanit'],[True],"[u'304', u'305']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,139,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1588
+238,306,kanit means:,"[u'517', u'516']",1422757319038,1422757319452,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,140,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,414
+239,306,kanit means:,"[u'517', u'516']",1422757319038,1422757319452,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,141,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,414
+240,427,Which word is represented by this picture?,"[u'517', u'516']",1422757319454,1422757321426,2,both,[u'424'],[u'lilafa'],[True],"[u'425', u'424']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,142,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1972
+241,427,Which word is represented by this picture?,"[u'517', u'516']",1422757319454,1422757321426,2,both,[u'424'],[u'lilafa'],[True],"[u'425', u'424']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,143,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1972
+242,426,lilafa means:,"[u'517', u'516']",1422757321428,1422757321778,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,144,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,350
+243,426,lilafa means:,"[u'517', u'516']",1422757321428,1422757321778,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,145,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,350
+244,423,Which word is represented by this picture?,"[u'517', u'516']",1422757321780,1422757324370,2,both,[u'420'],[u'gikemfa'],[True],"[u'421', u'420']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,146,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2590
+245,423,Which word is represented by this picture?,"[u'517', u'516']",1422757321780,1422757324370,2,both,[u'420'],[u'gikemfa'],[True],"[u'421', u'420']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,147,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2590
+246,422,gikemfa means:,"[u'517', u'516']",1422757324372,1422757324786,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,148,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,414
+247,422,gikemfa means:,"[u'517', u'516']",1422757324372,1422757324786,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,149,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,414
+248,487,Which word is represented by this picture?,"[u'517', u'516']",1422757324789,1422757326420,2,both,[u'484'],[u'gikemfa'],[True],"[u'485', u'484']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,150,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1631
+249,487,Which word is represented by this picture?,"[u'517', u'516']",1422757324789,1422757326420,2,both,[u'484'],[u'gikemfa'],[True],"[u'485', u'484']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,151,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1631
+250,486,gikemfa means: ,"[u'517', u'516']",1422757326422,1422757326866,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,152,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,444
+251,486,gikemfa means: ,"[u'517', u'516']",1422757326422,1422757326866,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,153,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,444
+252,439,Which word is represented by this picture?,"[u'517', u'516']",1422757326868,1422757332301,2,both,[u'436'],[u'mudungfa'],[True],"[u'437', u'436']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,154,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,5433
+253,439,Which word is represented by this picture?,"[u'517', u'516']",1422757326868,1422757332301,2,both,[u'436'],[u'mudungfa'],[True],"[u'437', u'436']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,155,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,5433
+254,438,mudungfa means:,"[u'517', u'516']",1422757332303,1422757332773,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,156,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,470
+255,438,mudungfa means:,"[u'517', u'516']",1422757332303,1422757332773,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,157,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,470
+256,259,Which word is represented by this picture?,"[u'517', u'516']",1422757332776,1422757334387,2,2,[u'256'],[u'peguk'],[True],"[u'257', u'256']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,158,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1611
+257,259,Which word is represented by this picture?,"[u'517', u'516']",1422757332776,1422757334387,2,2,[u'256'],[u'peguk'],[True],"[u'257', u'256']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,159,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1611
+258,258,peguk means:,"[u'517', u'516']",1422757334389,1422757334764,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,160,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,375
+259,258,peguk means:,"[u'517', u'516']",1422757334389,1422757334764,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,161,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,375
+260,399,Which word is represented by this picture?,"[u'517', u'516']",1422757334768,1422757340158,2,2,[u'396'],[u'gutonfa'],[True],"[u'396', u'397']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,162,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,5390
+261,399,Which word is represented by this picture?,"[u'517', u'516']",1422757334768,1422757340158,2,2,[u'396'],[u'gutonfa'],[True],"[u'396', u'397']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,163,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,5390
+262,398,gutonfa means:,"[u'517', u'516']",1422757340161,1422757340758,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,164,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,597
+263,398,gutonfa means:,"[u'517', u'516']",1422757340161,1422757340758,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,165,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,597
+264,359,Which word is represented by this picture?,"[u'517', u'516']",1422757340762,1422757342461,2,both,[u'356'],[u'gikem'],[True],"[u'357', u'356']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,166,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1699
+265,359,Which word is represented by this picture?,"[u'517', u'516']",1422757340762,1422757342461,2,both,[u'356'],[u'gikem'],[True],"[u'357', u'356']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,167,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1699
+266,358,gikem means: ,"[u'517', u'516']",1422757342462,1422757342798,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,168,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,336
+267,358,gikem means: ,"[u'517', u'516']",1422757342462,1422757342798,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,169,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,336
+268,435,Which word is represented by this picture?,"[u'517', u'516']",1422757342801,1422757344389,2,both,[u'432'],[u'kanitfa'],[True],"[u'433', u'432']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,170,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1588
+269,435,Which word is represented by this picture?,"[u'517', u'516']",1422757342801,1422757344389,2,both,[u'432'],[u'kanitfa'],[True],"[u'433', u'432']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,171,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1588
+270,434,kanitfa means:,"[u'517', u'516']",1422757344390,1422757344734,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,172,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,344
+271,434,kanitfa means:,"[u'517', u'516']",1422757344390,1422757344734,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,173,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,344
+272,315,Which word is represented by this picture?,"[u'517', u'516']",1422757344737,1422757347526,2,both,[u'313'],[u'gikem'],[False],"[u'312', u'313']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,174,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2789
+273,315,Which word is represented by this picture?,"[u'517', u'516']",1422757344737,1422757347526,2,both,[u'313'],[u'gikem'],[False],"[u'312', u'313']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,175,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2789
+274,314,kofen means:,"[u'517', u'516']",1422757347528,1422757348206,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,176,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,678
+275,314,kofen means:,"[u'517', u'516']",1422757347528,1422757348206,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,177,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,678
+276,347,Which word is represented by this picture?,"[u'517', u'516']",1422757348213,1422757349846,2,both,[u'344'],[u'beling'],[True],"[u'345', u'344']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,178,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1633
+277,347,Which word is represented by this picture?,"[u'517', u'516']",1422757348213,1422757349846,2,both,[u'344'],[u'beling'],[True],"[u'345', u'344']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,179,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1633
+278,346,beling means: ,"[u'517', u'516']",1422757349848,1422757350198,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,180,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,350
+279,346,beling means: ,"[u'517', u'516']",1422757349848,1422757350198,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,181,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,350
+280,355,Which word is represented by this picture?,"[u'517', u'516']",1422757350201,1422757351798,2,both,[u'352'],[u'dupu'],[True],"[u'352', u'353']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,182,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1597
+281,355,Which word is represented by this picture?,"[u'517', u'516']",1422757350201,1422757351798,2,both,[u'352'],[u'dupu'],[True],"[u'352', u'353']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,183,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1597
+282,354,dupu means: ,"[u'517', u'516']",1422757351800,1422757352157,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,184,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,357
+283,354,dupu means: ,"[u'517', u'516']",1422757351800,1422757352157,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,185,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,357
+284,387,Which word is represented by this picture?,"[u'517', u'516']",1422757352160,1422757353916,2,2,[u'384'],[u'pegukfa'],[True],"[u'384', u'385']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,186,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1756
+285,387,Which word is represented by this picture?,"[u'517', u'516']",1422757352160,1422757353916,2,2,[u'384'],[u'pegukfa'],[True],"[u'384', u'385']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,187,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1756
+286,386,pegukfa means:,"[u'517', u'516']",1422757353918,1422757354262,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,188,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,344
+287,386,pegukfa means:,"[u'517', u'516']",1422757353918,1422757354262,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,189,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,344
+288,363,Which word is represented by this picture?,"[u'517', u'516']",1422757354265,1422757362708,2,both,[u'360'],[u'lila'],[True],"[u'360', u'361']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,190,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,8443
+289,363,Which word is represented by this picture?,"[u'517', u'516']",1422757354265,1422757362708,2,both,[u'360'],[u'lila'],[True],"[u'360', u'361']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,191,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,8443
+290,362,lila means: ,"[u'517', u'516']",1422757362710,1422757363044,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,192,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,334
+291,362,lila means: ,"[u'517', u'516']",1422757362710,1422757363044,2,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,193,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,334
+292,598,"In this part of the experiment, you will see pairs of new words.
+Based on how each word sounds, decide which one is more likely to belong to the
+language you just learned.",[u'599'],1422757363057,1422757370770,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,194,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,7713
+293,550,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757370772,1422757373650,1,,[u'548'],[u'lufop'],[None],"[u'548', u'549']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,195,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2878
+294,526,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757373653,1422757374475,1,,[u'524'],[u'bogfep'],[None],"[u'525', u'524']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,196,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,822
+295,589,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757374478,1422757375539,1,,[u'587'],[u'pafum'],[None],"[u'587', u'588']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,197,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1061
+296,565,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757375542,1422757376364,1,,[u'564'],[u''],[None],"[u'563', u'564']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,198,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,822
+297,541,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757376366,1422757377091,1,,[u'540'],[u''],[None],"[u'539', u'540']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,199,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,725
+298,577,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757377094,1422757377658,1,,[u'576'],[u''],[None],"[u'575', u'576']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,200,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,564
+299,562,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757377660,1422757378338,1,,[u'561'],[u''],[None],"[u'560', u'561']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,201,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,678
+300,520,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757378340,1422757379275,1,,[u'519'],[u'labfub'],[None],"[u'518', u'519']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,202,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,935
+301,592,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757379279,1422757379867,1,,[u'590'],[u'nifal'],[None],"[u'591', u'590']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,203,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,588
+302,553,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757379870,1422757380522,1,,[u'552'],[u''],[None],"[u'551', u'552']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,204,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,652
+303,538,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757380524,1422757381121,1,,[u'537'],[u''],[None],"[u'536', u'537']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,205,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,597
+304,586,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757381124,1422757381722,1,,[u'584'],[u'fefik'],[None],"[u'585', u'584']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,206,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,598
+305,523,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757381725,1422757382362,1,,[u'522'],[u'nidfig'],[None],"[u'521', u'522']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,207,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,637
+306,568,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757382365,1422757382947,1,,[u'567'],[u''],[None],"[u'566', u'567']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,208,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,582
+307,574,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757382950,1422757383476,1,,[u'572'],[u'bofum'],[None],"[u'573', u'572']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,209,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,526
+308,583,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757383480,1422757384065,1,,[u'581'],[u'mufet'],[None],"[u'582', u'581']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,210,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,585
+309,556,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757384068,1422757384594,1,,[u'555'],[u''],[None],"[u'554', u'555']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,211,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,526
+310,535,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757384597,1422757385186,1,,[u'534'],[u''],[None],"[u'533', u'534']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,212,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,589
+311,580,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757385189,1422757385739,1,,[u'578'],[u'kofop'],[None],"[u'579', u'578']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,213,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,550
+312,544,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757385741,1422757386323,1,,[u'542'],[u'fefam'],[None],"[u'543', u'542']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,214,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,582
+313,532,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757386325,1422757387690,1,,[u'531'],[u'mengfod'],[None],"[u'530', u'531']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,215,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1365
+314,571,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757387693,1422757390457,1,,[u'570'],[u''],[None],"[u'570', u'569']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,216,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2764
+315,529,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757390459,1422757391002,1,,[u'528'],[u'gunfan'],[None],"[u'527', u'528']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,217,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,543
+316,547,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757391005,1422757391538,1,,[u'546'],[u''],[None],"[u'545', u'546']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,218,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,533
+317,559,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'593'],1422757391541,1422757392035,1,,[u'557'],[u'mefim'],[None],"[u'558', u'557']",[1],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,219,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,494
+318,732,"What information or strategies did you use to choose words in the
+experimental questions?",[u'733'],1422757392041,1422757423686,1,,[u'731'],[u'I saw some suspicious repetition.'],[None],[u'731'],[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,220,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,31645
+319,730,What language do you speak most often?,[u'733'],1422757423691,1422757428665,1,,[u'729'],[u'Klingon'],[None],[u'729'],[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,221,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,4974
+320,722,How old are you?,[u'733'],1422757428728,1422757433594,1,,[u'612'],[10],[None],"[u'602', u'603', u'604', u'605', u'606', u'607', u'608', u'609', u'610', u'611', u'612', u'613', u'614', u'615', u'616', u'617', u'618', u'619', u'620', u'621', u'622', u'623', u'624', u'625', u'626', u'627', u'628', u'629', u'630', u'631', u'632', u'633', u'634', u'635', u'636', u'637', u'638', u'639', u'640', u'641', u'642', u'643', u'644', u'645', u'646', u'647', u'648', u'649', u'650', u'651', u'652', u'653', u'654', u'655', u'656', u'657', u'658', u'659', u'660', u'661', u'662', u'663', u'664', u'665', u'666', u'667', u'668', u'669', u'670', u'671', u'672', u'673', u'674', u'675', u'676', u'677', u'678', u'679', u'680', u'681', u'682', u'683', u'684', u'685', u'686', u'687', u'688', u'689', u'690', u'691', u'692', u'693', u'694', u'695', u'696', u'697', u'698', u'699', u'700', u'701', u'702', u'703', u'704', u'705', u'706', u'707', u'708', u'709', u'710', u'711', u'712', u'713', u'714', u'715', u'716', u'717', u'718', u'719', u'720', u'721']",[10],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,222,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,4866
+321,726,What is your sex?,[u'733'],1422757433605,1422757436857,1,,[u'724'],[u'female'],[None],"[u'724', u'723', u'725']",[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,223,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,3252
+322,728,What is your native language?,[u'733'],1422757436860,1422757439690,1,,[u'727'],[u'fs '],[None],[u'727'],[0],A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,224,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,2830
+323,600,Thank you for participating in this experiment!,[u'601'],1422757439691,1422757440803,1,,,,,,,A2LD8A4LBTYELX:3C44YUNSI1PS4DXAWYLR15H7SV9PDG,225,0,1,37SDSEDIN92BJ6KN4LUJPXQPZDK18N,A2LD8A4LBTYELX,1112
+324,338,"During experimental questions, you will not be able to use your mouse. Use
+the F key to choose the option on the left, the J key to choose the option
+on the right, and the spacebar to move forward.",[u'339'],1422924664067,1422924680681,1,,,,,,,debugXYM93H:debugFCQJEZ,0,0,1,debugH3E1FV,debugXYM93H,16614
+325,340,"In this part of the experiment, you will learn words
+from a made-up language. Their meanings will be expressed through pictures. You
+will see a picture with two words and be asked to choose which word has the
+meaning shown by the picture. At first you will just be guessing, but that's
+okay. Try to remember the right answer, and you'll get better with practice.",[u'341'],1422924680687,1422924682363,1,,,,,,,debugXYM93H:debugFCQJEZ,1,0,1,debugH3E1FV,debugXYM93H,1676
+326,139,Which word is represented by this picture?,"[u'261', u'259']",1422924682371,1422924685380,1,2,[u'136'],[u'nodol'],[True],"[u'136', u'137']",[0],debugXYM93H:debugFCQJEZ,2,0,1,debugH3E1FV,debugXYM93H,3009
+327,138,nodol means:,"[u'261', u'259']",1422924685384,1422924686149,1,,,,,,,debugXYM93H:debugFCQJEZ,3,0,1,debugH3E1FV,debugXYM93H,765
+328,183,Which word is represented by this picture?,"[u'261', u'259']",1422924686152,1422924687782,1,both,[u'180'],[u'bubap'],[True],"[u'180', u'181']",[0],debugXYM93H:debugFCQJEZ,4,0,1,debugH3E1FV,debugXYM93H,1630
+329,182,bubap means: ,"[u'261', u'259']",1422924687784,1422924688238,1,,,,,,,debugXYM93H:debugFCQJEZ,5,0,1,debugH3E1FV,debugXYM93H,454
+330,159,Which word is represented by this picture?,"[u'261', u'259']",1422924688243,1422924689645,1,both,[u'156'],[u'gikem'],[True],"[u'156', u'157']",[0],debugXYM93H:debugFCQJEZ,6,0,1,debugH3E1FV,debugXYM93H,1402
+331,158,gikem means:,"[u'261', u'259']",1422924689647,1422924690084,1,,,,,,,debugXYM93H:debugFCQJEZ,7,0,1,debugH3E1FV,debugXYM93H,437
+332,223,Which word is represented by this picture?,"[u'261', u'259']",1422924690087,1422924692204,1,both,[u'220'],[u'gikemfa'],[True],"[u'221', u'220']",[1],debugXYM93H:debugFCQJEZ,8,0,1,debugH3E1FV,debugXYM93H,2117
+333,222,gikemfa means:,"[u'261', u'259']",1422924692206,1422924692565,1,,,,,,,debugXYM93H:debugFCQJEZ,9,0,1,debugH3E1FV,debugXYM93H,359
+334,163,Which word is represented by this picture?,"[u'261', u'259']",1422924692568,1422924695029,1,2,[u'160'],[u'peguk'],[True],"[u'161', u'160']",[1],debugXYM93H:debugFCQJEZ,10,0,1,debugH3E1FV,debugXYM93H,2461
+335,162,peguk means: ,"[u'261', u'259']",1422924695032,1422924695406,1,,,,,,,debugXYM93H:debugFCQJEZ,11,0,1,debugH3E1FV,debugXYM93H,374
+336,219,Which word is represented by this picture?,"[u'261', u'259']",1422924695410,1422924697540,1,both,[u'217'],[u'gutonfa'],[False],"[u'216', u'217']",[1],debugXYM93H:debugFCQJEZ,12,0,1,debugH3E1FV,debugXYM93H,2130
+337,218,lilanfa means:,"[u'261', u'259']",1422924697542,1422924697932,1,,,,,,,debugXYM93H:debugFCQJEZ,13,0,1,debugH3E1FV,debugXYM93H,390
+338,131,Which word is represented by this picture?,"[u'261', u'259']",1422924697935,1422924699389,1,2,[u'128'],[u'peguk'],[True],"[u'128', u'129']",[0],debugXYM93H:debugFCQJEZ,14,0,1,debugH3E1FV,debugXYM93H,1454
+339,130,peguk means:,"[u'261', u'259']",1422924699391,1422924699814,1,,,,,,,debugXYM93H:debugFCQJEZ,15,0,1,debugH3E1FV,debugXYM93H,423
+340,227,Which word is represented by this picture?,"[u'261', u'259']",1422924699818,1422924700877,1,2,[u'224'],[u'pegukfa'],[True],"[u'224', u'225']",[0],debugXYM93H:debugFCQJEZ,16,0,1,debugH3E1FV,debugXYM93H,1059
+341,226,pegukfa means: ,"[u'261', u'259']",1422924700880,1422924701270,1,,,,,,,debugXYM93H:debugFCQJEZ,17,0,1,debugH3E1FV,debugXYM93H,390
+342,231,Which word is represented by this picture?,"[u'261', u'259']",1422924701275,1422924702693,1,2,[u'228'],[u'kanitfa'],[True],"[u'229', u'228']",[1],debugXYM93H:debugFCQJEZ,18,0,1,debugH3E1FV,debugXYM93H,1418
+343,230,kanitfa means: ,"[u'261', u'259']",1422924702697,1422924703029,1,,,,,,,debugXYM93H:debugFCQJEZ,19,0,1,debugH3E1FV,debugXYM93H,332
+344,207,Which word is represented by this picture?,"[u'261', u'259']",1422924703033,1422924704484,1,both,[u'204'],[u'belingfa'],[True],"[u'204', u'205']",[0],debugXYM93H:debugFCQJEZ,20,0,1,debugH3E1FV,debugXYM93H,1451
+345,206,belingfa means:,"[u'261', u'259']",1422924704486,1422924704892,1,,,,,,,debugXYM93H:debugFCQJEZ,21,0,1,debugH3E1FV,debugXYM93H,406
+346,187,Which word is represented by this picture?,"[u'261', u'259']",1422924704895,1422924706373,1,both,[u'184'],[u'lilan'],[True],"[u'184', u'185']",[0],debugXYM93H:debugFCQJEZ,22,0,1,debugH3E1FV,debugXYM93H,1478
+347,186,lilan means: ,"[u'261', u'259']",1422924706375,1422924706781,1,,,,,,,debugXYM93H:debugFCQJEZ,23,0,1,debugH3E1FV,debugXYM93H,406
+348,167,Which word is represented by this picture?,"[u'261', u'259']",1422924706785,1422924707870,1,2,[u'164'],[u'kanit'],[True],"[u'165', u'164']",[1],debugXYM93H:debugFCQJEZ,24,0,1,debugH3E1FV,debugXYM93H,1085
+349,166,kanit means: ,"[u'261', u'259']",1422924707872,1422924708253,1,,,,,,,debugXYM93H:debugFCQJEZ,25,0,1,debugH3E1FV,debugXYM93H,381
+350,135,Which word is represented by this picture?,"[u'261', u'259']",1422924708255,1422924709373,1,2,[u'132'],[u'kanit'],[True],"[u'133', u'132']",[1],debugXYM93H:debugFCQJEZ,26,0,1,debugH3E1FV,debugXYM93H,1118
+351,134,kanit means:,"[u'261', u'259']",1422924709374,1422924709717,1,,,,,,,debugXYM93H:debugFCQJEZ,27,0,1,debugH3E1FV,debugXYM93H,343
+352,239,Which word is represented by this picture?,"[u'261', u'259']",1422924709721,1422924711125,1,both,[u'236'],[u'belingfa'],[True],"[u'236', u'237']",[0],debugXYM93H:debugFCQJEZ,28,0,1,debugH3E1FV,debugXYM93H,1404
+353,238,belingfa means: ,"[u'261', u'259']",1422924711128,1422924711468,1,,,,,,,debugXYM93H:debugFCQJEZ,29,0,1,debugH3E1FV,debugXYM93H,340
+354,243,Which word is represented by this picture?,"[u'261', u'259']",1422924711472,1422924713069,1,both,[u'240'],[u'gutonfa'],[True],"[u'241', u'240']",[1],debugXYM93H:debugFCQJEZ,30,0,1,debugH3E1FV,debugXYM93H,1597
+355,242,gutonfa means: ,"[u'261', u'259']",1422924713072,1422924713413,1,,,,,,,debugXYM93H:debugFCQJEZ,31,0,1,debugH3E1FV,debugXYM93H,341
+356,255,Which word is represented by this picture?,"[u'261', u'259']",1422924713416,1422924716189,1,both,[u'252'],[u'gikemfa'],[True],"[u'253', u'252']",[1],debugXYM93H:debugFCQJEZ,32,0,1,debugH3E1FV,debugXYM93H,2773
+357,254,gikemfa means: ,"[u'261', u'259']",1422924716191,1422924716556,1,,,,,,,debugXYM93H:debugFCQJEZ,33,0,1,debugH3E1FV,debugXYM93H,365
+358,203,Which word is represented by this picture?,"[u'261', u'260']",1422924716563,1422924718764,1,2,[u'200'],[u'nodolfa'],[True],"[u'201', u'200']",[1],debugXYM93H:debugFCQJEZ,34,0,1,debugH3E1FV,debugXYM93H,2201
+359,202,nodolfa means:,"[u'261', u'260']",1422924718767,1422924719101,1,,,,,,,debugXYM93H:debugFCQJEZ,35,0,1,debugH3E1FV,debugXYM93H,334
+360,199,Which word is represented by this picture?,"[u'261', u'260']",1422924719104,1422924723421,1,2,[u'196'],[u'kanitfa'],[True],"[u'196', u'197']",[0],debugXYM93H:debugFCQJEZ,36,0,1,debugH3E1FV,debugXYM93H,4317
+361,198,kanitfa means:,"[u'261', u'260']",1422924723423,1422924723733,1,,,,,,,debugXYM93H:debugFCQJEZ,37,0,1,debugH3E1FV,debugXYM93H,310
+362,147,Which word is represented by this picture?,"[u'261', u'260']",1422924723738,1422924725221,1,both,[u'145'],[u'beling'],[False],"[u'145', u'144']",[0],debugXYM93H:debugFCQJEZ,38,0,1,debugH3E1FV,debugXYM93H,1483
+363,146,guton means:,"[u'261', u'260']",1422924725223,1422924725603,1,,,,,,,debugXYM93H:debugFCQJEZ,39,0,1,debugH3E1FV,debugXYM93H,380
+364,195,Which word is represented by this picture?,"[u'261', u'260']",1422924725606,1422924726932,1,2,[u'192'],[u'pegukfa'],[True],"[u'193', u'192']",[1],debugXYM93H:debugFCQJEZ,40,0,1,debugH3E1FV,debugXYM93H,1326
+365,194,pegukfa means:,"[u'261', u'260']",1422924726933,1422924727244,1,,,,,,,debugXYM93H:debugFCQJEZ,41,0,1,debugH3E1FV,debugXYM93H,311
+366,251,Which word is represented by this picture?,"[u'261', u'260']",1422924727246,1422924731278,1,both,[u'248'],[u'lilanfa'],[True],"[u'249', u'248']",[1],debugXYM93H:debugFCQJEZ,42,0,1,debugH3E1FV,debugXYM93H,4032
+367,250,lilanfa means: ,"[u'261', u'260']",1422924731279,1422924731582,1,,,,,,,debugXYM93H:debugFCQJEZ,43,0,1,debugH3E1FV,debugXYM93H,303
+368,171,Which word is represented by this picture?,"[u'261', u'260']",1422924731586,1422924733119,1,2,[u'168'],[u'nodol'],[True],"[u'168', u'169']",[0],debugXYM93H:debugFCQJEZ,44,0,1,debugH3E1FV,debugXYM93H,1533
+369,170,nodol means: ,"[u'261', u'260']",1422924733121,1422924733415,1,,,,,,,debugXYM93H:debugFCQJEZ,45,0,1,debugH3E1FV,debugXYM93H,294
+370,215,Which word is represented by this picture?,"[u'261', u'260']",1422924733420,1422924734870,1,both,[u'213'],[u'belingfa'],[False],"[u'213', u'212']",[0],debugXYM93H:debugFCQJEZ,46,0,1,debugH3E1FV,debugXYM93H,1450
+371,214,bubapfa means:,"[u'261', u'260']",1422924734872,1422924735175,1,,,,,,,debugXYM93H:debugFCQJEZ,47,0,1,debugH3E1FV,debugXYM93H,303
+372,247,Which word is represented by this picture?,"[u'261', u'260']",1422924735178,1422924736286,1,both,[u'244'],[u'bubapfa'],[True],"[u'244', u'245']",[0],debugXYM93H:debugFCQJEZ,48,0,1,debugH3E1FV,debugXYM93H,1108
+373,246,bubapfa means: ,"[u'261', u'260']",1422924736288,1422924736574,1,,,,,,,debugXYM93H:debugFCQJEZ,49,0,1,debugH3E1FV,debugXYM93H,286
+374,175,Which word is represented by this picture?,"[u'261', u'260']",1422924736578,1422924737991,1,both,[u'172'],[u'beling'],[True],"[u'172', u'173']",[0],debugXYM93H:debugFCQJEZ,50,0,1,debugH3E1FV,debugXYM93H,1413
+375,174,beling means: ,"[u'261', u'260']",1422924737993,1422924738351,1,,,,,,,debugXYM93H:debugFCQJEZ,51,0,1,debugH3E1FV,debugXYM93H,358
+376,143,Which word is represented by this picture?,"[u'261', u'260']",1422924738355,1422924739807,1,both,[u'140'],[u'beling'],[True],"[u'140', u'141']",[0],debugXYM93H:debugFCQJEZ,52,0,1,debugH3E1FV,debugXYM93H,1452
+377,142,beling means:,"[u'261', u'260']",1422924739811,1422924740102,1,,,,,,,debugXYM93H:debugFCQJEZ,53,0,1,debugH3E1FV,debugXYM93H,291
+378,235,Which word is represented by this picture?,"[u'261', u'260']",1422924740105,1422924741973,1,2,[u'232'],[u'nodolfa'],[True],"[u'233', u'232']",[1],debugXYM93H:debugFCQJEZ,54,0,1,debugH3E1FV,debugXYM93H,1868
+379,234,nodolfa means: ,"[u'261', u'260']",1422924741974,1422924742367,1,,,,,,,debugXYM93H:debugFCQJEZ,55,0,1,debugH3E1FV,debugXYM93H,393
+380,155,Which word is represented by this picture?,"[u'261', u'260']",1422924742371,1422924743694,1,both,[u'152'],[u'lilan'],[True],"[u'152', u'153']",[0],debugXYM93H:debugFCQJEZ,56,0,1,debugH3E1FV,debugXYM93H,1323
+381,154,lilan means:,"[u'261', u'260']",1422924743696,1422924744007,1,,,,,,,debugXYM93H:debugFCQJEZ,57,0,1,debugH3E1FV,debugXYM93H,311
+382,151,Which word is represented by this picture?,"[u'261', u'260']",1422924744010,1422924745902,1,both,[u'148'],[u'bubap'],[True],"[u'149', u'148']",[1],debugXYM93H:debugFCQJEZ,58,0,1,debugH3E1FV,debugXYM93H,1892
+383,150,bubap means:,"[u'261', u'260']",1422924745903,1422924746214,1,,,,,,,debugXYM93H:debugFCQJEZ,59,0,1,debugH3E1FV,debugXYM93H,311
+384,211,Which word is represented by this picture?,"[u'261', u'260']",1422924746217,1422924747566,1,both,[u'209'],[u'lilanfa'],[False],"[u'209', u'208']",[0],debugXYM93H:debugFCQJEZ,60,0,1,debugH3E1FV,debugXYM93H,1349
+385,210,gutonfa means:,"[u'261', u'260']",1422924747568,1422924747863,1,,,,,,,debugXYM93H:debugFCQJEZ,61,0,1,debugH3E1FV,debugXYM93H,295
+386,179,Which word is represented by this picture?,"[u'261', u'260']",1422924747867,1422924749470,1,both,[u'176'],[u'guton'],[True],"[u'177', u'176']",[1],debugXYM93H:debugFCQJEZ,62,0,1,debugH3E1FV,debugXYM93H,1603
+387,178,guton means: ,"[u'261', u'260']",1422924749473,1422924749789,1,,,,,,,debugXYM93H:debugFCQJEZ,63,0,1,debugH3E1FV,debugXYM93H,316
+388,191,Which word is represented by this picture?,"[u'261', u'260']",1422924749792,1422924750949,1,both,[u'188'],[u'gikem'],[True],"[u'189', u'188']",[1],debugXYM93H:debugFCQJEZ,64,0,1,debugH3E1FV,debugXYM93H,1157
+389,190,gikem means: ,"[u'261', u'260']",1422924750951,1422924751254,1,,,,,,,debugXYM93H:debugFCQJEZ,65,0,1,debugH3E1FV,debugXYM93H,303
+390,342,"In this part of the experiment, you will see pairs of new words.
+Based on how each word sounds, decide which one is more likely to belong to the
+language you just learned.",[u'343'],1422924751257,1422924755351,1,,,,,,,debugXYM93H:debugFCQJEZ,66,0,1,debugH3E1FV,debugXYM93H,4094
+391,333,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924755353,1422924757160,1,,[u'331'],[u'pafum'],[None],"[u'331', u'332']",[0],debugXYM93H:debugFCQJEZ,67,0,1,debugH3E1FV,debugXYM93H,1807
+392,312,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924757164,1422924757463,1,,[u'311'],[u''],[None],"[u'311', u'310']",[0],debugXYM93H:debugFCQJEZ,68,0,1,debugH3E1FV,debugXYM93H,299
+393,315,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924757465,1422924757784,1,,[u'314'],[u''],[None],"[u'314', u'313']",[0],debugXYM93H:debugFCQJEZ,69,0,1,debugH3E1FV,debugXYM93H,319
+394,291,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924757787,1422924758040,1,,[u'290'],[u''],[None],"[u'290', u'289']",[0],debugXYM93H:debugFCQJEZ,70,0,1,debugH3E1FV,debugXYM93H,253
+395,285,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924758043,1422924758312,1,,[u'284'],[u''],[None],"[u'284', u'283']",[0],debugXYM93H:debugFCQJEZ,71,0,1,debugH3E1FV,debugXYM93H,269
+396,279,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924758315,1422924758567,1,,[u'277'],[u'pufop'],[None],"[u'277', u'278']",[0],debugXYM93H:debugFCQJEZ,72,0,1,debugH3E1FV,debugXYM93H,252
+397,321,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924758569,1422924758807,1,,[u'319'],[u'dufil'],[None],"[u'319', u'320']",[0],debugXYM93H:debugFCQJEZ,73,0,1,debugH3E1FV,debugXYM93H,238
+398,336,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924758810,1422924759079,1,,[u'334'],[u'nifal'],[None],"[u'334', u'335']",[0],debugXYM93H:debugFCQJEZ,74,0,1,debugH3E1FV,debugXYM93H,269
+399,327,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924759081,1422924759320,1,,[u'326'],[u''],[None],"[u'326', u'325']",[0],debugXYM93H:debugFCQJEZ,75,0,1,debugH3E1FV,debugXYM93H,239
+400,270,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924759324,1422924759576,1,,[u'268'],[u'bogfep'],[None],"[u'268', u'269']",[0],debugXYM93H:debugFCQJEZ,76,0,1,debugH3E1FV,debugXYM93H,252
+401,276,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924759580,1422924760143,1,,[u'274'],[u'mengfod'],[None],"[u'274', u'275']",[0],debugXYM93H:debugFCQJEZ,77,0,1,debugH3E1FV,debugXYM93H,563
+402,294,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924760145,1422924760432,1,,[u'293'],[u''],[None],"[u'293', u'292']",[0],debugXYM93H:debugFCQJEZ,78,0,1,debugH3E1FV,debugXYM93H,287
+403,318,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924760435,1422924760719,1,,[u'316'],[u'bofum'],[None],"[u'316', u'317']",[0],debugXYM93H:debugFCQJEZ,79,0,1,debugH3E1FV,debugXYM93H,284
+404,330,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924760722,1422924760982,1,,[u'328'],[u'fefik'],[None],"[u'328', u'329']",[0],debugXYM93H:debugFCQJEZ,80,0,1,debugH3E1FV,debugXYM93H,260
+405,297,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924760985,1422924761247,1,,[u'296'],[u''],[None],"[u'296', u'295']",[0],debugXYM93H:debugFCQJEZ,81,0,1,debugH3E1FV,debugXYM93H,262
+406,264,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924761249,1422924761495,1,,[u'263'],[u'labfub'],[None],"[u'263', u'262']",[0],debugXYM93H:debugFCQJEZ,82,0,1,debugH3E1FV,debugXYM93H,246
+407,273,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924761498,1422924761770,1,,[u'271'],[u'gunfan'],[None],"[u'271', u'272']",[0],debugXYM93H:debugFCQJEZ,83,0,1,debugH3E1FV,debugXYM93H,272
+408,300,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924761774,1422924762040,1,,[u'298'],[u'gafek'],[None],"[u'298', u'299']",[0],debugXYM93H:debugFCQJEZ,84,0,1,debugH3E1FV,debugXYM93H,266
+409,288,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924762043,1422924762304,1,,[u'287'],[u''],[None],"[u'287', u'286']",[0],debugXYM93H:debugFCQJEZ,85,0,1,debugH3E1FV,debugXYM93H,261
+410,282,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924762308,1422924762583,1,,[u'281'],[u''],[None],"[u'281', u'280']",[0],debugXYM93H:debugFCQJEZ,86,0,1,debugH3E1FV,debugXYM93H,275
+411,324,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924762586,1422924762855,1,,[u'322'],[u'kofop'],[None],"[u'322', u'323']",[0],debugXYM93H:debugFCQJEZ,87,0,1,debugH3E1FV,debugXYM93H,269
+412,309,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924762857,1422924763136,1,,[u'308'],[u''],[None],"[u'308', u'307']",[0],debugXYM93H:debugFCQJEZ,88,0,1,debugH3E1FV,debugXYM93H,279
+413,267,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924763139,1422924763416,1,,[u'265'],[u'nidfig'],[None],"[u'265', u'266']",[0],debugXYM93H:debugFCQJEZ,89,0,1,debugH3E1FV,debugXYM93H,277
+414,303,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924763419,1422924763695,1,,[u'301'],[u'mefim'],[None],"[u'301', u'302']",[0],debugXYM93H:debugFCQJEZ,90,0,1,debugH3E1FV,debugXYM93H,276
+415,306,"Which of these two words is more likely to be a word of the
+language you just learned?",[u'337'],1422924763698,1422924763960,1,,[u'304'],[u'difal'],[None],"[u'304', u'305']",[0],debugXYM93H:debugFCQJEZ,91,0,1,debugH3E1FV,debugXYM93H,262
+416,476,"What information or strategies did you use to choose words in the
+experimental questions?",[u'477'],1422924763966,1422924765692,1,,[u'475'],[u'f '],[None],[u'475'],[0],debugXYM93H:debugFCQJEZ,92,0,1,debugH3E1FV,debugXYM93H,1726
+417,470,What is your sex?,[u'477'],1422924765696,1422924768936,1,,[u'468'],[u'female'],[None],"[u'467', u'469', u'468']",[2],debugXYM93H:debugFCQJEZ,93,0,1,debugH3E1FV,debugXYM93H,3240
+418,472,What is your native language?,[u'477'],1422924768940,1422924770374,1,,[u'471'],[u'f'],[None],[u'471'],[0],debugXYM93H:debugFCQJEZ,94,0,1,debugH3E1FV,debugXYM93H,1434
+419,466,How old are you?,[u'477'],1422924770408,1422924777408,1,,[u'463'],[117],[None],"[u'465', u'464', u'463', u'462', u'461', u'460', u'459', u'458', u'457', u'456', u'455', u'454', u'453', u'452', u'451', u'450', u'449', u'448', u'447', u'446', u'445', u'444', u'443', u'442', u'441', u'440', u'439', u'438', u'437', u'436', u'435', u'434', u'433', u'432', u'431', u'430', u'429', u'428', u'427', u'426', u'425', u'424', u'423', u'422', u'421', u'420', u'419', u'418', u'417', u'416', u'415', u'414', u'413', u'412', u'411', u'410', u'409', u'408', u'407', u'406', u'405', u'404', u'403', u'402', u'401', u'400', u'399', u'398', u'397', u'396', u'395', u'394', u'393', u'392', u'391', u'390', u'389', u'388', u'387', u'386', u'385', u'384', u'383', u'382', u'381', u'380', u'379', u'378', u'377', u'376', u'375', u'374', u'373', u'372', u'371', u'370', u'369', u'368', u'367', u'366', u'365', u'364', u'363', u'362', u'361', u'360', u'359', u'358', u'357', u'356', u'355', u'354', u'353', u'352', u'351', u'350', u'349', u'348', u'347', u'346']",[2],debugXYM93H:debugFCQJEZ,95,0,1,debugH3E1FV,debugXYM93H,7000
+420,474,What language do you speak most often?,[u'477'],1422924777416,1422924779110,1,,[u'473'],[u'f'],[None],[u'473'],[0],debugXYM93H:debugFCQJEZ,96,0,1,debugH3E1FV,debugXYM93H,1694
+421,344,Thank you for participating in this experiment!,[u'345'],1422924779111,1422924780228,1,,,,,,,debugXYM93H:debugFCQJEZ,97,0,1,debugH3E1FV,debugXYM93H,1117

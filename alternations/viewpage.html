@@ -1,0 +1,27 @@
+<!-- to test your experiment without PsiTurk, put this in your project directory and view it in your browser-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Try Speriment In Your Browser</title>
+  <link rel=stylesheet href="static/lib/node_modules/speriment/css/speriment.css" type="text/css">
+</head>
+<body>
+
+  <script src="static/lib/jquery-min.js"></script>
+  <script src="static/lib/underscore-min.js"></script>
+  <script src="static/lib/node_modules/speriment/javascript/speriment.js"></script>
+  <script src="static/js/alternations_experiment.js"></script> <!-- put the name of your experiment here-->
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+        var jsonExperiment = alternations_experiment; // put the name of your experiment here
+        var condition = 1; // you can change this to test your latin square
+        var counterbalance = 0;
+        var s = new Experiment(jsonExperiment, condition, counterbalance);
+        s.start();
+    });
+  </script>
+
+</body>
+</html>

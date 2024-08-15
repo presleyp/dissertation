@@ -5,25 +5,25 @@ f,o,ng, ,e,m,both,fongem,fongemfa,fongem,,,swapped ng and f,
 p,u,s, ,i,t,both,pufsit,pufsitfa,pufsit,,,,f
 n,i,m, ,o,l,both,nimol,nimolfa,nimol,,,,
 n,e,m,p,a,b,voice,nemab,nemapfa,nemab,b,,,
-d,o,b,t,u,d,voice,dobud,dobutfa,dobud,d,,,
+s,o,b,t,u,d,voice,sobud,sobutfa,sobud,d,,,
 f,e,t,p,a,b,voice,fetab,fetapfa,fetab,b,,,
 t,a,d,t,i,d,voice,tamdid,tamditfa,tamdid,d,,,m
-s,u,ng,p,i,b,voice,sungib,sungipfa,sungib,b,,swapped ng and s,
+d,u,ng,p,i,b,voice,dungib,dungipfa,dungib,b,,swapped ng and d,
 m,i,l,t,o,d,voice,milod,milotfa,milod,d,,,
 l,i,p,p,e,b,voice,lispeb,lispepfa,lispeb,b,,,s
-s,a,ng,p,o,b,voice,sangob,sangopfa,sangob,b,,,
-p,o,n,t,e,d,voice,poned,ponetfa,poned,d,,,
+s,a,ng,t,o,d,voice,sangod,sangotfa,sangod,d,,,
+p,o,n,p,e,b,voice,poneb,ponepfa,poneb,b,,,
 b,u,f,t,u,d,voice,bupfud,bupfutfa,bupfud,d,,,p
-n,e,m,m,a,n,nasal,neman,nemamfa,neman,n,,,
-s,o,b,m,u,n,nasal,sobun,sobumfa,sobun,n,,,
-f,e,t,m,a,ng,nasal,fetang,fetamfa,fetang,ng,,,
-t,a,d,m,i,ng,nasal,tamding,tamdimfa,tamding,ng,,,m
-d,u,ng,m,i,n,nasal,dungin,dungimfa,dungin,n,,swapped ng and d,
-m,i,l,m,o,ng,nasal,milong,milomfa,milong,ng,,,
-l,i,p,m,e,n,nasal,lispen,lispemfa,lispen,n,,,s
-s,a,ng,m,o,n,nasal,sangon,sangomfa,sangon,n,,,
-p,o,n,m,e,ng,nasal,poneng,ponemfa,poneng,ng,,,
-b,u,f,m,u,ng,nasal,bupfung,bupfumfa,bupfung,ng,,,p
+s,u,m,m,e,n,nasal,sumen,sumemfa,sumen,n,,,
+l,o,b,m,o,n,nasal,lobon,lobomfa,lobon,n,,,
+p,i,t,m,a,ng,nasal,pitang,pitamfa,pitang,ng,,,
+d,e,d,m,i,ng,nasal,demding,demdimfa,demding,ng,,,m
+f,a,ng,m,u,n,nasal,fangun,fangumfa,fangun,n,,swapped ng and d,
+s,o,l,m,o,n,nasal,solon,solomfa,solon,n,,,
+b,u,p,m,a,ng,nasal,buspang,buspamfa,buspang,ng,,,s
+n,a,ng,m,u,ng,nasal,nangung,nangumfa,nangung,ng,,,
+t,i,n,m,e,n,nasal,tinen,tinemfa,tinen,n,,n matched with b one extra time,
+m,e,f,m,i,ng,nasal,mepfing,mepfimfa,mepfing,ng,,ng matched with d one extra time,p
 l,u,d,ng,u,m,test,ludfum,lungfum,ludfum,d,ng,,
 p,i,d,ng,a,p,test,pidfap,pingfap,pidfap,d,ng,,
 t,o,b,n,o,b,test,tobfob,tonfob,tobfob,b,n,,
@@ -31,9 +31,9 @@ b,u,d,ng,i,l,test,budfil,bungfil,budfil,d,ng,,
 d,i,d,n,i,ng,test,didfing,dinfing,didfing,d,n,,
 s,u,d,n,u,f,test,sudfuf,sunfuf,sudfuf,d,n,,
 n,a,b,n,u,ng,test,nabfung,nanfung,nabfung,b,n,swapped ng and n,
-m,a,d,ng,a,t,test,madfat,mangfat,madfat,d,ng,,
+m,a,d,ng,a,s,test,madfas,mangfas,madfas,d,ng,,
 m,e,b,n,e,t,test,mebfet,menfet,mebfet,b,n,,
-n,i,b,ng,i,s,test,nibfis,ningfis,nibfis,b,ng,,
+n,i,b,ng,i,t,test,nibfit,ningfit,nibfit,b,ng,,
 n,a,d,ng,e,p,test,nadfep,nangfep,nadfep,d,ng,,
 t,i,b,n,i,m,test,tibfim,tinfim,tibfim,b,n,,
 f,o,b,ng,o,l,test,fobfol,fongfol,fobfol,b,ng,,

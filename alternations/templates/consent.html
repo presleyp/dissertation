@@ -1,0 +1,120 @@
+<!doctype html>
+<!-- 
+  The consent.html displays the text of your IRB-approved
+  consent form.  Even if you are not required to provide
+  a consent form, it is helpful to use this form to 
+  describe what people can do if an error comes up, etc...
+
+-->
+<html>
+    <head>
+        <title>Linguistics Experiment - Informed Consent Form</title>
+        <link rel=stylesheet href="/static/css/bootstrap.min.css" type="text/css">
+        <link rel=stylesheet href="/static/css/style.css" type="text/css">
+        <link rel=stylesheet href="/static/lib/node_modules/speriment/css/speriment.css" type="text/css">
+        <script type="text/javascript">
+            function onexit() {
+              self.close(); // no harm, no foul here
+            }
+        </script>
+    </head>
+    <body>
+        <div id="container-consent">
+            <div id="consent">
+                <h1>We need your consent to proceed</h1>
+                <hr>
+                <div class="legal well">
+                    <p>
+                    You have been invited to take part in a linguistics experiment.
+                    </p>
+                        <!-- CONSENT FORM HERE -->
+                        <h2>
+                        Purpose of study
+                        </h2>
+                        </p>
+                        In this research, we are investigating the learning of a new language. The
+                        information collected in this study will be used in the preparation of papers
+                        for presentation in international conferences and journals on linguistics.
+                        <p>
+                        <h2>
+                        Procedures
+                        </h2>
+                        <p>
+                        In this study, you will hear examples of words in a new
+                        language, and will be tested on how well you know the
+                        language. We will also ask you to supply some
+                        demographic information, such as age and native
+                        language.  The entire process will last less than one
+                        hour.
+                        </p>
+                        <h2>
+                        Risks
+                        </h2>
+                        <p>
+                        There are no known risks involved in this experimental procedure.
+                        <h2>
+                        Benefits
+                        </h2>
+                        <p>
+                        There are no immediate benefits of this research. In
+                        the long term, however, this research may help in the
+                        design of effective methods for language instruction
+                        and treatment of phonological disorders.  </p>
+                        <h2>
+                        Confidentiality
+                        </h2>
+                        <p>
+                        Your results will be kept completely confidential. To maximize confidentiality, you will not be asked to
+                        provide a name, and your results will be assigned to a subject number even for our own analyses.
+                        </p>
+                        <h2>
+                        Request for more information
+                        </h2>
+                        <p>
+                        If you have questions or concerns about the study, you may contact Prof. Joe Pater at 413-577-1308. If these
+                        concerns are not resolved satisfactorily, or if you have concerns about how you were treated by the
+                        experimenter, please contact the chair of the board in the Linguistics Department that oversees these
+                        experiments, John Kingston, who can be reached at 413-545-0885.
+                        </p>
+                        <h2>
+                        Refusal or withdrawal of participation
+                        </h2>
+                        <p>
+                        Your participation in this study is purely voluntary. You may withdraw from this study at any time.
+                        </p>
+                        <h2>
+                        Terms of consent
+                        </h2>
+                        <p>
+                        By participating in this experiment I confirm that I understand the purpose of the research, the study
+                        procedures that I will undergo and the possible risks and discomforts as well as benefits that I may
+                        experience. I have read and I understand these terms of consent. Therefore, I agree to give my consent to
+                        participate as a subject in this research project.
+                        </p>
+
+                    <button type="button" class="btn btn-default btn-sm" onClick="window.print();">
+                    <span class="glyphicon glyphicon-print"></span> Print a copy of this
+                    </button>
+                </div>
+
+                <hr>
+                <h4>Do you understand and consent to these terms?</h4>
+                <br>
+
+                <center>
+                    <button type="button" class="btn btn-primary btn-lg" onClick="window.location='/exp?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}'">
+                    <span class="glyphicon glyphicon-ok"></span> I agree 
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-danger btn-lg" onClick="onexit()">
+                    <span class="glyphicon glyphicon-ban-circle"></span> No thanks, I do not want to do this HIT
+                    </button>
+                </center>
+
+            </div>
+        </div>
+    </body>
+</html>
+

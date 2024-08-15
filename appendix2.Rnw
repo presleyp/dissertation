@@ -1,0 +1,314 @@
+<<set-parent-appendix2, echo=FALSE, cache=FALSE>>=
+set_parent('diss.Rnw')
+@
+
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Treatment-neutral exposure items in Experiments 3 and 4.}
+    \begin{tabular}{ll}
+    \hline
+    Singular & Plural \\
+    \hline
+    teldus & teldusfa \\
+    labap & labapfa \\
+    fongem & fongemfa \\
+    pufsit & pufsitfa \\
+    nimol & nimolfa \\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Devoicing treatment exposure items appearing in both the singular and plural in Experiments 3 and 4.}
+    \begin{tabular}{ll}
+    \hline
+    Singular & Plural \\
+    \hline
+    nemab  &	nemapfa	\\
+    sobud	&	sobutfa	\\
+    fetab	&	fetapfa	\\
+    tamdid	&	tamditfa	\\
+    dungib	&	dungipfa	\\
+    milod	&	milotfa	\\
+    lispeb	&	lispepfa	\\
+    sangod	&	sangotfa	\\
+    poneb	&	ponepfa	\\
+    bupfud	&	bupfutfa	\\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Devoicing treatment exposure items appearing in the singular only in Experiments 3 and 4.}
+    \begin{tabular}{l}
+    \hline
+    Singular Only \\
+    \hline
+    sumen  		\\
+    lobon			\\
+    pitang			\\
+    demding			\\
+    fangun			\\
+    solon			\\
+    buspang			\\
+    nangung			\\
+    tinen			\\
+    mepfing			\\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Devoicing treatment exposure items appearing in the plural only in Experiments 3 and 4.}
+    \begin{tabular}{l}
+    \hline
+    Plural Only \\
+    \hline
+      funemfa	\\
+        semomfa	\\
+        nangimfa	\\
+        sipumfa	\\
+        lotamfa	\\
+        melomfa	\\
+        bangumfa	\\
+        tubemfa	\\
+        ditfamfa	\\
+        podimfa	\\
+        \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Place Assimilation treatment exposure items appearing in both the singular and plural in Experiments 3 and 4.}
+    \begin{tabular}{ll}
+    \hline
+    Singular & Plural \\
+    \hline
+    sumen  &	sumemfa	\\
+    lobon	&	lobomfa	\\
+    pitang	&	pitamfa	\\
+    demding	&	demdimfa	\\
+    fangun	&	fangumfa	\\
+    solon	&	solomfa	\\
+    buspang	&	buspamfa	\\
+    nangung	&	nangumfa	\\
+    tinen	&	tinemfa	\\
+    mepfing	&	mepfimfa	\\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Place Assimilation treatment exposure items appearing in the singular only in Experiments 3 and 4.}
+    \begin{tabular}{l}
+    \hline
+    Singular Only \\
+    \hline
+    nemab  		\\
+    sobud			\\
+    fetab			\\
+    tamdid			\\
+    dungib			\\
+    milod			\\
+    lispeb		\\
+    sangod			\\
+    poneb			\\
+    bupfud			\\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Place Assimilation treatment exposure items appearing in the plural only in Experiments 3 and 4.}
+    \begin{tabular}{l}
+    \hline
+    Plural Only \\
+    \hline
+      funepfa	\\
+        semotfa	\\
+        nangipfa	\\
+        siputfa	\\
+        lotapfa	\\
+        melotfa	\\
+        bangupfa	\\
+        tubetfa	\\
+        ditfapfa	\\
+        poditfa	\\
+        \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Treatment-neutral training items in Experiments 3 and 4.}
+    \begin{tabular}{lll}
+    \hline
+    Singular & Plural 1 & Plural 2 \\
+    \hline
+    beful  &	befulfa	&	befumfa	\\
+    pidep	&	pidepfa	&	pidetfa	\\
+    nupis	&	nupisfa	&	nupiffa	\\
+    tatul	&	tatulfa	&	tatumfa	\\
+    dulim	&	dulimfa	&	dulilfa	\\
+    fongep	&	fongepfa	&	fongetfa	\\
+    mengos	&	mengosfa	&	mengoffa	\\
+    limat	&	limatfa	&	limapfa	\\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Devoicing treatment training items in Experiments 3 and 4.}
+    \begin{tabular}{lll}
+    \hline
+    Singular & Plural 1 & Plural 2 \\
+    \hline
+    sapod  &	sapodfa	&	sapotfa	\\
+    pulob	&	pulobfa	&	pulopfa	\\
+    lumub	&	lumubfa	&	lumupfa	\\
+    tetib	&	tetibfa	&	tetipfa	\\
+    fadud	&	fadudfa	&	fadutfa	\\
+    mofeb	&	mofebfa	&	mofepfa	\\
+    bined	&	binedfa	&	binetfa	\\
+    ningad	&	ningadfa	&	ningatfa	\\
+    sengib	&	sengibfa	&	sengipfa	\\
+    dobad	&	dobadfa	&	dobatfa	\\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Place Assimilation treatment training items in Experiments 3 and 4.}
+    \begin{tabular}{lll}
+    \hline
+    Singular & Plural 1 & Plural 2 \\
+    \hline
+    sapong  &	sapongfa	&	sapomfa	\\
+    pulong	&	pulongfa	&	pulomfa	\\
+    lumung	&	lumungfa	&	lumumfa	\\
+    tetin	&	tetinfa	&	tetimfa	\\
+    fadung	&	fadungfa	&	fadumfa	\\
+    mofeng	&	mofengfa	&	mofemfa	\\
+    binen	&	binenfa	&	binemfa	\\
+    ningan	&	ninganfa	&	ningamfa	\\
+    sengin	&	senginfa	&	sengimfa	\\
+    doban	&	dobanfa	&	dobamfa	\\
+    sanot	&	sanotfa	&	sanopfa	\\
+    sobam	&	sobamfa	&	sobalfa	\\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Filler items in the testing phase of Experiments 3 and 4.}
+    \begin{tabular}{ll}
+    \hline
+    Form 1 & Form 2 \\
+    \hline
+    folfam  &	fosfam	\\
+    mulfuf	&	musfuf	\\
+    lalfit	&	lasfit	\\
+    bilfab	&	bisfab	\\
+    lelfeng	&	lesfeng	\\
+    sulfen	&	susfen	\\
+    nilfid	&	nisfid	\\
+    polfup	&	posfup	\\
+    delfong	&	desfong	\\
+    talfos	&	tasfos	\\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Items testing *DF in Experiments 3 and 4.}
+    \begin{tabular}{ll}
+    \hline
+    Constraint Violating Form & Constraint Satisfying Form \\
+    \hline
+    ludfum  &	lutfum	\\
+    pidfap	&	pitfap	\\
+    todfob	&	totfob	\\
+    budfil	&	butfil	\\
+    didfing	&	ditfing	\\
+    sudfuf	&	sutfuf	\\
+    nadfung	&	natfung	\\
+    madfas	&	matfas	\\
+    medfet	&	metfet	\\
+    nidfit	&	nitfit	\\
+    nabfep	&	napfep	\\
+    tibfim	&	tipfim	\\
+    fobfol	&	fopfol	\\
+    pebfuf	&	pepfuf	\\
+    bubfan	&	bupfan	\\
+    sabfod	&	sapfod	\\
+    fobfes	&	fopfes	\\
+    bobfang	&	bopfang	\\
+    lebfong	&	lepfong	\\
+    debfed	&	depfed	\\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}
+
+
+    \begin{table}[htp]
+    \begin{center}
+    \caption{Items testing *NF in Experiments 3 and 4.}
+    \begin{tabular}{ll}
+    \hline
+    Constraint Violating Form & Constraint Satisfying Form \\
+    \hline
+    lunfum  &	lumfum	\\
+    pingfap	&	pimfap	\\
+    tonfob	&	tomfob	\\
+    bungfil	&	bumfil	\\
+    dinfing	&	dimfing	\\
+    sungfuf	&	sumfuf	\\
+    nanfung	&	namfung	\\
+    mangfas	&	mamfas	\\
+    menfet	&	memfet	\\
+    ningfit	&	nimfit	\\
+    nanfep	&	namfep	\\
+    tingfim	&	timfim	\\
+    fonfol	&	fomfol	\\
+    pengfuf	&	pemfuf	\\
+    bunfan	&	bumfan	\\
+    sangfod	&	samfod	\\
+    fonfes	&	fomfes	\\
+    bongfang	&	bomfang	\\
+    lenfong	&	lemfong	\\
+    dengfed	&	demfed	\\
+    \hline
+    \end{tabular}
+    \end{center}
+    \end{table}

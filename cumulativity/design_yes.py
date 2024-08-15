@@ -10,6 +10,9 @@ from speriment import *
 # bad catch. new exclusion criteria: accepted more bad than good catch. use
 # catch to show difference from ceiling/floor.
 # 6 real version of 5
+# 7 pilot of yes/no with april19 materials, don't have to balance, 6 good and 6
+# bad catch, and anchoring at the beginning.
+# real of 7
 
 ##### Wording #####
 
@@ -27,6 +30,16 @@ the F key to choose the option on the left, the J key to choose the option
 on the right, and the spacebar to move forward. Make sure your CAPS lock is off.
 At the end of the experiment, you can use the mouse to answer some questions
 about yourself.'''
+
+instructions2 = '''Before we start, here are examples of the kind of words
+you'll see.
+<br><br>
+<b>blickity</b> is the kind of word you might want to say "yes" to. It's not an
+English word, but it sounds like it could be.
+<br><br>
+<b>rzbesgathv</b> is the kind of word you might want to say "no" to. It's not an
+English word, and it doesn't sound like it could ever be one.
+'''
 
 question = '''Based on how it sounds, do you think this word could be a word of
 English? <br><br>'''
@@ -52,8 +65,8 @@ the Complete HIT button on the next page.'''
 
 ##### Stimuli #####
 
-# rows = get_dicts('items_april19.csv')
-rows = get_dicts('items_oct8.csv')
+rows = get_dicts('items_june17.csv')
+# rows = get_dicts('items_oct8.csv')
 
 # condition, onset violation, coda violation
 test_conditions = [
@@ -67,7 +80,9 @@ test_conditions = [
 with make_experiment(IDGenerator()):
 
     intro_block = Block(pages = [Page(introduction, tags = {'PageType': 'Instructions'})])
-    instruction_block = Block(pages = [Page(instructions, tags = {'PageType': 'Instructions'})])
+    instruction_block = Block(pages = [
+        Page(instructions, tags = {'PageType': 'Instructions'}),
+        Page(instructions2, tags = {'PageType': 'Instruction'})])
 
     test_page_groups = [
         [Page(
@@ -87,13 +102,23 @@ with make_experiment(IDGenerator()):
     for (i, row) in enumerate(rows)]
 
     # truly terrible words
+    # catch_words = [
+    #     'lbifth',
+    #     'krlisg',
+    #     'psatrl',
+    #     'tmozb',
+    #     'zgdivl',
+    #     'wlramr']
+
+    # even worse words
     catch_words = [
-        'lbifth',
-        'krlisg',
-        'psatrl',
-        'tmozb',
-        'zgdivl',
-        'wlramr']
+            'lbafthrizk',
+            'kflisgwevr',
+            'psafzotrl',
+            'tmuhrizb',
+            'zgdokpevf',
+            'wlratlumr'
+            ]
 
     catch_trials = [Page(
             [question, '<b>', word, '</b>'],
@@ -177,4 +202,4 @@ with make_experiment(IDGenerator()):
         demographics_block,
         thanks_block
     ])
-    experiment.install('cumulativity_experiment2')
+    experiment.install('cumulativity_experiment7')

@@ -2,9 +2,74 @@
 set_parent('diss.Rnw')
 @
 
-I will conclude with recommendations for phonotactic modeling, regarding the
-function that we should fit the data to and two of the potential factors, token
-frequency and participation in alternations, that we could use in those models.
+This dissertation has aimed to push forward the study of phonotactics with
+experimental results as well as aid in future advances with software to
+facilitate further experimentation. Chapter \ref{ch:speriment} presented Speriment, experiment
+creation software that is particularly tailored to phonotactic research in that
+it includes the specific features needed to run judgment and artificial language
+learning experiments.  By
+using this package, experimenters can reduce the amount of time they spend
+creating and running experiments, and easily share their designs and results
+with others.
 
-I will also discuss SurveyMan and recommendations for running phonotactic
-judgment experiments in a convenient and effective way.
+Chapter \ref{ch:cumulativity} presented experiments that found and replicated an effect showing
+that constraint violations do not accumulate linearly, but rather, a violation
+in the presence of another violation has a smaller effect on word acceptability
+than it does in isolation. This finding suggests that phonotactic modeling
+should not be done in linear Harmonic Grammar, or other frameworks that predict linear
+accumulation of violations. It also reinforces the view that phonotactic
+modeling should not be done in Optimality Theory, where violations do not
+accumulate at all across constraints. It offers preliminary support for the use
+of Maximum Entropy Grammar in modeling phonotactics, and any other models that predict
+subadditive accumulation of violations.
+
+Narrowing down the space of constraint-based models is useful in several ways.
+First, it gives researchers who would like to improve existing constraint-based
+models a clearer starting point. Building on Maximum Entropy Grammar is likely to be
+more fruitful than building on models that incorrectly model violation
+interaction.
+
+Second, it gives researchers who would like to propose new models
+a desideratum for their model and a suggested point of comparison between their
+model and Maximum Entropy Grammar.  The desideratum is that their model predict
+subadditive cumulativity of violations. The point of comparison is in the
+specific ways that a new model and Maximum Entropy Grammar create this subadditivity.
+The finding that the acceptability loss from two violations is less than the
+acceptability loss from each violation is isolation is consistent with many
+methods of combining violations. Maximum Entropy Grammar uses exponentiation to create
+an effect of diminishing marginal penalties, but other methods are possible.
+New models of constraint-based phonotactics could be compared against Maximum
+Entropy Grammar using more sensitive tests in order to learn more about the nature of
+violation cumulativity.
+
+Finally, this finding gives researchers who would like to compare
+constraint-based models against other classes of models more justification in
+choosing Maximum Entropy Grammar (or another subadditive model) over Optimality Theory
+or linear Harmonic Grammar as a representative of constraint-based phonotactics. A
+theory comparison is only fair if each is represented as well as possible, and
+Experiments 1 and 2 provide researchers with one possible test for choosing a
+representative of constraint-based phonotactics.
+
+Chapter \ref{ch:alternations} presented experiments that investigated whether
+learning a phonological alternations affects phonotactic judgments. Experiment
+3 found support for this hypothesis. Experiment 4 attempted to replicate this
+effect with a different style of training, in order to eliminate a possible
+confound. It found a nonsignificant trend in the predicted direction,
+motivating further research to distinguish between the discovery that a
+confound was responsible for the effect of Experiment 3, and merely a lack of
+power in Experiment 4. Because both experiments were designed using Speriment,
+their designs are easy to adjust and replicate, making this next step
+accessible to other researchers. If the hypothesis supported by Experiment 3
+holds upon further investigation, the finding will be compatible with the
+assumption often made in constraint-based grammars that phonotactics and
+alternations are encoded in one constraint set.  It would suggest that models
+that account for phonotactics and alternations separately should at least have
+a mechanism for communication between the two repositories of knowledge.
+
+This dissertation shows how experiments can be efficiently created and used to
+shed light on questions about the basic architecture of the phonological
+grammar. The question left open by Experiment 4 is a common situation in experimental
+work, and highlights the importance of allowing other researchers to inspect,
+tweak, and replicate experiments before drawing conclusions. Speriment complements
+the findings of this dissertation by providing a means for others to build upon
+them and question them with accuracy and efficiency.
